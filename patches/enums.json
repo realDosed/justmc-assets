@@ -1,5 +1,8 @@
 {
-  "Boolean": ["TRUE", "FALSE"],
+  "Boolean": [
+    "TRUE",
+    "FALSE"
+  ],
   "TreeType": [
     "TREE",
     "ACACIA",
@@ -22,27 +25,6 @@
     "WARPED_FUNGUS",
     "AZALEA"
   ],
-  "BlockFace": [
-    "DOWN",
-    "EAST",
-    "EAST_NORTH_EAST",
-    "EAST_SOUTH_EAST",
-    "NORTH",
-    "NORTH_EAST",
-    "NORTH_NORTH_EAST",
-    "NORTH_NORTH_WEST",
-    "NORTH_WEST",
-    "SELF",
-    "SOUTH",
-    "SOUTH_EAST",
-    "SOUTH_SOUTH_EAST",
-    "SOUTH_SOUTH_WEST",
-    "SOUTH_WEST",
-    "UP",
-    "WEST",
-    "WEST_NORTH_WEST",
-    "WEST_SOUTH_WEST"
-  ],
   "Panda.Gene": [
     "NORMAL",
     "LAZY",
@@ -52,7 +34,14 @@
     "WEAK",
     "AGGRESSIVE"
   ],
-  "EquipmentSlot": ["CHEST", "FEET", "HAND", "HEAD", "LEGS", "OFF_HAND"],
+  "EquipmentSlot": [
+    "CHEST",
+    "FEET",
+    "HAND",
+    "HEAD",
+    "LEGS",
+    "OFF_HAND"
+  ],
   "DyeColor": [
     "BLACK",
     "BLUE",
@@ -70,13 +59,6 @@
     "RED",
     "WHITE",
     "YELLOW"
-  ],
-  "CheckMode": ["ANY", "ALL"],
-  "ItemComparisonMode": [
-    "EXACTLY",
-    "IGNORE_STACK_SIZE",
-    "IGNORE_DURABILITY_AND_STACK_SIZE",
-    "TYPE_ONLY"
   ],
   "EntityDamageEvent.DamageCause": [
     "BLOCK_EXPLOSION",
@@ -148,7 +130,11 @@
     "STICKS",
     "XYLOPHONE"
   ],
-  "TargetBlockInfo.FluidMode": ["NEVER", "SOURCE_ONLY", "ALWAYS"],
+  "TargetBlockInfo.FluidMode": [
+    "NEVER",
+    "SOURCE_ONLY",
+    "ALWAYS"
+  ],
   "InventoryType": [
     "CHEST",
     "DISPENSER",
@@ -177,18 +163,6 @@
     "STONECUTTER",
     "COMPOSTER"
   ],
-  "Sound.Source": [
-    "MASTER",
-    "AMBIENT",
-    "BLOCK",
-    "HOSTILE",
-    "MUSIC",
-    "NEUTRAL",
-    "PLAYER",
-    "RECORD",
-    "VOICE",
-    "WEATHER"
-  ],
   "BossBar.Color": [
     "PINK",
     "BLUE",
@@ -205,9 +179,10 @@
     "NOTCHED_12",
     "NOTCHED_20"
   ],
-  "WeatherType": ["DOWNFALL", "CLEAR"],
-  "AngleUnit": ["DEGREES", "RADIANS"],
-  "VectorComponent": ["X", "Y", "Z"],
+  "WeatherType": [
+    "DOWNFALL",
+    "CLEAR"
+  ],
   "Villager.Profession": [
     "NONE",
     "ARMORER",
@@ -225,24 +200,35 @@
     "TOOLSMITH",
     "WEAPONSMITH"
   ],
-  "Difficulty": ["EASY", "HARD", "NORMAL", "PEACEFUL"],
-  "FluidCollisionMode": ["NEVER", "SOURCE_ONLY", "ALWAYS"],
-  "Axolotl.Variant": ["BLUE", "CYAN", "GOLD", "LUCY", "WILD"],
-  "Cat.Type": [
-    "ALL_BLACK",
-    "BLACK",
-    "BRITISH_SHORTHAIR",
-    "CALICO",
-    "JELLIE",
-    "PERSIAN",
-    "RAGDOLL",
-    "RED",
-    "SIAMESE",
-    "TABBY",
-    "WHITE"
+  "Difficulty": [
+    "EASY",
+    "HARD",
+    "NORMAL",
+    "PEACEFUL"
   ],
-  "MushroomCow.Variant": ["BROWN", "RED"],
-  "Parrot.Variant": ["BLUE", "CYAN", "GRAY", "GREEN", "RED"],
+  "FluidCollisionMode": [
+    "NEVER",
+    "SOURCE_ONLY",
+    "ALWAYS"
+  ],
+  "Axolotl.Variant": [
+    "BLUE",
+    "CYAN",
+    "GOLD",
+    "LUCY",
+    "WILD"
+  ],
+  "MushroomCow.Variant": [
+    "BROWN",
+    "RED"
+  ],
+  "Parrot.Variant": [
+    "BLUE",
+    "CYAN",
+    "GRAY",
+    "GREEN",
+    "RED"
+  ],
   "Rabbit.Type": [
     "BLACK",
     "BLACK_AND_WHITE",
@@ -252,8 +238,6 @@
     "THE_KILLER_BUNNY",
     "WHITE"
   ],
-  "CompareMode": ["NEAREST", "FARTHEST"],
-  "UnitsOfMeasurement": ["POINTS", "DISTANCE"],
   "GameEnvironment.EnvironmentPrivilege": [
     "BUILDER",
     "DEVELOPER",
@@ -261,8 +245,12 @@
     "WHITELISTED",
     "OWNER"
   ],
-  "Frog.Variant": ["COLD", "TEMPERATE", "WARM"],
-  "Llama.Color": ["BROWN", "CREAMY", "GRAY", "WHITE"],
+  "Llama.Color": [
+    "BROWN",
+    "CREAMY",
+    "GRAY",
+    "WHITE"
+  ],
   "Pose": [
     "CROAKING",
     "DIGGING",
@@ -293,21 +281,9 @@
     "ADD_NUMBER",
     "ADD_SCALAR"
   ],
-  "InteractionHand": ["MAIN_HAND", "OFF_HAND"],
-  "Attribute": [
-    "GENERIC_ARMOR",
-    "GENERIC_ARMOR_TOUGHNESS",
-    "GENERIC_ATTACK_DAMAGE",
-    "GENERIC_ATTACK_KNOCKBACK",
-    "GENERIC_ATTACK_SPEED",
-    "GENERIC_FLYING_SPEED",
-    "GENERIC_FOLLOW_RANGE",
-    "GENERIC_KNOCKBACK_RESISTANCE",
-    "GENERIC_LUCK",
-    "GENERIC_MAX_HEALTH",
-    "GENERIC_MOVEMENT_SPEED",
-    "HORSE_JUMP_STRENGTH",
-    "ZOMBIE_SPAWN_REINFORCEMENTS"
+  "InteractionHand": [
+    "MAIN_HAND",
+    "OFF_HAND"
   ],
   "EnderDragon.Phase": [
     "BREATH_ATTACK",
@@ -322,9 +298,17 @@
     "SEARCH_FOR_BREATH_ATTACK_TARGET",
     "STRAFING"
   ],
-  "ReportCatcher.ReportType": ["WARNING", "ERROR", "ALL"],
-  "Report.Type": ["WARNING", "ERROR", "FATAL"],
-  "Billboard": ["CENTER", "FIXED", "HORIZONTAL", "VERTICAL"],
+  "Report.Type": [
+    "WARNING",
+    "ERROR",
+    "FATAL"
+  ],
+  "Billboard": [
+    "CENTER",
+    "FIXED",
+    "HORIZONTAL",
+    "VERTICAL"
+  ],
   "ItemDisplay.ItemDisplayTransform": [
     "FIRSTPERSON_LEFTHAND",
     "FIRSTPERSON_RIGHTHAND",
@@ -345,9 +329,22 @@
     "SEARCHING",
     "SNIFFING"
   ],
-  "TextDisplay.TextAlignment": ["CENTER", "LEFT", "RIGHT"],
-  "DecoratedPot.Side": ["BACK", "FRONT", "LEFT", "RIGHT"],
-  "TextDecoration.State": ["FALSE", "NOT_SET", "TRUE"],
+  "TextDisplay.TextAlignment": [
+    "CENTER",
+    "LEFT",
+    "RIGHT"
+  ],
+  "DecoratedPot.Side": [
+    "BACK",
+    "FRONT",
+    "LEFT",
+    "RIGHT"
+  ],
+  "TextDecoration.State": [
+    "FALSE",
+    "NOT_SET",
+    "TRUE"
+  ],
   "SoundSource": [
     "AMBIENT",
     "BLOCK",
@@ -360,13 +357,48 @@
     "VOICE",
     "WEATHER"
   ],
-  "ParticleCubeType": ["SOLID", "HOLLOW", "WIREFRAME"],
-  "WeatheringCopperState": ["UNAFFECTED", "EXPOSED", "WEATHERED", "OXIDIZED"],
-  "TriState": ["TRUE", "FALSE", "NOT_SET"],
-  "CopperGolemStatue.Pose": ["STANDING", "SITTING", "RUNNING", "STAR"],
-  "CreakingHeart.State": ["UPROOTED", "DORMANT", "AWAKE"],
-  "PotentSulfur.State": ["DRY", "WET", "DORMANT", "ERUPTING", "CONTINUOUS"],
-  "DecoratedPot.WobbleStyle": ["POSITIVE", "NEGATIVE"],
-  "CookingBookCategory": ["FOOD", "BLOCKS", "MISC"],
-  "CraftingBookCategory": ["BUILDING", "REDSTONE", "EQUIPMENT", "MISC"]
+  "WeatheringCopperState": [
+    "UNAFFECTED",
+    "EXPOSED",
+    "WEATHERED",
+    "OXIDIZED"
+  ],
+  "TriState": [
+    "TRUE",
+    "FALSE",
+    "NOT_SET"
+  ],
+  "CopperGolemStatue.Pose": [
+    "STANDING",
+    "SITTING",
+    "RUNNING",
+    "STAR"
+  ],
+  "CreakingHeart.State": [
+    "UPROOTED",
+    "DORMANT",
+    "AWAKE"
+  ],
+  "PotentSulfur.State": [
+    "DRY",
+    "WET",
+    "DORMANT",
+    "ERUPTING",
+    "CONTINUOUS"
+  ],
+  "DecoratedPot.WobbleStyle": [
+    "POSITIVE",
+    "NEGATIVE"
+  ],
+  "CookingBookCategory": [
+    "FOOD",
+    "BLOCKS",
+    "MISC"
+  ],
+  "CraftingBookCategory": [
+    "BUILDING",
+    "REDSTONE",
+    "EQUIPMENT",
+    "MISC"
+  ]
 }

@@ -1,28 +1,27 @@
 import { promises as fs } from 'fs';
-import path from 'path';
 
 import {
   info,
   success,
   toPrettyPrintJson,
-  CACHE_TRIGGERS_FILE,
   EVENTS_FILE,
   removeComments,
   CachedIcon,
   error,
   matches,
   EVENT_ICONS_CACHE_FILE,
-  TRIGGER_MENUS_CACHE_DIR,
   Dictionary,
-  PATCHES_DIR,
   warn,
   extractIconTexture,
   loadCachedTextureValues,
+  extractValueTypeIcons,
+  getSourceFiles,
+  readSourceFile,
+  getImportedKotlinSources,
+  uncommentKotlinDeclarations,
 } from './common';
 
 ///////////////////////////////////////////////////////////////////////////////
-
-const EVENTS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'events.json');
 
 const MENU_TRIGGERS =
   /(?<!\.)trigger\(\s*Triggers\.(.*?),(.*?)(?=trigger|open|subcategory)/gms;
@@ -35,7 +34,7 @@ const MENU_TRIGGER_CATEGORY = /creative_plus.category.(.*)_event/;
 const STRING = /"(.*?)"/gms;
 
 type EventMenuIcon = CachedIcon & {
-  category: string;
+  category: string | null;
   cancellable: boolean;
   worksWith: string[];
   additionalInfo: string[];
@@ -46,15 +45,20 @@ const getStrings = (content: string, regex: RegExp) =>
 
 const extractTriggerMenuIcons = (
   triggerMenuFile: string,
-  patches: Dictionary,
-  textureValues: Record<string, string>
+  valueTypeIcons: Record<string, string>,
+  textureValues: Record<string, string>,
+  importedSources: string[]
 ) => {
   const category = triggerMenuFile.match(MENU_TRIGGER_CATEGORY)?.[1] || null;
 
   return matches(triggerMenuFile, MENU_TRIGGERS).reduce<
     Dictionary<EventMenuIcon>
   >((acc, [, name, iconPart]) => {
-    const match = iconPart.match(MENU_TRIGGER_MATERIAL);
+    const match =
+      iconPart.match(MENU_TRIGGER_MATERIAL) ||
+      importedSources
+        .map((source) => source.match(MENU_TRIGGER_MATERIAL))
+        .find(Boolean);
 
     if (!match) {
       error(`Could not extract icon metadata for trigger: ${name}`);
@@ -64,9 +68,7 @@ const extractTriggerMenuIcons = (
     const material =
       match[1] ||
       match[3] ||
-      (match[4]
-        ? patches[match[4].toLowerCase()]?.icon?.material
-        : undefined);
+      (match[4] ? valueTypeIcons[match[4]] : undefined);
 
     const amount = Number(match[2]) || 1;
 
@@ -85,7 +87,6 @@ const extractTriggerMenuIcons = (
     const additionalInfo = getStrings(iconPart, ADDITIONAL_INFO_KEYS);
     const texture = extractIconTexture(iconPart, textureValues);
     const id = name.toLowerCase();
-    const patch = patches[id];
 
     return {
       ...acc,
@@ -100,7 +101,6 @@ const extractTriggerMenuIcons = (
         worksWith,
         additionalInfo,
         ...(texture ? { texture } : {}),
-        ...(patch ? patch.icon : {}),
       },
     };
   }, {});
@@ -113,24 +113,25 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
 (async () => {
   info('caching event icons...');
 
-  const triggerMenuFiles = await fs.readdir(TRIGGER_MENUS_CACHE_DIR);
+  const triggerMenuFiles = await getSourceFiles('editor/menu/trigger');
 
-  const patches: Dictionary = JSON.parse(
-    await fs.readFile(EVENTS_PATCHES_FILE, 'utf-8')
-  );
+  const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
 
   let icons: Dictionary<EventMenuIcon> = {};
   await Promise.all(
     triggerMenuFiles.map(async (file) => {
-      const triggersMenuFile = (await fs.readFile(
-        path.resolve(TRIGGER_MENUS_CACHE_DIR, file),
-        'utf-8'
-      )).replace(/^\s*\/\/\s?/gm, '');
+      const triggersMenuFile = file.content.replace(/^\s*\/\/\s?/gm, '');
+      const importedSources = await getImportedKotlinSources(file.content);
 
       icons = {
         ...icons,
-        ...extractTriggerMenuIcons(triggersMenuFile, patches, textureValues),
+        ...extractTriggerMenuIcons(
+          triggersMenuFile,
+          valueTypeIcons,
+          textureValues,
+          importedSources
+        ),
       };
     })
   );
@@ -140,7 +141,9 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
   info('extracting events...');
 
   const triggers = removeComments(
-    await fs.readFile(CACHE_TRIGGERS_FILE, 'utf-8')
+    uncommentKotlinDeclarations(
+      await readSourceFile('core/trigger/Triggers.kt')
+    )
   );
 
   const events = Array.from(triggers.matchAll(REGISTERED_EVENT_REGEX))
@@ -150,13 +153,19 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
       let icon = icons[name];
 
       if (!icon) {
-        const patch = patches[id];
-        if (patch && patch.icon) {
-          icon = patch.icon;
-        } else {
-          warn('Not found icon for event', id);
-          return { id };
-        }
+        warn(`Not found menu icon for event: ${id}; using an empty icon`);
+        icons[name] = {
+          id,
+          type: 'event',
+          material: 'AIR',
+          amount: 1,
+          hasGlint: false,
+          category: null,
+          cancellable: false,
+          worksWith: [],
+          additionalInfo: [],
+        };
+        return { id };
       }
 
       icon.id = id;

@@ -7,12 +7,9 @@ import {
   success,
   toPrettyPrintJson,
   GAME_VALUES_FILE,
-  CACHE_GAME_VALUES_FILE,
   removeComments,
-  CACHE_GAME_VALUES_MENU_FILE,
   matches,
   error,
-  PATCHES_DIR,
   exitIfAnyErrors,
   Dictionary,
   CachedIcon,
@@ -20,14 +17,16 @@ import {
   extractValueTypeIcons,
   extractIconTexture,
   loadCachedTextureValues,
+  readSourceFile,
+  getImportedKotlinSources,
+  uncommentKotlinDeclarations,
+  warn,
 } from './common';
 
 import { ValueTypes, valueTypeFromInternal } from '../src/types/ValueType';
 import GameValue from '../src/types/GameValue';
 
 ///////////////////////////////////////////////////////////////////////////////
-
-const GAME_VALUES_PATCHES_FILE = path.resolve(PATCHES_DIR, 'game_values.json');
 
 const MENU_GAME_VALUES =
   /(?<!\.)addGameValue\(\s*GameValues\.(.*?),(.*?)(?=add(?:G|Q))/gms;
@@ -45,12 +44,16 @@ const extractGameValueMenuIcons = (
   gameValueMenuFile: string,
   valueTypeIcons: Record<string, string>,
   textureValues: Record<string, string>,
-  patches: Dictionary
+  importedSources: string[]
 ) => {
   const icons = matches(gameValueMenuFile, MENU_GAME_VALUES).reduce<
     Dictionary<GameValueMenuIcon>
   >((acc, [, name, iconPart]) => {
-    const match = iconPart.match(MENU_GAME_VALUE_MATERIAL);
+    const match =
+      iconPart.match(MENU_GAME_VALUE_MATERIAL) ||
+      importedSources
+        .map((source) => source.match(MENU_GAME_VALUE_MATERIAL))
+        .find(Boolean);
 
     if (!match) {
       error(`Could not extract icon metadata for game value: ${name}`);
@@ -79,38 +82,19 @@ const extractGameValueMenuIcons = (
       STRING
     ).map(([, key]) => key);
     const texture = extractIconTexture(iconPart, textureValues);
-    const id = name.toLowerCase();
-    const patch = patches[id];
-
     return {
       ...acc,
       [name]: {
-        id,
+        id: name.toLowerCase(),
         type: 'game_value',
         material,
         amount,
         hasGlint,
         worksWith,
         ...(texture ? { texture } : {}),
-        ...(patch ? patch.icon : {}),
       },
     };
   }, {});
-
-  Object.entries(patches).forEach(([id, patch]) => {
-    const name = id.toUpperCase();
-    if (icons[name] || !patch.icon?.material) return;
-
-    icons[name] = {
-      id,
-      type: 'game_value',
-      material: patch.icon.material,
-      amount: patch.icon.amount || 1,
-      hasGlint: patch.icon.hasGlint || false,
-      worksWith: [],
-      ...patch.icon,
-    };
-  });
 
   return icons;
 };
@@ -119,17 +103,59 @@ const extractGameValueMenuIcons = (
 
 const REGISTERED_GAME_VALUES =
   /val\s*(.*?)\s*=\s*register\("(.*)",\s*ValueTypes.([\w]*)/g;
+const NEXT_GAME_VALUE = /^[ \t]{4}val\s+[A-Z][A-Z0-9_]*\s*=\s*register\(/gm;
+const VALUE_CONTAINER_TYPE =
+  /DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
+const MAP_CONTAINER_TYPES =
+  /result\s*\[\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)[\s\S]*?\]\s*=\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
+const MAP_KEY_TYPE =
+  /result\s*\[\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
+
+const inferGameValueCollectionTypes = (type: string, body: string) => {
+  const valueTypes = matches(body, VALUE_CONTAINER_TYPE)
+    .map(([, type]) => valueTypeFromInternal(type))
+    .filter((type): type is NonNullable<typeof type> => Boolean(type));
+
+  if (type === ValueTypes.LIST) {
+    const nonNumericTypes = valueTypes.filter((type) => type !== 'number');
+    const itemTypes = [...new Set(nonNumericTypes.length ? nonNumericTypes : valueTypes)];
+    return {
+      elementType: itemTypes.length === 1 ? itemTypes[0] : 'any',
+    };
+  }
+
+  if (type === ValueTypes.DICTIONARY) {
+    const entries = matches(body, MAP_CONTAINER_TYPES).map(([, key, value]) => [
+      valueTypeFromInternal(key),
+      valueTypeFromInternal(value),
+    ]);
+    const keyTypes = [
+      ...new Set(
+        matches(body, MAP_KEY_TYPE)
+          .map(([, key]) => valueTypeFromInternal(key))
+          .filter(Boolean)
+      ),
+    ];
+    const entryValueTypes = [
+      ...new Set(entries.map(([, value]) => value).filter(Boolean)),
+    ];
+
+    return {
+      keyType: keyTypes.length === 1 ? keyTypes[0] : 'any',
+      valueType: entryValueTypes.length === 1 ? entryValueTypes[0] : 'any',
+    };
+  }
+
+  return {};
+};
 
 (async () => {
   info('caching game value icons...');
 
-  const gameValuesMenuFile = removeComments(
-    await fs.readFile(CACHE_GAME_VALUES_MENU_FILE, 'utf-8')
-  );
-
-  const patches: Dictionary = JSON.parse(
-    await fs.readFile(GAME_VALUES_PATCHES_FILE, 'utf-8')
-  );
+  const gameValuesMenuFile = (
+    await readSourceFile('editor/menu/gamevalue/GameValuesMenu.kt')
+  ).replace(/^\s*\/\/\s?/gm, '');
+  const importedSources = await getImportedKotlinSources(gameValuesMenuFile);
 
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
@@ -137,29 +163,37 @@ const REGISTERED_GAME_VALUES =
     gameValuesMenuFile,
     valueTypeIcons,
     textureValues,
-    patches
+    importedSources
   );
-  await fs.writeFile(GAME_VALUE_ICONS_CACHE_FILE, toPrettyPrintJson(menuIcons));
 
   success('cached game value icons');
 
   info('extracting game values...');
 
   const gameValuesFile = removeComments(
-    await fs.readFile(CACHE_GAME_VALUES_FILE, 'utf-8')
+    uncommentKotlinDeclarations(
+      await readSourceFile('core/value/GameValue.kt')
+    )
   );
 
-  const registeredGameValues = matches(
-    gameValuesFile,
-    REGISTERED_GAME_VALUES
-  ).map(([, name, id, _type]) => {
+  const declarations = matches(gameValuesFile, REGISTERED_GAME_VALUES);
+  const registeredGameValues = declarations.map((declaration, index) => {
+    const [, name, id, _type] = declaration;
     const type = valueTypeFromInternal(_type);
     if (!type) error(`Unknown internal type: ${_type}`);
+    const bodyStart = declaration.index! + declaration[0].length;
+    const nextDeclaration = NEXT_GAME_VALUE.exec(
+      gameValuesFile.slice(bodyStart)
+    );
+    NEXT_GAME_VALUE.lastIndex = 0;
+    const bodyEnd = nextDeclaration?.index ?? gameValuesFile.length - bodyStart;
+    const body = gameValuesFile.slice(bodyStart, bodyStart + bodyEnd);
 
     return {
       id,
       name,
       type: type!,
+      ...inferGameValueCollectionTypes(type!, body),
     };
   });
 
@@ -168,25 +202,36 @@ const REGISTERED_GAME_VALUES =
   /////////////////////////////////////////////////////////////////////////////
 
   const gameValues = registeredGameValues.map((_gameValue) => {
-    const icon = menuIcons[_gameValue.name];
+    let icon = menuIcons[_gameValue.name];
 
     if (!icon) {
-      error(`Could not find menu icon for game value: ${_gameValue.id}`);
+      warn(
+        `Could not find menu icon for game value: ${_gameValue.id}; using an empty icon`
+      );
+      icon = {
+        id: _gameValue.id,
+        type: 'game_value',
+        material: 'AIR',
+        amount: 1,
+        hasGlint: false,
+        worksWith: [],
+      };
+      menuIcons[_gameValue.name] = icon;
     }
 
     let gameValue = {
       id: _gameValue.id,
       type: _gameValue.type,
+      ...('elementType' in _gameValue
+        ? { elementType: _gameValue.elementType }
+        : {}),
+      ...('keyType' in _gameValue
+        ? { keyType: _gameValue.keyType, valueType: _gameValue.valueType }
+        : {}),
       ...(icon?.worksWith?.length
         ? { worksWith: icon.worksWith }
         : {}),
     } as GameValue;
-
-    const patch = patches[_gameValue.id];
-    if (patch) {
-      const { icon: _icon, ...gameValuePatch } = patch;
-      gameValue = { ...gameValue, ...gameValuePatch };
-    }
 
     if (gameValue.type === ValueTypes.DICTIONARY)
       if (!gameValue.keyType || !gameValue.valueType)
@@ -207,6 +252,7 @@ const REGISTERED_GAME_VALUES =
     return gameValue;
   });
 
+  await fs.writeFile(GAME_VALUE_ICONS_CACHE_FILE, toPrettyPrintJson(menuIcons));
   await fs.writeFile(GAME_VALUES_FILE, toPrettyPrintJson(gameValues));
 
   exitIfAnyErrors();

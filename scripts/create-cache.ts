@@ -4,187 +4,65 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { Gitlab } from '@gitbeaker/node';
 
-import {
-  CACHE_GAME_VALUES_FILE,
-  info,
-  success,
-  CACHE_TRIGGERS_FILE,
-  CACHE_GAME_VALUES_MENU_FILE,
-  CACHE_VALUE_TYPES_FILE,
-  ACTION_MENUS_CACHE_DIR,
-  TRIGGER_MENUS_CACHE_DIR,
-  ACTIONS_DIR,
-  ENUMS_CACHE_DIR,
-} from './common';
+import { info, SOURCE_CACHE_DIR, success } from './common';
 
 const PROJECT_ID = 21858804;
+const DOWNLOAD_CONCURRENCY = 8;
+const DOWNLOAD_ATTEMPTS = 3;
 const API = new Gitlab({
   token: process.env.GITLAB_TOKEN,
-  requestTimeout: 10_000,
+  requestTimeout: 30_000,
 });
 
-const IGNORED_ACTIONS = ['Actions.kt', 'DummyAction.kt'];
-const ACTIONS_FOLDER_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/action';
-const ENUMS_FOLDER_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/util/enums';
+const SOURCE_PATH =
+  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus';
 
-const IGNORED_ACTION_MENUS = [
-  'ActionMenuBuilder.kt',
-  'StartProcessMenu.kt',
-  'SelectActionMenu.kt',
-  'AllConditionalSelectionMenu.kt',
-  'EntityConditionalSelectionMenu.kt',
-  'PlayerConditionalSelectionMenu.kt',
-  'PlayerActionMenu.kt',
-  'IfPlayerActionMenu.kt',
-  'PlayerActionMenu.kt',
-  'GameActionMenu.kt',
-  'CallFunctionMenu.kt',
-];
-const ACTION_MENUS_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/editor/menu/action';
+const getFile = async (filePath: string) => {
+  let lastError: unknown;
 
-const TRIGGERS_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/core/trigger/Triggers.kt';
+  for (let attempt = 1; attempt <= DOWNLOAD_ATTEMPTS; attempt++) {
+    try {
+      return await API.RepositoryFiles.showRaw(PROJECT_ID, filePath);
+    } catch (error) {
+      lastError = error;
+      if (attempt < DOWNLOAD_ATTEMPTS)
+        await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
+    }
+  }
 
-const IGNORED_TRIGGER_MENUS = ['TriggerMenu.kt'];
-const TRIGGER_MENUS_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/editor/menu/trigger';
-
-const GAME_VALUES_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/core/value/GameValue.kt';
-
-const GAME_VALUES_MENU_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/editor/menu/gamevalue/GameValuesMenu.kt';
-
-const VALUE_TYPES_PATH =
-  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/core/value/ValueTypes.kt';
-
-const getFile = async (path: string) => {
-  return await API.RepositoryFiles.showRaw(PROJECT_ID, path);
+  throw new Error(`Failed to download ${filePath}`, { cause: lastError });
 };
 
 (async () => {
-  info('creating cache...');
-  info('fetching actions...');
+  info('fetching creative-plus source tree...');
 
-  const actionFiles = (
+  const sourceFiles = (
     await API.Repositories.tree(PROJECT_ID, {
-      path: ACTIONS_FOLDER_PATH,
-      recursive: true,
-    })
-  ).filter((file) => {
-    if (file.type !== 'blob') return false;
-
-    return !IGNORED_ACTIONS.some((ignored) => file.path.endsWith(ignored));
-  });
-
-  info('caching actions...');
-
-  await Promise.all(
-    actionFiles.map(async (file) => {
-      const content = await getFile(file.path);
-
-      return fs.writeFile(path.resolve(ACTIONS_DIR, file.name), content);
-    })
-  );
-
-  info('fetching enums...');
-
-  const enumFiles = (
-    await API.Repositories.tree(PROJECT_ID, {
-      path: ENUMS_FOLDER_PATH,
+      path: SOURCE_PATH,
       recursive: true,
     })
   ).filter((file) => file.type === 'blob');
 
-  info('caching enums...');
+  info(`caching ${sourceFiles.length} source files...`);
 
-  await Promise.all(
-    enumFiles.map(async (file) => {
-      const content = await getFile(file.path);
-
-      return fs.writeFile(path.resolve(ENUMS_CACHE_DIR, file.name), content);
-    })
+  let nextFileIndex = 0;
+  const downloadWorkers = Array.from(
+    { length: Math.min(DOWNLOAD_CONCURRENCY, sourceFiles.length) },
+    async () => {
+      while (nextFileIndex < sourceFiles.length) {
+        const file = sourceFiles[nextFileIndex++];
+        const relativePath = path.relative(SOURCE_PATH, file.path);
+        const targetPath = path.resolve(SOURCE_CACHE_DIR, relativePath);
+        await fs.mkdir(path.dirname(targetPath), { recursive: true });
+        await fs.writeFile(targetPath, await getFile(file.path));
+      }
+    }
   );
 
-  info('fetching action menus...');
+  await Promise.all(downloadWorkers);
 
-  const actionMenuFiles = (
-    await API.Repositories.tree(PROJECT_ID, {
-      path: ACTION_MENUS_PATH,
-      recursive: true,
-    })
-  ).filter((file) => {
-    if (file.type !== 'blob') return false;
-
-    return !IGNORED_ACTION_MENUS.some((ignored) =>
-      file.path.endsWith(`/${ignored}`)
-    );
-  });
-
-  info('caching action menus...');
-
-  await Promise.all(
-    actionMenuFiles.map(async (file) => {
-      const content = await getFile(file.path);
-
-      return fs.writeFile(
-        path.resolve(ACTION_MENUS_CACHE_DIR, file.name),
-        content
-      );
-    })
-  );
-
-  info('caching triggers...');
-
-  await fs.writeFile(CACHE_TRIGGERS_FILE, await getFile(TRIGGERS_PATH));
-
-  info('fetching trigger menus...');
-
-  const triggerMenuFiles = (
-    await API.Repositories.tree(PROJECT_ID, {
-      path: TRIGGER_MENUS_PATH,
-    })
-  ).filter((file) => {
-    if (file.type !== 'blob') return false;
-
-    return !IGNORED_TRIGGER_MENUS.some((ignored) =>
-      file.path.endsWith(ignored)
-    );
-  });
-
-  info('caching trigger menus...');
-
-  await Promise.all(
-    triggerMenuFiles.map(async (file) => {
-      const content = await getFile(file.path);
-
-      return fs.writeFile(
-        path.resolve(TRIGGER_MENUS_CACHE_DIR, file.name),
-        content
-      );
-    })
-  );
-
-  info('caching game values...');
-
-  await fs.writeFile(CACHE_GAME_VALUES_FILE, await getFile(GAME_VALUES_PATH));
-
-  info('caching game values menu...');
-
-  await fs.writeFile(
-    CACHE_GAME_VALUES_MENU_FILE,
-    await getFile(GAME_VALUES_MENU_PATH)
-  );
-
-  info('caching value types...');
-
-  await fs.writeFile(
-    CACHE_VALUE_TYPES_FILE,
-    await getFile(VALUE_TYPES_PATH)
-  );
-
-  success('created cache');
-})();
+  success('cached creative-plus source tree');
+})().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

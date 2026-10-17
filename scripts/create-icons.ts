@@ -12,6 +12,7 @@ import {
   ICONS_DIR,
   info,
   success,
+  warn,
   type CachedIcon,
 } from './common';
 
@@ -26,6 +27,10 @@ const SHADOW_COLOR = '#373737';
 const TEXT_COLOR = 'white';
 const DEFAULT_PLAYER_HEAD_ID =
   '31f477eb1a7beee631c2ca64d06f8f68fa93a3386d04452ab27f43acdf1b60cb';
+
+type IconWithCategory = CachedIcon & {
+  category?: string;
+};
 
 const DEFAULT_DEST_IMAGE_OPTIONS = {
   x: 0,
@@ -45,7 +50,7 @@ const HEAD_DEST_IMAGE_OPTIONS = {
 
 const canvas = createCanvas(SIZE, SIZE);
 const context = canvas.getContext('2d');
-context.font = `${FONT_SIZE}px Minecraft Seven`;
+context.font = `${FONT_SIZE}px Minecraft`;
 
 const offCanvas = createCanvas(SIZE, SIZE);
 const offContext = offCanvas.getContext('2d');
@@ -88,6 +93,11 @@ const loadIcon = async (url: string) => {
 };
 
 const drawIcon = async (icon: CachedIcon) => {
+  if (icon.material === 'AIR') {
+    context.clearRect(0, 0, SIZE, SIZE);
+    return canvas.toBuffer();
+  }
+
   let url: string;
   let destinationOpts = DEFAULT_DEST_IMAGE_OPTIONS;
 
@@ -153,7 +163,7 @@ const drawIcon = async (icon: CachedIcon) => {
 
   await Promise.all(
     iconsDir.map(async (categoryFile) => {
-      const icons: Dictionary<CachedIcon> = JSON.parse(
+      const icons: Dictionary<IconWithCategory> = JSON.parse(
         await fs.readFile(path.resolve(ICONS_CACHE_DIR, categoryFile), 'utf-8')
       );
 
@@ -167,7 +177,21 @@ const drawIcon = async (icon: CachedIcon) => {
         Object.values(icons).map(async (icon) => {
           const iconPath = path.resolve(categoryDir, `${icon.id}.png`);
 
-          if (icon.material !== 'PLAYER_HEAD' && await fileExists(iconPath))
+          if (category === 'actions' && icon.material === 'AIR' && icon.category) {
+            const categoryIconPath = path.resolve(
+              categoryDir,
+              'categories',
+              `${icon.category}.png`
+            );
+            if (await fileExists(categoryIconPath))
+              return fs.copyFile(categoryIconPath, iconPath);
+          }
+
+          if (
+            icon.material !== 'PLAYER_HEAD' &&
+            icon.material !== 'AIR' &&
+            (await fileExists(iconPath))
+          )
             return;
           const picture = await drawIcon(icon);
           if (!picture) return;
@@ -184,8 +208,14 @@ const drawIcon = async (icon: CachedIcon) => {
 
   info('creating extra icons...');
 
+  const extraIconsFile = path.resolve(ICONS_DIR, 'extra_icons.json');
+  if (!(await fileExists(extraIconsFile))) {
+    warn('skipping extra icons; icons/extra_icons.json is missing');
+    return;
+  }
+
   const extraIcons: (CachedIcon & { path: string })[] = JSON.parse(
-    await fs.readFile(path.resolve(ICONS_DIR, 'extra_icons.json'), 'utf-8')
+    await fs.readFile(extraIconsFile, 'utf-8')
   );
 
   await Promise.all(
@@ -197,5 +227,5 @@ const drawIcon = async (icon: CachedIcon) => {
     })
   );
 
-  success(`created all icons`);
+  success('created all icons');
 })();

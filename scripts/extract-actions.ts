@@ -3,7 +3,6 @@ import chalk from 'chalk';
 import path from 'path';
 
 import {
-  ACTIONS_DIR,
   PATCHES_DIR,
   error,
   exitIfAnyErrors,
@@ -15,12 +14,14 @@ import {
   toPrettyPrintJson,
   matches,
   CachedIcon,
-  ACTION_MENUS_CACHE_DIR,
   ACTION_ICONS_CACHE_FILE,
   extractValueTypeIcons,
   extractIconTexture,
   loadCachedTextureValues,
-  ENUMS_CACHE_DIR,
+  getSourceFiles,
+  getImportedKotlinSources,
+  uncommentKotlinDeclarations,
+  warn,
 } from './common';
 
 import { naiveActionTypeFromId } from '../src/types/Action';
@@ -32,10 +33,9 @@ import ActionArgument, {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+const ACTION_NAME = /object\s*(.*?)\s*:.*?"(.*?)"/gms;
 const ACTIONS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'actions.json');
 const ENUMS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'enums.json');
-
-const ACTION_NAME = /object\s*(.*?)\s*:.*?"(.*?)"/gms;
 
 const ARGUMENT =
   /val\s+.*?\s+by\s+([a-z]+(?:[A-Z](?!ist)[a-z]*)?)(List)?<?([^<>(){}]*)>?\("(.*?)"(?:(?:,\s*(false))|(?:.*))\)\s*{((?:.|\n)*?)(?=^[ \t]{4}\})/gm;
@@ -65,6 +65,7 @@ const ADDITIONAL_INFO_KEYS = /additionalInfoKeys\s*=\s*(.*?)\)/;
 const STRING = /"(.*?)"/gms;
 
 type ActionMenuIcon = CachedIcon & {
+  category?: string;
   subcategory: string | null;
   worksWith: string[];
   additionalInfo: string[];
@@ -75,8 +76,10 @@ const getStrings = (content: string, regex: RegExp) =>
 
 const extractActionMenuIcons = (
   actionMenuFile: string,
+  actionNames: Set<string>,
   valueTypeIcons: Record<string, string>,
-  textureValues: Record<string, string>
+  textureValues: Record<string, string>,
+  importedSources: string[]
 ) => {
   const subcategory =
     actionMenuFile.match(MENU_ACTION_SUBCATEGORY)?.[1] || null;
@@ -84,7 +87,13 @@ const extractActionMenuIcons = (
   return matches(actionMenuFile, MENU_ACTIONS).reduce<
     Dictionary<ActionMenuIcon>
   >((acc, [, name, iconPart]) => {
-    const match = iconPart.match(MENU_ACTION_MATERIAL);
+    if (!actionNames.has(name)) return acc;
+
+    const match =
+      iconPart.match(MENU_ACTION_MATERIAL) ||
+      importedSources
+        .map((source) => source.match(MENU_ACTION_MATERIAL))
+        .find(Boolean);
 
     if (!match) {
       error(`Could not extract icon metadata for action: ${name}`);
@@ -166,7 +175,7 @@ const getArguments = (
   content: string
 ) => {
   const _args = matches(content, ARGUMENT);
-  const _enums: Enums = { ...getEnums(content), ...enums };
+  const _enums: Enums = { ...enums, ...getEnums(content) };
 
   return _args.map<ActionArgument>(
     ([argumentDeclaration, type, plural, enumName, id, bool, body]) => {
@@ -238,40 +247,29 @@ const getArguments = (
       }
 
       if (argumentType === ActionArgumentTypes.LIST) {
-        if (!args[id] || !('elementType' in args[id]))
-          return error(
-            `Coudln't find required ${chalk.yellow(
-              'element type'
-            )} of array argument ${chalk.cyan(id)} in action ${action}`
-          );
-
         return {
           id,
           plural: false,
           type: argumentType,
           valueSlots,
           descriptionSlots,
-          elementType: args[id].elementType,
+          elementType: args[id]?.elementType || 'any',
           ...args[id],
         };
       }
 
       if (argumentType === ActionArgumentTypes.DICTIONARY) {
-        if (!args[id] || !('keyType' in args[id]) || !('valueType' in args[id]))
-          return error(
-            `Coudln't find required ${chalk.yellow(
-              'key and value types'
-            )} of dictionary argument ${chalk.cyan(id)} in action ${action}`
-          );
-
         return {
           id,
           plural: false,
           type: argumentType,
           valueSlots,
           descriptionSlots,
-          keyType: args[id].keyType,
-          valueType: args[id].valueType,
+          keyType:
+            type.toLowerCase() === 'parameters'
+              ? 'text'
+              : args[id]?.keyType || 'any',
+          valueType: args[id]?.valueType || 'any',
           ...args[id],
         };
       }
@@ -295,24 +293,41 @@ const getArguments = (
 (async () => {
   info('caching action icons...');
 
-  const actionMenuFiles = await fs.readdir(ACTION_MENUS_CACHE_DIR);
+  const actionFiles = (await getSourceFiles('action')).filter((file) => {
+    ACTION_NAME.lastIndex = 0;
+    const action = matches(
+      uncommentKotlinDeclarations(file.content),
+      ACTION_NAME
+    )[0];
+    return Boolean(action && !action[2].includes('dummy'));
+  });
+  const actionNames = new Set(
+    actionFiles.flatMap((file) => {
+      const action = matches(
+        uncommentKotlinDeclarations(file.content),
+        ACTION_NAME
+      )[0];
+      return action ? [action[1]] : [];
+    })
+  );
+  const actionMenuFiles = await getSourceFiles('editor/menu/action');
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
 
   let icons: Dictionary<ActionMenuIcon> = {};
   await Promise.all(
     actionMenuFiles.map(async (file) => {
-      const actionsMenuFile = (await fs.readFile(
-        path.resolve(ACTION_MENUS_CACHE_DIR, file),
-        'utf-8'
-      )).replace(/^\s*\/\/\s?/gm, '');
+      const actionsMenuFile = file.content.replace(/^\s*\/\/\s?/gm, '');
+      const importedSources = await getImportedKotlinSources(file.content);
 
       icons = {
         ...icons,
         ...extractActionMenuIcons(
           actionsMenuFile,
+          actionNames,
           valueTypeIcons,
-          textureValues
+          textureValues,
+          importedSources
         ),
       };
     })
@@ -324,71 +339,64 @@ const getArguments = (
 
   info('extracting actions...');
 
-  const actionFiles = await fs.readdir(ACTIONS_DIR);
-
   /////////////////////////////////////////////////////////////////////////////
 
-  const patches: Dictionary = JSON.parse(
-    await fs.readFile(ACTIONS_PATCHES_FILE, 'utf-8')
+  const enumFiles = await getSourceFiles('');
+  const cachedEnums = enumFiles.map((file) =>
+    getEnums(removeComments(file.content))
   );
-
-  const enumFiles = await fs.readdir(ENUMS_CACHE_DIR);
-  const cachedEnums = await Promise.all(
-    enumFiles.map(async (file) =>
-      getEnums(
-        removeComments(
-          await fs.readFile(path.resolve(ENUMS_CACHE_DIR, file), 'utf-8')
-        )
-      )
-    )
-  );
-
   const patchedEnums: Enums = JSON.parse(
     await fs.readFile(ENUMS_PATCHES_FILE, 'utf-8')
   );
   const enums = Object.assign({}, ...cachedEnums, patchedEnums);
-
+  const actionPatches: Dictionary = JSON.parse(
+    await fs.readFile(ACTIONS_PATCHES_FILE, 'utf-8')
+  );
   const actions = await Promise.all(
     actionFiles.map(async (file) => {
       const contents = removeComments(
-        await fs.readFile(path.resolve(ACTIONS_DIR, file), 'utf-8')
+        uncommentKotlinDeclarations(file.content)
       );
 
       const ni = matches(contents, ACTION_NAME)[0];
-      if (!ni) return error(`Could not find action in file: ${file}`);
+      if (!ni)
+        return error(`Could not find action in file: ${path.basename(file.path)}`);
       const [, name, id] = ni;
-      const { icon: patchIcon, args, ...patch } = patches[id] || {};
-
-      if (!icons[name]) {
-        if (!patchIcon)
-          return error(
-            `Could not find ${chalk.cyan('icon')} for action: ${id}`
-          );
-
-        icons[name] = patchIcon;
-        icons[name].type = 'action';
-      } else if (patchIcon) {
-        icons[name] = { ...icons[name], ...patchIcon };
-      }
-
-      icons[name].id = id;
-      const icon = icons[name];
-
       const ct = naiveActionTypeFromId(id);
       if (!ct) return error(`Could not find category for action: ${id}`);
       const [category, type] = ct;
+      let icon = icons[name];
+
+      if (!icon) {
+        warn(`Could not find menu icon for action: ${id}; using an empty icon`);
+        icon = {
+          id,
+          type: 'action',
+          category,
+          material: 'AIR',
+          amount: 1,
+          hasGlint: false,
+          subcategory: null,
+          worksWith: [],
+          additionalInfo: [],
+        };
+        icons[name] = icon;
+      } else {
+        icon.id = id;
+      }
+
+      const actionType = actionPatches[id]?.type || type;
 
       return {
         id,
         category,
         subcategory: icon?.subcategory || null,
-        type,
-        args: getArguments(id, enums, args || {}, contents),
+        type: actionType,
+        args: getArguments(id, enums, {}, contents),
         ...(icon?.worksWith?.length ? { worksWith: icon.worksWith } : {}),
         ...(icon?.additionalInfo?.length
           ? { additionalInfo: icon.additionalInfo }
           : {}),
-        ...patch,
       };
     })
   );

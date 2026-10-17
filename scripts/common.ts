@@ -12,6 +12,12 @@ const COMMENT_REGEX = /\/\/.*/g;
 export const removeComments = (contents: string) =>
   contents.replace(COMMENT_REGEX, '');
 
+export const uncommentKotlinDeclarations = (contents: string) =>
+  contents.replace(
+    /^([ \t]*)\/\/\s?(?=(?:val\s+\w+\s*=\s*register\b|object\s+\w+\s*:[^\n]*\w*(?:Action|Trigger)\b|val\s+\w+\s+by\s+\w+\s*\())/gm,
+    '$1'
+  );
+
 export type Dictionary<T = Record<any, any>> = {
   [key: string]: T;
 };
@@ -59,20 +65,89 @@ export const exitIfAnyErrors = () => {
 
 export const CACHE_DIR = path.resolve(__dirname, '../.cache');
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
+export const PATCHES_DIR = path.resolve(__dirname, '../patches');
 
-export const ACTIONS_DIR = path.resolve(CACHE_DIR, 'actions');
-if (!fs.existsSync(ACTIONS_DIR)) fs.mkdirSync(ACTIONS_DIR);
+export const SOURCE_CACHE_DIR = path.resolve(CACHE_DIR, 'creative-plus');
+export const SOURCE_ROOT = SOURCE_CACHE_DIR;
 
-export const ENUMS_CACHE_DIR = path.resolve(CACHE_DIR, 'enums');
-if (!fs.existsSync(ENUMS_CACHE_DIR)) fs.mkdirSync(ENUMS_CACHE_DIR);
+export type KotlinSourceFile = {
+  path: string;
+  content: string;
+};
 
-export const CACHE_TRIGGERS_FILE = path.resolve(CACHE_DIR, 'Triggers.kt');
-export const CACHE_GAME_VALUES_FILE = path.resolve(CACHE_DIR, 'GameValues.kt');
-export const CACHE_GAME_VALUES_MENU_FILE = path.resolve(
-  CACHE_DIR,
-  'GameValuesMenu.kt'
-);
-export const CACHE_VALUE_TYPES_FILE = path.resolve(CACHE_DIR, 'ValueTypes.kt');
+let allSourceFiles: Promise<KotlinSourceFile[]> | undefined;
+
+export async function getKotlinFiles(
+  directory = SOURCE_ROOT
+): Promise<string[]> {
+  const entries = await fs.promises.readdir(directory, { withFileTypes: true });
+  const files: string[][] = await Promise.all(
+    entries.map(async (entry): Promise<string[]> => {
+      const filePath = path.resolve(directory, entry.name);
+      if (entry.isDirectory()) return getKotlinFiles(filePath);
+      if (!entry.isFile() || path.extname(entry.name) !== '.kt') return [];
+      return [filePath];
+    })
+  );
+
+  return files.flat();
+}
+
+export const sourcePath = (relativePath: string) =>
+  path.resolve(SOURCE_ROOT, relativePath);
+
+export const readSourceFile = (relativePath: string) =>
+  fs.promises.readFile(sourcePath(relativePath), 'utf8');
+
+export async function getSourceFiles(relativePath: string) {
+  const files = await getKotlinFiles(sourcePath(relativePath));
+  return Promise.all(
+    files.map(async (filePath) => ({
+      path: filePath,
+      content: await fs.promises.readFile(filePath, 'utf8'),
+    }))
+  );
+}
+
+export async function getImportedKotlinSources(contents: string) {
+  const imports = [
+    ...contents.matchAll(/^\s*import\s+([\w.*]+)(?:\s+as\s+(\w+))?/gm),
+  ].map(([, importPath, alias]) => ({
+    packageName: importPath.endsWith('.*')
+      ? importPath.slice(0, -2)
+      : importPath.slice(0, importPath.lastIndexOf('.')),
+    name: alias || importPath.split('.').pop()!,
+    wildcard: importPath.endsWith('.*'),
+  }));
+
+  if (imports.length === 0) return [];
+
+  allSourceFiles ??= (async () => {
+    const files = await getKotlinFiles();
+    return Promise.all(
+      files.map(async (filePath) => ({
+        path: filePath,
+        content: await fs.promises.readFile(filePath, 'utf8'),
+      }))
+    );
+  })();
+
+  const sourceFiles = await allSourceFiles;
+  return sourceFiles
+    .filter((file) => {
+      const packageName = file.content.match(/^\s*package\s+([\w.]+)/m)?.[1];
+      return imports.some(
+        (item) =>
+          packageName === item.packageName &&
+          (item.wildcard ||
+            path.basename(file.path, '.kt') === item.name ||
+            new RegExp(
+              `\\b(?:object|class|interface|enum\\s+class|val|fun)\\s+${item.name}\\b`
+            ).test(file.content))
+      );
+    })
+    .map((file) => file.content);
+}
 
 export const extractTextureValues = (contents: string[]) => {
   const values: Record<string, string> = {};
@@ -126,27 +201,16 @@ export const extractIconTexture = (
 };
 
 export async function loadCachedTextureValues(): Promise<Record<string, string>> {
-  const cachedDirectories = [
-    ACTIONS_DIR,
-    ACTION_MENUS_CACHE_DIR,
-    TRIGGER_MENUS_CACHE_DIR,
-  ];
-  const cachedFiles = [CACHE_GAME_VALUES_MENU_FILE];
-
-  for (const directory of cachedDirectories) {
-    const files = await fs.promises.readdir(directory);
-    cachedFiles.push(...files.map((file) => path.resolve(directory, file)));
-  }
-
+  const files = await getKotlinFiles();
   const contents = await Promise.all(
-    cachedFiles.map((file) => fs.promises.readFile(file, 'utf8'))
+    files.map((file) => fs.promises.readFile(file, 'utf8'))
   );
 
   return extractTextureValues(contents);
 }
 
 export async function extractValueTypeIcons(): Promise<Record<string, string>> {
-  const content = await fs.promises.readFile(CACHE_VALUE_TYPES_FILE, 'utf8');
+  const content = await readSourceFile('core/value/ValueTypes.kt');
   const icons: Record<string, string> = {};
 
   const declarationRegex = /val\s+([A-Z][A-Z0-9_]*)\s*=\s*register\s*\(/g;
@@ -194,27 +258,13 @@ export async function extractValueTypeIcons(): Promise<Record<string, string>> {
   return icons;
 }
 
-///////////////////////////////////////////////////////////////////////////////
-
-export const MENU_CACHE_DIR = path.resolve(CACHE_DIR, 'menu');
-if (!fs.existsSync(MENU_CACHE_DIR)) fs.mkdirSync(MENU_CACHE_DIR);
-
-export const ACTION_MENUS_CACHE_DIR = path.resolve(MENU_CACHE_DIR, 'actions');
-if (!fs.existsSync(ACTION_MENUS_CACHE_DIR))
-  fs.mkdirSync(ACTION_MENUS_CACHE_DIR);
-
-export const TRIGGER_MENUS_CACHE_DIR = path.resolve(MENU_CACHE_DIR, 'triggers');
-if (!fs.existsSync(TRIGGER_MENUS_CACHE_DIR))
-  fs.mkdirSync(TRIGGER_MENUS_CACHE_DIR);
-
-///////////////////////////////////////////////////////////////////////////////
-
 export const DATA_DIR = path.resolve(__dirname, '../data');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
 
 export const EVENTS_FILE = path.resolve(DATA_DIR, 'events.json');
 export const GAME_VALUES_FILE = path.resolve(DATA_DIR, 'game_values.json');
 export const ACTIONS_FILE = path.resolve(DATA_DIR, 'actions.json');
+export const OUTPUT_FILE = path.resolve(__dirname, '../src/index.ts');
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -235,13 +285,3 @@ export const ACTION_ICONS_CACHE_FILE = path.resolve(
 
 export const ICONS_DIR = path.resolve(__dirname, '../icons');
 if (!fs.existsSync(ICONS_DIR)) fs.mkdirSync(ICONS_DIR);
-
-export const OUTPUT_FILE = path.resolve(__dirname, '../src/index.ts');
-
-///////////////////////////////////////////////////////////////////////////////
-
-export const PATCHES_DIR = path.resolve(__dirname, '../patches');
-if (!fs.existsSync(PATCHES_DIR)) {
-  fs.mkdirSync(PATCHES_DIR);
-  error('No patches dir found!');
-}
