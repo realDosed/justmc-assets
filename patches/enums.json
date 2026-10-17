@@ -360,5 +360,13 @@
     "VOICE",
     "WEATHER"
   ],
-  "ParticleCubeType": ["SOLID", "HOLLOW", "WIREFRAME"]
+  "ParticleCubeType": ["SOLID", "HOLLOW", "WIREFRAME"],
+  "WeatheringCopperState": ["UNAFFECTED", "EXPOSED", "WEATHERED", "OXIDIZED"],
+  "TriState": ["TRUE", "FALSE", "NOT_SET"],
+  "CopperGolemStatue.Pose": ["STANDING", "SITTING", "RUNNING", "STAR"],
+  "CreakingHeart.State": ["UPROOTED", "DORMANT", "AWAKE"],
+  "PotentSulfur.State": ["DRY", "WET", "DORMANT", "ERUPTING", "CONTINUOUS"],
+  "DecoratedPot.WobbleStyle": ["POSITIVE", "NEGATIVE"],
+  "CookingBookCategory": ["FOOD", "BLOCKS", "MISC"],
+  "CraftingBookCategory": ["BUILDING", "REDSTONE", "EQUIPMENT", "MISC"]
 }

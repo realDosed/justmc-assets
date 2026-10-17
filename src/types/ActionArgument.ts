@@ -42,6 +42,9 @@ export const argumentTypeFromInternal = (
     return _value as ArgumentTypeFromInternal;
 
   if (_value === 'boolean') return ActionArgumentTypes.ENUM;
+  if (_value === 'byte') return ActionArgumentTypes.LIST;
+  if (_value === 'parameters') return ActionArgumentTypes.DICTIONARY;
+  if (_value === 'tristate') return ActionArgumentTypes.ENUM;
 
   return valueTypeFromInternal(value);
 };
@@ -91,6 +94,7 @@ export type ParticleArgumentDefaultValue = {
   material?: string;
   color?: string;
   size?: number;
+  to_color?: string;
 };
 
 export type PotionArgumentDefaultValue = {

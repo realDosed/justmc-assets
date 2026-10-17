@@ -37,6 +37,8 @@ const CATEGORIES = [
 export const actionCategoryFromId = (
   id: string
 ): ActionCategory | undefined => {
+  if (id === 'send_currency_transaction') return ActionCategories.PLAYER;
+
   return CATEGORIES.find((category) => id.startsWith(category));
 };
 

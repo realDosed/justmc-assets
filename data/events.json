@@ -20,6 +20,69 @@
     "cancellable": true
   },
   {
+    "id": "player_custom_click",
+    "category": "player",
+    "cancellable": false
+  },
+  {
+    "id": "player_ask_gamemode_change",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "combination_f3_f4",
+      "combination_f3_n"
+    ],
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
+  },
+  {
+    "id": "player_open_advancements_tab",
+    "category": "player",
+    "cancellable": false,
+    "additionalInfo": [
+      "menu_can_be_closed_with_close_inventory_action"
+    ]
+  },
+  {
+    "id": "player_close_advancements_menu",
+    "category": "player",
+    "cancellable": false
+  },
+  {
+    "id": "player_request_stats",
+    "category": "player",
+    "cancellable": false,
+    "additionalInfo": [
+      "menu_can_be_closed_with_close_inventory_action"
+    ]
+  },
+  {
+    "id": "player_skin_change",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "skin_command",
+      "skin_change_action"
+    ],
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
+  },
+  {
+    "id": "player_currency_transaction",
+    "category": "player",
+    "cancellable": false
+  },
+  {
+    "id": "player_anticheat_flag",
+    "category": "player",
+    "cancellable": false,
+    "worksWith": [
+      "anticheat_world_settings"
+    ]
+  },
+  {
     "id": "player_interact",
     "category": "player",
     "cancellable": true,
@@ -45,7 +108,10 @@
   {
     "id": "player_break_block",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "block_damage",
@@ -58,7 +124,59 @@
     "cancellable": false
   },
   {
+    "id": "player_block_break_progress_update",
+    "category": "player",
+    "cancellable": false
+  },
+  {
+    "id": "player_shear_block",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_pick_block",
+    "category": "player",
+    "cancellable": true,
+    "additionalInfo": [
+      "about_picking"
+    ]
+  },
+  {
+    "id": "player_sign_change",
+    "category": "player",
+    "cancellable": true
+  },
+  {
     "id": "player_structure_grow",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_vault_change_state",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "vault"
+    ]
+  },
+  {
+    "id": "player_block_dispense_loot",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "vault"
+    ]
+  },
+  {
+    "id": "player_flowerpot_manipulate",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "flower_pot"
+    ]
+  },
+  {
+    "id": "player_harvest_block",
     "category": "player",
     "cancellable": true
   },
@@ -111,12 +229,35 @@
     "cancellable": true
   },
   {
+    "id": "player_unleash_entity",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_pick_entity",
+    "category": "player",
+    "cancellable": true,
+    "additionalInfo": [
+      "about_picking"
+    ]
+  },
+  {
     "id": "player_start_spectating_entity",
     "category": "player",
     "cancellable": true
   },
   {
     "id": "player_stop_spectating_entity",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_toggle_entity_age_lock",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_feed_sulfur_cube_item",
     "category": "player",
     "cancellable": true
   },
@@ -136,17 +277,26 @@
   {
     "id": "player_click_inventory",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "player_drag_inventory",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "player_click_own_inventory",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "player_craft_item",
@@ -164,6 +314,14 @@
     "cancellable": true
   },
   {
+    "id": "player_equipment_changed",
+    "category": "player",
+    "cancellable": false,
+    "additionalInfo": [
+      "fired_after_attributes_and_enchants_updated"
+    ]
+  },
+  {
     "id": "player_change_slot",
     "category": "player",
     "cancellable": true
@@ -171,10 +329,7 @@
   {
     "id": "player_pick_item",
     "category": "player",
-    "cancellable": true,
-    "additionalInfo": [
-      "not_fired_in_creative"
-    ]
+    "cancellable": true
   },
   {
     "id": "player_furnace_extract",
@@ -185,6 +340,80 @@
       "blast_furnace",
       "smoker"
     ]
+  },
+  {
+    "id": "player_item_mend",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_enchant_item",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "enchanting_table"
+    ]
+  },
+  {
+    "id": "player_anvil_rename_input",
+    "category": "player",
+    "cancellable": false,
+    "worksWith": [
+      "anvil"
+    ],
+    "additionalInfo": [
+      "fired_before_item_changes"
+    ]
+  },
+  {
+    "id": "player_anvil_damaged",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "anvil"
+    ]
+  },
+  {
+    "id": "player_item_cooldown",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_item_group_cooldown",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_prepare_result",
+    "category": "player",
+    "cancellable": false,
+    "worksWith": [
+      "anvil",
+      "grindstone",
+      "smithing"
+    ]
+  },
+  {
+    "id": "player_prepare_item_craft",
+    "category": "player",
+    "cancellable": false,
+    "worksWith": [
+      "crafting_table",
+      "player_inventory"
+    ]
+  },
+  {
+    "id": "player_prepare_item_enchant",
+    "category": "player",
+    "cancellable": true,
+    "worksWith": [
+      "enchanting_table"
+    ]
+  },
+  {
+    "id": "player_inventory_slot_change",
+    "category": "player",
+    "cancellable": false
   },
   {
     "id": "player_shot_bow",
@@ -231,6 +460,11 @@
     "cancellable": false
   },
   {
+    "id": "player_damage_item",
+    "category": "player",
+    "cancellable": true
+  },
+  {
     "id": "player_stop_using_item",
     "category": "player",
     "cancellable": false
@@ -247,6 +481,16 @@
   },
   {
     "id": "player_move",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_location_change",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_rotate",
     "category": "player",
     "cancellable": true
   },
@@ -304,6 +548,16 @@
     "cancellable": true
   },
   {
+    "id": "player_start_gliding",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_stop_gliding",
+    "category": "player",
+    "cancellable": true
+  },
+  {
     "id": "player_riptide",
     "category": "player",
     "cancellable": true
@@ -332,6 +586,15 @@
     "cancellable": false
   },
   {
+    "id": "player_input_event",
+    "category": "player",
+    "cancellable": false,
+    "additionalInfo": [
+      "input_list",
+      "can_be_multiple_inputs"
+    ]
+  },
+  {
     "id": "player_take_damage",
     "category": "player",
     "cancellable": true
@@ -352,9 +615,22 @@
     "cancellable": true
   },
   {
-    "id": "player_resurrect",
+    "id": "player_knockback",
     "category": "player",
     "cancellable": true
+  },
+  {
+    "id": "player_velocity",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_resurrect",
+    "category": "player",
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "player_heal",
@@ -388,6 +664,11 @@
   },
   {
     "id": "elder_guardian_appears_at_player",
+    "category": "player",
+    "cancellable": true
+  },
+  {
+    "id": "player_combust",
     "category": "player",
     "cancellable": true
   },
@@ -445,6 +726,11 @@
     "cancellable": true
   },
   {
+    "id": "entity_knockback",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
     "id": "entity_heal",
     "category": "entity",
     "cancellable": true
@@ -452,7 +738,10 @@
   {
     "id": "entity_resurrect",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "additionalInfo": [
+      "can_be_default_cancelled"
+    ]
   },
   {
     "id": "entity_death",
@@ -467,6 +756,11 @@
       "evoker",
       "illusioner"
     ]
+  },
+  {
+    "id": "entity_teleport",
+    "category": "entity",
+    "cancellable": true
   },
   {
     "id": "enderman_escape",
@@ -492,6 +786,11 @@
       "painting",
       "leash"
     ]
+  },
+  {
+    "id": "entity_combust",
+    "category": "entity",
+    "cancellable": true
   },
   {
     "id": "projectile_launch",
@@ -534,12 +833,35 @@
     "cancellable": true
   },
   {
+    "id": "item_merge",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "experience_orb_merge",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "entity_equipment_changed",
+    "category": "entity",
+    "cancellable": false,
+    "additionalInfo": [
+      "fired_after_attributes_and_enchants_updated"
+    ]
+  },
+  {
     "id": "vehicle_take_damage",
     "category": "entity",
     "cancellable": true
   },
   {
     "id": "block_fall",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "falling_block_land",
     "category": "entity",
     "cancellable": true
   },
@@ -561,7 +883,18 @@
   {
     "id": "witch_throw_potion",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "worksWith": [
+      "witch"
+    ]
+  },
+  {
+    "id": "fishing_hook_state_change",
+    "category": "entity",
+    "cancellable": false,
+    "worksWith": [
+      "fishing_hook"
+    ]
   },
   {
     "id": "entity_shot_bow",
@@ -589,12 +922,72 @@
     "cancellable": true
   },
   {
+    "id": "entity_start_gliding",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "entity_stop_gliding",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "entity_bell_ring",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "block_form_by_entity",
+    "category": "entity",
+    "cancellable": true,
+    "worksWith": [
+      "snowman",
+      "frost_walker"
+    ]
+  },
+  {
+    "id": "entity_block_break_progress_update",
+    "category": "entity",
+    "cancellable": false,
+    "worksWith": [
+      "zombie"
+    ]
+  },
+  {
+    "id": "entity_explode",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "entity_explosion",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "entity_unleash_event",
+    "category": "entity",
+    "cancellable": true
+  },
+  {
+    "id": "hopper_pickup_item",
+    "category": "entity",
+    "cancellable": true,
+    "additionalInfo": [
+      "item_is_victim_entity"
+    ]
+  },
+  {
     "id": "world_start",
     "category": "world",
     "cancellable": false
   },
   {
     "id": "world_stop",
+    "category": "world",
+    "cancellable": false
+  },
+  {
+    "id": "world_reload",
     "category": "world",
     "cancellable": false
   },
@@ -613,9 +1006,14 @@
     "cancellable": false
   },
   {
-    "id": "block_ignite",
+    "id": "world_web_exception",
     "category": "world",
     "cancellable": false
+  },
+  {
+    "id": "block_ignite",
+    "category": "world",
+    "cancellable": true
   },
   {
     "id": "block_burn",
@@ -642,16 +1040,6 @@
   },
   {
     "id": "block_explode",
-    "category": "world",
-    "cancellable": true
-  },
-  {
-    "id": "entity_explode",
-    "category": "world",
-    "cancellable": true
-  },
-  {
-    "id": "entity_explosion",
     "category": "world",
     "cancellable": true
   },
@@ -726,16 +1114,8 @@
     "cancellable": true,
     "worksWith": [
       "mushrooms",
-      "fire"
-    ]
-  },
-  {
-    "id": "block_form_by_entity",
-    "category": "world",
-    "cancellable": true,
-    "worksWith": [
-      "snowman",
-      "frost_walker"
+      "fire",
+      "grass_block"
     ]
   },
   {
@@ -745,11 +1125,6 @@
   },
   {
     "id": "bell_ring",
-    "category": "world",
-    "cancellable": true
-  },
-  {
-    "id": "entity_bell_ring",
     "category": "world",
     "cancellable": true
   },
@@ -764,9 +1139,24 @@
     "cancellable": true
   },
   {
+    "id": "block_failed_dispense",
+    "category": "world",
+    "cancellable": false
+  },
+  {
     "id": "dispenser_equip_armor",
     "category": "world",
     "cancellable": true
+  },
+  {
+    "id": "beacon_activate",
+    "category": "world",
+    "cancellable": false
+  },
+  {
+    "id": "beacon_deactivate",
+    "category": "world",
+    "cancellable": false
   },
   {
     "id": "fluid_level_change",
@@ -779,12 +1169,17 @@
     "cancellable": true
   },
   {
-    "id": "sculk_bloom",
+    "id": "block_break_block",
+    "category": "world",
+    "cancellable": false
+  },
+  {
+    "id": "moisture_change",
     "category": "world",
     "cancellable": true
   },
   {
-    "id": "falling_block_land",
+    "id": "sculk_bloom",
     "category": "world",
     "cancellable": true
   },
@@ -794,11 +1189,35 @@
     "cancellable": true
   },
   {
-    "id": "hopper_pickup_item",
+    "id": "vault_display_item",
     "category": "world",
     "cancellable": true,
-    "additionalInfo": [
-      "item_is_victim_entity"
+    "worksWith": [
+      "vault"
+    ]
+  },
+  {
+    "id": "vault_change_state",
+    "category": "world",
+    "cancellable": true,
+    "worksWith": [
+      "vault"
+    ]
+  },
+  {
+    "id": "block_dispense_loot",
+    "category": "world",
+    "cancellable": true,
+    "worksWith": [
+      "vault"
+    ]
+  },
+  {
+    "id": "crafter_craft",
+    "category": "world",
+    "cancellable": true,
+    "worksWith": [
+      "crafter"
     ]
   },
   {
@@ -829,6 +1248,22 @@
       "furnace",
       "blast_furnace",
       "smoker"
+    ]
+  },
+  {
+    "id": "chunk_load",
+    "category": "world",
+    "cancellable": false,
+    "additionalInfo": [
+      "event_block_location_set_to_bottom_corner"
+    ]
+  },
+  {
+    "id": "chunk_unload",
+    "category": "world",
+    "cancellable": false,
+    "additionalInfo": [
+      "event_block_location_set_to_bottom_corner"
     ]
   }
 ]

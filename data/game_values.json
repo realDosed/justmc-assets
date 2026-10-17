@@ -24,6 +24,18 @@
     "type": "number"
   },
   {
+    "id": "saturated_regen_rate",
+    "type": "number"
+  },
+  {
+    "id": "unsaturated_regen_rate",
+    "type": "number"
+  },
+  {
+    "id": "starvation_rate",
+    "type": "number"
+  },
+  {
     "id": "attack_damage",
     "type": "number"
   },
@@ -52,12 +64,23 @@
     "type": "number"
   },
   {
+    "id": "max_invulnerability_ticks",
+    "type": "number"
+  },
+  {
     "id": "experience_level",
     "type": "number"
   },
   {
     "id": "experience_progress",
     "type": "number"
+  },
+  {
+    "id": "death_screen_score",
+    "type": "number",
+    "worksWith": [
+      "player"
+    ]
   },
   {
     "id": "fire_ticks",
@@ -96,7 +119,18 @@
     "type": "number"
   },
   {
+    "id": "client_view_distance",
+    "type": "number",
+    "worksWith": [
+      "player"
+    ]
+  },
+  {
     "id": "item_usage_progress",
+    "type": "number"
+  },
+  {
+    "id": "active_item_used_time",
     "type": "number"
   },
   {
@@ -140,10 +174,37 @@
   },
   {
     "id": "entity_width_z",
+    "type": "number"
+  },
+  {
+    "id": "entity_fuse_ticks",
     "type": "number",
     "worksWith": [
-      "location"
+      "creeper",
+      "tnt",
+      "firework"
     ]
+  },
+  {
+    "id": "projectile_power",
+    "type": "vector",
+    "worksWith": [
+      "fireball",
+      "dragon_fireball",
+      "wither_skull"
+    ]
+  },
+  {
+    "id": "enchantment_seed",
+    "type": "number"
+  },
+  {
+    "id": "idle_duration",
+    "type": "number"
+  },
+  {
+    "id": "entity_pathfinder_point_index",
+    "type": "number"
   },
   {
     "id": "location",
@@ -164,6 +225,13 @@
   {
     "id": "eye_location",
     "type": "location"
+  },
+  {
+    "id": "cape_location",
+    "type": "location",
+    "worksWith": [
+      "player"
+    ]
   },
   {
     "id": "x_coordinate",
@@ -220,10 +288,11 @@
   {
     "id": "blocks_beneath",
     "type": "list",
-    "worksWith": [
-      "item"
-    ],
     "elementType": "location"
+  },
+  {
+    "id": "last_death_location",
+    "type": "location"
   },
   {
     "id": "main_hand_item",
@@ -268,16 +337,19 @@
   },
   {
     "id": "entity_item",
-    "type": "item",
+    "type": "item"
+  },
+  {
+    "id": "entity_pick_item_stack",
+    "type": "item"
+  },
+  {
+    "id": "player_enderchest_items",
+    "type": "list",
     "worksWith": [
-      "item",
-      "thrown_potion",
-      "firework",
-      "arrow",
-      "falling_block",
-      "other_projectiles",
-      "info"
-    ]
+      "player"
+    ],
+    "elementType": "any"
   },
   {
     "id": "name",
@@ -310,6 +382,13 @@
     ]
   },
   {
+    "id": "clientside_locale",
+    "type": "text",
+    "worksWith": [
+      "player"
+    ]
+  },
+  {
     "id": "open_inventory_title",
     "type": "text",
     "worksWith": [
@@ -318,6 +397,13 @@
   },
   {
     "id": "open_inventory_type",
+    "type": "text",
+    "worksWith": [
+      "player"
+    ]
+  },
+  {
+    "id": "open_inventory_custom_id",
     "type": "text",
     "worksWith": [
       "player"
@@ -362,6 +448,14 @@
     "type": "text"
   },
   {
+    "id": "player_ender_pearls",
+    "type": "list",
+    "worksWith": [
+      "player"
+    ],
+    "elementType": "text"
+  },
+  {
     "id": "spawn_reason",
     "type": "text"
   },
@@ -369,19 +463,78 @@
     "id": "main_hand",
     "type": "text",
     "worksWith": [
-      "player",
-      "event"
+      "player"
     ]
   },
   {
-    "id": "event_block_location",
-    "type": "location",
+    "id": "pose",
+    "type": "text"
+  },
+  {
+    "id": "current_input_list",
+    "type": "list",
     "worksWith": [
-      "interact_events",
-      "place_break_events",
-      "projectile_hit_event",
-      "world_block_events"
+      "player"
+    ],
+    "elementType": "text"
+  },
+  {
+    "id": "chat_visibility",
+    "type": "text",
+    "worksWith": [
+      "player"
     ]
+  },
+  {
+    "id": "particle_visibility",
+    "type": "text",
+    "worksWith": [
+      "player"
+    ]
+  },
+  {
+    "id": "projectile_owner_uuid",
+    "type": "text",
+    "worksWith": [
+      "projectile"
+    ]
+  },
+  {
+    "id": "display_entity_translation",
+    "type": "vector",
+    "worksWith": [
+      "display"
+    ]
+  },
+  {
+    "id": "display_entity_left_rotation",
+    "type": "vector",
+    "worksWith": [
+      "display"
+    ]
+  },
+  {
+    "id": "display_entity_right_rotation",
+    "type": "vector",
+    "worksWith": [
+      "display"
+    ]
+  },
+  {
+    "id": "display_entity_scale",
+    "type": "vector",
+    "worksWith": [
+      "display"
+    ]
+  },
+  {
+    "id": "entity_pathfinder_points",
+    "type": "list",
+    "elementType": "location"
+  },
+  {
+    "id": "event_block_location",
+    "type": "location"
   },
   {
     "id": "event_block_face",
@@ -392,6 +545,10 @@
       "projectile_hit_event",
       "piston_events"
     ]
+  },
+  {
+    "id": "event_block",
+    "type": "text"
   },
   {
     "id": "event_blocks_involved",
@@ -412,32 +569,54 @@
     ]
   },
   {
+    "id": "event_from_location",
+    "type": "location"
+  },
+  {
     "id": "event_new_location",
-    "type": "location",
-    "worksWith": [
-      "player_move_event",
-      "player_jump_event",
-      "player_teleport_event",
-      "player_fail_move_event",
-      "falling_block_land_event"
-    ]
+    "type": "location"
   },
   {
     "id": "event_damage",
-    "type": "number",
-    "worksWith": [
-      "player_take_damage_event",
-      "entity_take_damage_event",
-      "vehicle_take_damage_event"
-    ]
+    "type": "number"
+  },
+  {
+    "id": "event_final_damage",
+    "type": "number"
   },
   {
     "id": "event_damage_cause",
+    "type": "text"
+  },
+  {
+    "id": "event_knockback_event_type",
     "type": "text",
     "worksWith": [
-      "player_take_damage_event",
-      "entity_take_damage_event",
-      "vehicle_take_damage_event"
+      "player_knockback",
+      "entity_knockback"
+    ]
+  },
+  {
+    "id": "event_knockback_cause",
+    "type": "text",
+    "worksWith": [
+      "player_knockback",
+      "entity_knockback"
+    ]
+  },
+  {
+    "id": "event_knockback_vector",
+    "type": "vector",
+    "worksWith": [
+      "player_knockback",
+      "entity_knockback"
+    ]
+  },
+  {
+    "id": "event_velocity",
+    "type": "vector",
+    "worksWith": [
+      "player_velocity"
     ]
   },
   {
@@ -453,6 +632,27 @@
     "worksWith": [
       "player_join_event",
       "player_quit_event",
+      "player_death_event"
+    ]
+  },
+  {
+    "id": "event_custom_click_key",
+    "type": "text",
+    "worksWith": [
+      "player_custom_click"
+    ]
+  },
+  {
+    "id": "event_custom_click_dialog_view_data",
+    "type": "any",
+    "worksWith": [
+      "player_custom_click"
+    ]
+  },
+  {
+    "id": "event_death_screen_message",
+    "type": "text",
+    "worksWith": [
       "player_death_event"
     ]
   },
@@ -503,52 +703,31 @@
   },
   {
     "id": "event_item",
-    "type": "item",
-    "worksWith": [
-      "item_events",
-      "player_fish_event",
-      "player_edit_book_event",
-      "player_shoot_bow_event"
-    ]
+    "type": "item"
   },
   {
     "id": "event_items",
     "type": "list",
-    "worksWith": [
-      "piglin_barter"
-    ],
     "elementType": "item"
   },
   {
-    "id": "event_equipment_slot",
-    "type": "text",
+    "id": "event_old_item",
+    "type": "item",
     "worksWith": [
-      "right_click_event",
-      "left_click_event",
-      "interact_event",
-      "player_arm_swing_event"
+      "player_inventory_slot_change_event"
     ]
+  },
+  {
+    "id": "event_equipment_slot",
+    "type": "text"
   },
   {
     "id": "event_slot",
-    "type": "number",
-    "worksWith": [
-      "player_change_slot_event",
-      "player_click_own_inventory_event",
-      "player_click_inventory_event",
-      "player_craft_item_event",
-      "player_pick_item"
-    ]
+    "type": "number"
   },
   {
     "id": "event_hotbar_slot",
-    "type": "number",
-    "worksWith": [
-      "player_change_slot_event",
-      "player_own_inventory_click_event",
-      "player_other_inventory_click_event",
-      "player_pick_item"
-    ]
+    "type": "number"
   },
   {
     "id": "event_added_items",
@@ -560,12 +739,28 @@
     "valueType": "item"
   },
   {
-    "id": "event_slot_type",
-    "type": "text",
+    "id": "event_old_equipments",
+    "type": "dictionary",
     "worksWith": [
-      "player_own_inventory_click_event",
-      "player_other_inventory_click_event"
-    ]
+      "player_equipment_changed",
+      "entity_equipment_changed"
+    ],
+    "keyType": "text",
+    "valueType": "item"
+  },
+  {
+    "id": "event_new_equipments",
+    "type": "dictionary",
+    "worksWith": [
+      "player_equipment_changed",
+      "entity_equipment_changed"
+    ],
+    "keyType": "text",
+    "valueType": "item"
+  },
+  {
+    "id": "event_slot_type",
+    "type": "text"
   },
   {
     "id": "event_close_inventory_cause",
@@ -576,19 +771,11 @@
   },
   {
     "id": "event_inventory_click_type",
-    "type": "text",
-    "worksWith": [
-      "player_click_own_inventory_event",
-      "player_click_inventory_event"
-    ]
+    "type": "text"
   },
   {
     "id": "event_inventory_action",
-    "type": "text",
-    "worksWith": [
-      "player_own_inventory_click_event",
-      "player_other_inventory_click_event"
-    ]
+    "type": "text"
   },
   {
     "id": "event_drag_type",
@@ -613,6 +800,13 @@
     ]
   },
   {
+    "id": "event_new_fishing_hook_state",
+    "type": "text",
+    "worksWith": [
+      "fishing_hook_state_change"
+    ]
+  },
+  {
     "id": "event_tree_type",
     "type": "text",
     "worksWith": [
@@ -622,18 +816,20 @@
   },
   {
     "id": "event_experience",
-    "type": "number",
-    "worksWith": [
-      "player_fish_event",
-      "player_pickup_experience_event",
-      "death_events"
-    ]
+    "type": "number"
   },
   {
     "id": "event_hanging_break_cause",
     "type": "text",
     "worksWith": [
       "hanging_break_event"
+    ]
+  },
+  {
+    "id": "event_entity_unleash_reason",
+    "type": "text",
+    "worksWith": [
+      "entity_unleash_events"
     ]
   },
   {
@@ -658,6 +854,45 @@
     ]
   },
   {
+    "id": "event_item_cooldown",
+    "type": "number",
+    "worksWith": [
+      "player_item_cooldown",
+      "player_item_group_cooldown"
+    ]
+  },
+  {
+    "id": "event_item_cooldown_group",
+    "type": "text",
+    "worksWith": [
+      "player_item_cooldown",
+      "player_item_group_cooldown"
+    ]
+  },
+  {
+    "id": "event_item_damage",
+    "type": "number",
+    "worksWith": [
+      "player_damage_item"
+    ]
+  },
+  {
+    "id": "event_combust_duration",
+    "type": "number",
+    "worksWith": [
+      "player_combust",
+      "entity_combust"
+    ]
+  },
+  {
+    "id": "event_combust_reason",
+    "type": "text",
+    "worksWith": [
+      "player_combust",
+      "entity_combust"
+    ]
+  },
+  {
     "id": "event_projectile_item",
     "type": "item",
     "worksWith": [
@@ -670,6 +905,14 @@
     "worksWith": [
       "player_teleport_event",
       "enderman_escape_event"
+    ]
+  },
+  {
+    "id": "event_block_break_progress",
+    "type": "number",
+    "worksWith": [
+      "player_block_break_progress_update",
+      "entity_block_break_progress_update"
     ]
   },
   {
@@ -686,6 +929,110 @@
       "player_query_block_info",
       "player_query_entity_info"
     ]
+  },
+  {
+    "id": "event_advancement_tab_name",
+    "type": "text"
+  },
+  {
+    "id": "event_gamemode",
+    "type": "text",
+    "worksWith": [
+      "player_ask_gamemode_change"
+    ]
+  },
+  {
+    "id": "event_sign_lines",
+    "type": "list",
+    "worksWith": [
+      "sign_change_event"
+    ],
+    "elementType": "text"
+  },
+  {
+    "id": "event_sign_side",
+    "type": "text",
+    "worksWith": [
+      "sign_change_event"
+    ]
+  },
+  {
+    "id": "event_old_vault_state",
+    "type": "text",
+    "worksWith": [
+      "vault_change_state",
+      "player_vault_change_state"
+    ]
+  },
+  {
+    "id": "event_new_vault_state",
+    "type": "text",
+    "worksWith": [
+      "vault_change_state",
+      "player_vault_change_state"
+    ]
+  },
+  {
+    "id": "event_anvil_rename_input",
+    "type": "text",
+    "worksWith": [
+      "player_anvil_rename_input"
+    ]
+  },
+  {
+    "id": "event_anvil_damage_state",
+    "type": "text",
+    "worksWith": [
+      "player_anvil_damaged"
+    ]
+  },
+  {
+    "id": "event_enchantment_hint",
+    "type": "text",
+    "worksWith": [
+      "player_enchant_item"
+    ]
+  },
+  {
+    "id": "event_enchantments_to_add",
+    "type": "dictionary",
+    "worksWith": [
+      "player_enchant_item"
+    ],
+    "keyType": "text",
+    "valueType": "number"
+  },
+  {
+    "id": "event_enchantment_level_hint",
+    "type": "number",
+    "worksWith": [
+      "player_enchant_item"
+    ]
+  },
+  {
+    "id": "event_enchantment_offers",
+    "type": "list",
+    "worksWith": [
+      "player_prepare_item_enchant"
+    ],
+    "elementType": "any"
+  },
+  {
+    "id": "event_enchantment_bonus",
+    "type": "number",
+    "worksWith": [
+      "player_prepare_item_enchant"
+    ]
+  },
+  {
+    "id": "event_input_list",
+    "type": "list",
+    "worksWith": [
+      "player_input_event",
+      "player_vehicle_move",
+      "player_vehicle_jump"
+    ],
+    "elementType": "text"
   },
   {
     "id": "event_fail_move_reason",
@@ -713,19 +1060,84 @@
     "id": "event_replaced_block",
     "type": "text",
     "worksWith": [
-      "player_place_block_event",
-      "world"
+      "player_place_block_event"
+    ]
+  },
+  {
+    "id": "url_response",
+    "type": "text",
+    "worksWith": [
+      "web_response_event"
+    ]
+  },
+  {
+    "id": "url_response_code",
+    "type": "number",
+    "worksWith": [
+      "web_response_event"
+    ]
+  },
+  {
+    "id": "response_headers",
+    "type": "dictionary",
+    "worksWith": [
+      "web_response_event"
+    ],
+    "keyType": "text",
+    "valueType": "any"
+  },
+  {
+    "id": "url",
+    "type": "text",
+    "worksWith": [
+      "web_response_event"
+    ]
+  },
+  {
+    "id": "currency_transaction_reason",
+    "type": "text",
+    "worksWith": [
+      "player_currency_event"
+    ]
+  },
+  {
+    "id": "currency_transaction_amount",
+    "type": "text",
+    "worksWith": [
+      "player_currency_event"
+    ]
+  },
+  {
+    "id": "currency_transaction_result",
+    "type": "text",
+    "worksWith": [
+      "player_currency_event"
+    ]
+  },
+  {
+    "id": "anticheat_check",
+    "type": "text",
+    "worksWith": [
+      "player_anticheat_flag_event"
+    ]
+  },
+  {
+    "id": "anticheat_violations",
+    "type": "number",
+    "worksWith": [
+      "player_anticheat_flag_event"
     ]
   },
   {
     "id": "player_count",
-    "type": "number",
-    "icon": {
-      "texture": "none"
-    }
+    "type": "number"
   },
   {
     "id": "cpu_usage",
+    "type": "number"
+  },
+  {
+    "id": "particle_cpu_usage",
     "type": "number"
   },
   {
@@ -755,35 +1167,31 @@
     "elementType": "text"
   },
   {
-    "id": "url_response",
-    "type": "text",
-    "worksWith": [
-      "web_response_event"
-    ],
-    "icon": {
-      "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0="
-    }
-  },
-  {
-    "id": "url_response_code",
-    "type": "number",
-    "worksWith": [
-      "web_response_event"
-    ]
-  },
-  {
-    "id": "url",
-    "type": "text",
-    "worksWith": [
-      "web_response_event"
-    ]
-  },
-  {
     "id": "world_time",
     "type": "number"
   },
   {
+    "id": "world_game_time",
+    "type": "number"
+  },
+  {
     "id": "world_weather",
+    "type": "text"
+  },
+  {
+    "id": "world_clear_weather_duration",
+    "type": "number"
+  },
+  {
+    "id": "world_weather_duration",
+    "type": "number"
+  },
+  {
+    "id": "world_thunder_duration",
+    "type": "number"
+  },
+  {
+    "id": "world_moon_phase",
     "type": "text"
   },
   {
@@ -796,14 +1204,34 @@
   },
   {
     "id": "world_id",
-    "type": "text",
-    "worksWith": [
-      "creative_plus.menu.game_values.general.title",
-      "creative_plus.menu.game_values.$name.title",
-      "creative_plus.game_value.exit.name",
-      "creative_plus.game_value.exit.description",
-      "creative_plus.game_value.previous_page.name",
-      "creative_plus.game_value.next_page.name"
-    ]
+    "type": "text"
+  },
+  {
+    "id": "all_players_names",
+    "type": "list",
+    "elementType": "text"
+  },
+  {
+    "id": "all_players_uuids",
+    "type": "list",
+    "elementType": "text"
+  },
+  {
+    "id": "all_entities_names",
+    "type": "list",
+    "elementType": "text"
+  },
+  {
+    "id": "all_entities_uuids",
+    "type": "list",
+    "elementType": "text"
+  },
+  {
+    "id": "start_reload_tick",
+    "type": "number"
+  },
+  {
+    "id": "delay_reload_count",
+    "type": "number"
   }
 ]

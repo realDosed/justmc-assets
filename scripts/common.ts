@@ -63,12 +63,136 @@ if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 export const ACTIONS_DIR = path.resolve(CACHE_DIR, 'actions');
 if (!fs.existsSync(ACTIONS_DIR)) fs.mkdirSync(ACTIONS_DIR);
 
+export const ENUMS_CACHE_DIR = path.resolve(CACHE_DIR, 'enums');
+if (!fs.existsSync(ENUMS_CACHE_DIR)) fs.mkdirSync(ENUMS_CACHE_DIR);
+
 export const CACHE_TRIGGERS_FILE = path.resolve(CACHE_DIR, 'Triggers.kt');
 export const CACHE_GAME_VALUES_FILE = path.resolve(CACHE_DIR, 'GameValues.kt');
 export const CACHE_GAME_VALUES_MENU_FILE = path.resolve(
   CACHE_DIR,
   'GameValuesMenu.kt'
 );
+export const CACHE_VALUE_TYPES_FILE = path.resolve(CACHE_DIR, 'ValueTypes.kt');
+
+export const extractTextureValues = (contents: string[]) => {
+  const values: Record<string, string> = {};
+  const constantRegex =
+    /(?:const\s+)?val\s+([A-Z][A-Z0-9_]*)\s*=\s*"([A-Za-z0-9+/=]+)"/g;
+
+  contents.forEach((content) => {
+    for (const [, name, value] of content.matchAll(constantRegex)) {
+      values[name] = value;
+    }
+  });
+
+  const declarationRegex =
+    /^[ \t]*(?:private\s+)?(?:const\s+)?val\s+([A-Z][A-Z0-9_]*)\s*=/gm;
+
+  contents.forEach((content) => {
+    const declarations = [...content.matchAll(declarationRegex)];
+
+    declarations.forEach((declaration, index) => {
+      const start = declaration.index! + declaration[0].length;
+      const end = declarations[index + 1]?.index ?? content.length;
+      const profileValue = content
+        .slice(start, end)
+        .match(
+          /ProfileProperty\s*\(\s*"textures"\s*,\s*(?:"([A-Za-z0-9+/=]+)"|([A-Z][A-Z0-9_]*))\s*\)/
+        );
+
+      if (profileValue) {
+        const value = profileValue[1] || values[profileValue[2]];
+        if (value) values[declaration[1]] = value;
+      }
+    });
+  });
+
+  return values;
+};
+
+export const extractIconTexture = (
+  content: string,
+  textureValues: Record<string, string>
+) => {
+  const textureValue = content.match(
+    /setTextureValue\s*\(\s*(?:"([A-Za-z0-9+/=]+)"|([A-Z][A-Z0-9_]*))\s*\)/
+  );
+  if (textureValue) return textureValue[1] || textureValues[textureValue[2]];
+
+  const profile = content.match(
+    /(?:setProfile\s*\(|playerProfile\s*=\s*)(?:[A-Za-z_][\w]*\.)*([A-Z][A-Z0-9_]*)/
+  );
+  return profile ? textureValues[profile[1]] : undefined;
+};
+
+export async function loadCachedTextureValues(): Promise<Record<string, string>> {
+  const cachedDirectories = [
+    ACTIONS_DIR,
+    ACTION_MENUS_CACHE_DIR,
+    TRIGGER_MENUS_CACHE_DIR,
+  ];
+  const cachedFiles = [CACHE_GAME_VALUES_MENU_FILE];
+
+  for (const directory of cachedDirectories) {
+    const files = await fs.promises.readdir(directory);
+    cachedFiles.push(...files.map((file) => path.resolve(directory, file)));
+  }
+
+  const contents = await Promise.all(
+    cachedFiles.map((file) => fs.promises.readFile(file, 'utf8'))
+  );
+
+  return extractTextureValues(contents);
+}
+
+export async function extractValueTypeIcons(): Promise<Record<string, string>> {
+  const content = await fs.promises.readFile(CACHE_VALUE_TYPES_FILE, 'utf8');
+  const icons: Record<string, string> = {};
+
+  const declarationRegex = /val\s+([A-Z][A-Z0-9_]*)\s*=\s*register\s*\(/g;
+  const declarations = [...content.matchAll(declarationRegex)];
+  const nextDeclarationRegex = /\n\s*val\s+[A-Z][A-Z0-9_]*\s*=/;
+  const materialRegex =
+    /ItemStack(?:\.of)?\s*\(\s*Material\.([A-Z0-9_]+)/g;
+
+  for (let i = 0; i < declarations.length; i++) {
+    const declaration = declarations[i];
+    const name = declaration[1];
+    const start = declaration.index! + declaration[0].length;
+    const nextDeclaration = nextDeclarationRegex.exec(content.slice(start));
+    const end = nextDeclaration
+      ? start + nextDeclaration.index
+      : content.length;
+    const block = content.slice(start, end);
+
+    let iconPart = block;
+    const aprilFirstIndex = block.indexOf('DurationUtils.isAprilFirst()');
+
+    if (aprilFirstIndex !== -1) {
+      const elseIndex = block.indexOf('else', aprilFirstIndex);
+
+      if (elseIndex === -1) {
+        error(`Could not find else branch for value type: ${name}`);
+        continue;
+      }
+
+      iconPart = block.slice(elseIndex + 'else'.length);
+    }
+
+    const materials = [...iconPart.matchAll(materialRegex)].map(
+      (match) => match[1]
+    );
+
+    if (materials.length === 0) {
+      error(`Could not extract icon material for value type: ${name}`);
+      continue;
+    }
+
+    icons[name] = materials[0];
+  }
+
+  return icons;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 

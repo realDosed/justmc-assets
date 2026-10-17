@@ -208,6 +208,7 @@
     }
   },
   "set_variable_append_map": {
+    "icon": { "material": "CHEST_MINECART" },
     "args": {
       "map": {
         "keyType": "any",
@@ -220,6 +221,7 @@
     }
   },
   "set_variable_append_list": {
+    "icon": { "material": "PAPER" },
     "args": {
       "list_1": {
         "elementType": "any"
@@ -291,11 +293,23 @@
   "start_process": {
     "icon": {
       "material": "EMERALD_ORE"
+    },
+    "args": {
+      "args": {
+        "keyType": "text",
+        "valueType": "any"
+      }
     }
   },
   "call_function": {
     "icon": {
       "material": "LAPIS_ORE"
+    },
+    "args": {
+      "args": {
+        "keyType": "text",
+        "valueType": "any"
+      }
     }
   },
   "else": {
@@ -466,6 +480,12 @@
   "game_send_web_request": {
     "icon": {
       "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjFkZDRmZTRhNDI5YWJkNjY1ZGZkYjNlMjEzMjFkNmVmYTZhNmI1ZTdiOTU2ZGI5YzVkNTljOWVmYWIyNSJ9fX0="
+    },
+    "args": {
+      "headers": {
+        "keyType": "text",
+        "valueType": "any"
+      }
     }
   },
   "player_disguise_as_entity": {
@@ -554,6 +574,7 @@
     }
   },
   "set_variable_get_map_key_by_index": {
+    "icon": { "material": "TRIPWIRE_HOOK" },
     "args": {
       "map": {
         "keyType": "any",
@@ -562,6 +583,7 @@
     }
   },
   "set_variable_get_map_value_by_index": {
+    "icon": { "material": "CHEST" },
     "args": {
       "map": {
         "keyType": "any",
@@ -646,6 +668,108 @@
   "set_variable_get_bundle_items": {
     "icon": {
       "texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWFkNjNkZjhiODg4YzNlZGMyYjc1OTQ4MDkyODQ4ZjA3NDc0NDQ5OTQ1NTU1NDllZTUyOGNmOWQ4M2FmZGZlYSJ9fX0="
+    }
+  },
+  "entity_set_display_transformation_matrix": {
+    "icon": { "material": "STRUCTURE_BLOCK" }
+  },
+  "entity_shear_sheep": {
+    "icon": { "material": "SHEARS" }
+  },
+  "game_set_block_data": {
+    "icon": { "material": "STRUCTURE_BLOCK" }
+  },
+  "game_set_hardcore": {
+    "icon": { "material": "REDSTONE_BLOCK" }
+  },
+  "if_variable_in_range": {
+    "icon": { "material": "COMPARATOR" }
+  },
+  "if_variable_item_has_stored_enchantment": {
+    "icon": { "material": "ENCHANTED_BOOK" }
+  },
+  "if_variable_not_equals": {
+    "icon": { "material": "REDSTONE_TORCH" }
+  },
+  "set_variable_add_item_stored_enchantment": {
+    "icon": { "material": "ENCHANTED_BOOK" }
+  },
+  "set_variable_clear_map": {
+    "icon": { "material": "BUCKET" }
+  },
+  "set_variable_get_item_custom_model_data": {
+    "icon": { "material": "ITEM_FRAME" }
+  },
+  "set_variable_get_item_stored_enchantments": {
+    "icon": { "material": "ENCHANTED_BOOK" }
+  },
+  "set_variable_remove_item_custom_model_data": {
+    "icon": { "material": "ITEM_FRAME" }
+  },
+  "set_variable_remove_item_stored_enchantment": {
+    "icon": { "material": "ENCHANTED_BOOK" }
+  },
+  "set_variable_set_item_custom_model_data": {
+    "icon": { "material": "ITEM_FRAME" }
+  },
+  "set_variable_append_lists": {
+    "args": {
+      "lists": { "elementType": "list" }
+    }
+  },
+  "set_variable_append_maps": {
+    "args": {
+      "maps": { "keyType": "any", "valueType": "any" }
+    }
+  },
+  "set_variable_bytes_to_text": {
+    "args": {
+      "bytes": { "elementType": "number" }
+    }
+  },
+  "set_variable_chunk_list": {
+    "args": {
+      "list": { "elementType": "any" }
+    }
+  },
+  "set_variable_code_bytes": {
+    "args": {
+      "input": { "elementType": "number" }
+    }
+  },
+  "set_variable_destructure_list": {
+    "args": {
+      "list": { "elementType": "any" }
+    }
+  },
+  "set_variable_get_map_random_entry": {
+    "args": {
+      "map": { "keyType": "any", "valueType": "any" }
+    }
+  },
+  "set_variable_get_map_entry_by_index": {
+    "args": {
+      "map": { "keyType": "any", "valueType": "any" }
+    }
+  },
+  "set_variable_join_to_component": {
+    "args": {
+      "list": { "elementType": "any" }
+    }
+  },
+  "set_variable_put_map_value": {
+    "args": {
+      "map": { "keyType": "any", "valueType": "any" }
+    }
+  },
+  "set_variable_randomize_map_order": {
+    "args": {
+      "map": { "keyType": "any", "valueType": "any" }
+    }
+  },
+  "set_variable_reverse_map": {
+    "args": {
+      "map": { "keyType": "any", "valueType": "any" }
     }
   }
 }

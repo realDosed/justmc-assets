@@ -17,6 +17,10 @@ import {
   CachedIcon,
   ACTION_MENUS_CACHE_DIR,
   ACTION_ICONS_CACHE_FILE,
+  extractValueTypeIcons,
+  extractIconTexture,
+  loadCachedTextureValues,
+  ENUMS_CACHE_DIR,
 } from './common';
 
 import { naiveActionTypeFromId } from '../src/types/Action';
@@ -34,7 +38,7 @@ const ENUMS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'enums.json');
 const ACTION_NAME = /object\s*(.*?)\s*:.*?"(.*?)"/gms;
 
 const ARGUMENT =
-  /val\s*.*\s*by\s*([a-z]*)(List)?<?([^<>(){}]*)>?\("(.*?)"(?:(?:,\s*(false))|(?:.*))\)\s*{((?:.|\n)*?)}/gm;
+  /val\s+.*?\s+by\s+([a-z]+(?:[A-Z](?!ist)[a-z]*)?)(List)?<?([^<>(){}]*)>?\("(.*?)"(?:(?:,\s*(false))|(?:.*))\)\s*{((?:.|\n)*?)(?=^[ \t]{4}\})/gm;
 
 const ARGUMENT_VALUE_SLOTS = /parsing\s*=\s*(.*)/;
 const ARGUMENT_DESCRIPTION_SLOTS = /descriptions?\s*=\s*(.*)/;
@@ -54,7 +58,8 @@ const MENU_ACTIONS =
 
 const MENU_ACTION_SUBCATEGORY = /translatable.*subcategory\.(.*)\./;
 
-const MENU_ACTION_MATERIAL = /Material.(.*?)\s*(?:\,|\))/;
+const MENU_ACTION_MATERIAL =
+  /(?:ItemStack(?:\.of)?\(\s*Material\.([A-Z0-9_]+)(?:\s*,\s*(\d+)\s*)?\s*\)|Material\.([A-Z0-9_]+)|ValueTypes\.([A-Z0-9_]+)\.icon(?:\.clone\(\))?)/;
 const WORK_WITH_KEYS = /workWithKeys\s*=\s*(.*?)\)/;
 const ADDITIONAL_INFO_KEYS = /additionalInfoKeys\s*=\s*(.*?)\)/;
 const STRING = /"(.*?)"/gms;
@@ -68,7 +73,11 @@ type ActionMenuIcon = CachedIcon & {
 const getStrings = (content: string, regex: RegExp) =>
   matches(content.match(regex)?.[1] || '', STRING).map(([, key]) => key);
 
-const extractActionMenuIcons = (actionMenuFile: string) => {
+const extractActionMenuIcons = (
+  actionMenuFile: string,
+  valueTypeIcons: Record<string, string>,
+  textureValues: Record<string, string>
+) => {
   const subcategory =
     actionMenuFile.match(MENU_ACTION_SUBCATEGORY)?.[1] || null;
 
@@ -76,15 +85,32 @@ const extractActionMenuIcons = (actionMenuFile: string) => {
     Dictionary<ActionMenuIcon>
   >((acc, [, name, iconPart]) => {
     const match = iconPart.match(MENU_ACTION_MATERIAL);
+
     if (!match) {
       error(`Could not extract icon metadata for action: ${name}`);
       return acc;
     }
 
-    const [, material] = match;
-    const hasGlint = iconPart.includes('addUnsafeEnchantment');
+    const material =
+      match[1] ||
+      match[3] ||
+      (match[4] ? valueTypeIcons[match[4]] : undefined);
+
+    const amount = Number(match[2]) || 1;
+
+    if (!material) {
+      error(`Could not resolve icon material for action: ${name}`);
+      return acc;
+    }
+
+    const hasGlint =
+      /addUnsafeEnchantment|glint\s*\(\s*\)|setData\s*\(\s*DataComponentTypes\.ENCHANTMENT_GLINT_OVERRIDE\s*\)|setEnchantmentGlintOverride\s*\(\s*true\s*\)/.test(
+        iconPart
+      );
+
     const worksWith = getStrings(iconPart, WORK_WITH_KEYS);
     const additionalInfo = getStrings(iconPart, ADDITIONAL_INFO_KEYS);
+    const texture = extractIconTexture(iconPart, textureValues);
 
     return {
       ...acc,
@@ -92,11 +118,12 @@ const extractActionMenuIcons = (actionMenuFile: string) => {
         id: name.toLowerCase(),
         type: 'action',
         material,
-        amount: 1,
+        amount,
         subcategory,
         hasGlint,
         worksWith,
         additionalInfo,
+        ...(texture ? { texture } : {}),
       },
     };
   }, {});
@@ -142,7 +169,7 @@ const getArguments = (
   const _enums: Enums = { ...getEnums(content), ...enums };
 
   return _args.map<ActionArgument>(
-    ([_, type, plural, enumName, id, bool, body]) => {
+    ([argumentDeclaration, type, plural, enumName, id, bool, body]) => {
       const argumentType = argumentTypeFromInternal(type);
       if (!argumentType)
         return error(
@@ -159,7 +186,18 @@ const getArguments = (
       const valueSlots = getSlots(_valueSlots);
 
       if (argumentType === ActionArgumentTypes.ENUM) {
-        const values = _enums[type === 'boolean' ? 'Boolean' : enumName];
+        const defaultEnumName = argumentDeclaration.match(
+          /\b(?:enum|triState)\s*(?:<[^>]*>)?\s*\(\s*"[^"]+"\s*,\s*([A-Z][\w]*(?:\.[A-Z][\w]*)*)\./
+        )?.[1];
+        const resolvedEnumName =
+          enumName ||
+          (type.toLowerCase() === 'tristate'
+            ? 'TriStateEnum'
+            : defaultEnumName);
+        const enumValuesName =
+          resolvedEnumName === 'TriState' ? 'TriStateEnum' : resolvedEnumName;
+        const values =
+          _enums[type === 'boolean' ? 'Boolean' : enumValuesName || ''];
         if (!values)
           return error(
             `Could not get values of enum argument ${chalk.cyan(
@@ -258,15 +296,25 @@ const getArguments = (
   info('caching action icons...');
 
   const actionMenuFiles = await fs.readdir(ACTION_MENUS_CACHE_DIR);
+  const valueTypeIcons = await extractValueTypeIcons();
+  const textureValues = await loadCachedTextureValues();
 
   let icons: Dictionary<ActionMenuIcon> = {};
   await Promise.all(
     actionMenuFiles.map(async (file) => {
-      const actionsMenuFile = removeComments(
-        await fs.readFile(path.resolve(ACTION_MENUS_CACHE_DIR, file), 'utf-8')
-      );
+      const actionsMenuFile = (await fs.readFile(
+        path.resolve(ACTION_MENUS_CACHE_DIR, file),
+        'utf-8'
+      )).replace(/^\s*\/\/\s?/gm, '');
 
-      icons = { ...icons, ...extractActionMenuIcons(actionsMenuFile) };
+      icons = {
+        ...icons,
+        ...extractActionMenuIcons(
+          actionsMenuFile,
+          valueTypeIcons,
+          textureValues
+        ),
+      };
     })
   );
 
@@ -284,9 +332,21 @@ const getArguments = (
     await fs.readFile(ACTIONS_PATCHES_FILE, 'utf-8')
   );
 
-  const enums: Enums = JSON.parse(
+  const enumFiles = await fs.readdir(ENUMS_CACHE_DIR);
+  const cachedEnums = await Promise.all(
+    enumFiles.map(async (file) =>
+      getEnums(
+        removeComments(
+          await fs.readFile(path.resolve(ENUMS_CACHE_DIR, file), 'utf-8')
+        )
+      )
+    )
+  );
+
+  const patchedEnums: Enums = JSON.parse(
     await fs.readFile(ENUMS_PATCHES_FILE, 'utf-8')
   );
+  const enums = Object.assign({}, ...cachedEnums, patchedEnums);
 
   const actions = await Promise.all(
     actionFiles.map(async (file) => {

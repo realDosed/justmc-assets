@@ -10,9 +10,11 @@ import {
   success,
   CACHE_TRIGGERS_FILE,
   CACHE_GAME_VALUES_MENU_FILE,
+  CACHE_VALUE_TYPES_FILE,
   ACTION_MENUS_CACHE_DIR,
   TRIGGER_MENUS_CACHE_DIR,
   ACTIONS_DIR,
+  ENUMS_CACHE_DIR,
 } from './common';
 
 const PROJECT_ID = 21858804;
@@ -24,6 +26,8 @@ const API = new Gitlab({
 const IGNORED_ACTIONS = ['Actions.kt', 'DummyAction.kt'];
 const ACTIONS_FOLDER_PATH =
   'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/action';
+const ENUMS_FOLDER_PATH =
+  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/util/enums';
 
 const IGNORED_ACTION_MENUS = [
   'ActionMenuBuilder.kt',
@@ -54,6 +58,9 @@ const GAME_VALUES_PATH =
 const GAME_VALUES_MENU_PATH =
   'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/editor/menu/gamevalue/GameValuesMenu.kt';
 
+const VALUE_TYPES_PATH =
+  'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/core/value/ValueTypes.kt';
+
 const getFile = async (path: string) => {
   return await API.RepositoryFiles.showRaw(PROJECT_ID, path);
 };
@@ -80,6 +87,25 @@ const getFile = async (path: string) => {
       const content = await getFile(file.path);
 
       return fs.writeFile(path.resolve(ACTIONS_DIR, file.name), content);
+    })
+  );
+
+  info('fetching enums...');
+
+  const enumFiles = (
+    await API.Repositories.tree(PROJECT_ID, {
+      path: ENUMS_FOLDER_PATH,
+      recursive: true,
+    })
+  ).filter((file) => file.type === 'blob');
+
+  info('caching enums...');
+
+  await Promise.all(
+    enumFiles.map(async (file) => {
+      const content = await getFile(file.path);
+
+      return fs.writeFile(path.resolve(ENUMS_CACHE_DIR, file.name), content);
     })
   );
 
@@ -151,6 +177,13 @@ const getFile = async (path: string) => {
   await fs.writeFile(
     CACHE_GAME_VALUES_MENU_FILE,
     await getFile(GAME_VALUES_MENU_PATH)
+  );
+
+  info('caching value types...');
+
+  await fs.writeFile(
+    CACHE_VALUE_TYPES_FILE,
+    await getFile(VALUE_TYPES_PATH)
   );
 
   success('created cache');

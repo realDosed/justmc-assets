@@ -24,6 +24,8 @@ const TEXT_OFFSET_X = -2;
 const SHADOW_OFFSET = 17;
 const SHADOW_COLOR = '#373737';
 const TEXT_COLOR = 'white';
+const DEFAULT_PLAYER_HEAD_ID =
+  '31f477eb1a7beee631c2ca64d06f8f68fa93a3386d04452ab27f43acdf1b60cb';
 
 const DEFAULT_DEST_IMAGE_OPTIONS = {
   x: 0,
@@ -52,47 +54,58 @@ const glint = fs
   .readFile(path.resolve(__dirname, '../enchanted_item_glint.png'))
   .then(loadImage);
 
-const getPlayerHeadId = (texture: string): string => {
-  const decoded = Buffer.from(texture, 'base64').toString('utf-8');
+const getPlayerHeadId = (texture?: string): string => {
+  if (!texture) return DEFAULT_PLAYER_HEAD_ID;
 
   try {
+    const decoded = Buffer.from(texture, 'base64').toString('utf-8');
     const parsed = JSON.parse(decoded);
 
     return parsed.textures.SKIN.url.split('/').pop();
   } catch (_) {
-    // New steve
-    return '31f477eb1a7beee631c2ca64d06f8f68fa93a3386d04452ab27f43acdf1b60cb';
+    return DEFAULT_PLAYER_HEAD_ID;
   }
 };
 
 const loadIcon = async (url: string) => {
-  const result = await fetch(url, {
-    timeout: 40_000,
-  }).then((r) => r.buffer());
+  let lastError: unknown;
 
-  return result;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetch(url, { timeout: 40_000 });
+      if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
+
+      const buffer = await response.buffer();
+      return { image: await loadImage(buffer) };
+    } catch (cause) {
+      lastError = cause;
+    }
+  }
+
+  throw new Error(
+    `Could not load a valid image from ${url}: ${lastError instanceof Error ? lastError.message : String(lastError)}`
+  );
 };
 
 const drawIcon = async (icon: CachedIcon) => {
-  let buffer: Buffer;
+  let url: string;
   let destinationOpts = DEFAULT_DEST_IMAGE_OPTIONS;
 
   if (icon.material === 'PLAYER_HEAD') {
-    const texture = icon.texture;
-    if (!texture)
-      return error(`Could not get player head texture for icon ${icon.id}`);
-
     destinationOpts = HEAD_DEST_IMAGE_OPTIONS;
-    buffer = await loadIcon(
-      `https://mc-heads.net/head/${getPlayerHeadId(texture)}`
-    );
+    url = `https://mc-heads.net/head/${getPlayerHeadId(icon.texture)}`;
   } else {
-    buffer = await loadIcon(
-      `https://raw.githubusercontent.com/Owen1212055/mc-assets/main/assets/${icon.material}.png`
-    );
+    url = `https://raw.githubusercontent.com/Owen1212055/mc-assets/main/item-assets/${icon.material}.png`;
   }
 
-  const image = await loadImage(buffer);
+  let image: Awaited<ReturnType<typeof loadImage>>;
+  try {
+    ({ image } = await loadIcon(url));
+  } catch (cause) {
+    return error(
+      `Could not load image for icon ${icon.id} (${icon.material}): ${cause}`
+    );
+  }
 
   context.clearRect(0, 0, SIZE, SIZE);
   context.drawImage(
@@ -154,7 +167,8 @@ const drawIcon = async (icon: CachedIcon) => {
         Object.values(icons).map(async (icon) => {
           const iconPath = path.resolve(categoryDir, `${icon.id}.png`);
 
-          if (await fileExists(iconPath)) return;
+          if (icon.material !== 'PLAYER_HEAD' && await fileExists(iconPath))
+            return;
           const picture = await drawIcon(icon);
           if (!picture) return;
 

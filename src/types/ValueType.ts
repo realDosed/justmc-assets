@@ -1,4 +1,5 @@
 export const ValueTypes = {
+  ANY: 'any',
   NUMBER: 'number',
   TEXT: 'text',
 

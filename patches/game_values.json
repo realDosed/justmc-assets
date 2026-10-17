@@ -54,5 +54,59 @@
   },
   "event_transformed_entities": {
     "elementType": "text"
+  },
+  "player_enderchest_items": {
+    "elementType": "any"
+  },
+  "player_ender_pearls": {
+    "elementType": "text"
+  },
+  "current_input_list": {
+    "elementType": "text"
+  },
+  "entity_pathfinder_points": {
+    "elementType": "location"
+  },
+  "event_old_equipments": {
+    "keyType": "text",
+    "valueType": "item"
+  },
+  "event_new_equipments": {
+    "keyType": "text",
+    "valueType": "item"
+  },
+  "event_advancement_tab_name": {
+    "icon": {
+      "material": "TOTEM_OF_UNDYING"
+    }
+  },
+  "event_sign_lines": {
+    "elementType": "text"
+  },
+  "event_enchantments_to_add": {
+    "keyType": "text",
+    "valueType": "number"
+  },
+  "event_enchantment_offers": {
+    "elementType": "any"
+  },
+  "event_input_list": {
+    "elementType": "text"
+  },
+  "response_headers": {
+    "keyType": "text",
+    "valueType": "any"
+  },
+  "all_players_names": {
+    "elementType": "text"
+  },
+  "all_players_uuids": {
+    "elementType": "text"
+  },
+  "all_entities_names": {
+    "elementType": "text"
+  },
+  "all_entities_uuids": {
+    "elementType": "text"
   }
 }
