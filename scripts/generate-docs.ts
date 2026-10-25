@@ -111,6 +111,24 @@ const markdownCell = (value: unknown) =>
     .replace(/\|/g, '\\|')
     .replace(/\r?\n/g, '<br/>');
 
+const localizeList = (
+  properties: Properties,
+  entryKey: string,
+  category: 'work_with' | 'additional_information',
+  values: string[] | undefined,
+  missing: Set<string>
+) =>
+  values
+    ?.map((value) =>
+      localize(
+        properties,
+        `${entryKey}.${category}.${value}`,
+        missing
+      )
+    )
+    .join('<br/>') || '';
+const formatFlag = (value?: true) => value === true;
+
 const markdownTable = (
   headers: string[],
   rows: Array<Array<unknown>>
@@ -156,9 +174,26 @@ const generateActionDocs = async (
         action.id,
         action.category,
         action.subcategory,
+        action.type,
         ('args' in action ? action.args : [])
           .map((argument) => `${argument.id}: ${argument.type}`)
           .join('<br/>'),
+        localizeList(
+          properties,
+          `creative_plus.action.${action.id}`,
+          'work_with',
+          action.worksWith,
+          missing
+        ),
+        localizeList(
+          properties,
+          `creative_plus.action.${action.id}`,
+          'additional_information',
+          action.additionalInfo,
+          missing
+        ),
+        formatFlag(action.deprecated),
+        formatFlag(action.unused),
         localize(
           properties,
           `creative_plus.action.${action.id}.description`,
@@ -170,7 +205,19 @@ const generateActionDocs = async (
       path.resolve(directory, `${object}.md`),
       `${object[0].toUpperCase()}${object.slice(1)} actions`,
       markdownTable(
-        ['Name', 'ID', 'Category', 'Subcategory', 'Arguments', 'Description'],
+        [
+          'Name',
+          'ID',
+          'Category',
+          'Subcategory',
+          'Type',
+          'Arguments',
+          'Works with',
+          'Additional info',
+          'Deprecated',
+          'Unused',
+          'Description',
+        ],
         rows
       )
     );
@@ -194,6 +241,22 @@ const generateEventDocs = async (
       event.id,
       event.category,
       event.cancellable,
+      localizeList(
+        properties,
+        `creative_plus.trigger.${event.id}`,
+        'work_with',
+        event.worksWith,
+        missing
+      ),
+      localizeList(
+        properties,
+        `creative_plus.trigger.${event.id}`,
+        'additional_information',
+        event.additionalInfo,
+        missing
+      ),
+      formatFlag(event.deprecated),
+      formatFlag(event.unused),
       localize(
         properties,
         `creative_plus.trigger.${event.id}.description`,
@@ -205,7 +268,17 @@ const generateEventDocs = async (
     path.resolve(DOCS_DIR, locale, 'events.md'),
     'Events',
     markdownTable(
-      ['Name', 'ID', 'Category', 'Cancellable', 'Description'],
+      [
+        'Name',
+        'ID',
+        'Category',
+        'Cancellable',
+        'Works with',
+        'Additional info',
+        'Deprecated',
+        'Unused',
+        'Description',
+      ],
       rows
     )
   );
@@ -228,6 +301,25 @@ const generateGameValueDocs = async (
       value.id,
       value.type,
       value.selector,
+      'elementType' in value ? value.elementType : '',
+      'keyType' in value ? value.keyType : '',
+      'valueType' in value ? value.valueType : '',
+      localizeList(
+        properties,
+        `creative_plus.game_value.${value.id}`,
+        'work_with',
+        value.worksWith,
+        missing
+      ),
+      localizeList(
+        properties,
+        `creative_plus.game_value.${value.id}`,
+        'additional_information',
+        value.additionalInfo,
+        missing
+      ),
+      formatFlag(value.deprecated),
+      formatFlag(value.unused),
       localize(
         properties,
         `creative_plus.game_value.${value.id}.description`,
@@ -238,7 +330,23 @@ const generateGameValueDocs = async (
   await writeMarkdown(
     path.resolve(DOCS_DIR, locale, 'values.md'),
     'Game values',
-    markdownTable(['Name', 'ID', 'Type', 'Selector', 'Description'], rows)
+    markdownTable(
+      [
+        'Name',
+        'ID',
+        'Type',
+        'Selector',
+        'Element type',
+        'Key type',
+        'Value type',
+        'Works with',
+        'Additional info',
+        'Deprecated',
+        'Unused',
+        'Description',
+      ],
+      rows
+    )
   );
 };
 
