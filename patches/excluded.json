@@ -1,0 +1,23 @@
+{
+  "actions": [
+    "control_dummy",
+    "controller_dummy",
+    "empty",
+    "entity_dummy",
+    "game_dummy",
+    "if_entity_dummy",
+    "if_game_dummy",
+    "if_player_dummy",
+    "if_variable_dummy",
+    "player_dummy",
+    "repeat_dummy",
+    "select_dummy",
+    "set_variable_dummy"
+  ],
+  "events": [
+    "entity_dummy",
+    "player_dummy",
+    "world_dummy"
+  ],
+  "values": []
+}

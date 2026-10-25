@@ -47,7 +47,8 @@
   {
     "id": "player_close_advancements_menu",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "unused": true
   },
   {
     "id": "player_request_stats",
@@ -583,7 +584,8 @@
   {
     "id": "player_vehicle_move",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "unused": true
   },
   {
     "id": "player_input_event",

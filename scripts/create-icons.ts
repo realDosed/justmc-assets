@@ -11,6 +11,7 @@ import {
   fileExists,
   ICONS_CACHE_DIR,
   ICONS_DIR,
+  EXCLUDED_DATA_IDS,
   info,
   success,
   warn,
@@ -184,11 +185,7 @@ const drawIcon = async (icon: CachedIcon) => {
         try {
           const iconPath = path.resolve(categoryDir, `${icon.id}.png`);
 
-          if (
-            category === 'actions' &&
-            icon.material === 'AIR' &&
-            icon.category
-          ) {
+          if (icon.material === 'AIR' && icon.category) {
             const categoryIconPath = path.resolve(
               categoryDir,
               'categories',
@@ -214,6 +211,21 @@ const drawIcon = async (icon: CachedIcon) => {
       })
     );
     progress.complete();
+
+    const excludedIds =
+      category === 'actions'
+        ? EXCLUDED_DATA_IDS.actions
+        : category === 'events'
+          ? EXCLUDED_DATA_IDS.events
+          : category === 'game_values'
+            ? EXCLUDED_DATA_IDS.values
+            : [];
+    await Promise.all(
+      excludedIds.map(async (id) => {
+        const iconPath = path.resolve(categoryDir, `${id}.png`);
+        if (await fileExists(iconPath)) await fs.unlink(iconPath);
+      })
+    );
 
     exitIfAnyErrors();
 

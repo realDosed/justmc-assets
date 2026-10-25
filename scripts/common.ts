@@ -29,6 +29,7 @@ export type CachedIcon = {
   material: string;
   amount: number;
   hasGlint: boolean;
+  category?: string | null;
 
   /**
    * Player head texture
@@ -38,6 +39,27 @@ export type CachedIcon = {
 
 export const fileExists = async (path: string) =>
   !!(await fs.promises.stat(path).catch((e) => false));
+
+export const logDataSummary = async (
+  label: string,
+  filePath: string,
+  entries: Array<{ id: string; deprecated?: boolean; unused?: boolean }>
+) => {
+  const previousEntries: Array<{ id: string }> = (await fileExists(filePath))
+    ? JSON.parse(await fs.promises.readFile(filePath, 'utf-8'))
+    : [];
+  const previousIds = new Set(previousEntries.map(({ id }) => id));
+  const currentIds = new Set(entries.map(({ id }) => id));
+  const added = [...currentIds].filter((id) => !previousIds.has(id)).length;
+  const removed = [...previousIds].filter((id) => !currentIds.has(id)).length;
+  const deprecated = entries.filter((entry) => entry.deprecated).length;
+  const unused = entries.filter((entry) => entry.unused).length;
+
+  info(
+    `${label}: ${entries.length} total, ${added} added, ${removed} removed, ` +
+      `${deprecated} deprecated, ${unused} unused`
+  );
+};
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -116,6 +138,15 @@ export const exitIfAnyErrors = () => {
 export const CACHE_DIR = path.resolve(__dirname, '../.cache');
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 export const PATCHES_DIR = path.resolve(__dirname, '../patches');
+export type ExcludedDataCategory = 'actions' | 'events' | 'values';
+export const EXCLUDED_DATA_IDS: Record<ExcludedDataCategory, string[]> =
+  JSON.parse(
+    fs.readFileSync(path.resolve(PATCHES_DIR, 'excluded.json'), 'utf8')
+  );
+export const isExcludedDataId = (
+  category: ExcludedDataCategory,
+  id: string
+) => EXCLUDED_DATA_IDS[category].includes(id);
 
 export const SOURCE_CACHE_DIR = path.resolve(CACHE_DIR, 'creative-plus');
 export const LOCAL_CONFIG_PATH = path.resolve(
@@ -381,7 +412,7 @@ export const DATA_DIR = path.resolve(__dirname, '../data');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
 
 export const EVENTS_FILE = path.resolve(DATA_DIR, 'events.json');
-export const GAME_VALUES_FILE = path.resolve(DATA_DIR, 'game_values.json');
+export const GAME_VALUES_FILE = path.resolve(DATA_DIR, 'values.json');
 export const ACTIONS_FILE = path.resolve(DATA_DIR, 'actions.json');
 export const OUTPUT_FILE = path.resolve(__dirname, '../src/index.ts');
 

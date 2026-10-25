@@ -16,10 +16,11 @@
     "create:icons": "ts-node scripts/create-icons",
     "create:index": "ts-node scripts/create-index",
     "extract:events": "ts-node scripts/extract-events",
-    "extract:game-values": "ts-node scripts/extract-game-values",
+    "extract:values": "ts-node scripts/extract-game-values",
     "extract:actions": "ts-node scripts/extract-actions",
-    "extract": "yarn run extract:events && yarn run extract:game-values && yarn run extract:actions",
-    "update": "yarn run create:cache && yarn run extract",
+    "extract": "yarn run extract:events && yarn run extract:values && yarn run extract:actions",
+    "generate:docs": "ts-node scripts/generate-docs",
+    "update": "yarn run create:cache && yarn run extract && yarn run create:icons && yarn run generate:docs",
     "generate": "yarn run update && yarn run create:index && yarn run build"
   },
   "files": [

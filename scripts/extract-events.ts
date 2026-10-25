@@ -17,6 +17,8 @@ import {
   extractValueTypeIcons,
   getSourceFiles,
   mapWithProgress,
+  logDataSummary,
+  isExcludedDataId,
   readSourceFile,
   getImportedKotlinSources,
   uncommentKotlinDeclarations,
@@ -33,6 +35,8 @@ const WORK_WITH_KEYS = /workWithKeys\s*=\s*(.*?)\)/;
 const ADDITIONAL_INFO_KEYS = /additionalInfoKeys\s*=\s*(.*?)\)/;
 const MENU_TRIGGER_CATEGORY = /creative_plus.category.(.*)_event/;
 const STRING = /"(.*?)"/gms;
+const MENU_TRIGGER_REFERENCES =
+  /(?<!\.)trigger\(\s*Triggers\.(\w+)/g;
 
 type EventMenuIcon = CachedIcon & {
   category: string | null;
@@ -62,7 +66,7 @@ const extractTriggerMenuIcons = (
         .find(Boolean);
 
     if (!match) {
-      error(`Could not extract icon metadata for trigger: ${name}`);
+      warn(`Could not extract menu icon for trigger: ${name}; using category icon`);
       return acc;
     }
 
@@ -74,7 +78,7 @@ const extractTriggerMenuIcons = (
     const amount = Number(match[2]) || 1;
 
     if (!material) {
-      error(`Could not resolve icon material for trigger: ${name}`);
+      warn(`Could not resolve menu icon for trigger: ${name}; using category icon`);
       return acc;
     }
 
@@ -115,6 +119,18 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
   info('caching event icons...');
 
   const triggerMenuFiles = await getSourceFiles('editor/menu/trigger');
+  const menuTriggerReferences = triggerMenuFiles.reduce<Dictionary<boolean>>(
+    (references, file) => {
+      for (const match of matches(file.content, MENU_TRIGGER_REFERENCES)) {
+        const lineStart = file.content.lastIndexOf('\n', match.index) + 1;
+        const beforeCall = file.content.slice(lineStart, match.index);
+        references[match[1]] =
+          references[match[1]] || !/^\s*\/\//.test(beforeCall);
+      }
+      return references;
+    },
+    {}
+  );
 
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
@@ -134,7 +150,15 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
       );
     }
   );
-  const icons: Dictionary<EventMenuIcon> = Object.assign({}, ...iconsByFile);
+  const allIcons: Dictionary<EventMenuIcon> = Object.assign({}, ...iconsByFile);
+  const icons = Object.keys(allIcons).reduce<Dictionary<EventMenuIcon>>(
+    (filteredIcons, name) => {
+      const icon = allIcons[name];
+      if (!isExcludedDataId('events', icon.id)) filteredIcons[name] = icon;
+      return filteredIcons;
+    },
+    {}
+  );
 
   /////////////////////////////////////////////////////////////////////////////
 
@@ -148,24 +172,33 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
 
   const events = Array.from(triggers.matchAll(REGISTERED_EVENT_REGEX))
     .map(([, name, id]) => [name, id])
-    .filter(([, id]) => !id.includes('dummy'))
+    .filter(([, id]) => !isExcludedDataId('events', id))
     .map(([name, id]) => {
       let icon = icons[name];
+      const menuReference = menuTriggerReferences[name];
 
       if (!icon) {
-        warn(`Not found menu icon for event: ${id}; using an empty icon`);
+        const category = id.split('_')[0];
+        const isDeprecated = menuReference === undefined;
+        warn(`Not found menu icon for event: ${id}; using its category icon`);
         icons[name] = {
           id,
           type: 'event',
+          category,
           material: 'AIR',
           amount: 1,
           hasGlint: false,
-          category: null,
           cancellable: false,
           worksWith: [],
           additionalInfo: [],
         };
-        return { id };
+        return {
+          id,
+          category,
+          cancellable: false,
+          ...(isDeprecated ? { deprecated: true } : {}),
+          ...(menuReference === false ? { unused: true } : {}),
+        };
       }
 
       icon.id = id;
@@ -173,6 +206,7 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
         id,
         category: icon.category,
         cancellable: icon.cancellable,
+        ...(menuReference === false ? { unused: true } : {}),
         ...(icon.worksWith?.length ? { worksWith: icon.worksWith } : {}),
         ...(icon.additionalInfo?.length
           ? { additionalInfo: icon.additionalInfo }
@@ -180,8 +214,9 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
       };
     });
 
-  await fs.writeFile(EVENT_ICONS_CACHE_FILE, toPrettyPrintJson(icons));
+  await logDataSummary('Events', EVENTS_FILE, events);
 
+  await fs.writeFile(EVENT_ICONS_CACHE_FILE, toPrettyPrintJson(icons));
   success('cached event icons');
 
   await fs.writeFile(EVENTS_FILE, toPrettyPrintJson(events));

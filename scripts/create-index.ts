@@ -32,7 +32,7 @@ import actionsData from '../data/actions.json';
 import eventsData from '../data/events.json';
 
 // @ts-ignore
-import gameValuesData from '../data/game_values.json';
+import gameValuesData from '../data/values.json';
 
 export const actions = actionsData as ActionsData;
 export const events = eventsData as EventsData;

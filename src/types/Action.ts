@@ -66,7 +66,10 @@ export const naiveActionTypeFromId = (
 
 type BaseAction = WithMetadata & {
   id: string;
+  name: string;
+  object: string;
   category: ActionCategory;
+  subcategory: string | null;
 };
 
 type ActionWithArguments = BaseAction & {

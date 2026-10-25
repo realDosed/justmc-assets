@@ -18,6 +18,8 @@ import {
   extractIconTexture,
   loadCachedTextureValues,
   readSourceFile,
+  logDataSummary,
+  isExcludedDataId,
   getImportedKotlinSources,
   uncommentKotlinDeclarations,
   warn,
@@ -40,6 +42,8 @@ type GameValueMenuIcon = CachedIcon & {
   worksWith: string[];
 };
 
+const MENU_GAME_VALUE_REFERENCES = /addGameValue\(\s*GameValues\.(\w+)/g;
+
 const extractGameValueMenuIcons = (
   gameValueMenuFile: string,
   valueTypeIcons: Record<string, string>,
@@ -56,7 +60,9 @@ const extractGameValueMenuIcons = (
         .find(Boolean);
 
     if (!match) {
-      error(`Could not extract icon metadata for game value: ${name}`);
+      warn(
+        `Could not extract menu icon for game value: ${name}; using value type icon`
+      );
       return acc;
     }
 
@@ -68,7 +74,9 @@ const extractGameValueMenuIcons = (
     const amount = Number(match[2]) || 1;
 
     if (!material) {
-      error(`Could not resolve icon material for game value: ${name}`);
+      warn(
+        `Could not resolve menu icon for game value: ${name}; using value type icon`
+      );
       return acc;
     }
 
@@ -110,6 +118,9 @@ const MAP_CONTAINER_TYPES =
   /result\s*\[\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)[\s\S]*?\]\s*=\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
 const MAP_KEY_TYPE =
   /result\s*\[\s*DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
+const PLAYER_CONTEXT = /\bPlayerExecutionContext\b/;
+const ENTITY_CONTEXT = /\bEntityExecutionContext\b/;
+const EVENT_CONTEXT = /\bEventExecutionContext\b/;
 
 const inferGameValueCollectionTypes = (type: string, body: string) => {
   const valueTypes = matches(body, VALUE_CONTAINER_TYPE)
@@ -118,7 +129,9 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
 
   if (type === ValueTypes.LIST) {
     const nonNumericTypes = valueTypes.filter((type) => type !== 'number');
-    const itemTypes = [...new Set(nonNumericTypes.length ? nonNumericTypes : valueTypes)];
+    const itemTypes = [
+      ...new Set(nonNumericTypes.length ? nonNumericTypes : valueTypes),
+    ];
     return {
       elementType: itemTypes.length === 1 ? itemTypes[0] : 'any',
     };
@@ -149,12 +162,41 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
   return {};
 };
 
+const selectorFromBody = (
+  body: string
+): 'player' | 'entity' | 'both' | null => {
+  if (EVENT_CONTEXT.test(body)) return null;
+
+  const usesPlayer = PLAYER_CONTEXT.test(body);
+  const usesEntity = ENTITY_CONTEXT.test(body);
+
+  if (usesPlayer && usesEntity) return 'both';
+  if (usesPlayer) return 'player';
+  if (usesEntity) return 'entity';
+  return null;
+};
+
 (async () => {
   info('caching game value icons...');
 
-  const gameValuesMenuFile = (
-    await readSourceFile('editor/menu/gamevalue/GameValuesMenu.kt')
-  ).replace(/^\s*\/\/\s?/gm, '');
+  const originalGameValuesMenuFile = await readSourceFile(
+    'editor/menu/gamevalue/GameValuesMenu.kt'
+  );
+  const gameValuesMenuFile = originalGameValuesMenuFile.replace(
+    /^\s*\/\/\s?/gm,
+    ''
+  );
+  const menuGameValueReferences = matches(
+    originalGameValuesMenuFile,
+    MENU_GAME_VALUE_REFERENCES
+  ).reduce<Record<string, boolean>>((references, match) => {
+    const lineStart =
+      originalGameValuesMenuFile.lastIndexOf('\n', match.index) + 1;
+    const beforeCall = originalGameValuesMenuFile.slice(lineStart, match.index);
+    references[match[1]] =
+      references[match[1]] || !/^\s*\/\//.test(beforeCall);
+    return references;
+  }, {});
   const importedSources = await getImportedKotlinSources(gameValuesMenuFile);
 
   const valueTypeIcons = await extractValueTypeIcons();
@@ -177,7 +219,7 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
   );
 
   const declarations = matches(gameValuesFile, REGISTERED_GAME_VALUES);
-  const registeredGameValues = declarations.map((declaration, index) => {
+  const allRegisteredGameValues = declarations.map((declaration) => {
     const [, name, id, _type] = declaration;
     const type = valueTypeFromInternal(_type);
     if (!type) error(`Unknown internal type: ${_type}`);
@@ -193,9 +235,19 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
       id,
       name,
       type: type!,
+      selector: selectorFromBody(body),
       ...inferGameValueCollectionTypes(type!, body),
     };
   });
+  const excludedGameValueNames = new Set(
+    allRegisteredGameValues
+      .filter((value) => isExcludedDataId('values', value.id))
+      .map((value) => value.name)
+  );
+  for (const name of excludedGameValueNames) delete menuIcons[name];
+  const registeredGameValues = allRegisteredGameValues.filter(
+    (value) => !isExcludedDataId('values', value.id)
+  );
 
   exitIfAnyErrors();
 
@@ -206,15 +258,26 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
 
     if (!icon) {
       warn(
-        `Could not find menu icon for game value: ${_gameValue.id}; using an empty icon`
+        `Could not find menu icon for game value: ${_gameValue.id}; using value type icon`
       );
       icon = {
         id: _gameValue.id,
         type: 'game_value',
-        material: 'AIR',
+        material: valueTypeIcons[_gameValue.type.toUpperCase()] || 'AIR',
         amount: 1,
         hasGlint: false,
         worksWith: [],
+      };
+      menuIcons[_gameValue.name] = icon;
+    } else if (
+      !Object.prototype.hasOwnProperty.call(
+        menuGameValueReferences,
+        _gameValue.name
+      )
+    ) {
+      icon = {
+        ...icon,
+        material: valueTypeIcons[_gameValue.type.toUpperCase()] || 'AIR',
       };
       menuIcons[_gameValue.name] = icon;
     }
@@ -222,6 +285,7 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
     let gameValue = {
       id: _gameValue.id,
       type: _gameValue.type,
+      selector: _gameValue.selector,
       ...('elementType' in _gameValue
         ? { elementType: _gameValue.elementType }
         : {}),
@@ -230,6 +294,15 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
         : {}),
       ...(icon?.worksWith?.length
         ? { worksWith: icon.worksWith }
+        : {}),
+      ...(!Object.prototype.hasOwnProperty.call(
+        menuGameValueReferences,
+        _gameValue.name
+      )
+        ? { deprecated: true }
+        : {}),
+      ...(menuGameValueReferences[_gameValue.name] === false
+        ? { unused: true }
         : {}),
     } as GameValue;
 
@@ -252,10 +325,20 @@ const inferGameValueCollectionTypes = (type: string, body: string) => {
     return gameValue;
   });
 
-  await fs.writeFile(GAME_VALUE_ICONS_CACHE_FILE, toPrettyPrintJson(menuIcons));
-  await fs.writeFile(GAME_VALUES_FILE, toPrettyPrintJson(gameValues));
+  await logDataSummary('Values', GAME_VALUES_FILE, gameValues);
 
   exitIfAnyErrors();
+
+  const filteredMenuIcons = Object.fromEntries(
+    Object.entries(menuIcons).filter(
+      ([, icon]) => !isExcludedDataId('values', icon.id)
+    )
+  );
+  await fs.writeFile(
+    GAME_VALUE_ICONS_CACHE_FILE,
+    toPrettyPrintJson(filteredMenuIcons)
+  );
+  await fs.writeFile(GAME_VALUES_FILE, toPrettyPrintJson(gameValues));
 
   success('extracted game values');
 })();

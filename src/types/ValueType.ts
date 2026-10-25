@@ -15,12 +15,12 @@ export const ValueTypes = {
   /**
    * Argument that only accepts variables containing a list
    */
-  LIST: 'list',
+  LIST: 'array',
 
   /**
    * Argument that only accepts variables containing a dictionary
    */
-  DICTIONARY: 'dictionary',
+  DICTIONARY: 'map',
 } as const;
 
 export type ValueTypes = typeof ValueTypes;
@@ -30,8 +30,9 @@ export const valueTypeFromInternal = (value: string): ValueType | null => {
   const _value = value.toLowerCase();
 
   if (_value === 'string') return ValueTypes.TEXT;
-  if (_value === 'array') return ValueTypes.LIST;
-  if (_value === 'map') return ValueTypes.DICTIONARY;
+  if (_value === 'array' || _value === 'list') return ValueTypes.LIST;
+  if (_value === 'map' || _value === 'dictionary')
+    return ValueTypes.DICTIONARY;
 
   if (['int', 'long', 'float', 'double'].includes(_value))
     return ValueTypes.NUMBER;

@@ -21,6 +21,9 @@ import {
   mapWithProgress,
   getSourceFiles,
   getImportedKotlinSources,
+  logDataSummary,
+  isExcludedDataId,
+  readSourceFile,
   uncommentKotlinDeclarations,
   warn,
 } from './common';
@@ -31,6 +34,7 @@ import ActionArgument, {
   argumentTypeFromInternal,
   NumberActionArgumentSize,
 } from '../src/types/ActionArgument';
+import { ActionCategories } from '../src/ActionsData';
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -38,8 +42,8 @@ const ACTION_NAME = /object\s*(.*?)\s*:.*?"(.*?)"/gms;
 const ACTIONS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'actions.json');
 const ENUMS_PATCHES_FILE = path.resolve(PATCHES_DIR, 'enums.json');
 
-const ARGUMENT =
-  /val\s+.*?\s+by\s+([a-z]+(?:[A-Z](?!ist)[a-z]*)?)(List)?<?([^<>(){}]*)>?\("(.*?)"(?:(?:,\s*(false))|(?:.*))\)\s*{((?:.|\n)*?)(?=^[ \t]{4}\})/gm;
+const ARGUMENT_DECLARATION =
+  /^[ \t]*val\s+\w+\s+by\s+([a-z]+(?:[A-Z](?!ist)[a-z]*)?)(List)?\s*(?:<([^<>]*)>)?\s*\(/gm;
 
 const ARGUMENT_VALUE_SLOTS = /parsing\s*=\s*(.*)/;
 const ARGUMENT_DESCRIPTION_SLOTS = /descriptions?\s*=\s*(.*)/;
@@ -51,6 +55,61 @@ const ENUM_MEMBER_REGEX =
   /(?:(?:^|,)\s*)(?:\b(?!ItemStack|BlockDirection)([A-Z_][\w]*)(?!\))\b(?:\(.*?\))?)/gm;
 
 type Enums = Dictionary<string[]>;
+
+const ACTION_OBJECTS: Record<string, string> = {
+  [ActionCategories.PLAYER]: 'player',
+  [ActionCategories.IF_PLAYER]: 'player',
+  [ActionCategories.ENTITY]: 'entity',
+  [ActionCategories.IF_ENTITY]: 'entity',
+  [ActionCategories.GAME]: 'world',
+  [ActionCategories.IF_GAME]: 'world',
+  [ActionCategories.CONTROL]: 'code',
+  [ActionCategories.CONTROLLER]: 'controller',
+  [ActionCategories.SET_VARIABLE]: 'variable',
+  [ActionCategories.IF_VARIABLE]: 'variable',
+  [ActionCategories.SELECT]: 'select',
+  [ActionCategories.REPEAT]: 'repeat',
+  [ActionCategories.ELSE]: 'code',
+  [ActionCategories.CALL_FUNCTION]: 'code',
+  [ActionCategories.START_PROCESS]: 'code',
+  [ActionCategories.EMPTY]: 'code',
+};
+
+const ACTION_NAME_OVERRIDES: Record<string, string> = {
+  control_end_thread: 'break',
+  controller_exception: 'catch_exception',
+  entity_celar_potion_effects: 'clear_potion_effects',
+  entity_set_display_culling_suze: 'set_display_culling_size',
+  entity_set_no_physics: 'no_physics',
+  game_set_world_gamerule: 'set_gamerule',
+  if_entity_dummy: 'is_dummy',
+  if_game_dummy: 'is_dummy',
+  if_player_dummy: 'is_dummy',
+  if_player_is_holding: 'holding',
+  if_variable_dummy: 'is_dummy',
+  player_send_message: 'message',
+  set_variable_hash: 'get_text_hash',
+  set_variable_multiple: 'set_values',
+  set_variable_sort_any_list: 'sort_list',
+  set_variable_sort_any_map: 'sort_map',
+  set_variable_text: 'set_text',
+  set_variable_text_case: 'set_text_case',
+  set_variable_text_length: 'get_text_length',
+  set_variable_value: 'set_value',
+  set_variable_vector: 'set_vector',
+  set_variable_warp: 'wrap',
+};
+
+const TOP_LEVEL_ACTION_CATEGORIES = new Set<string>([
+  ActionCategories.CALL_FUNCTION,
+  ActionCategories.START_PROCESS,
+  ActionCategories.ELSE,
+  ActionCategories.EMPTY,
+]);
+
+const getActionName = (id: string, category: string) =>
+  ACTION_NAME_OVERRIDES[id] ||
+  (id.startsWith(`${category}_`) ? id.slice(category.length + 1) : id);
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -71,6 +130,19 @@ type ActionMenuIcon = CachedIcon & {
   worksWith: string[];
   additionalInfo: string[];
 };
+
+const REGISTERED_ACTIONS = /register\((\w+)\)/g;
+const MENU_ACTION_REFERENCES = /(?<!\.)action\(\s*(\w+)/g;
+
+const menuReferences = (content: string, regex: RegExp) =>
+  matches(content, regex).reduce<Record<string, boolean>>((references, match) => {
+    const name = match[1];
+    const lineStart = content.lastIndexOf('\n', match.index) + 1;
+    const beforeCall = content.slice(lineStart, match.index);
+    const isCommented = /^\s*\/\//.test(beforeCall);
+    references[name] = references[name] || !isCommented;
+    return references;
+  }, {});
 
 const getStrings = (content: string, regex: RegExp) =>
   matches(content.match(regex)?.[1] || '', STRING).map(([, key]) => key);
@@ -97,7 +169,7 @@ const extractActionMenuIcons = (
         .find(Boolean);
 
     if (!match) {
-      error(`Could not extract icon metadata for action: ${name}`);
+      warn(`Could not extract menu icon for action: ${name}; using category icon`);
       return acc;
     }
 
@@ -109,7 +181,7 @@ const extractActionMenuIcons = (
     const amount = Number(match[2]) || 1;
 
     if (!material) {
-      error(`Could not resolve icon material for action: ${name}`);
+      warn(`Could not resolve menu icon for action: ${name}; using category icon`);
       return acc;
     }
 
@@ -169,13 +241,76 @@ const getEnums = (content: string) => {
   return enums;
 };
 
+const readBalancedBlock = (
+  content: string,
+  start: number,
+  opening: string,
+  closing: string
+) => {
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+
+  for (let index = start; index < content.length; index++) {
+    const char = content[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === '\\') escaped = true;
+      else if (char === '"') inString = false;
+      continue;
+    }
+
+    if (char === '"') inString = true;
+    else if (char === opening) depth++;
+    else if (char === closing && --depth === 0) return index;
+  }
+
+  return -1;
+};
+
+const getArgumentDeclarations = (content: string) =>
+  matches(content, ARGUMENT_DECLARATION).flatMap((match) => {
+    const [, type, plural, enumName] = match;
+    const openingParenthesis = match.index! + match[0].lastIndexOf('(');
+    const closingParenthesis = readBalancedBlock(
+      content,
+      openingParenthesis,
+      '(',
+      ')'
+    );
+    if (closingParenthesis < 0) return [];
+
+    const callContent = content.slice(
+      openingParenthesis + 1,
+      closingParenthesis
+    );
+    const id = callContent.match(/^\s*"([^"]+)"/)?.[1];
+    if (!id) return [];
+
+    let body = '';
+    let declarationEnd = closingParenthesis + 1;
+    let bodyStart = declarationEnd;
+    while (/\s/.test(content[bodyStart] || '')) bodyStart++;
+    if (content[bodyStart] === '{') {
+      const bodyEnd = readBalancedBlock(content, bodyStart, '{', '}');
+      if (bodyEnd >= 0) {
+        body = content.slice(bodyStart + 1, bodyEnd);
+        declarationEnd = bodyEnd + 1;
+      }
+    }
+
+    const declaration = content.slice(match.index!, declarationEnd);
+    const bool = callContent.match(/,\s*(false)\b/)?.[1];
+    return [[declaration, type, plural, enumName, id, bool, body] as const];
+  });
+
 const getArguments = (
   action: string,
   enums: Enums,
   args: Dictionary,
   content: string
 ) => {
-  const _args = matches(content, ARGUMENT);
+  const _args = getArgumentDeclarations(content);
   const _enums: Enums = { ...enums, ...getEnums(content) };
 
   return _args.map<ActionArgument>(
@@ -294,13 +429,22 @@ const getArguments = (
 (async () => {
   info('caching action icons...');
 
-  const actionFiles = (await getSourceFiles('action')).filter((file) => {
+  const actionsRegistry = await readSourceFile('action/Actions.kt');
+  const registeredActions = new Set(
+    matches(actionsRegistry, REGISTERED_ACTIONS).map(([, name]) => name)
+  );
+  const allActionFiles = await getSourceFiles('action');
+  const actionFiles = allActionFiles.filter((file) => {
     ACTION_NAME.lastIndex = 0;
     const action = matches(
       uncommentKotlinDeclarations(file.content),
       ACTION_NAME
     )[0];
-    return Boolean(action && !action[2].includes('dummy'));
+    return Boolean(
+      action &&
+        registeredActions.has(action[1]) &&
+        !isExcludedDataId('actions', action[2])
+    );
   });
   const actionNames = new Set(
     actionFiles.flatMap((file) => {
@@ -332,6 +476,16 @@ const getArguments = (
     }
   );
   const icons: Dictionary<ActionMenuIcon> = Object.assign({}, ...iconsByFile);
+  const menuActionReferences = actionMenuFiles.reduce<Record<string, boolean>>(
+    (references, file) => {
+      for (const [name, isActive] of Object.entries(
+        menuReferences(file.content, MENU_ACTION_REFERENCES)
+      ))
+        references[name] = references[name] || isActive;
+      return references;
+    },
+    {}
+  );
 
   exitIfAnyErrors();
 
@@ -368,10 +522,15 @@ const getArguments = (
       const ct = naiveActionTypeFromId(id);
       if (!ct) return error(`Could not find category for action: ${id}`);
       const [category, type] = ct;
+      const object = ACTION_OBJECTS[category];
+      if (!object)
+        return error(
+          `Could not find object for action category: ${category}`
+        );
       let icon = icons[name];
 
       if (!icon) {
-        warn(`Could not find menu icon for action: ${id}; using an empty icon`);
+        warn(`Could not find menu icon for action: ${id}; using its category icon`);
         icon = {
           id,
           type: 'action',
@@ -389,13 +548,24 @@ const getArguments = (
       }
 
       const actionType = actionPatches[id]?.type || type;
+      const menuReference = menuActionReferences[name];
 
       return {
         id,
+        name: getActionName(id, category),
+        object,
         category,
         subcategory: icon?.subcategory || null,
         type: actionType,
         args: getArguments(id, enums, {}, contents),
+        ...(!TOP_LEVEL_ACTION_CATEGORIES.has(category) &&
+        menuReference === undefined
+          ? { deprecated: true }
+          : {}),
+        ...(!TOP_LEVEL_ACTION_CATEGORIES.has(category) &&
+        menuReference === false
+          ? { unused: true }
+          : {}),
         ...(icon?.worksWith?.length ? { worksWith: icon.worksWith } : {}),
         ...(icon?.additionalInfo?.length
           ? { additionalInfo: icon.additionalInfo }
@@ -406,8 +576,9 @@ const getArguments = (
 
   exitIfAnyErrors();
 
-  await fs.writeFile(ACTION_ICONS_CACHE_FILE, toPrettyPrintJson(icons));
+  await logDataSummary('Actions', ACTIONS_FILE, actions);
 
+  await fs.writeFile(ACTION_ICONS_CACHE_FILE, toPrettyPrintJson(icons));
   await fs.writeFile(ACTIONS_FILE, toPrettyPrintJson(actions));
 
   success('extracted actions');

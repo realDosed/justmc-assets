@@ -2,7 +2,10 @@ import { ValueType, ValueTypes } from './ValueType';
 import WithMetadata from './WithMetadata';
 import WithId from './WithId';
 
-type BaseGameValue = WithMetadata & WithId;
+type BaseGameValue = WithMetadata &
+  WithId & {
+    selector: 'player' | 'entity' | 'both' | null;
+  };
 
 ///////////////////////////////////////////////////////////////////////////////
 

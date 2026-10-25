@@ -1,184 +1,227 @@
 [
   {
     "id": "current_health",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "max_health",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "absorption_health",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "food_level",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "food_saturation",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "food_exhaustion",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "saturated_regen_rate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "unsaturated_regen_rate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "starvation_rate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "attack_damage",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "attack_speed",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "attack_cooldown_ticks",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "attack_cooldown_strength",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "armor_points",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "armor_toughness",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "invulnerability_ticks",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "max_invulnerability_ticks",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "experience_level",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "experience_progress",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "death_screen_score",
     "type": "number",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
   },
   {
     "id": "fire_ticks",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "freeze_ticks",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "remaining_air",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "fall_distance",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "held_slot",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "walking_speed",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "flying_speed",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "ping",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "protocol_version",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "client_view_distance",
     "type": "number",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
   },
   {
     "id": "item_usage_progress",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "active_item_used_time",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "entity_ticks_lived",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "arrows_in_body",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "age",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "steer_forward",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "steer_sideways",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "merchant_recipe_count",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "open_inventory_size",
     "type": "number",
+    "selector": "entity",
     "worksWith": [
       "players"
     ]
   },
   {
     "id": "entity_width_x",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "entity_height",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "entity_width_z",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "entity_fuse_ticks",
     "type": "number",
+    "selector": "entity",
     "worksWith": [
       "creeper",
       "tnt",
@@ -188,6 +231,7 @@
   {
     "id": "projectile_power",
     "type": "vector",
+    "selector": "entity",
     "worksWith": [
       "fireball",
       "dragon_fireball",
@@ -196,139 +240,171 @@
   },
   {
     "id": "enchantment_seed",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "idle_duration",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "entity_pathfinder_point_index",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "target_block_location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "target_fluid_location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "target_block_face",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "eye_location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "cape_location",
     "type": "location",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
   },
   {
     "id": "x_coordinate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "y_coordinate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "z_coordinate",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "pitch",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "yaw",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "direction_of_view",
-    "type": "vector"
+    "type": "vector",
+    "selector": "entity"
   },
   {
     "id": "cardinal_direction",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "hitbox_midpoint_location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "spawn_location",
-    "type": "location"
+    "type": "location",
+    "selector": null
   },
   {
     "id": "origin",
-    "type": "location"
+    "type": "location",
+    "selector": "both"
   },
   {
     "id": "velocity",
-    "type": "vector"
+    "type": "vector",
+    "selector": "entity"
   },
   {
     "id": "body_yaw",
-    "type": "number"
+    "type": "number",
+    "selector": "entity"
   },
   {
     "id": "block_beneath",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "blocks_beneath",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "location"
   },
   {
     "id": "last_death_location",
-    "type": "location"
+    "type": "location",
+    "selector": "entity"
   },
   {
     "id": "main_hand_item",
-    "type": "item"
+    "type": "item",
+    "selector": "entity"
   },
   {
     "id": "off_hand_item",
-    "type": "item"
+    "type": "item",
+    "selector": "entity"
   },
   {
     "id": "armor_items",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "item"
   },
   {
     "id": "hotbar_items",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "item"
   },
   {
     "id": "inventory_items",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "item"
   },
   {
     "id": "custom_inventory_items",
-    "type": "list",
+    "type": "array",
+    "selector": "player",
     "elementType": "item"
   },
   {
     "id": "cursor_item",
-    "type": "item"
+    "type": "item",
+    "selector": "entity"
   },
   {
     "id": "saddle_item",
     "type": "item",
+    "selector": "entity",
     "worksWith": [
       "pig",
       "horse",
@@ -337,15 +413,18 @@
   },
   {
     "id": "entity_item",
-    "type": "item"
+    "type": "item",
+    "selector": "entity"
   },
   {
     "id": "entity_pick_item_stack",
-    "type": "item"
+    "type": "item",
+    "selector": "entity"
   },
   {
     "id": "player_enderchest_items",
-    "type": "list",
+    "type": "array",
+    "selector": "player",
     "elementType": "item",
     "worksWith": [
       "player"
@@ -353,23 +432,28 @@
   },
   {
     "id": "name",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "uuid",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "display_name",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "entity_type",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "client_brand_name",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -377,6 +461,7 @@
   {
     "id": "user_locale",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -384,6 +469,7 @@
   {
     "id": "clientside_locale",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -391,6 +477,7 @@
   {
     "id": "open_inventory_title",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -398,6 +485,7 @@
   {
     "id": "open_inventory_type",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -405,6 +493,7 @@
   {
     "id": "open_inventory_custom_id",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -412,44 +501,53 @@
   {
     "id": "gamemode",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
   },
   {
     "id": "last_damage_cause",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "potion_effects",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "potion"
   },
   {
     "id": "vehicle",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "passengers",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "text"
   },
   {
     "id": "lead_holder",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "attached_leads",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "text"
   },
   {
     "id": "targeted_entity",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "player_ender_pearls",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "text",
     "worksWith": [
       "player"
@@ -457,22 +555,26 @@
   },
   {
     "id": "spawn_reason",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "main_hand",
     "type": "text",
+    "selector": "player",
     "worksWith": [
       "player"
     ]
   },
   {
     "id": "pose",
-    "type": "text"
+    "type": "text",
+    "selector": "entity"
   },
   {
     "id": "current_input_list",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "text",
     "worksWith": [
       "player"
@@ -481,6 +583,7 @@
   {
     "id": "chat_visibility",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -488,6 +591,7 @@
   {
     "id": "particle_visibility",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "player"
     ]
@@ -495,6 +599,7 @@
   {
     "id": "projectile_owner_uuid",
     "type": "text",
+    "selector": "entity",
     "worksWith": [
       "projectile"
     ]
@@ -502,6 +607,7 @@
   {
     "id": "display_entity_translation",
     "type": "vector",
+    "selector": "entity",
     "worksWith": [
       "display"
     ]
@@ -509,6 +615,7 @@
   {
     "id": "display_entity_left_rotation",
     "type": "vector",
+    "selector": "entity",
     "worksWith": [
       "display"
     ]
@@ -516,6 +623,7 @@
   {
     "id": "display_entity_right_rotation",
     "type": "vector",
+    "selector": "entity",
     "worksWith": [
       "display"
     ]
@@ -523,22 +631,26 @@
   {
     "id": "display_entity_scale",
     "type": "vector",
+    "selector": "entity",
     "worksWith": [
       "display"
     ]
   },
   {
     "id": "entity_pathfinder_points",
-    "type": "list",
+    "type": "array",
+    "selector": "entity",
     "elementType": "location"
   },
   {
     "id": "event_block_location",
-    "type": "location"
+    "type": "location",
+    "selector": null
   },
   {
     "id": "event_block_face",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "interact_events",
       "place_break_events",
@@ -548,11 +660,13 @@
   },
   {
     "id": "event_block",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_blocks_involved",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "location",
     "worksWith": [
       "explosion_events",
@@ -562,6 +676,7 @@
   {
     "id": "event_interaction",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "right_click_event",
       "left_click_event",
@@ -570,27 +685,33 @@
   },
   {
     "id": "event_from_location",
-    "type": "location"
+    "type": "location",
+    "selector": null
   },
   {
     "id": "event_new_location",
-    "type": "location"
+    "type": "location",
+    "selector": null
   },
   {
     "id": "event_damage",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "event_final_damage",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "event_damage_cause",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_knockback_event_type",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -599,6 +720,7 @@
   {
     "id": "event_knockback_cause",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -607,6 +729,7 @@
   {
     "id": "event_knockback_vector",
     "type": "vector",
+    "selector": null,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -615,6 +738,7 @@
   {
     "id": "event_velocity",
     "type": "vector",
+    "selector": null,
     "worksWith": [
       "player_velocity"
     ]
@@ -622,17 +746,20 @@
   {
     "id": "event_chat_message",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_chat_event"
     ]
   },
   {
     "id": "event_message",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_custom_click_key",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_custom_click"
     ]
@@ -640,6 +767,7 @@
   {
     "id": "event_custom_click_dialog_view_data",
     "type": "any",
+    "selector": null,
     "worksWith": [
       "player_custom_click"
     ]
@@ -647,6 +775,7 @@
   {
     "id": "event_death_screen_message",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_death_event"
     ]
@@ -654,6 +783,7 @@
   {
     "id": "event_heal_amount",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_heal_event",
       "entity_heal_event"
@@ -662,6 +792,7 @@
   {
     "id": "event_heal_cause",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_heal_event",
       "entity_heal_event"
@@ -670,6 +801,7 @@
   {
     "id": "event_exhaustion_amount",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_exhaustion_event"
     ]
@@ -677,6 +809,7 @@
   {
     "id": "event_exhaustion_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_exhaustion_event"
     ]
@@ -684,6 +817,7 @@
   {
     "id": "event_new_potion_effect",
     "type": "potion",
+    "selector": null,
     "worksWith": [
       "player_imbue_potion_cloud_event"
     ]
@@ -691,6 +825,7 @@
   {
     "id": "event_power",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_shoot_bow_event",
       "player_horse_jump_event"
@@ -698,35 +833,42 @@
   },
   {
     "id": "event_item",
-    "type": "item"
+    "type": "item",
+    "selector": null
   },
   {
     "id": "event_items",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "item"
   },
   {
     "id": "event_old_item",
     "type": "item",
+    "selector": null,
     "worksWith": [
       "player_inventory_slot_change_event"
     ]
   },
   {
     "id": "event_equipment_slot",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_slot",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "event_hotbar_slot",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "event_added_items",
-    "type": "dictionary",
+    "type": "map",
+    "selector": null,
     "keyType": "number",
     "valueType": "item",
     "worksWith": [
@@ -735,7 +877,8 @@
   },
   {
     "id": "event_old_equipments",
-    "type": "dictionary",
+    "type": "map",
+    "selector": null,
     "keyType": "text",
     "valueType": "item",
     "worksWith": [
@@ -745,7 +888,8 @@
   },
   {
     "id": "event_new_equipments",
-    "type": "dictionary",
+    "type": "map",
+    "selector": null,
     "keyType": "text",
     "valueType": "item",
     "worksWith": [
@@ -755,33 +899,39 @@
   },
   {
     "id": "event_slot_type",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_close_inventory_cause",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_close_inventory_event"
     ]
   },
   {
     "id": "event_inventory_click_type",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_inventory_action",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "event_drag_type",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_drag_inventory_event"
     ]
   },
   {
     "id": "event_slots_involved",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "number",
     "worksWith": [
       "player_drag_inventory_event"
@@ -790,6 +940,7 @@
   {
     "id": "event_fish_state",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_fish_event"
     ]
@@ -797,6 +948,7 @@
   {
     "id": "event_new_fishing_hook_state",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "fishing_hook_state_change"
     ]
@@ -804,6 +956,7 @@
   {
     "id": "event_tree_type",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_structure_grow_event",
       "structure_grow_event"
@@ -811,11 +964,13 @@
   },
   {
     "id": "event_experience",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "event_hanging_break_cause",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "hanging_break_event"
     ]
@@ -823,6 +978,7 @@
   {
     "id": "event_entity_unleash_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "entity_unleash_events"
     ]
@@ -830,6 +986,7 @@
   {
     "id": "event_time_skip_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "time_skip_event"
     ]
@@ -837,6 +994,7 @@
   {
     "id": "event_time_skip_amount",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "time_skip_event"
     ]
@@ -844,6 +1002,7 @@
   {
     "id": "event_food_level",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_food_level_change_event"
     ]
@@ -851,6 +1010,7 @@
   {
     "id": "event_item_cooldown",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_item_cooldown",
       "player_item_group_cooldown"
@@ -859,6 +1019,7 @@
   {
     "id": "event_item_cooldown_group",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_item_cooldown",
       "player_item_group_cooldown"
@@ -867,6 +1028,7 @@
   {
     "id": "event_item_damage",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_damage_item"
     ]
@@ -874,6 +1036,7 @@
   {
     "id": "event_combust_duration",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_combust",
       "entity_combust"
@@ -882,6 +1045,7 @@
   {
     "id": "event_combust_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_combust",
       "entity_combust"
@@ -890,6 +1054,7 @@
   {
     "id": "event_projectile_item",
     "type": "item",
+    "selector": null,
     "worksWith": [
       "player_shoot_bow_event"
     ]
@@ -897,6 +1062,7 @@
   {
     "id": "event_teleport_cause",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_teleport_event",
       "enderman_escape_event"
@@ -905,6 +1071,7 @@
   {
     "id": "event_block_break_progress",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_block_break_progress_update",
       "entity_block_break_progress_update"
@@ -913,6 +1080,7 @@
   {
     "id": "event_ticks_held_for",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_stop_using_item"
     ]
@@ -920,6 +1088,7 @@
   {
     "id": "event_query_info",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_query_block_info",
       "player_query_entity_info"
@@ -928,20 +1097,24 @@
   {
     "id": "event_advancement_tab_name",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_open_advancements_tab"
-    ]
+    ],
+    "deprecated": true
   },
   {
     "id": "event_gamemode",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_ask_gamemode_change"
     ]
   },
   {
     "id": "event_sign_lines",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text",
     "worksWith": [
       "sign_change_event"
@@ -950,6 +1123,7 @@
   {
     "id": "event_sign_side",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "sign_change_event"
     ]
@@ -957,6 +1131,7 @@
   {
     "id": "event_old_vault_state",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "vault_change_state",
       "player_vault_change_state"
@@ -965,6 +1140,7 @@
   {
     "id": "event_new_vault_state",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "vault_change_state",
       "player_vault_change_state"
@@ -973,6 +1149,7 @@
   {
     "id": "event_anvil_rename_input",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_anvil_rename_input"
     ]
@@ -980,6 +1157,7 @@
   {
     "id": "event_anvil_damage_state",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_anvil_damaged"
     ]
@@ -987,13 +1165,15 @@
   {
     "id": "event_enchantment_hint",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_enchant_item"
     ]
   },
   {
     "id": "event_enchantments_to_add",
-    "type": "dictionary",
+    "type": "map",
+    "selector": null,
     "keyType": "text",
     "valueType": "number",
     "worksWith": [
@@ -1003,13 +1183,15 @@
   {
     "id": "event_enchantment_level_hint",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_enchant_item"
     ]
   },
   {
     "id": "event_enchantment_offers",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text",
     "worksWith": [
       "player_prepare_item_enchant"
@@ -1018,13 +1200,15 @@
   {
     "id": "event_enchantment_bonus",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_prepare_item_enchant"
     ]
   },
   {
     "id": "event_input_list",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text",
     "worksWith": [
       "player_input_event",
@@ -1035,13 +1219,15 @@
   {
     "id": "event_fail_move_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_fail_move_event"
     ]
   },
   {
     "id": "event_transformed_entities",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text",
     "worksWith": [
       "entity_transform_event"
@@ -1050,6 +1236,7 @@
   {
     "id": "event_transform_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "entity_transform_event"
     ]
@@ -1057,6 +1244,7 @@
   {
     "id": "event_replaced_block",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_place_block_event"
     ]
@@ -1064,6 +1252,7 @@
   {
     "id": "url_response",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "web_response_event"
     ]
@@ -1071,13 +1260,15 @@
   {
     "id": "url_response_code",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "web_response_event"
     ]
   },
   {
     "id": "response_headers",
-    "type": "dictionary",
+    "type": "map",
+    "selector": null,
     "keyType": "text",
     "valueType": "any",
     "worksWith": [
@@ -1087,6 +1278,7 @@
   {
     "id": "url",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "web_response_event"
     ]
@@ -1094,6 +1286,7 @@
   {
     "id": "currency_transaction_reason",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1101,6 +1294,7 @@
   {
     "id": "currency_transaction_amount",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1108,6 +1302,7 @@
   {
     "id": "currency_transaction_result",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1115,6 +1310,7 @@
   {
     "id": "anticheat_check",
     "type": "text",
+    "selector": null,
     "worksWith": [
       "player_anticheat_flag_event"
     ]
@@ -1122,114 +1318,140 @@
   {
     "id": "anticheat_violations",
     "type": "number",
+    "selector": null,
     "worksWith": [
       "player_anticheat_flag_event"
     ]
   },
   {
     "id": "player_count",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "cpu_usage",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "particle_cpu_usage",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "server_tps",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "timestamp",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "server_current_tick",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "selection_size",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "selection_target_names",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "selection_target_uuids",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "world_time",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_game_time",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_weather",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "world_clear_weather_duration",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_weather_duration",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_thunder_duration",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_moon_phase",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "owner_uuid",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "world_size",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "world_id",
-    "type": "text"
+    "type": "text",
+    "selector": null
   },
   {
     "id": "all_players_names",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "all_players_uuids",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "all_entities_names",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "all_entities_uuids",
-    "type": "list",
+    "type": "array",
+    "selector": null,
     "elementType": "text"
   },
   {
     "id": "start_reload_tick",
-    "type": "number"
+    "type": "number",
+    "selector": null
   },
   {
     "id": "delay_reload_count",
-    "type": "number"
+    "type": "number",
+    "selector": null
   }
 ]
