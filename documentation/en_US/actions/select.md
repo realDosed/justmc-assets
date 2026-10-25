@@ -1,38 +1,38 @@
 # Select actions
 
-| Name | ID | Category | Subcategory | Type | Arguments | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Add All Entities | select_add_all_entities | select | add | basic |  |  |  | false | false | Adds all entities to the selection. |
-| Add All Mobs | select_add_all_mobs | select | add | basic |  |  |  | false | false | Adds all mobs to the selection. |
-| Add All Players | select_add_all_players | select | add | basic |  |  |  | false | false | Adds all players to the selection. |
-| Add Entity By Conditional | select_add_entity_by_conditional | select | add | basic_with_conditional |  |  |  | false | false | Adds entities to the selection by a condition. |
-| Add Entity By Name/UUID | select_add_entity_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Adds an entity by name/UUID to the selection. |
-| Add Event Target | select_add_event_target | select | add | basic | selection_type: enum |  |  | false | false | Adds an event target to the selection |
-| Add Last Entity | select_add_last_entity | select | add | basic |  |  |  | false | false | Adds the last entity to the selection. |
-| Add Last Mob | select_add_last_mob | select | add | basic |  |  |  | false | false | Adds the last mob to the selection. |
-| Add Mob By Name/UUID | select_add_mob_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Adds a mob by name/UUID to the selection. |
-| Add Player By Conditional | select_add_player_by_conditional | select | add | basic_with_conditional |  |  |  | false | false | Adds players to the selection by a condition. |
-| Add Player By Name/UUID | select_add_player_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Adds a player by name/UUID to the selection. |
-| Add Random Entity | select_add_random_entity | select | add | basic |  |  |  | false | false | Adds a random entity to the selection. |
-| Add Random Mob | select_add_random_mob | select | add | basic |  |  |  | false | false | Adds a random mob to the selection. |
-| Add Random Player | select_add_random_player | select | add | basic |  |  |  | false | false | Adds a random player to the selection. |
-| Select All Entities | select_all_entities | select | creation | basic |  |  |  | false | false | Selects all entities in the world. |
-| Select All Mobs | select_all_mobs | select | creation | basic |  |  |  | false | false | Selects all mobs in the world. |
-| Select All Players | select_all_players | select | creation | basic |  |  |  | false | false | Selects all players in the world. |
-| Select Entity By Condition | select_entity_by_conditional | select | creation | basic_with_conditional |  |  |  | false | false | Selects entities if the specified condition is met. |
-| Select Entity By Name | select_entity_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Selects an entity or entities by name or UUID. |
-| Select Event Target | select_event_target | select | creation | basic | selection_type: enum |  |  | false | false | Selects the target that triggered the event. |
-| Filter Selection By Condition | select_filter_by_conditional | select | filter | basic_with_conditional |  |  |  | false | false | Keep the selection of targets that match the selected condition. |
-| Filter Selection By Distance | select_filter_by_distance | select | filter | basic | location: location<br/>selection_size: number<br/>ignore_y_axis: enum<br/>compare_mode: enum |  |  | false | false | Keep in the selection those targets that are at a distance from the location. |
-| Filter By Raycast | select_filter_by_raycast | select | filter | basic | variable: variable<br/>origin: location<br/>max_distance: number<br/>ray_size: number<br/>selection_size: number<br/>consider_blocks: enum<br/>ignore_passable_blocks: enum<br/>fluid_collision_mode: enum |  |  | false | false | Keep only the targets hit by the launched beam in the selection. Beamwidth only works on entities (increases or decreases creature hitboxes). |
-| Filter Selection Randomly | select_filter_randomly | select | filter | basic | size: number |  |  | false | false | Selects a random number of targets in the selection. |
-| Invert Selection | select_invert | select | creation | basic |  |  |  | false | false | Creates a new selection that includes all creatures except the selected ones. |
-| Select Last Spawned Entity | select_last_entity | select | creation | basic |  |  |  | false | false | Selects the last spawned entity in the world. |
-| Select Last Spawned Mob | select_last_mob | select | creation | basic |  |  |  | false | false | Selects the last mob that spawned in the world. |
-| Select Mob By Name | select_mob_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Selects a mob or mobs by name or UUID. |
-| Select Player By Condition | select_player_by_conditional | select | creation | basic_with_conditional |  |  |  | false | false | Selects players if the specified condition is met. |
-| Select Player By Name | select_player_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Selects a player or players by name or UUID. |
-| Select Random Entity | select_random_entity | select | creation | basic |  |  |  | false | false | Selects a random entity in the world. |
-| Select Random Mob | select_random_mob | select | creation | basic |  |  |  | false | false | Selects a random mob in the world. |
-| Select Random Player | select_random_player | select | creation | basic |  |  |  | false | false | Selects a random player in the world. |
-| Reset Selection | select_reset | select | creation | basic |  |  |  | false | false | Resets the entire selection. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Subcategory | Type | Arguments |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![select_add_all_entities](../../../icons/actions/select_add_all_entities.png) | select_add_all_entities | Add All Entities | Adds all entities to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_all_mobs](../../../icons/actions/select_add_all_mobs.png) | select_add_all_mobs | Add All Mobs | Adds all mobs to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_all_players](../../../icons/actions/select_add_all_players.png) | select_add_all_players | Add All Players | Adds all players to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_entity_by_conditional](../../../icons/actions/select_add_entity_by_conditional.png) | select_add_entity_by_conditional | Add Entity By Conditional | Adds entities to the selection by a condition. | select |  |  | false | false | add | basic_with_conditional |  |
+| ![select_add_entity_by_name](../../../icons/actions/select_add_entity_by_name.png) | select_add_entity_by_name | Add Entity By Name/UUID | Adds an entity by name/UUID to the selection. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_event_target](../../../icons/actions/select_add_event_target.png) | select_add_event_target | Add Event Target | Adds an event target to the selection | select |  |  | false | false | add | basic | selection_type: enum |
+| ![select_add_last_entity](../../../icons/actions/select_add_last_entity.png) | select_add_last_entity | Add Last Entity | Adds the last entity to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_last_mob](../../../icons/actions/select_add_last_mob.png) | select_add_last_mob | Add Last Mob | Adds the last mob to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_mob_by_name](../../../icons/actions/select_add_mob_by_name.png) | select_add_mob_by_name | Add Mob By Name/UUID | Adds a mob by name/UUID to the selection. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_player_by_conditional](../../../icons/actions/select_add_player_by_conditional.png) | select_add_player_by_conditional | Add Player By Conditional | Adds players to the selection by a condition. | select |  |  | false | false | add | basic_with_conditional |  |
+| ![select_add_player_by_name](../../../icons/actions/select_add_player_by_name.png) | select_add_player_by_name | Add Player By Name/UUID | Adds a player by name/UUID to the selection. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_random_entity](../../../icons/actions/select_add_random_entity.png) | select_add_random_entity | Add Random Entity | Adds a random entity to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_random_mob](../../../icons/actions/select_add_random_mob.png) | select_add_random_mob | Add Random Mob | Adds a random mob to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_add_random_player](../../../icons/actions/select_add_random_player.png) | select_add_random_player | Add Random Player | Adds a random player to the selection. | select |  |  | false | false | add | basic |  |
+| ![select_all_entities](../../../icons/actions/select_all_entities.png) | select_all_entities | Select All Entities | Selects all entities in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_all_mobs](../../../icons/actions/select_all_mobs.png) | select_all_mobs | Select All Mobs | Selects all mobs in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_all_players](../../../icons/actions/select_all_players.png) | select_all_players | Select All Players | Selects all players in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_entity_by_conditional](../../../icons/actions/select_entity_by_conditional.png) | select_entity_by_conditional | Select Entity By Condition | Selects entities if the specified condition is met. | select |  |  | false | false | creation | basic_with_conditional |  |
+| ![select_entity_by_name](../../../icons/actions/select_entity_by_name.png) | select_entity_by_name | Select Entity By Name | Selects an entity or entities by name or UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_event_target](../../../icons/actions/select_event_target.png) | select_event_target | Select Event Target | Selects the target that triggered the event. | select |  |  | false | false | creation | basic | selection_type: enum |
+| ![select_filter_by_conditional](../../../icons/actions/select_filter_by_conditional.png) | select_filter_by_conditional | Filter Selection By Condition | Keep the selection of targets that match the selected condition. | select |  |  | false | false | filter | basic_with_conditional |  |
+| ![select_filter_by_distance](../../../icons/actions/select_filter_by_distance.png) | select_filter_by_distance | Filter Selection By Distance | Keep in the selection those targets that are at a distance from the location. | select |  |  | false | false | filter | basic | location: location<br/>selection_size: number<br/>ignore_y_axis: enum<br/>compare_mode: enum |
+| ![select_filter_by_raycast](../../../icons/actions/select_filter_by_raycast.png) | select_filter_by_raycast | Filter By Raycast | Keep only the targets hit by the launched beam in the selection. Beamwidth only works on entities (increases or decreases creature hitboxes). | select |  |  | false | false | filter | basic | variable: variable<br/>origin: location<br/>max_distance: number<br/>ray_size: number<br/>selection_size: number<br/>consider_blocks: enum<br/>ignore_passable_blocks: enum<br/>fluid_collision_mode: enum |
+| ![select_filter_randomly](../../../icons/actions/select_filter_randomly.png) | select_filter_randomly | Filter Selection Randomly | Selects a random number of targets in the selection. | select |  |  | false | false | filter | basic | size: number |
+| ![select_invert](../../../icons/actions/select_invert.png) | select_invert | Invert Selection | Creates a new selection that includes all creatures except the selected ones. | select |  |  | false | false | creation | basic |  |
+| ![select_last_entity](../../../icons/actions/select_last_entity.png) | select_last_entity | Select Last Spawned Entity | Selects the last spawned entity in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_last_mob](../../../icons/actions/select_last_mob.png) | select_last_mob | Select Last Spawned Mob | Selects the last mob that spawned in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_mob_by_name](../../../icons/actions/select_mob_by_name.png) | select_mob_by_name | Select Mob By Name | Selects a mob or mobs by name or UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_player_by_conditional](../../../icons/actions/select_player_by_conditional.png) | select_player_by_conditional | Select Player By Condition | Selects players if the specified condition is met. | select |  |  | false | false | creation | basic_with_conditional |  |
+| ![select_player_by_name](../../../icons/actions/select_player_by_name.png) | select_player_by_name | Select Player By Name | Selects a player or players by name or UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_random_entity](../../../icons/actions/select_random_entity.png) | select_random_entity | Select Random Entity | Selects a random entity in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_random_mob](../../../icons/actions/select_random_mob.png) | select_random_mob | Select Random Mob | Selects a random mob in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_random_player](../../../icons/actions/select_random_player.png) | select_random_player | Select Random Player | Selects a random player in the world. | select |  |  | false | false | creation | basic |  |
+| ![select_reset](../../../icons/actions/select_reset.png) | select_reset | Reset Selection | Resets the entire selection. | select |  |  | false | false | creation | basic |  |

@@ -1,10 +1,10 @@
 # Controller actions
 
-| Name | ID | Category | Subcategory | Type | Arguments | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Запуск в окремому потоці | controller_async_run | controller |  | container |  |  | Деякі дії всередині поршнів можуть не працювати. | false | true | Запускає код всередині поршнів в окремому потоці, що може зменшити навантаження. Скасування та повернення події не працюватимуть після поршнів. |
-| Ігнорувати виконання | controller_do_not_run | controller |  | container |  |  |  | false | false | Ігнорує код, що знаходиться всередині дужок, під час виконання. |
-| Зловити помилку | controller_exception | controller |  | container | variable: variable |  | Не ловить глобальні та критичні помилки. | false | false | Ловить помилку в коді всередині поршнів та присвоює її ідентифікатор змінній (приклад: function_not_found). |
-| Ізолювати вибірку | controller_isolated_selection | controller |  | container | selection_mode: enum |  | Вибірка, створена всередині, буде активна лише в межах дужок. | false | false | Ізолює вибірку всередині дужок. |
-| Позначити код | controller_label | controller |  | container | label: text |  | Працює у зв'язці з дією "Вийти з блоку з міткою" | false | false | Позначає код між поршнями вказаним ім'ям та дозволяє його перервати. |
-| Виміряти час виконання | controller_measure_time | controller |  | container | variable: variable<br/>duration: enum |  | Враховує блоки "Чекати". | false | false | Вимірює час виконання коду всередині поршнів та присвоює результат змінній. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Subcategory | Type | Arguments |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![controller_async_run](../../../icons/actions/controller_async_run.png) | controller_async_run | Запуск в окремому потоці | Запускає код всередині поршнів в окремому потоці, що може зменшити навантаження. Скасування та повернення події не працюватимуть після поршнів. | controller |  | Деякі дії всередині поршнів можуть не працювати. | true | false |  | container |  |
+| ![controller_do_not_run](../../../icons/actions/controller_do_not_run.png) | controller_do_not_run | Ігнорувати виконання | Ігнорує код, що знаходиться всередині дужок, під час виконання. | controller |  |  | false | false |  | container |  |
+| ![controller_exception](../../../icons/actions/controller_exception.png) | controller_exception | Зловити помилку | Ловить помилку в коді всередині поршнів та присвоює її ідентифікатор змінній (приклад: function_not_found). | controller |  | Не ловить глобальні та критичні помилки. | false | false |  | container | variable: variable |
+| ![controller_isolated_selection](../../../icons/actions/controller_isolated_selection.png) | controller_isolated_selection | Ізолювати вибірку | Ізолює вибірку всередині дужок. | controller |  | Вибірка, створена всередині, буде активна лише в межах дужок. | false | false |  | container | selection_mode: enum |
+| ![controller_label](../../../icons/actions/controller_label.png) | controller_label | Позначити код | Позначає код між поршнями вказаним ім'ям та дозволяє його перервати. | controller |  | Працює у зв'язці з дією "Вийти з блоку з міткою" | false | false |  | container | label: text |
+| ![controller_measure_time](../../../icons/actions/controller_measure_time.png) | controller_measure_time | Виміряти час виконання | Вимірює час виконання коду всередині поршнів та присвоює результат змінній. | controller |  | Враховує блоки "Чекати". | false | false |  | container | variable: variable<br/>duration: enum |

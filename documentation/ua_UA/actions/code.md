@@ -1,14 +1,14 @@
 # Code actions
 
-| Name | ID | Category | Subcategory | Type | Arguments | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Вызвать функцию | call_function | call_function |  | basic | function_name: text<br/>args: map |  |  | false | false | Вызывает строку кода функции. |
-| Вийти з блоку з міткою | control_break_label | control |  | basic | label: text | Дією "Позначити код" |  | false | false | Перериває код, позначений вказаним ім'ям. |
-| Викликати помилку | control_call_exception | control |  | basic | id: text<br/>message: text<br/>type: enum |  | Рекомендується використовувати це в дії "Перехопити помилку". | false | false | Викликає певну помилку із вказаним ID та повідомленням. |
-| Остановить последовательность | control_end_thread | control |  | basic |  |  | Якщо дію було використано у функціях, то зупинить батьківський рядок, у якому викликали функцію. | false | false | Останавливает текущую последовательность блоков кода. Любой код после этого блока не будет выполнен. |
-| Повернутися до виклику | control_return_function | control |  | basic |  |  | Повертає до блоку виклику поточної функції у батьківському рядку. | false | false | Зупиняє поточну послідовність блоків коду у функції та повертає до блоку виклику цієї самої функції. |
-| Пропустити повторення | control_skip_iteration | control |  | basic |  |  |  | false | false | Пропускає одну ітерацію у поточному повторенні. |
-| CONTROL_STOP_REPEAT | control_stop_repeat | control |  | basic |  |  |  | false | false | ... |
-| Ждать | control_wait | control |  | basic | duration: number<br/>time_unit: enum |  | Мінімальна затримка - 1 тік; у режимі Тіки можна встановити лише цілі числа. | false | false | Приостанавливает текущую последовательность блоков кода на определённое время. |
-| Інакше | else | else |  | container |  |  |  | false | false | ... |
-| Запустить процесс | start_process | start_process |  | basic | process_name: text<br/>target_mode: enum<br/>local_variables_mode: enum<br/>args: map |  |  | false | false | Запускает строку кода процесса. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Subcategory | Type | Arguments |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![call_function](../../../icons/actions/call_function.png) | call_function | Вызвать функцию | Вызывает строку кода функции. | call_function |  |  | false | false |  | basic | function_name: text<br/>args: map |
+| ![control_break_label](../../../icons/actions/control_break_label.png) | control_break_label | Вийти з блоку з міткою | Перериває код, позначений вказаним ім'ям. | control | Дією "Позначити код" |  | false | false |  | basic | label: text |
+| ![control_call_exception](../../../icons/actions/control_call_exception.png) | control_call_exception | Викликати помилку | Викликає певну помилку із вказаним ID та повідомленням. | control |  | Рекомендується використовувати це в дії "Перехопити помилку". | false | false |  | basic | id: text<br/>message: text<br/>type: enum |
+| ![control_end_thread](../../../icons/actions/control_end_thread.png) | control_end_thread | Остановить последовательность | Останавливает текущую последовательность блоков кода. Любой код после этого блока не будет выполнен. | control |  | Якщо дію було використано у функціях, то зупинить батьківський рядок, у якому викликали функцію. | false | false |  | basic |  |
+| ![control_return_function](../../../icons/actions/control_return_function.png) | control_return_function | Повернутися до виклику | Зупиняє поточну послідовність блоків коду у функції та повертає до блоку виклику цієї самої функції. | control |  | Повертає до блоку виклику поточної функції у батьківському рядку. | false | false |  | basic |  |
+| ![control_skip_iteration](../../../icons/actions/control_skip_iteration.png) | control_skip_iteration | Пропустити повторення | Пропускає одну ітерацію у поточному повторенні. | control |  |  | false | false |  | basic |  |
+| ![control_stop_repeat](../../../icons/actions/control_stop_repeat.png) | control_stop_repeat | CONTROL_STOP_REPEAT | ... | control |  |  | false | false |  | basic |  |
+| ![control_wait](../../../icons/actions/control_wait.png) | control_wait | Ждать | Приостанавливает текущую последовательность блоков кода на определённое время. | control |  | Мінімальна затримка - 1 тік; у режимі Тіки можна встановити лише цілі числа. | false | false |  | basic | duration: number<br/>time_unit: enum |
+| ![else](../../../icons/actions/else.png) | else | Інакше | ... | else |  |  | false | false |  | container |  |
+| ![start_process](../../../icons/actions/start_process.png) | start_process | Запустить процесс | Запускает строку кода процесса. | start_process |  |  | false | false |  | basic | process_name: text<br/>target_mode: enum<br/>local_variables_mode: enum<br/>args: map |

@@ -1,214 +1,214 @@
 # Events
 
-| Name | ID | Category | Cancellable | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Маяк активовано | beacon_activate | world | false |  |  | false | false | Виконує код, коли активується маяк. |
-| Маяк деактивовано | beacon_deactivate | world | false |  |  | false | false | Виконує код, коли деактивується маяк. |
-| Дзвін дзвону | bell_ring | world | true |  |  | false | false | Виконує код, коли у світі дзвенить дзвоник. |
-| Блок ламає блок | block_break_block | world | false |  |  | false | false | Виконує код, коли блок (рідина або поршень) ламає інший блок. |
-| Згорання блоку | block_burn | world | true |  |  | false | false | Виконує код в момент згорання блоку. |
-| Блок отримує урон | block_damage | player | true |  |  | false | false | Виконує код, коли блок отримує урон. |
-| Гравець перестає ламати блок | block_damage_abort | player | false |  |  | false | false | Виконує код, коли гравець перестає ламати блок. |
-| Блок викидає лут | block_dispense_loot | world | true | Скарбницями |  | false | false | Виконує код, коли блок викидає лут. |
-| Блок вибухає | block_explode | world | true |  |  | false | false | Виконує код, коли блок утворює вибух. |
-| Зникнення блоку | block_fade | world | true | Снігом<br/>Льодом<br/>Вогнем<br/>Коралами<br/>Черепашими яйцями<br/>Дереном |  | false | false | Виконує код. коли блок зникає, наприклад, коли тане лід чи сніг, затухає вогонь чи засихає корал. |
-| Блок не зміг викинути предмет | block_failed_dispense | world | false |  |  | false | false | Виконує код, коли блок не може викинути предмет. |
-| Блок почав падати | block_fall | entity | true |  |  | false | false | Виконує код, коли блок, затронутий гравітацією, перетворюється на падаючий блок. |
-| Добриво блоку | block_fertilize | world | true |  |  | false | false | Виконує код, коли блок удобрюється. |
-| Пересування блоку | block_flow | world | true | Рідинами<br/>Яйцем дракона |  | false | false | Виконує код, коли блок пересувається. |
-| Генерация блоку | block_form | world | true | Снігом<br/>Льодом<br/>Генерацією кругляку и т.п.<br/>Затвердеванием цемента |  | false | false | Виконує код, коли блок генерується після взаємодії блоків. |
-| Генерація блоку через істоти | block_form_by_entity | entity | true | Сніговими големами<br/>Зачаруванням Льодохід |  | false | false | Виконує код, коли блок генерується завдяки взаємодії блоку та істоти. |
-| Зріст блоку | block_grow | world | true | Насінням<br/>Гарбузами та кавунами<br/>Черепашими яйцями |  | false | false | Виконує код, коли блок зростає. |
-| Блок підпалюється | block_ignite | world | true |  |  | false | false | Виконує код, коли блок підпалюється. |
-| Поршень висувається | block_piston_extend | world | true |  |  | false | false | Виконує код, коли поршень висуває блок. |
-| Поршень втягується | block_piston_retract | world | true |  |  | false | false | Виконує код, коли поршень втягує блок. |
-| Поширення блоку | block_spread | world | true | Грибами<br/>Вогнем<br/>creative_plus.trigger.block_spread.work_with.grass_block |  | false | false | Виконує код, коли блок поширюється. |
-| Завершення зілляварення | brew_complete | world | true |  |  | false | false | Виконує код, коли зіллеварення в блоці закінчується. |
-| creative_plus.trigger.chunk_load.name | chunk_load | world | false |  | creative_plus.trigger.chunk_load.additional_information.event_block_location_set_to_bottom_corner | false | false | creative_plus.trigger.chunk_load.description |
-| creative_plus.trigger.chunk_unload.name | chunk_unload | world | false |  | creative_plus.trigger.chunk_unload.additional_information.event_block_location_set_to_bottom_corner | false | false | creative_plus.trigger.chunk_unload.description |
-| Збирач створює предмет | crafter_craft | world | true | Збирачами |  | false | false | Виконує код, коли збирач створює предмет. |
-| Блок викидає предмет | dispenser_dispense_item | world | true |  |  | false | false | Виконує код, коли блок викидає предмет. |
-| Роздавач одягає броню | dispenser_equip_armor | world | true |  |  | false | false | Виконує код, коли роздатчик одягає броню на сутність. |
-| Роздатчик обрізав вівцю | dispenser_shear_sheep | entity | true |  |  | false | false | Виконує код, коли роздатчик зрізає вовну з вівці. |
-| Стародавній страж прокляв гравця | elder_guardian_appears_at_player | player | true |  |  | false | false | Виконує код, коли стародавній страж проклинає гравця. |
-| Ендермен злиться на гравця | enderman_attack_player | entity | true |  |  | false | false | Виконує код, коли Ендермен злиться на гравця. |
-| Ендермен тікає | enderman_escape | entity | true |  |  | false | false | Виконує код, коли Ендермен телепортується, щоб уникнути чого-небудь. |
-| Істота дзвонить у дзвоник | entity_bell_ring | entity | true |  |  | false | false | Виконує код, коли істота дзвонить у дзвоник. |
-| Оновлення статусу поломки блока | entity_block_break_progress_update | entity | false | Зомбі |  | false | false | Виконує код, коли істота оновлює статус поломки блока. |
-| Істота загорілася | entity_combust | entity | true |  |  | false | false | Виконує код, коли істота загоряється. |
-| Моб наносить урон гравцю | entity_damage_entity | entity | true |  |  | false | false | Виконує код, коли моб наносить урон іншому мобу. |
-| Істота ранить гравця | entity_damage_player | player | true |  |  | false | false | Виконує код, коли істота ранить гравця. |
-| Смерть істоті | entity_death | entity | true |  |  | false | false | Виконує код, коли істота вмерла. |
-| Істота викидає предмет | entity_drop_item | entity | true |  |  | false | false | Виконує код, коли істота викидає предмет. |
-| Істота змінює екіпірування | entity_equipment_changed | entity | false |  | Подія виникає після зміни атрибутів або зачарувань будь-якої з частин екіпірування. | false | false | Виконує код, коли екіпірування істоти змінюється. |
-| Істота вибухає | entity_explode | entity | true |  |  | false | false | Виконує код, коли істота вибухає. |
-| Істота вирішила вибухнути | entity_explosion | entity | true |  |  | false | false | Виконує код, коли істота вирішила вибухнути. |
-| Істота зцілюється | entity_heal | entity | true |  |  | false | false | Виконує код, коли істота зцілюється. |
-| Істота взаємодіє зі світом | entity_interact | entity | true |  |  | false | false | Виконує код, коли істота взаємодіє зі світом. |
-| Моб вбив моба | entity_kill_entity | entity | true |  |  | false | false | Виконує код, коли моб вбив іншого моба. |
-| Істота відштовхується | entity_knockback | entity | true |  |  | false | false | Виконує код, коли істота відштовхується. |
-| Сутність заряджає арбалет | entity_load_crossbow | entity | true |  |  | false | false | Виконує код, коли сутність заряджає арбалет. |
-| Істота підіймає предмет | entity_pickup_item | entity | true |  |  | false | false | Виконує код, коли істота підіймає предмет. |
-| Видалення істоти | entity_removed_from_world | entity | false |  |  | false | false | Виконує код, коли зі світу видаляється істота. |
-| Істота воскресає від тотему | entity_resurrect | entity | true |  | За замовчуванням ця подія скасована, якщо істота не тримає в руці Тотем безсмертя. | false | false | Виконує код, коли істота воскресає від Тотему безсмертя. |
-| Сутність стріляє | entity_shot_bow | entity | true |  |  | false | false | Виконує код, коли сутність стріляє з лука або арбалета. |
-| Створити істоту | entity_spawn | entity | true |  |  | false | false | Виконує код, коли у світі з`являеться нова істота. |
-| Істота виконує заклинання | entity_spell_cast | entity | true | Викликач<br/>Ілюзіоніст |  | false | false | Виконує код, коли істота виконує заклинання. |
-| Істота починає летіти на елітрах | entity_start_gliding | entity | true |  |  | false | false | Виконує код, коли істота починає летіти на елітрах. |
-| Істота перестає летіти на елітрах | entity_stop_gliding | entity | true |  |  | false | false | Виконує код, коли істота перестає летіти на елітрах. |
-| Істота отримує урон | entity_take_damage | entity | true |  |  | false | false | Виконує код, коли істота отримує урон. |
-| Істота телепортується | entity_teleport | entity | true |  |  | false | false | Виконує код, коли істота телепортується. |
-| Сутність замінюється іншою сутністю | entity_transform | entity | true |  |  | false | false | Виконує код, коли сутність замінюється іншою сутністю. |
-| Істота відв'язалась | entity_unleash_event | entity | true |  |  | false | false | Виконує код, коли істота відв'язується від повідка. |
-| Сфери досвіду об'єднуються | experience_orb_merge | entity | true |  |  | false | false | Виконує код, коли сфера досвіду об'єднується з іншою сферою досвіду. |
-| Падаючий блок приземляється | falling_block_land | entity | true |  |  | false | false | Виконує код, коли падаючий блок перетворюється на звичайний блок. |
-| Феєрверк вибухає | firework_explode | entity | true |  |  | false | false | Виконує код, коли вибахує феєрверк. |
-| Поплавок вудки змінює стан | fishing_hook_state_change | entity | false | Поплавком вудки |  | false | false | Виконує код, коли поплавок вудки змінює свій стан. |
-| Зміна рівню води | fluid_level_change | world | true |  |  | false | false | Виконує код, коли змінюється рівень води у блоці. |
-| Піч використовує паливо | furnace_burn | world | true | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false | Виконує код, коли піч використовує предмет як паливо. |
-| Піч закінчила плавку | furnace_smelt | world | true | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false | Виконує код, коли піч закінчує плавку. |
-| Піч почала плавку | furnace_start_smelt | world | false | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false | Виконує код, коли піч починає плавку. |
-| Коза таранить сутність | goat_ram_entity | entity | true |  |  | false | false | Виконує код, коли коза таранить сутність. |
-| Ламанная істоті, що висить | hanging_break | entity | true | Рамками<br/>Картинами<br/>Повідками |  | false | false | Виконує код, коли ламається істота, що висить (картина, рамка). |
-| Лійка підбирає предмет | hopper_pickup_item | entity | true |  | Щоб вибрати предмет як істоту, використовуйте ціль "Жертва". | false | false | Виконує код, коли лійка підбирає предмет. |
-| Предмет зник | item_despawn | entity | true |  |  | false | false | Виконує код, коли предмет зникає зі світу через 5 хвилин після його створення. |
-| Предмети на землі об'єднуються | item_merge | entity | true |  |  | false | false | Виконує код, коли предмети, що лежать поруч, об'єднуються в єдиний стак. |
-| Предмет перемістився у контейнер | item_moved_into_container | world | true |  |  | false | false | Виконує код, коли предмет переміщується у контейнер. |
-| Листопад | leaves_decay | world | true |  |  | false | false | Виконує код, коли листя обпадають. |
-| Моб вбиває гравця | mob_kill_player | player | true |  |  | false | false | Виконує код, коли моб вбиває гравця. |
-| Грядка змінює статус вологості | moisture_change | world | true |  |  | false | false | Виконує код, коли блок грядки стає мокрим або висихає. |
-| Програвання звуку нотним блоком | note_play | world | true |  |  | false | false | Виконує код, коли у світі нотний блок програє звкук. |
-| Піґлін торгується | piglin_barter | entity | true |  |  | false | false | Виконує код, коли піґлін торгується. |
-| Античит засік гравця | player_anticheat_flag | player | false | Налаштуваннями античита світу |  | false | false | Виконує код, коли античит засік гравця на читах. Спрацьовує лише в рекомендованих світах. |
-| Гравець пошкоджує ковадло | player_anvil_damaged | player | true | Ковадлами |  | false | false | Виконує код, коли гравець пошкоджує ковадло. |
-| Гравець перейменовує предмет | player_anvil_rename_input | player | false | Ковадлами | Подія викликається до зміни предмета | false | false | Виконує код, коли гравець перейменовує предмет за допомогою ковадла. |
-| Гравець махає рукою | player_arm_swing | player | true |  |  | false | false | Виконує код, коли гравець махає правою або лівою рукою. |
-| Гравець запросив меню зміни режиму гри | player_ask_gamemode_change | player | true | Комбінацією клавіш F3 + F4<br/>Комбінацією клавіш F3 + N | За замовчуванням ця подія скасовується, якщо гравець не має доступу до зміни режиму. | false | false | Виконує код, коли гравець запрошує меню зміни режиму гри. |
-| Оновлення статусу поломки блока | player_block_break_progress_update | player | false |  |  | false | false | Виконує код, коли гравець оновлює статус поломки блока. |
-| Гравець змушує блок викинути лут | player_block_dispense_loot | player | true | Скарбницями |  | false | false | Виконує код, коли гравець змушує блок викинути лут. |
-| Гравець ламає блок | player_break_block | player | true |  | За замовчуванням ця подія скасована, якщо гравець, перебуваючи в творчому режимі, ламає блок, тримаючи в руці меч або тризуб. | false | false | Виконує код, коли гравець ламає блок. |
-| Гравець ламає предмет | player_break_item | player | false |  |  | false | false | Виконує код, коли гравець ламає предмет. |
-| Гравець змінює слот | player_change_slot | player | true |  |  | false | false | Виконує код, коли гравець змінює слот. |
-| Гравець пише повідомлення до чату | player_chat | player | true |  |  | false | false | Виконує код, гравець пише повідомлення до чату. |
-| Гравець кликає у інвентарі | player_click_inventory | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false | Виконує код, коли гравець кликає у інвентарі. |
-| Гравець кликає у своєму інвентарі | player_click_own_inventory | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false | Виконує код, коли гравець кликає у своєму інвентарі. |
-| Гравець закрив меню досягнень | player_close_advancements_menu | player | false |  |  | false | true | Виконує код, коли гравець закриває меню досягнень. |
-| Гравець закриває інвентар | player_close_inventory | player | false |  |  | false | false | Виконує код, коли гравець закриває інвентар. |
-| Гравець загорівся | player_combust | player | true |  |  | false | false | Виконує код, коли гравець загоряється. |
-| Гравець вживає предмет | player_consume_item | player | true | Їжею<br/>Зіллями<br/>Молоком |  | false | false | Виконує код, коли гравець з`їдає або випиває предмет. |
-| Гравець крафтить предмет | player_craft_item | player | true |  |  | false | false | Виконує код, коли гравець крафтить предмет. |
-| Гравець здійснює транзакцію | player_currency_transaction | player | false |  |  | false | false | Виконує код, коли гравець здійснює транзакцію в смарагдах. |
-| Гравець викликає кастомний клік | player_custom_click | player | false |  |  | false | false | Виконує код, коли гравець викликає кастомний клік у діалоговому вікні або чаті. |
-| Гравець ранить істоту | player_damage_entity | player | true |  |  | false | false | Виконує код, коли гравець ранить істоту. |
-| Гравець пошкоджує предмет | player_damage_item | player | true |  |  | false | false | Виконує код, коли предмет в інвентарі гравця ламається. |
-| Гравець ранить гравця | player_damage_player | player | true |  |  | false | false | Виконує код, коли гравець ранить іншого гравця. |
-| Гравець помирає | player_death | player | true |  |  | false | false | Виконує код, коли гравець помирає не в результаті поранення від іншого гравця чи істоти. |
-| Гравець спішився | player_dismount | player | true |  |  | false | false | Виконує код, коли гравець спішився з човна, коня чи інших істот. |
-| Гравець перетягує предмет у інвентарі | player_drag_inventory | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false | Виконує код, коли гравець перетягує предмет у інвентарі. |
-| Игрок выбрасывает предмет | player_drop_item | player | true |  |  | false | false | Виконує код, коли гравець викидає предмет. |
-| Гравець змінює книгу | player_edit_book | player | true |  |  | false | false | Виконує код, коли гравець редагує чи підписує книгу з пером. |
-| Гравець зачаровує предмет | player_enchant_item | player | true | Столами зачарування |  | false | false | Виконує код, коли гравець зачаровує предмет. |
-| Гравець змінює екіпірування | player_equipment_changed | player | false |  | Подія виникає після зміни атрибутів або зачарувань будь-якої з частин екіпірування. | false | false | Виконує код, коли екіпірування гравця змінюється. |
-| Гравець виснажується | player_exhaustion | player | true |  |  | false | false | Виконує код, коли гравець отримує виснаження. |
-| Гравцю не вдалося пересунутись | player_fail_move | player | false |  |  | false | false | Виконує код, коли гравцю не вдається пересунутися з місця. |
-| Гравець годує сірчаного слайма предметом | player_feed_sulfur_cube_item | player | true |  |  | false | false | Виконує код, коли гравець годує сірчаного слайма предметом. |
-| Гравець рибалить | player_fish | player | true |  |  | false | false | Виконує код, коли гравець ловить що-небудь на вудку. |
-| Гравець взаємодіє з квітковим горщиком | player_flowerpot_manipulate | player | true | Квітковими горщиками |  | false | false | Виконує код, коли гравець взаємодіє з квітковим горщиком. |
-| Зміна рівня голоду гравця | player_food_level_change | player | true |  |  | false | false | Виконує код, коли рівень голоду гравця змінюється. |
-| Гравець забирає предмет із печі | player_furnace_extract | player | false | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false | Виконує код, коли гравець забирає предмет із печі. |
-| Гравець збирає врожай | player_harvest_block | player | true |  |  | false | false | Виконує код, коли гравець збирає врожай, не ламаючи блок. |
-| Гравець відновлює здоров`я | player_heal | player | true |  |  | false | false | Виконує код, коли гравець відновлює здоров`я будь-яким чином. |
-| Гравець стрибає на коні | player_horse_jump | player | true |  |  | false | false | Виконує код, коли гравець виконує стрибок на коні, ослі або мулі. |
-| Гравець отримує еффект від вибухового зілля | player_imbue_potion_cloud | player | true |  |  | false | false | Виконує код, коли гравець отримує еффект від вибухового зілля. |
-| Гравець змінює натиснуті клавіші пересування | player_input_event | player | false |  | Подія виникає, коли список натиснутих клавіш для пересування гравця (за замовчуванням: WASD — пересування, Shift — присідання, Space — стрибок, Ctrl — біг) змінюється.<br/>Подія містить усі натиснуті на даний момент клавіші гравця. | false | false | Виконує код, коли гравець змінює натиснуті клавіші пересування. |
-| Гравець взаємодіє зі світом | player_interact | player | true |  | Працює при натисканні ЛКМ, ПКМ, взаємодії з натискними плитами, розтяжками тощо. | false | false | Виконує код, коли гравець взаємодіє зі світом. |
-| creative_plus.trigger.player_inventory_slot_change.name | player_inventory_slot_change | player | false |  |  | false | false | creative_plus.trigger.player_inventory_slot_change.description |
-| Гравець використовує предмет із затримкою | player_item_cooldown | player | true |  |  | false | false | Виконує код, коли гравець використовує предмет, що має затримку між використаннями. |
-| Гравець отримує затримку для групи предметів | player_item_group_cooldown | player | true |  |  | false | false | Виконує код, коли гравець отримує затримку для групи предметів. |
-| Гравець лагодить предмет | player_item_mend | player | true |  |  | false | false | Виконує код, коли гравець лагодить предмет за допомогою зачарування "Ремонт". |
-| Гравець зайшов у світ | player_join | player | false |  |  | false | false | Виконує код, коли гравець заходить у світ. |
-| Гравець стибає | player_jump | player | true |  |  | false | false | Виконує код, коли гравець стрибає. |
-| Гравець вбиває моба | player_kill_mob | player | true |  |  | false | false | Виконує код, коли гравець вбиває моба. |
-| Гравець вбиває гравця | player_kill_player | player | true |  |  | false | false | Виконує код, коли гравець вбиває іншого гравця. |
-| Гравець відштовхується | player_knockback | player | true |  |  | false | false | Виконує код, коли гравець відштовхується. |
-| Гравець запускає снаряд | player_launch_projectile | player | true | Яйцями<br/>Сніжками<br/>Зіллями |  | false | false | Виконує код, коли гравець запускає снаряд. |
-| Гравець прив`язує істоту | player_leash_entity | player | true |  |  | false | false | Виконує код, коли гравець прив`язує істоту. |
-| Гравець клацає лівою кнопкою | player_left_click | player | true |  |  | false | false | Виконує код, коли гравець клацає лівою кнопкою миші. |
-| Гравець заряджає арбалет | player_load_crossbow | player | true | Арбалетом |  | false | false | Виконує код, коли гравець заряджає арбалет. |
-| Гравець змінює місцеположення | player_location_change | player | true |  |  | false | false | Виконує код, коли гравець змінює своє місцеположення (у тому числі залишаючись на тому ж блоці). |
-| Гравець пересувається | player_move | player | true |  |  | false | false | Виконує код, коли гравець пересувається. |
-| Гравець змінив вкладку в меню досягнень | player_open_advancements_tab | player | false |  | Меню може бути закрито дією "Закрити інвентар" | false | false | Виконує код, коли гравець переключається на іншу вкладку в меню досягнень або відкриває меню досягнень. |
-| Гравець відкрив інвентар | player_open_inventory | player | true |  |  | false | false | Виконує код, коли гравцю відкривається інвентарне меню. |
-| Гравець використовує вибір предмета на блоці | player_pick_block | player | true |  | Подія виникає, коли гравець використовує функцію вибору предмета на блоці (клік середньою кнопкою миші на блоці для отримання відповідного предмета). | false | false | Виконує код, коли гравець використовує вибір предмета на блоці. |
-| Гравець використовує вибір предмета на істоті | player_pick_entity | player | true |  | Подія виникає, коли гравець використовує функцію вибору предмета на істоті (клік по істоті для отримання відповідного предмета). | false | false | Виконує код, коли гравець використовує вибір предмета на істоті. |
-| Гравець знаходить предмет в інвентарі | player_pick_item | player | true |  |  | false | false | Виконує код, коли гравець знаходить предмет в інвентарі за допомогою середньої кнопки миші. |
-| Гавець підняв сферу досвіду | player_pickup_experience | player | true |  |  | false | false | Виконує код, коли гравець піднімає сферу досвіду. |
-| Гравець підняв предмет | player_pickup_item | player | true |  |  | false | false | Виконує код, коли гравець піднімає предмет. |
-| Гравець підняв снаряд | player_pickup_projectile | player | true |  |  | false | false | Виконує код, коли гравець піднімає снаряд. |
-| Гравець ставить блок | player_place_block | player | true |  |  | false | false | Виконує код, коли гравець ставить блок. |
-| Гравець збирається завдати урону істоті | player_pre_attack_entity | player | true |  |  | false | false | Виконує код, коли гравець збирається завдати урону істоті. Скасування події також скасовує звуки удару. |
-| Гравець виклав крафт | player_prepare_item_craft | player | false | Верстаками<br/>Сіткою крафту в інвентарі |  | false | false | Виконує код, коли гравець викладає крафт якогось предмета. |
-| Гравець вибирає зачарування | player_prepare_item_enchant | player | true | Чарівними столами |  | false | false | Виконує код, коли гравець отримує результат у чарівному столі, отримуючи можливість вибору зачарування. |
-| Гравець отримує результат | player_prepare_result | player | false | Ковадлами<br/>Точилами<br/>Ковальськими столами |  | false | false | Виконує код, коли гравець отримує результат в інвентарі. |
-| Влучення снаряда гравця | player_projectile_hit | player | true |  |  | false | false | Виконує код, коли снаряд, випущений гравцем, потрапляє у блок, істоту, чи іншого гравця. |
-| Гравець отримує інформацію про блок | player_query_block_info | player | true |  | Подія не спрацює, якщо гравець присідає. | false | false | Виконує код, коли гравець отримує налагоджувальну інформацію про цільовий блок (F3 + I). |
-| Гравець отримує інформацію про істоту | player_query_entity_info | player | true |  | Подія не спрацює, якщо гравець присідає. | false | false | Виконує код, коли гравець отримує налагоджувальну інформацію про цільову істоту (F3 + I). |
-| Гравець вийшов зі світу | player_quit | player | false |  |  | false | false | Виконує код, коли гравець виходить зі світу. |
-| Гравець перезайшов у світ | player_rejoin | player | true |  |  | false | false | Виконує код, коли гравець перезаходить у світ за допомогою команди /play. |
-| Гравець запросив статистику | player_request_stats | player | false |  | Закрити меню "Статистика" можна дією "Закрити меню". | false | false | Виконує код, коли гравець відкриває меню "Статистика". |
-| Гравець відроджується | player_respawn | player | false |  | Бажано використовувати блок "Чекати" перед рештою коду для коректної роботи. | false | false | Виконує код, коли гравець відроджується. |
-| Гравець воскресає від тотему | player_resurrect | player | true |  | За замовчуванням ця подія скасована, якщо гравець не тримає в руці Тотем безсмертя. | false | false | Виконує код, коли гравець воскресає від Тотему безсмертя. |
-| Гравець кликає правою кнопкою | player_right_click | player | true |  |  | false | false | Виконує код, коли гравець клацає правою кнопкою миші. |
-| Гравець кликає правою кнопкою по істоті | player_right_click_entity | player | true |  |  | false | false | Виконує код, коли гравець клацає правою кнопкою по істоті. |
-| Гравець кликає правою кнопкою по гравцю | player_right_click_player | player | true |  |  | false | false | Виконує код, коли гравець клацає правою кнопкою по іншому гравцю. |
-| Гравець використовує 'Тягун' | player_riptide | player | true |  |  | false | false | Виконує код, коли гравець використовує тризуб із зачаруванням 'Тягун'. |
-| Гравець повертається | player_rotate | player | true |  |  | false | false | Виконує код, коли гравець повертається (змінює положення yaw або pitch) |
-| Гравець вирізає блок | player_shear_block | player | true |  |  | false | false | Виконує код, коли гравець вирізає блок ножицями. |
-| Гравець стріляє | player_shot_bow | player | true | Луком<br/>Арбалетом |  | false | false | Виконує код, коли гравець стріляє з лука/арбалета. |
-| Гравець змінює табличку | player_sign_change | player | true |  |  | false | false | Виконує код, коли гравець змінює текст таблички. |
-| Скін гравця змінився | player_skin_change | player | true | Самостійною зміною скіна (через /skin)<br/>Дією "Встановити скін" | За замовчуванням ця подія скасована. | false | false | Виконує код, коли скін гравця змінюється. |
-| Гравець починає крастись | player_sneak | player | true |  |  | false | false | Виконує код, коли гравець починає крастись. |
-| Гравець починає літати | player_start_flight | player | true |  |  | false | false | Виконує код, коли гравець починає літати. |
-| Гравець починає летіти на елітрах | player_start_gliding | player | true |  |  | false | false | Виконує код, коли гравець починає летіти на елітрах. |
-| Гравець почав стежити за істотою | player_start_spectating_entity | player | true |  |  | false | false | Виконує код, коли гравець почав стежити за істотою в режимі спостерігача. |
-| Гравець почав бігти | player_start_sprint | player | true |  |  | false | false | Виконує код, коли гравець починає бігти. |
-| Гравець перестає літати | player_stop_flight | player | true |  |  | false | false | Виконує код, коли гарвець перестає літати. |
-| Гравець перестає летіти на елітрах | player_stop_gliding | player | true |  |  | false | false | Виконує код, коли гравець перестає летіти на елітрах. |
-| Гравець перестав стежити за істотою | player_stop_spectating_entity | player | true |  |  | false | false | Виконує код, коли гравець перестає стежити за істотою в режимі спостерігача. |
-| Гравець перестав бігти | player_stop_sprint | player | true |  |  | false | false | Виконує код, коли гравець перестає бігти. |
-| Гравець перестає використовувати предмет | player_stop_using_item | player | false |  |  | false | false | Виконує код, коли гравець перестає використовувати предмет. |
-| Гравець вирощує дерево | player_structure_grow | player | true |  |  | false | false | Виконує код, коли гравець вирощує дерево або гриб. |
-| Гравець змінює руку | player_swap_hands | player | true |  |  | false | false | Виконує код, коли гравець перекладає предмет із головної руки у другорядну. |
-| Гравець отримує урон | player_take_damage | player | true |  |  | false | false | Виконує код, коли гравець отримує урон. |
-| Игрок приручает существо | player_tame_entity | player | true |  |  | false | false | Виконує код, коли гравець приручає істоту. |
-| Гравець телепортувався | player_teleport | player | true |  |  | false | false | Виконує код, коли гравець здійснює телепортацію. |
-| Гравець зупиняє зростання істоти | player_toggle_entity_age_lock | player | true |  |  | false | false | Виконує код, коли гравець блокує зростання істоти за допомогою золотої кульбаби. |
-| Гравець відв'язав істоту | player_unleash_entity | player | true |  |  | false | false | Виконує код, коли гравець відв'язує істоту від повідка. |
-| Гравець перестав крастись | player_unsneak | player | true |  |  | false | false | Виконує код, коли гравець перестає крастись. |
-| Гравець змінює стан скарбниці | player_vault_change_state | player | true | Скарбницями |  | false | false | Виконує код, коли гравець змінює стан скарбниці. |
-| Гравець стрибає на транспорті | player_vehicle_jump | player | false |  | Може бути використано для перевірки натискання кнопки стрибка. | false | false | Виконує код, коли гравець натискає кнопку стрибка, сидячи на транспорті. |
-| Гравець пересувається на транспорті | player_vehicle_move | player | false |  |  | false | true | Виконує код, коли гравець натискає кнопки руху, сидячи на транспорті. |
-| Гравець змінив вектор швидкості | player_velocity | player | true |  |  | false | false | Виконує код, коли вектор швидкості гравця змінюється. |
-| Створення порталу | portal_create | world | true |  |  | false | false | Виконує код, коли у світі створюється портал. |
-| Урон від снаряду | projectile_damage_entity | entity | true |  |  | false | false | Виконує код, коли снаряд наносить урон істоті. |
-| Гравець отримує урон від снаряду | projectile_damage_player | player | true |  |  | false | false | Виконує код, коли снаряд ранить гравця. |
-| Влучення снаряду | projectile_hit | entity | true |  |  | false | false | Виконує код, коли снаряд влучає в блок. |
-| Снаряд вбив істоту | projectile_kill_entity | entity | true |  |  | false | false | Виконує код, коли снаряд вбиває істоту. |
-| Запуск снаряда | projectile_launch | entity | true |  |  | false | false | Виконує код, коли запускається будь-який снаряд. |
-| Снаряд зіткнувся з істотою | projective_collide | entity | true |  |  | false | false | Виконує код, коли снаряд стикається з істотою. |
-| Зміна сили редстоуну | redstone_level_change | world | false |  |  | false | false | Виконує код, коли сила редстоуну змінюється. |
-| Скалк розцвітає | sculk_bloom | world | true |  |  | false | false | Виконує код, коли скалк розцвітає. |
-| Вівця відростила вовну | sheep_regrow_wool | entity | true |  |  | false | false | Виконує код, коли Вівця відрощує вовну. |
-| Губка поглинає воду | sponge_absorb | world | true |  |  | false | false | Виконує код, коли губка поглинає воду. |
-| Дерево виростає | structure_grow | world | true |  |  | false | false | Виконує код, коли дерево або гриб виростає. |
-| Пропуск часу | time_skip | world | true | Сном<br/>Кодом |  | false | false | Виконує код, коли стався пропуск часу. |
-| Підрив динаміту | tnt_prime | world | true |  |  | false | false | Виконує код, коли блок динаміту підпалюється. |
-| Скарбниця змінює стан | vault_change_state | world | true | Скарбницями |  | false | false | Виконує код, коли скарбниця змінює свій стан. |
-| Скарбниця показує предмет | vault_display_item | world | true | Скарбницями |  | false | false | Виконує код, коли блок скарбниці показує предмет. |
-| Урон транспорту | vehicle_take_damage | entity | true |  |  | false | false | Виконує код, коли транспорт (вагонетка чи лодка) отримує урон. |
-| Відьма кидає зілля | witch_throw_potion | entity | true | Відьмами |  | false | false | Виконує код, коли Відьма кидає зілля. |
-| creative_plus.trigger.world_reload.name | world_reload | world | false |  |  | false | false | creative_plus.trigger.world_reload.description |
-| Запуск світу | world_start | world | false |  |  | false | false | Виконує код у моменті запуска світ в режимі гри. |
-| Зупинка світу | world_stop | world | false |  |  | false | false | Виконує код у момент зупинки режима гри у світі. |
-| Помилка веб-запиту | world_web_exception | world | false |  |  | false | false | Виконує код, якщо не вдалося отримати відповідь на веб-запит. |
-| Відповідь від сервера | world_web_response | world | false |  |  | false | false | Виконує код, коли сервер, на який було відправлено запрос, відповідає. |
+| Icon | ID | Name | Description | Category | Cancellable | Works with | Additional info | Unused | Deprecated |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![beacon_activate](../../icons/events/beacon_activate.png) | beacon_activate | Маяк активовано | Виконує код, коли активується маяк. | world | false |  |  | false | false |
+| ![beacon_deactivate](../../icons/events/beacon_deactivate.png) | beacon_deactivate | Маяк деактивовано | Виконує код, коли деактивується маяк. | world | false |  |  | false | false |
+| ![bell_ring](../../icons/events/bell_ring.png) | bell_ring | Дзвін дзвону | Виконує код, коли у світі дзвенить дзвоник. | world | true |  |  | false | false |
+| ![block_break_block](../../icons/events/block_break_block.png) | block_break_block | Блок ламає блок | Виконує код, коли блок (рідина або поршень) ламає інший блок. | world | false |  |  | false | false |
+| ![block_burn](../../icons/events/block_burn.png) | block_burn | Згорання блоку | Виконує код в момент згорання блоку. | world | true |  |  | false | false |
+| ![block_damage](../../icons/events/block_damage.png) | block_damage | Блок отримує урон | Виконує код, коли блок отримує урон. | player | true |  |  | false | false |
+| ![block_damage_abort](../../icons/events/block_damage_abort.png) | block_damage_abort | Гравець перестає ламати блок | Виконує код, коли гравець перестає ламати блок. | player | false |  |  | false | false |
+| ![block_dispense_loot](../../icons/events/block_dispense_loot.png) | block_dispense_loot | Блок викидає лут | Виконує код, коли блок викидає лут. | world | true | Скарбницями |  | false | false |
+| ![block_explode](../../icons/events/block_explode.png) | block_explode | Блок вибухає | Виконує код, коли блок утворює вибух. | world | true |  |  | false | false |
+| ![block_fade](../../icons/events/block_fade.png) | block_fade | Зникнення блоку | Виконує код. коли блок зникає, наприклад, коли тане лід чи сніг, затухає вогонь чи засихає корал. | world | true | Снігом<br/>Льодом<br/>Вогнем<br/>Коралами<br/>Черепашими яйцями<br/>Дереном |  | false | false |
+| ![block_failed_dispense](../../icons/events/block_failed_dispense.png) | block_failed_dispense | Блок не зміг викинути предмет | Виконує код, коли блок не може викинути предмет. | world | false |  |  | false | false |
+| ![block_fall](../../icons/events/block_fall.png) | block_fall | Блок почав падати | Виконує код, коли блок, затронутий гравітацією, перетворюється на падаючий блок. | entity | true |  |  | false | false |
+| ![block_fertilize](../../icons/events/block_fertilize.png) | block_fertilize | Добриво блоку | Виконує код, коли блок удобрюється. | world | true |  |  | false | false |
+| ![block_flow](../../icons/events/block_flow.png) | block_flow | Пересування блоку | Виконує код, коли блок пересувається. | world | true | Рідинами<br/>Яйцем дракона |  | false | false |
+| ![block_form](../../icons/events/block_form.png) | block_form | Генерация блоку | Виконує код, коли блок генерується після взаємодії блоків. | world | true | Снігом<br/>Льодом<br/>Генерацією кругляку и т.п.<br/>Затвердеванием цемента |  | false | false |
+| ![block_form_by_entity](../../icons/events/block_form_by_entity.png) | block_form_by_entity | Генерація блоку через істоти | Виконує код, коли блок генерується завдяки взаємодії блоку та істоти. | entity | true | Сніговими големами<br/>Зачаруванням Льодохід |  | false | false |
+| ![block_grow](../../icons/events/block_grow.png) | block_grow | Зріст блоку | Виконує код, коли блок зростає. | world | true | Насінням<br/>Гарбузами та кавунами<br/>Черепашими яйцями |  | false | false |
+| ![block_ignite](../../icons/events/block_ignite.png) | block_ignite | Блок підпалюється | Виконує код, коли блок підпалюється. | world | true |  |  | false | false |
+| ![block_piston_extend](../../icons/events/block_piston_extend.png) | block_piston_extend | Поршень висувається | Виконує код, коли поршень висуває блок. | world | true |  |  | false | false |
+| ![block_piston_retract](../../icons/events/block_piston_retract.png) | block_piston_retract | Поршень втягується | Виконує код, коли поршень втягує блок. | world | true |  |  | false | false |
+| ![block_spread](../../icons/events/block_spread.png) | block_spread | Поширення блоку | Виконує код, коли блок поширюється. | world | true | Грибами<br/>Вогнем<br/>creative_plus.trigger.block_spread.work_with.grass_block |  | false | false |
+| ![brew_complete](../../icons/events/brew_complete.png) | brew_complete | Завершення зілляварення | Виконує код, коли зіллеварення в блоці закінчується. | world | true |  |  | false | false |
+| ![chunk_load](../../icons/events/chunk_load.png) | chunk_load | creative_plus.trigger.chunk_load.name | creative_plus.trigger.chunk_load.description | world | false |  | creative_plus.trigger.chunk_load.additional_information.event_block_location_set_to_bottom_corner | false | false |
+| ![chunk_unload](../../icons/events/chunk_unload.png) | chunk_unload | creative_plus.trigger.chunk_unload.name | creative_plus.trigger.chunk_unload.description | world | false |  | creative_plus.trigger.chunk_unload.additional_information.event_block_location_set_to_bottom_corner | false | false |
+| ![crafter_craft](../../icons/events/crafter_craft.png) | crafter_craft | Збирач створює предмет | Виконує код, коли збирач створює предмет. | world | true | Збирачами |  | false | false |
+| ![dispenser_dispense_item](../../icons/events/dispenser_dispense_item.png) | dispenser_dispense_item | Блок викидає предмет | Виконує код, коли блок викидає предмет. | world | true |  |  | false | false |
+| ![dispenser_equip_armor](../../icons/events/dispenser_equip_armor.png) | dispenser_equip_armor | Роздавач одягає броню | Виконує код, коли роздатчик одягає броню на сутність. | world | true |  |  | false | false |
+| ![dispenser_shear_sheep](../../icons/events/dispenser_shear_sheep.png) | dispenser_shear_sheep | Роздатчик обрізав вівцю | Виконує код, коли роздатчик зрізає вовну з вівці. | entity | true |  |  | false | false |
+| ![elder_guardian_appears_at_player](../../icons/events/elder_guardian_appears_at_player.png) | elder_guardian_appears_at_player | Стародавній страж прокляв гравця | Виконує код, коли стародавній страж проклинає гравця. | player | true |  |  | false | false |
+| ![enderman_attack_player](../../icons/events/enderman_attack_player.png) | enderman_attack_player | Ендермен злиться на гравця | Виконує код, коли Ендермен злиться на гравця. | entity | true |  |  | false | false |
+| ![enderman_escape](../../icons/events/enderman_escape.png) | enderman_escape | Ендермен тікає | Виконує код, коли Ендермен телепортується, щоб уникнути чого-небудь. | entity | true |  |  | false | false |
+| ![entity_bell_ring](../../icons/events/entity_bell_ring.png) | entity_bell_ring | Істота дзвонить у дзвоник | Виконує код, коли істота дзвонить у дзвоник. | entity | true |  |  | false | false |
+| ![entity_block_break_progress_update](../../icons/events/entity_block_break_progress_update.png) | entity_block_break_progress_update | Оновлення статусу поломки блока | Виконує код, коли істота оновлює статус поломки блока. | entity | false | Зомбі |  | false | false |
+| ![entity_combust](../../icons/events/entity_combust.png) | entity_combust | Істота загорілася | Виконує код, коли істота загоряється. | entity | true |  |  | false | false |
+| ![entity_damage_entity](../../icons/events/entity_damage_entity.png) | entity_damage_entity | Моб наносить урон гравцю | Виконує код, коли моб наносить урон іншому мобу. | entity | true |  |  | false | false |
+| ![entity_damage_player](../../icons/events/entity_damage_player.png) | entity_damage_player | Істота ранить гравця | Виконує код, коли істота ранить гравця. | player | true |  |  | false | false |
+| ![entity_death](../../icons/events/entity_death.png) | entity_death | Смерть істоті | Виконує код, коли істота вмерла. | entity | true |  |  | false | false |
+| ![entity_drop_item](../../icons/events/entity_drop_item.png) | entity_drop_item | Істота викидає предмет | Виконує код, коли істота викидає предмет. | entity | true |  |  | false | false |
+| ![entity_equipment_changed](../../icons/events/entity_equipment_changed.png) | entity_equipment_changed | Істота змінює екіпірування | Виконує код, коли екіпірування істоти змінюється. | entity | false |  | Подія виникає після зміни атрибутів або зачарувань будь-якої з частин екіпірування. | false | false |
+| ![entity_explode](../../icons/events/entity_explode.png) | entity_explode | Істота вибухає | Виконує код, коли істота вибухає. | entity | true |  |  | false | false |
+| ![entity_explosion](../../icons/events/entity_explosion.png) | entity_explosion | Істота вирішила вибухнути | Виконує код, коли істота вирішила вибухнути. | entity | true |  |  | false | false |
+| ![entity_heal](../../icons/events/entity_heal.png) | entity_heal | Істота зцілюється | Виконує код, коли істота зцілюється. | entity | true |  |  | false | false |
+| ![entity_interact](../../icons/events/entity_interact.png) | entity_interact | Істота взаємодіє зі світом | Виконує код, коли істота взаємодіє зі світом. | entity | true |  |  | false | false |
+| ![entity_kill_entity](../../icons/events/entity_kill_entity.png) | entity_kill_entity | Моб вбив моба | Виконує код, коли моб вбив іншого моба. | entity | true |  |  | false | false |
+| ![entity_knockback](../../icons/events/entity_knockback.png) | entity_knockback | Істота відштовхується | Виконує код, коли істота відштовхується. | entity | true |  |  | false | false |
+| ![entity_load_crossbow](../../icons/events/entity_load_crossbow.png) | entity_load_crossbow | Сутність заряджає арбалет | Виконує код, коли сутність заряджає арбалет. | entity | true |  |  | false | false |
+| ![entity_pickup_item](../../icons/events/entity_pickup_item.png) | entity_pickup_item | Істота підіймає предмет | Виконує код, коли істота підіймає предмет. | entity | true |  |  | false | false |
+| ![entity_removed_from_world](../../icons/events/entity_removed_from_world.png) | entity_removed_from_world | Видалення істоти | Виконує код, коли зі світу видаляється істота. | entity | false |  |  | false | false |
+| ![entity_resurrect](../../icons/events/entity_resurrect.png) | entity_resurrect | Істота воскресає від тотему | Виконує код, коли істота воскресає від Тотему безсмертя. | entity | true |  | За замовчуванням ця подія скасована, якщо істота не тримає в руці Тотем безсмертя. | false | false |
+| ![entity_shot_bow](../../icons/events/entity_shot_bow.png) | entity_shot_bow | Сутність стріляє | Виконує код, коли сутність стріляє з лука або арбалета. | entity | true |  |  | false | false |
+| ![entity_spawn](../../icons/events/entity_spawn.png) | entity_spawn | Створити істоту | Виконує код, коли у світі з`являеться нова істота. | entity | true |  |  | false | false |
+| ![entity_spell_cast](../../icons/events/entity_spell_cast.png) | entity_spell_cast | Істота виконує заклинання | Виконує код, коли істота виконує заклинання. | entity | true | Викликач<br/>Ілюзіоніст |  | false | false |
+| ![entity_start_gliding](../../icons/events/entity_start_gliding.png) | entity_start_gliding | Істота починає летіти на елітрах | Виконує код, коли істота починає летіти на елітрах. | entity | true |  |  | false | false |
+| ![entity_stop_gliding](../../icons/events/entity_stop_gliding.png) | entity_stop_gliding | Істота перестає летіти на елітрах | Виконує код, коли істота перестає летіти на елітрах. | entity | true |  |  | false | false |
+| ![entity_take_damage](../../icons/events/entity_take_damage.png) | entity_take_damage | Істота отримує урон | Виконує код, коли істота отримує урон. | entity | true |  |  | false | false |
+| ![entity_teleport](../../icons/events/entity_teleport.png) | entity_teleport | Істота телепортується | Виконує код, коли істота телепортується. | entity | true |  |  | false | false |
+| ![entity_transform](../../icons/events/entity_transform.png) | entity_transform | Сутність замінюється іншою сутністю | Виконує код, коли сутність замінюється іншою сутністю. | entity | true |  |  | false | false |
+| ![entity_unleash_event](../../icons/events/entity_unleash_event.png) | entity_unleash_event | Істота відв'язалась | Виконує код, коли істота відв'язується від повідка. | entity | true |  |  | false | false |
+| ![experience_orb_merge](../../icons/events/experience_orb_merge.png) | experience_orb_merge | Сфери досвіду об'єднуються | Виконує код, коли сфера досвіду об'єднується з іншою сферою досвіду. | entity | true |  |  | false | false |
+| ![falling_block_land](../../icons/events/falling_block_land.png) | falling_block_land | Падаючий блок приземляється | Виконує код, коли падаючий блок перетворюється на звичайний блок. | entity | true |  |  | false | false |
+| ![firework_explode](../../icons/events/firework_explode.png) | firework_explode | Феєрверк вибухає | Виконує код, коли вибахує феєрверк. | entity | true |  |  | false | false |
+| ![fishing_hook_state_change](../../icons/events/fishing_hook_state_change.png) | fishing_hook_state_change | Поплавок вудки змінює стан | Виконує код, коли поплавок вудки змінює свій стан. | entity | false | Поплавком вудки |  | false | false |
+| ![fluid_level_change](../../icons/events/fluid_level_change.png) | fluid_level_change | Зміна рівню води | Виконує код, коли змінюється рівень води у блоці. | world | true |  |  | false | false |
+| ![furnace_burn](../../icons/events/furnace_burn.png) | furnace_burn | Піч використовує паливо | Виконує код, коли піч використовує предмет як паливо. | world | true | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false |
+| ![furnace_smelt](../../icons/events/furnace_smelt.png) | furnace_smelt | Піч закінчила плавку | Виконує код, коли піч закінчує плавку. | world | true | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false |
+| ![furnace_start_smelt](../../icons/events/furnace_start_smelt.png) | furnace_start_smelt | Піч почала плавку | Виконує код, коли піч починає плавку. | world | false | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false |
+| ![goat_ram_entity](../../icons/events/goat_ram_entity.png) | goat_ram_entity | Коза таранить сутність | Виконує код, коли коза таранить сутність. | entity | true |  |  | false | false |
+| ![hanging_break](../../icons/events/hanging_break.png) | hanging_break | Ламанная істоті, що висить | Виконує код, коли ламається істота, що висить (картина, рамка). | entity | true | Рамками<br/>Картинами<br/>Повідками |  | false | false |
+| ![hopper_pickup_item](../../icons/events/hopper_pickup_item.png) | hopper_pickup_item | Лійка підбирає предмет | Виконує код, коли лійка підбирає предмет. | entity | true |  | Щоб вибрати предмет як істоту, використовуйте ціль "Жертва". | false | false |
+| ![item_despawn](../../icons/events/item_despawn.png) | item_despawn | Предмет зник | Виконує код, коли предмет зникає зі світу через 5 хвилин після його створення. | entity | true |  |  | false | false |
+| ![item_merge](../../icons/events/item_merge.png) | item_merge | Предмети на землі об'єднуються | Виконує код, коли предмети, що лежать поруч, об'єднуються в єдиний стак. | entity | true |  |  | false | false |
+| ![item_moved_into_container](../../icons/events/item_moved_into_container.png) | item_moved_into_container | Предмет перемістився у контейнер | Виконує код, коли предмет переміщується у контейнер. | world | true |  |  | false | false |
+| ![leaves_decay](../../icons/events/leaves_decay.png) | leaves_decay | Листопад | Виконує код, коли листя обпадають. | world | true |  |  | false | false |
+| ![mob_kill_player](../../icons/events/mob_kill_player.png) | mob_kill_player | Моб вбиває гравця | Виконує код, коли моб вбиває гравця. | player | true |  |  | false | false |
+| ![moisture_change](../../icons/events/moisture_change.png) | moisture_change | Грядка змінює статус вологості | Виконує код, коли блок грядки стає мокрим або висихає. | world | true |  |  | false | false |
+| ![note_play](../../icons/events/note_play.png) | note_play | Програвання звуку нотним блоком | Виконує код, коли у світі нотний блок програє звкук. | world | true |  |  | false | false |
+| ![piglin_barter](../../icons/events/piglin_barter.png) | piglin_barter | Піґлін торгується | Виконує код, коли піґлін торгується. | entity | true |  |  | false | false |
+| ![player_anticheat_flag](../../icons/events/player_anticheat_flag.png) | player_anticheat_flag | Античит засік гравця | Виконує код, коли античит засік гравця на читах. Спрацьовує лише в рекомендованих світах. | player | false | Налаштуваннями античита світу |  | false | false |
+| ![player_anvil_damaged](../../icons/events/player_anvil_damaged.png) | player_anvil_damaged | Гравець пошкоджує ковадло | Виконує код, коли гравець пошкоджує ковадло. | player | true | Ковадлами |  | false | false |
+| ![player_anvil_rename_input](../../icons/events/player_anvil_rename_input.png) | player_anvil_rename_input | Гравець перейменовує предмет | Виконує код, коли гравець перейменовує предмет за допомогою ковадла. | player | false | Ковадлами | Подія викликається до зміни предмета | false | false |
+| ![player_arm_swing](../../icons/events/player_arm_swing.png) | player_arm_swing | Гравець махає рукою | Виконує код, коли гравець махає правою або лівою рукою. | player | true |  |  | false | false |
+| ![player_ask_gamemode_change](../../icons/events/player_ask_gamemode_change.png) | player_ask_gamemode_change | Гравець запросив меню зміни режиму гри | Виконує код, коли гравець запрошує меню зміни режиму гри. | player | true | Комбінацією клавіш F3 + F4<br/>Комбінацією клавіш F3 + N | За замовчуванням ця подія скасовується, якщо гравець не має доступу до зміни режиму. | false | false |
+| ![player_block_break_progress_update](../../icons/events/player_block_break_progress_update.png) | player_block_break_progress_update | Оновлення статусу поломки блока | Виконує код, коли гравець оновлює статус поломки блока. | player | false |  |  | false | false |
+| ![player_block_dispense_loot](../../icons/events/player_block_dispense_loot.png) | player_block_dispense_loot | Гравець змушує блок викинути лут | Виконує код, коли гравець змушує блок викинути лут. | player | true | Скарбницями |  | false | false |
+| ![player_break_block](../../icons/events/player_break_block.png) | player_break_block | Гравець ламає блок | Виконує код, коли гравець ламає блок. | player | true |  | За замовчуванням ця подія скасована, якщо гравець, перебуваючи в творчому режимі, ламає блок, тримаючи в руці меч або тризуб. | false | false |
+| ![player_break_item](../../icons/events/player_break_item.png) | player_break_item | Гравець ламає предмет | Виконує код, коли гравець ламає предмет. | player | false |  |  | false | false |
+| ![player_change_slot](../../icons/events/player_change_slot.png) | player_change_slot | Гравець змінює слот | Виконує код, коли гравець змінює слот. | player | true |  |  | false | false |
+| ![player_chat](../../icons/events/player_chat.png) | player_chat | Гравець пише повідомлення до чату | Виконує код, гравець пише повідомлення до чату. | player | true |  |  | false | false |
+| ![player_click_inventory](../../icons/events/player_click_inventory.png) | player_click_inventory | Гравець кликає у інвентарі | Виконує код, коли гравець кликає у інвентарі. | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false |
+| ![player_click_own_inventory](../../icons/events/player_click_own_inventory.png) | player_click_own_inventory | Гравець кликає у своєму інвентарі | Виконує код, коли гравець кликає у своєму інвентарі. | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false |
+| ![player_close_advancements_menu](../../icons/events/player_close_advancements_menu.png) | player_close_advancements_menu | Гравець закрив меню досягнень | Виконує код, коли гравець закриває меню досягнень. | player | false |  |  | true | false |
+| ![player_close_inventory](../../icons/events/player_close_inventory.png) | player_close_inventory | Гравець закриває інвентар | Виконує код, коли гравець закриває інвентар. | player | false |  |  | false | false |
+| ![player_combust](../../icons/events/player_combust.png) | player_combust | Гравець загорівся | Виконує код, коли гравець загоряється. | player | true |  |  | false | false |
+| ![player_consume_item](../../icons/events/player_consume_item.png) | player_consume_item | Гравець вживає предмет | Виконує код, коли гравець з`їдає або випиває предмет. | player | true | Їжею<br/>Зіллями<br/>Молоком |  | false | false |
+| ![player_craft_item](../../icons/events/player_craft_item.png) | player_craft_item | Гравець крафтить предмет | Виконує код, коли гравець крафтить предмет. | player | true |  |  | false | false |
+| ![player_currency_transaction](../../icons/events/player_currency_transaction.png) | player_currency_transaction | Гравець здійснює транзакцію | Виконує код, коли гравець здійснює транзакцію в смарагдах. | player | false |  |  | false | false |
+| ![player_custom_click](../../icons/events/player_custom_click.png) | player_custom_click | Гравець викликає кастомний клік | Виконує код, коли гравець викликає кастомний клік у діалоговому вікні або чаті. | player | false |  |  | false | false |
+| ![player_damage_entity](../../icons/events/player_damage_entity.png) | player_damage_entity | Гравець ранить істоту | Виконує код, коли гравець ранить істоту. | player | true |  |  | false | false |
+| ![player_damage_item](../../icons/events/player_damage_item.png) | player_damage_item | Гравець пошкоджує предмет | Виконує код, коли предмет в інвентарі гравця ламається. | player | true |  |  | false | false |
+| ![player_damage_player](../../icons/events/player_damage_player.png) | player_damage_player | Гравець ранить гравця | Виконує код, коли гравець ранить іншого гравця. | player | true |  |  | false | false |
+| ![player_death](../../icons/events/player_death.png) | player_death | Гравець помирає | Виконує код, коли гравець помирає не в результаті поранення від іншого гравця чи істоти. | player | true |  |  | false | false |
+| ![player_dismount](../../icons/events/player_dismount.png) | player_dismount | Гравець спішився | Виконує код, коли гравець спішився з човна, коня чи інших істот. | player | true |  |  | false | false |
+| ![player_drag_inventory](../../icons/events/player_drag_inventory.png) | player_drag_inventory | Гравець перетягує предмет у інвентарі | Виконує код, коли гравець перетягує предмет у інвентарі. | player | true |  | За замовчуванням ця подія скасована, якщо гравець знаходиться в режимі спостерігача. | false | false |
+| ![player_drop_item](../../icons/events/player_drop_item.png) | player_drop_item | Игрок выбрасывает предмет | Виконує код, коли гравець викидає предмет. | player | true |  |  | false | false |
+| ![player_edit_book](../../icons/events/player_edit_book.png) | player_edit_book | Гравець змінює книгу | Виконує код, коли гравець редагує чи підписує книгу з пером. | player | true |  |  | false | false |
+| ![player_enchant_item](../../icons/events/player_enchant_item.png) | player_enchant_item | Гравець зачаровує предмет | Виконує код, коли гравець зачаровує предмет. | player | true | Столами зачарування |  | false | false |
+| ![player_equipment_changed](../../icons/events/player_equipment_changed.png) | player_equipment_changed | Гравець змінює екіпірування | Виконує код, коли екіпірування гравця змінюється. | player | false |  | Подія виникає після зміни атрибутів або зачарувань будь-якої з частин екіпірування. | false | false |
+| ![player_exhaustion](../../icons/events/player_exhaustion.png) | player_exhaustion | Гравець виснажується | Виконує код, коли гравець отримує виснаження. | player | true |  |  | false | false |
+| ![player_fail_move](../../icons/events/player_fail_move.png) | player_fail_move | Гравцю не вдалося пересунутись | Виконує код, коли гравцю не вдається пересунутися з місця. | player | false |  |  | false | false |
+| ![player_feed_sulfur_cube_item](../../icons/events/player_feed_sulfur_cube_item.png) | player_feed_sulfur_cube_item | Гравець годує сірчаного слайма предметом | Виконує код, коли гравець годує сірчаного слайма предметом. | player | true |  |  | false | false |
+| ![player_fish](../../icons/events/player_fish.png) | player_fish | Гравець рибалить | Виконує код, коли гравець ловить що-небудь на вудку. | player | true |  |  | false | false |
+| ![player_flowerpot_manipulate](../../icons/events/player_flowerpot_manipulate.png) | player_flowerpot_manipulate | Гравець взаємодіє з квітковим горщиком | Виконує код, коли гравець взаємодіє з квітковим горщиком. | player | true | Квітковими горщиками |  | false | false |
+| ![player_food_level_change](../../icons/events/player_food_level_change.png) | player_food_level_change | Зміна рівня голоду гравця | Виконує код, коли рівень голоду гравця змінюється. | player | true |  |  | false | false |
+| ![player_furnace_extract](../../icons/events/player_furnace_extract.png) | player_furnace_extract | Гравець забирає предмет із печі | Виконує код, коли гравець забирає предмет із печі. | player | false | Печами<br/>Доменними печами<br/>Коптильнями |  | false | false |
+| ![player_harvest_block](../../icons/events/player_harvest_block.png) | player_harvest_block | Гравець збирає врожай | Виконує код, коли гравець збирає врожай, не ламаючи блок. | player | true |  |  | false | false |
+| ![player_heal](../../icons/events/player_heal.png) | player_heal | Гравець відновлює здоров`я | Виконує код, коли гравець відновлює здоров`я будь-яким чином. | player | true |  |  | false | false |
+| ![player_horse_jump](../../icons/events/player_horse_jump.png) | player_horse_jump | Гравець стрибає на коні | Виконує код, коли гравець виконує стрибок на коні, ослі або мулі. | player | true |  |  | false | false |
+| ![player_imbue_potion_cloud](../../icons/events/player_imbue_potion_cloud.png) | player_imbue_potion_cloud | Гравець отримує еффект від вибухового зілля | Виконує код, коли гравець отримує еффект від вибухового зілля. | player | true |  |  | false | false |
+| ![player_input_event](../../icons/events/player_input_event.png) | player_input_event | Гравець змінює натиснуті клавіші пересування | Виконує код, коли гравець змінює натиснуті клавіші пересування. | player | false |  | Подія виникає, коли список натиснутих клавіш для пересування гравця (за замовчуванням: WASD — пересування, Shift — присідання, Space — стрибок, Ctrl — біг) змінюється.<br/>Подія містить усі натиснуті на даний момент клавіші гравця. | false | false |
+| ![player_interact](../../icons/events/player_interact.png) | player_interact | Гравець взаємодіє зі світом | Виконує код, коли гравець взаємодіє зі світом. | player | true |  | Працює при натисканні ЛКМ, ПКМ, взаємодії з натискними плитами, розтяжками тощо. | false | false |
+| ![player_inventory_slot_change](../../icons/events/player_inventory_slot_change.png) | player_inventory_slot_change | creative_plus.trigger.player_inventory_slot_change.name | creative_plus.trigger.player_inventory_slot_change.description | player | false |  |  | false | false |
+| ![player_item_cooldown](../../icons/events/player_item_cooldown.png) | player_item_cooldown | Гравець використовує предмет із затримкою | Виконує код, коли гравець використовує предмет, що має затримку між використаннями. | player | true |  |  | false | false |
+| ![player_item_group_cooldown](../../icons/events/player_item_group_cooldown.png) | player_item_group_cooldown | Гравець отримує затримку для групи предметів | Виконує код, коли гравець отримує затримку для групи предметів. | player | true |  |  | false | false |
+| ![player_item_mend](../../icons/events/player_item_mend.png) | player_item_mend | Гравець лагодить предмет | Виконує код, коли гравець лагодить предмет за допомогою зачарування "Ремонт". | player | true |  |  | false | false |
+| ![player_join](../../icons/events/player_join.png) | player_join | Гравець зайшов у світ | Виконує код, коли гравець заходить у світ. | player | false |  |  | false | false |
+| ![player_jump](../../icons/events/player_jump.png) | player_jump | Гравець стибає | Виконує код, коли гравець стрибає. | player | true |  |  | false | false |
+| ![player_kill_mob](../../icons/events/player_kill_mob.png) | player_kill_mob | Гравець вбиває моба | Виконує код, коли гравець вбиває моба. | player | true |  |  | false | false |
+| ![player_kill_player](../../icons/events/player_kill_player.png) | player_kill_player | Гравець вбиває гравця | Виконує код, коли гравець вбиває іншого гравця. | player | true |  |  | false | false |
+| ![player_knockback](../../icons/events/player_knockback.png) | player_knockback | Гравець відштовхується | Виконує код, коли гравець відштовхується. | player | true |  |  | false | false |
+| ![player_launch_projectile](../../icons/events/player_launch_projectile.png) | player_launch_projectile | Гравець запускає снаряд | Виконує код, коли гравець запускає снаряд. | player | true | Яйцями<br/>Сніжками<br/>Зіллями |  | false | false |
+| ![player_leash_entity](../../icons/events/player_leash_entity.png) | player_leash_entity | Гравець прив`язує істоту | Виконує код, коли гравець прив`язує істоту. | player | true |  |  | false | false |
+| ![player_left_click](../../icons/events/player_left_click.png) | player_left_click | Гравець клацає лівою кнопкою | Виконує код, коли гравець клацає лівою кнопкою миші. | player | true |  |  | false | false |
+| ![player_load_crossbow](../../icons/events/player_load_crossbow.png) | player_load_crossbow | Гравець заряджає арбалет | Виконує код, коли гравець заряджає арбалет. | player | true | Арбалетом |  | false | false |
+| ![player_location_change](../../icons/events/player_location_change.png) | player_location_change | Гравець змінює місцеположення | Виконує код, коли гравець змінює своє місцеположення (у тому числі залишаючись на тому ж блоці). | player | true |  |  | false | false |
+| ![player_move](../../icons/events/player_move.png) | player_move | Гравець пересувається | Виконує код, коли гравець пересувається. | player | true |  |  | false | false |
+| ![player_open_advancements_tab](../../icons/events/player_open_advancements_tab.png) | player_open_advancements_tab | Гравець змінив вкладку в меню досягнень | Виконує код, коли гравець переключається на іншу вкладку в меню досягнень або відкриває меню досягнень. | player | false |  | Меню може бути закрито дією "Закрити інвентар" | false | false |
+| ![player_open_inventory](../../icons/events/player_open_inventory.png) | player_open_inventory | Гравець відкрив інвентар | Виконує код, коли гравцю відкривається інвентарне меню. | player | true |  |  | false | false |
+| ![player_pick_block](../../icons/events/player_pick_block.png) | player_pick_block | Гравець використовує вибір предмета на блоці | Виконує код, коли гравець використовує вибір предмета на блоці. | player | true |  | Подія виникає, коли гравець використовує функцію вибору предмета на блоці (клік середньою кнопкою миші на блоці для отримання відповідного предмета). | false | false |
+| ![player_pick_entity](../../icons/events/player_pick_entity.png) | player_pick_entity | Гравець використовує вибір предмета на істоті | Виконує код, коли гравець використовує вибір предмета на істоті. | player | true |  | Подія виникає, коли гравець використовує функцію вибору предмета на істоті (клік по істоті для отримання відповідного предмета). | false | false |
+| ![player_pick_item](../../icons/events/player_pick_item.png) | player_pick_item | Гравець знаходить предмет в інвентарі | Виконує код, коли гравець знаходить предмет в інвентарі за допомогою середньої кнопки миші. | player | true |  |  | false | false |
+| ![player_pickup_experience](../../icons/events/player_pickup_experience.png) | player_pickup_experience | Гавець підняв сферу досвіду | Виконує код, коли гравець піднімає сферу досвіду. | player | true |  |  | false | false |
+| ![player_pickup_item](../../icons/events/player_pickup_item.png) | player_pickup_item | Гравець підняв предмет | Виконує код, коли гравець піднімає предмет. | player | true |  |  | false | false |
+| ![player_pickup_projectile](../../icons/events/player_pickup_projectile.png) | player_pickup_projectile | Гравець підняв снаряд | Виконує код, коли гравець піднімає снаряд. | player | true |  |  | false | false |
+| ![player_place_block](../../icons/events/player_place_block.png) | player_place_block | Гравець ставить блок | Виконує код, коли гравець ставить блок. | player | true |  |  | false | false |
+| ![player_pre_attack_entity](../../icons/events/player_pre_attack_entity.png) | player_pre_attack_entity | Гравець збирається завдати урону істоті | Виконує код, коли гравець збирається завдати урону істоті. Скасування події також скасовує звуки удару. | player | true |  |  | false | false |
+| ![player_prepare_item_craft](../../icons/events/player_prepare_item_craft.png) | player_prepare_item_craft | Гравець виклав крафт | Виконує код, коли гравець викладає крафт якогось предмета. | player | false | Верстаками<br/>Сіткою крафту в інвентарі |  | false | false |
+| ![player_prepare_item_enchant](../../icons/events/player_prepare_item_enchant.png) | player_prepare_item_enchant | Гравець вибирає зачарування | Виконує код, коли гравець отримує результат у чарівному столі, отримуючи можливість вибору зачарування. | player | true | Чарівними столами |  | false | false |
+| ![player_prepare_result](../../icons/events/player_prepare_result.png) | player_prepare_result | Гравець отримує результат | Виконує код, коли гравець отримує результат в інвентарі. | player | false | Ковадлами<br/>Точилами<br/>Ковальськими столами |  | false | false |
+| ![player_projectile_hit](../../icons/events/player_projectile_hit.png) | player_projectile_hit | Влучення снаряда гравця | Виконує код, коли снаряд, випущений гравцем, потрапляє у блок, істоту, чи іншого гравця. | player | true |  |  | false | false |
+| ![player_query_block_info](../../icons/events/player_query_block_info.png) | player_query_block_info | Гравець отримує інформацію про блок | Виконує код, коли гравець отримує налагоджувальну інформацію про цільовий блок (F3 + I). | player | true |  | Подія не спрацює, якщо гравець присідає. | false | false |
+| ![player_query_entity_info](../../icons/events/player_query_entity_info.png) | player_query_entity_info | Гравець отримує інформацію про істоту | Виконує код, коли гравець отримує налагоджувальну інформацію про цільову істоту (F3 + I). | player | true |  | Подія не спрацює, якщо гравець присідає. | false | false |
+| ![player_quit](../../icons/events/player_quit.png) | player_quit | Гравець вийшов зі світу | Виконує код, коли гравець виходить зі світу. | player | false |  |  | false | false |
+| ![player_rejoin](../../icons/events/player_rejoin.png) | player_rejoin | Гравець перезайшов у світ | Виконує код, коли гравець перезаходить у світ за допомогою команди /play. | player | true |  |  | false | false |
+| ![player_request_stats](../../icons/events/player_request_stats.png) | player_request_stats | Гравець запросив статистику | Виконує код, коли гравець відкриває меню "Статистика". | player | false |  | Закрити меню "Статистика" можна дією "Закрити меню". | false | false |
+| ![player_respawn](../../icons/events/player_respawn.png) | player_respawn | Гравець відроджується | Виконує код, коли гравець відроджується. | player | false |  | Бажано використовувати блок "Чекати" перед рештою коду для коректної роботи. | false | false |
+| ![player_resurrect](../../icons/events/player_resurrect.png) | player_resurrect | Гравець воскресає від тотему | Виконує код, коли гравець воскресає від Тотему безсмертя. | player | true |  | За замовчуванням ця подія скасована, якщо гравець не тримає в руці Тотем безсмертя. | false | false |
+| ![player_right_click](../../icons/events/player_right_click.png) | player_right_click | Гравець кликає правою кнопкою | Виконує код, коли гравець клацає правою кнопкою миші. | player | true |  |  | false | false |
+| ![player_right_click_entity](../../icons/events/player_right_click_entity.png) | player_right_click_entity | Гравець кликає правою кнопкою по істоті | Виконує код, коли гравець клацає правою кнопкою по істоті. | player | true |  |  | false | false |
+| ![player_right_click_player](../../icons/events/player_right_click_player.png) | player_right_click_player | Гравець кликає правою кнопкою по гравцю | Виконує код, коли гравець клацає правою кнопкою по іншому гравцю. | player | true |  |  | false | false |
+| ![player_riptide](../../icons/events/player_riptide.png) | player_riptide | Гравець використовує 'Тягун' | Виконує код, коли гравець використовує тризуб із зачаруванням 'Тягун'. | player | true |  |  | false | false |
+| ![player_rotate](../../icons/events/player_rotate.png) | player_rotate | Гравець повертається | Виконує код, коли гравець повертається (змінює положення yaw або pitch) | player | true |  |  | false | false |
+| ![player_shear_block](../../icons/events/player_shear_block.png) | player_shear_block | Гравець вирізає блок | Виконує код, коли гравець вирізає блок ножицями. | player | true |  |  | false | false |
+| ![player_shot_bow](../../icons/events/player_shot_bow.png) | player_shot_bow | Гравець стріляє | Виконує код, коли гравець стріляє з лука/арбалета. | player | true | Луком<br/>Арбалетом |  | false | false |
+| ![player_sign_change](../../icons/events/player_sign_change.png) | player_sign_change | Гравець змінює табличку | Виконує код, коли гравець змінює текст таблички. | player | true |  |  | false | false |
+| ![player_skin_change](../../icons/events/player_skin_change.png) | player_skin_change | Скін гравця змінився | Виконує код, коли скін гравця змінюється. | player | true | Самостійною зміною скіна (через /skin)<br/>Дією "Встановити скін" | За замовчуванням ця подія скасована. | false | false |
+| ![player_sneak](../../icons/events/player_sneak.png) | player_sneak | Гравець починає крастись | Виконує код, коли гравець починає крастись. | player | true |  |  | false | false |
+| ![player_start_flight](../../icons/events/player_start_flight.png) | player_start_flight | Гравець починає літати | Виконує код, коли гравець починає літати. | player | true |  |  | false | false |
+| ![player_start_gliding](../../icons/events/player_start_gliding.png) | player_start_gliding | Гравець починає летіти на елітрах | Виконує код, коли гравець починає летіти на елітрах. | player | true |  |  | false | false |
+| ![player_start_spectating_entity](../../icons/events/player_start_spectating_entity.png) | player_start_spectating_entity | Гравець почав стежити за істотою | Виконує код, коли гравець почав стежити за істотою в режимі спостерігача. | player | true |  |  | false | false |
+| ![player_start_sprint](../../icons/events/player_start_sprint.png) | player_start_sprint | Гравець почав бігти | Виконує код, коли гравець починає бігти. | player | true |  |  | false | false |
+| ![player_stop_flight](../../icons/events/player_stop_flight.png) | player_stop_flight | Гравець перестає літати | Виконує код, коли гарвець перестає літати. | player | true |  |  | false | false |
+| ![player_stop_gliding](../../icons/events/player_stop_gliding.png) | player_stop_gliding | Гравець перестає летіти на елітрах | Виконує код, коли гравець перестає летіти на елітрах. | player | true |  |  | false | false |
+| ![player_stop_spectating_entity](../../icons/events/player_stop_spectating_entity.png) | player_stop_spectating_entity | Гравець перестав стежити за істотою | Виконує код, коли гравець перестає стежити за істотою в режимі спостерігача. | player | true |  |  | false | false |
+| ![player_stop_sprint](../../icons/events/player_stop_sprint.png) | player_stop_sprint | Гравець перестав бігти | Виконує код, коли гравець перестає бігти. | player | true |  |  | false | false |
+| ![player_stop_using_item](../../icons/events/player_stop_using_item.png) | player_stop_using_item | Гравець перестає використовувати предмет | Виконує код, коли гравець перестає використовувати предмет. | player | false |  |  | false | false |
+| ![player_structure_grow](../../icons/events/player_structure_grow.png) | player_structure_grow | Гравець вирощує дерево | Виконує код, коли гравець вирощує дерево або гриб. | player | true |  |  | false | false |
+| ![player_swap_hands](../../icons/events/player_swap_hands.png) | player_swap_hands | Гравець змінює руку | Виконує код, коли гравець перекладає предмет із головної руки у другорядну. | player | true |  |  | false | false |
+| ![player_take_damage](../../icons/events/player_take_damage.png) | player_take_damage | Гравець отримує урон | Виконує код, коли гравець отримує урон. | player | true |  |  | false | false |
+| ![player_tame_entity](../../icons/events/player_tame_entity.png) | player_tame_entity | Игрок приручает существо | Виконує код, коли гравець приручає істоту. | player | true |  |  | false | false |
+| ![player_teleport](../../icons/events/player_teleport.png) | player_teleport | Гравець телепортувався | Виконує код, коли гравець здійснює телепортацію. | player | true |  |  | false | false |
+| ![player_toggle_entity_age_lock](../../icons/events/player_toggle_entity_age_lock.png) | player_toggle_entity_age_lock | Гравець зупиняє зростання істоти | Виконує код, коли гравець блокує зростання істоти за допомогою золотої кульбаби. | player | true |  |  | false | false |
+| ![player_unleash_entity](../../icons/events/player_unleash_entity.png) | player_unleash_entity | Гравець відв'язав істоту | Виконує код, коли гравець відв'язує істоту від повідка. | player | true |  |  | false | false |
+| ![player_unsneak](../../icons/events/player_unsneak.png) | player_unsneak | Гравець перестав крастись | Виконує код, коли гравець перестає крастись. | player | true |  |  | false | false |
+| ![player_vault_change_state](../../icons/events/player_vault_change_state.png) | player_vault_change_state | Гравець змінює стан скарбниці | Виконує код, коли гравець змінює стан скарбниці. | player | true | Скарбницями |  | false | false |
+| ![player_vehicle_jump](../../icons/events/player_vehicle_jump.png) | player_vehicle_jump | Гравець стрибає на транспорті | Виконує код, коли гравець натискає кнопку стрибка, сидячи на транспорті. | player | false |  | Може бути використано для перевірки натискання кнопки стрибка. | false | false |
+| ![player_vehicle_move](../../icons/events/player_vehicle_move.png) | player_vehicle_move | Гравець пересувається на транспорті | Виконує код, коли гравець натискає кнопки руху, сидячи на транспорті. | player | false |  |  | true | false |
+| ![player_velocity](../../icons/events/player_velocity.png) | player_velocity | Гравець змінив вектор швидкості | Виконує код, коли вектор швидкості гравця змінюється. | player | true |  |  | false | false |
+| ![portal_create](../../icons/events/portal_create.png) | portal_create | Створення порталу | Виконує код, коли у світі створюється портал. | world | true |  |  | false | false |
+| ![projectile_damage_entity](../../icons/events/projectile_damage_entity.png) | projectile_damage_entity | Урон від снаряду | Виконує код, коли снаряд наносить урон істоті. | entity | true |  |  | false | false |
+| ![projectile_damage_player](../../icons/events/projectile_damage_player.png) | projectile_damage_player | Гравець отримує урон від снаряду | Виконує код, коли снаряд ранить гравця. | player | true |  |  | false | false |
+| ![projectile_hit](../../icons/events/projectile_hit.png) | projectile_hit | Влучення снаряду | Виконує код, коли снаряд влучає в блок. | entity | true |  |  | false | false |
+| ![projectile_kill_entity](../../icons/events/projectile_kill_entity.png) | projectile_kill_entity | Снаряд вбив істоту | Виконує код, коли снаряд вбиває істоту. | entity | true |  |  | false | false |
+| ![projectile_launch](../../icons/events/projectile_launch.png) | projectile_launch | Запуск снаряда | Виконує код, коли запускається будь-який снаряд. | entity | true |  |  | false | false |
+| ![projective_collide](../../icons/events/projective_collide.png) | projective_collide | Снаряд зіткнувся з істотою | Виконує код, коли снаряд стикається з істотою. | entity | true |  |  | false | false |
+| ![redstone_level_change](../../icons/events/redstone_level_change.png) | redstone_level_change | Зміна сили редстоуну | Виконує код, коли сила редстоуну змінюється. | world | false |  |  | false | false |
+| ![sculk_bloom](../../icons/events/sculk_bloom.png) | sculk_bloom | Скалк розцвітає | Виконує код, коли скалк розцвітає. | world | true |  |  | false | false |
+| ![sheep_regrow_wool](../../icons/events/sheep_regrow_wool.png) | sheep_regrow_wool | Вівця відростила вовну | Виконує код, коли Вівця відрощує вовну. | entity | true |  |  | false | false |
+| ![sponge_absorb](../../icons/events/sponge_absorb.png) | sponge_absorb | Губка поглинає воду | Виконує код, коли губка поглинає воду. | world | true |  |  | false | false |
+| ![structure_grow](../../icons/events/structure_grow.png) | structure_grow | Дерево виростає | Виконує код, коли дерево або гриб виростає. | world | true |  |  | false | false |
+| ![time_skip](../../icons/events/time_skip.png) | time_skip | Пропуск часу | Виконує код, коли стався пропуск часу. | world | true | Сном<br/>Кодом |  | false | false |
+| ![tnt_prime](../../icons/events/tnt_prime.png) | tnt_prime | Підрив динаміту | Виконує код, коли блок динаміту підпалюється. | world | true |  |  | false | false |
+| ![vault_change_state](../../icons/events/vault_change_state.png) | vault_change_state | Скарбниця змінює стан | Виконує код, коли скарбниця змінює свій стан. | world | true | Скарбницями |  | false | false |
+| ![vault_display_item](../../icons/events/vault_display_item.png) | vault_display_item | Скарбниця показує предмет | Виконує код, коли блок скарбниці показує предмет. | world | true | Скарбницями |  | false | false |
+| ![vehicle_take_damage](../../icons/events/vehicle_take_damage.png) | vehicle_take_damage | Урон транспорту | Виконує код, коли транспорт (вагонетка чи лодка) отримує урон. | entity | true |  |  | false | false |
+| ![witch_throw_potion](../../icons/events/witch_throw_potion.png) | witch_throw_potion | Відьма кидає зілля | Виконує код, коли Відьма кидає зілля. | entity | true | Відьмами |  | false | false |
+| ![world_reload](../../icons/events/world_reload.png) | world_reload | creative_plus.trigger.world_reload.name | creative_plus.trigger.world_reload.description | world | false |  |  | false | false |
+| ![world_start](../../icons/events/world_start.png) | world_start | Запуск світу | Виконує код у моменті запуска світ в режимі гри. | world | false |  |  | false | false |
+| ![world_stop](../../icons/events/world_stop.png) | world_stop | Зупинка світу | Виконує код у момент зупинки режима гри у світі. | world | false |  |  | false | false |
+| ![world_web_exception](../../icons/events/world_web_exception.png) | world_web_exception | Помилка веб-запиту | Виконує код, якщо не вдалося отримати відповідь на веб-запит. | world | false |  |  | false | false |
+| ![world_web_response](../../icons/events/world_web_response.png) | world_web_response | Відповідь від сервера | Виконує код, коли сервер, на який було відправлено запрос, відповідає. | world | false |  |  | false | false |

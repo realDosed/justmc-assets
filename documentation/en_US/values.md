@@ -1,225 +1,225 @@
 # Game values
 
-| Name | ID | Type | Selector | Element type | Key type | Value type | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Additional Health | absorption_health | number | entity |  |  |  |  |  | false | false | Gets the target's absorption (gold) health. |
-| Item usage time | active_item_used_time | number | entity |  |  |  |  |  | false | false | Gets the current usage time of the item held in the hand. |
-| Target Age | age | number | entity |  |  |  |  |  | false | false | Gets the target's age in ticks. |
-| All Entity Names | all_entities_names | array |  | text |  |  |  |  | false | false | Gets the names of all entities in the world. |
-| All Entity UUIDs | all_entities_uuids | array |  | text |  |  |  |  | false | false | Gets the UUIDs of all entities in the world. |
-| All Player Names | all_players_names | array |  | text |  |  |  |  | false | false | Gets the names of all players in the world. |
-| All Player UUIDs | all_players_uuids | array |  | text |  |  |  |  | false | false | Gets the UUIDs of all players in the world. |
-| Anticheat Check | anticheat_check | text |  |  |  |  | Anticheat Flags a Player Event |  | false | false | Gets the name of the anticheat check that flagged the player. |
-| Anticheat Violations | anticheat_violations | number |  |  |  |  | Anticheat Flags a Player Event |  | false | false | Gets the number of anticheat check violations the player has. |
-| Armor Items | armor_items | array | entity | item |  |  |  |  | false | false | Gets items in the target's armor slots. |
-| Defense Points | armor_points | number | entity |  |  |  |  |  | false | false | Gets the target's armor, which can be modified by items. |
-| Armor Hardness | armor_toughness | number | entity |  |  |  |  |  | false | false | Gets the target's armor hardness, which can be modified with items. |
-| Number of Arrows In Body | arrows_in_body | number | entity |  |  |  |  |  | false | false | Gets the number of arrows in the target's body. |
-| Attached Leads | attached_leads | array | entity | text |  |  |  |  | false | false | Gets the UUID of the entities that are attached to the target with a lead. |
-| Attack Cooldown Strength | attack_cooldown_strength | number | entity |  |  |  |  |  | false | false | Gets the attack cooldown strength multiplier (How much of your base attack damage is nullified by your attack cooldown) |
-| Attack Cooldown in Ticks | attack_cooldown_ticks | number | entity |  |  |  |  |  | false | false | Gets the current attack cooldown of the target, measured in ticks. |
-| Attack Damage | attack_damage | number | entity |  |  |  |  |  | false | false | Gives the target's attack damage, modifiable by items. |
-| Attack Speed | attack_speed | number | entity |  |  |  |  |  | false | false | Gets the target's attack speed, which can be modified by items. |
-| Block Location Under Target | block_beneath | location | entity |  |  |  |  |  | false | false | Gets the location of the block supporting the target. |
-| Block Locations Under Target | blocks_beneath | array | entity | location |  |  |  |  | false | false | Gets the location of all blocks supporting the target. |
-| Body rotation | body_yaw | number | entity |  |  |  |  |  | false | false | Gets rotation of target's body. |
-| Cape Location | cape_location | location | entity |  |  |  | Player |  | false | false | Gets the location of a player's cape. |
-| Cardinal Direction | cardinal_direction | text | entity |  |  |  |  |  | false | false | Gets the cardinal direction (north, west, south, east) of the target. |
-| Chat Visibility | chat_visibility | text | entity |  |  |  | Player |  | false | false | Gets the player's chat visibility status, defined in their game settings. |
-| Player Client Name | client_brand_name | text | entity |  |  |  | Players |  | false | false | Gets the name of the player's client. |
-| Player Render Distance | client_view_distance | number | entity |  |  |  | Player |  | false | false | Gets the render distance of the player, as set in the game's settings. |
-| Player Client Locale | clientside_locale | text | entity |  |  |  | Players |  | false | false | Gets the player's client locale. |
-| CPU Usage Percentage | cpu_usage | number |  |  |  |  |  |  | false | false | Gets the percentage of the world's CPU utilization on the server. |
-| Emerald Transaction Amount | currency_transaction_amount | text |  |  |  |  | Player Makes a Transaction Event |  | false | false | Gets the number of emeralds spent in the transaction. |
-| Transaction Request Reason | currency_transaction_reason | text |  |  |  |  | Player Makes a Transaction Event |  | false | false | Gets the reason for the emerald transaction request. |
-| Transaction Result | currency_transaction_result | text |  |  |  |  | Player Makes a Transaction Event |  | false | false | Gets the result of the completed transaction. |
-| Current Health | current_health | number | entity |  |  |  |  |  | false | false | Gets the target's remaining health. |
-| Current Pressed Movement Keys | current_input_list | array | entity | text |  |  | Players |  | false | false | Gets the currently pressed movement keys. |
-| Cursor Item | cursor_item | item | entity |  |  |  |  |  | false | false | Gets the item at the target cursor (used when moving inventory items). |
-| List of items in open inventory | custom_inventory_items | array | player | item |  |  |  |  | false | false | Returns a list containing the items that are in the currently open inventory menu. |
-| Score Count | death_screen_score | number | entity |  |  |  | Players |  | false | false | Gets the score displayed on the death screen. |
-| Current world freeze time | delay_reload_count | number |  |  |  |  |  |  | false | false | Gets the current time for which the world is frozen. |
-| View Vector | direction_of_view | vector | entity |  |  |  |  |  | false | false | Get the direction vector of the target's view. |
-| Display Entity Left Rotation | display_entity_left_rotation | vector | entity |  |  |  | Display Entities |  | false | false | Gets a display entity's rotation to the left as a vector. |
-| Display Entity Right Rotation | display_entity_right_rotation | vector | entity |  |  |  | Display Entities |  | false | false | Gets a display entity's rotation to the right as a vector. |
-| Display Entity Scale | display_entity_scale | vector | entity |  |  |  | Display Entities |  | false | false | Gets the scale of a display entity as a vector. |
-| Display Entity Offset | display_entity_translation | vector | entity |  |  |  | Display Entities |  | false | false | Gets the offset of a display entity as a vector. |
-| Display Name | display_name | text | entity |  |  |  |  |  | false | false | Gets the target's display name. |
-| Current Enchantment Seed | enchantment_seed | number | entity |  |  |  |  |  | false | false | Gets the player's current enchantment seed. |
-| Entity Fuse Time | entity_fuse_ticks | number | entity |  |  |  | Creepers<br/>TNT<br/>Fireworks |  | false | false | Gets the entity's time before it explodes. |
-| Hitbox Height | entity_height | number | entity |  |  |  |  |  | false | false | Gets the height of the target's hitbox. |
-| Entity Item | entity_item | item | entity |  |  |  |  |  | false | false | Gets the object form of the target. |
-| Path point index | entity_pathfinder_point_index | number | entity |  |  |  |  |  | false | false | Gets the current path point index the mob is moving along. |
-| Current path | entity_pathfinder_points | array | entity | location |  |  |  |  | false | false | Gets a list of all points that make up the current path of the mob. |
-| Entity Pick Item | entity_pick_item_stack | item | entity |  |  |  |  |  | false | false | Gets the item obtained by middle-clicking (MMB) on the entity. |
-| Target Lifetime | entity_ticks_lived | number | entity |  |  |  |  |  | false | false | Gets the number of ticks the entity has been alive. |
-| Entity Type | entity_type | text | entity |  |  |  |  |  | false | false | Gets the entity type of the target. |
-| Hitbox X Size | entity_width_x | number | entity |  |  |  |  |  | false | false | Gets the size of the target's hitbox in the x-axis. |
-| Hitbox Z Size | entity_width_z | number | entity |  |  |  |  |  | false | false | Gets the size of the target's hitbox in the z-axis. |
-| Distributed Items | event_added_items | map |  |  | number | item | Drag Items Event |  | false | false | Produces a dictionary of slotted items with LMB/RMB or duplication with mouse wheel. |
-| Event Advancement Tab Name | event_advancement_tab_name | text |  |  |  |  | "Player Open Advancement Tab" event |  | true | false | The name of the current opened advancements tab. |
-| New Anvil Damage State | event_anvil_damage_state | text |  |  |  |  | Event "Player Damages Anvil" |  | false | false | Gets the new damage state of the anvil. |
-| Anvil Rename Input | event_anvil_rename_input | text |  |  |  |  | "Player Anvil Rename Input" event. |  | false | false | Gets the new name of the item in an anvil. |
-| Event Block | event_block | text |  |  |  |  |  |  | false | false | Gets the ID of the block associated with the event. |
-| Block Break Progress | event_block_break_progress | number |  |  |  |  | Player Block Break Progress Update<br/>Entity Block Break Progress Update |  | false | false | Gets the block break progress associated with the event. |
-| Event Block Face | event_block_face | text |  |  |  |  | Interaction Events<br/>Block Place or Break Events<br/>Projectile Hit Event<br/>Piston Events |  | false | false | Gets as directions the side of the block that was hit by the event. |
-| Event Block Location | event_block_location | location |  |  |  |  |  |  | false | false | Gets the location of the block in the event. |
-| Involved Event Blocks | event_blocks_involved | array |  | location |  |  | Explosion Events<br/>Piston Events |  | false | false | Gets a list of the locations of all enabled blocks in the event. |
-| Chat Message | event_chat_message | text |  |  |  |  | Player Event Message |  | false | false | Receives the message sent by the target in the event. |
-| Inventory close reason | event_close_inventory_cause | text |  |  |  |  | Inventory close event |  | false | false | Gets the reason for closing the target's open inventory in an event. |
-| Entity Combust Duration | event_combust_duration | number |  |  |  |  | Event "Player catches fire"<br/>Event "Entity catches fire" |  | false | false | Gets the duration an entity burns from the event. |
-| Entity Combust Reason | event_combust_reason | text |  |  |  |  | Event "Player catches fire"<br/>Event "Entity catches fire" |  | false | false | Gets the reason an entity caught fire from the event. |
-| Dialog Menu Data | event_custom_click_dialog_view_data | any |  |  |  |  | Event "Player triggers custom click" |  | false | false | Gets the data entered by the player in the dialog menu. |
-| Custom Click ID | event_custom_click_key | text |  |  |  |  | Event "Player triggers custom click" |  | false | false | Gets the identifier of the custom click in the dialog menu or chat. |
-| Damage Dealt | event_damage | number |  |  |  |  |  |  | false | false | Gets the amount of damage dealt in an event. |
-| Cause of Damage Received | event_damage_cause | text |  |  |  |  |  |  | false | false | Gets the cause or type of damage taken in an event. |
-| Death Screen Message | event_death_screen_message | text |  |  |  |  | Event "Player dies" |  | false | false | Gets the message displayed on the death screen. |
-| Inventory Drag Type | event_drag_type | text |  |  |  |  | Drag Item Event |  | false | false | Gets the drag type of items over the target's open inventory in the event. |
-| Bookshelf Count | event_enchantment_bonus | number |  |  |  |  | Player Enchant Item Event |  | false | false | Gets the number of bookshelves associated with the event. |
-| Suggested Enchantment | event_enchantment_hint | text |  |  |  |  | Event "Player enchants an item" |  | false | false | Gets the name of the suggested enchantment in the enchanting table. |
-| Required Enchantment Experience Level | event_enchantment_level_hint | number |  |  |  |  | Event "Player enchants an item" |  | false | false | Gets the required experience level for the selected enchantment. |
-| Event Enchantment Offers | event_enchantment_offers | array |  | text |  |  | Player Enchant Item Event |  | false | false | Gets the list of enchantments offered to the player associated with the event. |
-| Applied Enchantments | event_enchantments_to_add | map |  |  | text | number | Event "Player enchants an item" |  | false | false | Gets a map of enchantments applied to the item. |
-| Entity Unleash Reason | event_entity_unleash_reason | text |  |  |  |  | Unleash Events |  | false | false | Gets the reason why the entity was unleashed. |
-| Event Slot Type | event_equipment_slot | text |  |  |  |  |  |  | false | false | Gets the type of the equipped slot of the target in the event. |
-| Exhaustion Amount | event_exhaustion_amount | number |  |  |  |  | Player Exhaustion |  | false | false | Gets the amount of exhaustion received. |
-| Exhaustion Reason | event_exhaustion_reason | text |  |  |  |  | Player Exhaustion |  | false | false | Gets the reason for the exhaustion |
-| Amount of Event Experience | event_experience | number |  |  |  |  |  |  | false | false | Gets the number of experience points in an event. |
-| Reason for failed move | event_fail_move_reason | text |  |  |  |  | Player Failed to Move Event |  | false | false | Gets the reason for a failed move |
-| Final Damage | event_final_damage | number |  |  |  |  |  |  | false | false | Gets the final damage dealt in the event. |
-| Fishing Event Reason | event_fish_state | text |  |  |  |  | Fishing Event |  | false | false | Gets the reason for the fishing event. |
-| Event Hunger Replenished | event_food_level | number |  |  |  |  | Hunger Level Change Event |  | false | false | Get the number of hunger points replenished. |
-| Previous Location | event_from_location | location |  |  |  |  |  |  | false | false | Previous location of the player |
-| Event Game Mode | event_gamemode | text |  |  |  |  | Event "Player requests game mode change menu" |  | false | false | Gets the game mode associated with the event. |
-| Reason for Hanging Entity Removal | event_hanging_break_cause | text |  |  |  |  | Hanging Entity Break Event |  | false | false | Gets the reason for removing a hanging entity (painting, frame). |
-| Health Restored Amount | event_heal_amount | number |  |  |  |  | Player heals with an event<br/>Entity event restores health |  | false | false | Gets the amount of health restored in an event. |
-| Healing Cause | event_heal_cause | text |  |  |  |  | Player heals with an event<br/>Entity event restores health |  | false | false | Gets the reason for the event's health recovery. |
-| Event Hotbar Slot | event_hotbar_slot | number |  |  |  |  |  |  | false | false | Gets the current hotbar slot number in the event. |
-| List of Pressed Movement Keys | event_input_list | array |  | text |  |  | Event "Player changes movement keys pressed"<br/>Event "Player moves in a vehicle"<br/>Event "Player jumps in a vehicle" |  | false | false | Gets the list of pressed movement keys from the event. |
-| Event Interaction Type | event_interaction | text |  |  |  |  | Right Click Event<br/>Left Click Event<br/>Interaction Event |  | false | false | Gets the interaction type of the target in the event. |
-| Inventory Action on Click | event_inventory_action | text |  |  |  |  |  |  | false | false | Gets the current action in the inventory menu when it is clicked. |
-| Inventory Click Type | event_inventory_click_type | text |  |  |  |  |  |  | false | false | Gets the click type of the target's open inventory in the event. |
-| Event Item | event_item | item |  |  |  |  |  |  | false | false | Receives an item in an event. |
-| Event Item Cooldown | event_item_cooldown | number |  |  |  |  | Event "Player uses item with cooldown"<br/>Event "Player receives cooldown for item group" |  | false | false | Gets the item cooldown from the event. |
-| Cooldown Item Group | event_item_cooldown_group | text |  |  |  |  | Event "Player uses item with cooldown"<br/>Event "Player receives cooldown for item group" |  | false | false | Gets the item group affected by the cooldown from the event. |
-| Item Damage Dealt | event_item_damage | number |  |  |  |  | Event "Player Damages Item" |  | false | false | Gets the amount of damage dealt to the item. |
-| Event Items | event_items | array |  | item |  |  |  |  | false | false | Gets all the items in the event. |
-| Knockback Cause | event_knockback_cause | text |  |  |  |  | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false | Gets the cause of the knockback of the event. |
-| Knockback Type | event_knockback_event_type | text |  |  |  |  | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false | Gets the type of knockback of the event. |
-| Knockback Vector | event_knockback_vector | vector |  |  |  |  | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false | Gets the vector of the motion of the knockback of the event. |
-| Event Message | event_message | text |  |  |  |  |  |  | false | false | Receives the system message sent in an event. |
-| Equipment | event_new_equipments | map |  |  | text | item | Event "Player changes equipment"<br/>Event "Entity changes equipment" |  | false | false | Gets the equipment from the event. |
-| New Fishing Hook State | event_new_fishing_hook_state | text |  |  |  |  | Event "Fishing hook changes state" |  | false | false | Gets the new fishing hook state. |
-| New Player Location | event_new_location | location |  |  |  |  |  |  | false | false | Gets the player's new location. |
-| New potion effect | event_new_potion_effect | potion |  |  |  |  | Event "Player gets an effect from a lingering potion" |  | false | false | Gets new potion effect of the event. |
-| New Vault State | event_new_vault_state | text |  |  |  |  | Event "Vault changes state"<br/>Event "Player changes vault state" |  | false | false | Gets the new vault state. |
-| Previous Event Equipment | event_old_equipments | map |  |  | text | item | Event "Player changes equipment"<br/>Event "Entity changes equipment" |  | false | false | Gets the previous equipment from the event. |
-| creative_plus.game_value.event_old_item.name | event_old_item | item |  |  |  |  | creative_plus.game_value.event_old_item.work_with.player_inventory_slot_change_event |  | false | false | creative_plus.game_value.event_old_item.description |
-| Previous Vault State | event_old_vault_state | text |  |  |  |  | Event "Vault changes state"<br/>Event "Player changes vault state" |  | false | false | Gets the previous vault state. |
-| Complete Power Percentage | event_power | number |  |  |  |  | Player Event Shoots<br/>Horse Jump Event |  | false | false | Gets the percentage of execution power (bow draw, horse jump) of the event. |
-| Event Projectile Item | event_projectile_item | item |  |  |  |  | Player Event Shoots |  | false | false | Gets an event projectile item. |
-| Debug Info | event_query_info | text |  |  |  |  | Player Receives Block Information Event<br/>Player Receives Entity Info Event |  | false | false | Gets the debug information of the target block or entity. |
-| Event replaced block | event_replaced_block | text |  |  |  |  | Place Block Event |  | false | false | Gets the ID of the replaced block. |
-| Sign Lines | event_sign_lines | array |  | text |  |  | "Player Change Sign" event |  | false | false | Gets the lines on a Sign as a list. |
-| Sign Side | event_sign_side | text |  |  |  |  | "Player Change Sign" event |  | false | false | Gets the side the text is on. |
-| Event Slot | event_slot | number |  |  |  |  |  |  | false | false | Produces the slot number in the event. |
-| Clicked Slot Type | event_slot_type | text |  |  |  |  |  |  | false | false | Gets the current slot type of the inventory menu when clicked. |
-| Involved Slots | event_slots_involved | array |  | number |  |  | Drag Item Event |  | false | false | Gets a list of all enabled slots in the target's open inventory in the event. |
-| Teleport Cause | event_teleport_cause | text |  |  |  |  | Player Teleport Event<br/>Enderman Escape Event |  | false | false | Gets the reason for teleporting in an event. |
-| Item Use Ticks | event_ticks_held_for | number |  |  |  |  | Player Event "Stops using an item" |  | false | false | Gets the number of ticks to use an item. |
-| Number of Skip Time ticks | event_time_skip_amount | number |  |  |  |  | Time Skip Event |  | false | false | Gets the number of time skip ticks in the world. |
-| Skip Time Reason | event_time_skip_reason | text |  |  |  |  | Time Skip Event |  | false | false | Gets the reason for skipping time in the world. |
-| Entity transform reason | event_transform_reason | text |  |  |  |  | Entity Transform Event |  | false | false | Gets the reason for the entity transformation. |
-| Event transformed entities | event_transformed_entities | array |  | text |  |  | Entity Transform Event |  | false | false | Get transformed entities of the event. |
-| Tree Type | event_tree_type | text |  |  |  |  | Grow Tree Player Event<br/>Tree Grows World Event |  | false | false | Gets the type of tree in the event. |
-| Velocity Vector | event_velocity | vector |  |  |  |  | "Player Change Velocity Vector" event. |  | false | false | Gets the velocity vector of the event. |
-| Experience Level | experience_level | number | entity |  |  |  |  |  | false | false | Get the target's experience levels. |
-| Experience Progress | experience_progress | number | entity |  |  |  |  |  | false | false | Gets the percentage progress of the target's current experience level. |
-| Eye Location | eye_location | location | entity |  |  |  |  |  | false | false | Gets the location of the target at eye height. |
-| Fall Distance | fall_distance | number | entity |  |  |  |  |  | false | false | Gets the target's fall distance in blocks. |
-| Burning Time | fire_ticks | number | entity |  |  |  |  |  | false | false | Get the target's remaining fire ticks. |
-| Flying Speed | flying_speed | number | entity |  |  |  |  |  | false | false | Gets the target's current flying speed (attribute). |
-| Food Exhaustion | food_exhaustion | number | entity |  |  |  |  |  | false | false | Gets the target's food exhaustion level, which increases based on the player's actions. |
-| Hunger Level | food_level | number | entity |  |  |  |  |  | false | false | Gets the target's remaining food. |
-| Saturation Level | food_saturation | number | entity |  |  |  |  |  | false | false | Gets the target's food saturation based on the types of food eaten. |
-| Freeze Time | freeze_ticks | number | entity |  |  |  |  |  | false | false | Get the target's current freeze time. |
-| Game Mode | gamemode | text | entity |  |  |  | Players |  | false | false | Gets the player's current game mode. |
-| Choose Slot in Hot Bar | held_slot | number | entity |  |  |  |  |  | false | false | Gets the target's selected hotbar slot. |
-| Hitbox Center | hitbox_midpoint_location | location | entity |  |  |  |  |  | false | false | Gets the location of the center of the target's hitbox. |
-| Hotbar Items | hotbar_items | array | entity | item |  |  |  |  | false | false | Gets the items in the target's hotbar. |
-| Idle Duration | idle_duration | number | entity |  |  |  |  |  | false | false | Gets the current idle duration of the player. |
-| Inventory Items | inventory_items | array | entity | item |  |  |  |  | false | false | Gets the items in the target's inventory (including the hot bar). |
-| Invulnerability Time | invulnerability_ticks | number | entity |  |  |  |  |  | false | false | Gets the target's remaining invulnerability ticks. |
-| Item Usage Progress | item_usage_progress | number | entity |  |  |  |  |  | false | false | Gets the target's percentage progress on using an item in hand, such as food. |
-| Last Damage Cause | last_damage_cause | text | entity |  |  |  |  |  | false | false | Gets the target's last damage cause. |
-| Last Death Location | last_death_location | location | entity |  |  |  |  |  | false | false | Gets the location of the player's last death. |
-| Lead Holder | lead_holder | text | entity |  |  |  |  |  | false | false | Gets the UUID of the entity that leads the target on the lead. |
-| Location | location | location | entity |  |  |  |  |  | false | false | Gets the target's location. |
-| Main Hand | main_hand | text | player |  |  |  | Player |  | false | false | Get the player's main hand. |
-| Main Hand Item | main_hand_item | item | entity |  |  |  |  |  | false | false | Gets the item in the target's main hand. |
-| Max Health | max_health | number | entity |  |  |  |  |  | false | false | Gets the target's maximum health. |
-| Total Invulnerability Ticks | max_invulnerability_ticks | number | entity |  |  |  |  |  | false | false | Gets the max amount of time the target can have invulnerability ticks for. |
-| Merchant Recipe Count | merchant_recipe_count | number | entity |  |  |  |  |  | false | false | Gets the number of Merchant Recipe counts. |
-| Name | name | text | entity |  |  |  |  |  | false | false | Gets the target's name. |
-| Offhand Item | off_hand_item | item | entity |  |  |  |  |  | false | false | Gets the item in the target's secondary hand. |
-| Open Inventory Custom ID | open_inventory_custom_id | text | entity |  |  |  | Players |  | false | false | Gets the custom ID of the target's open inventory. |
-| Opened Inventory Size | open_inventory_size | number | entity |  |  |  | Players |  | false | false | Gets the size of the currently opened inventory. |
-| Open Inventory Title | open_inventory_title | text | entity |  |  |  | Players |  | false | false | Gets the title of the target's open inventory. |
-| Open Inventory Type | open_inventory_type | text | entity |  |  |  | Players |  | false | false | Get the target's open inventory type. |
-| First Spawn Location | origin | location | both |  |  |  |  |  | false | false | Gets the location of the target's first appearance. |
-| UUID of world owner | owner_uuid | text |  |  |  |  |  |  | false | false | Gets the UUID of the owner of the world. |
-| Particle CPU Usage | particle_cpu_usage | number |  |  |  |  |  |  | false | false | Gets the percent of CPU usage caused by particles. |
-| Particle Visibility | particle_visibility | text | entity |  |  |  | Players |  | false | false | Gets the player's particle visibility setting value. |
-| Passengers | passengers | array | entity | text |  |  |  |  | false | false | Gets the UUID of the entities that are traveling to the target. |
-| Player Ping | ping | number | entity |  |  |  |  |  | false | false | Gets the latency between player and server in milliseconds. |
-| Vertical Pitch | pitch | number | entity |  |  |  |  |  | false | false | Gets the vertical (up/down) pitch of the target. |
-| Number of players in the world | player_count | number |  |  |  |  |  |  | false | false | Gets the number of players in the world. |
-| Ender Pearl List | player_ender_pearls | array | entity | text |  |  | Players |  | false | false | Gets the list of the player's in-flight ender pearls. |
-| Ender Chest Items | player_enderchest_items | array | player | item |  |  | Players |  | false | false | Gets the items in the target's Ender Chest. |
-| Entity Pose | pose | text | entity |  |  |  |  |  | false | false | Gets the entity's pose. |
-| Potion Effects | potion_effects | array | entity | potion |  |  |  |  | false | false | Get the target's potion effects in effect. |
-| Projectile Owner UUID | projectile_owner_uuid | text | entity |  |  |  | Any Projectile |  | false | false | Gets the owner of the target projectile. |
-| Projectile Motion Vector | projectile_power | vector | entity |  |  |  | Fireballs<br/>Dragon Charges<br/>Wither Skulls |  | false | false | Gets the motion vector of a projectile |
-| Client Protocol Version | protocol_version | number | entity |  |  |  |  |  | false | false | Get the protocol version of the player's client. |
-| Remaining Air | remaining_air | number | entity |  |  |  |  |  | false | false | Gets the target's remaining air ticks. |
-| Web Request Response Headers | response_headers | map |  |  | text | any | Event "Server responds" |  | false | false | Gets the headers of the response to the sent web request. |
-| Saddle Item | saddle_item | item | entity |  |  |  | Pigs<br/>Horses<br/>Lamas |  | false | false | Gets the saddle or carpet equipped on the target. |
-| Saturated Regeneration Rate | saturated_regen_rate | number | entity |  |  |  |  |  | false | false | Gets the player's health regeneration rate while saturated. |
-| Number of Selected Targets | selection_size | number |  |  |  |  |  |  | false | false | Gets the number of targets in the selection. |
-| Names of selected targets | selection_target_names | array |  | text |  |  |  |  | false | false | Gets the name of each target in the selection. |
-| UUID of selected targets | selection_target_uuids | array |  | text |  |  |  |  | false | false | Gets the UUID of each target in the selection. |
-| Server Current Time | server_current_tick | number |  |  |  |  |  |  | false | false | Gets the server's current time in ticks. |
-| Server TPS | server_tps | number |  |  |  |  |  |  | false | false | Gets the number of Ticks Per Second (TPS) that the server can handle. |
-| World Spawn Location | spawn_location | location |  |  |  |  |  |  | false | false | Gets the location of the world's spawn point. |
-| Spawn Reason | spawn_reason | text | entity |  |  |  |  |  | false | false | Gets the reason for the target to spawn. |
-| World freeze start time | start_reload_tick | number |  |  |  |  |  |  | false | false | Gets the world freeze start time in ticks. |
-| Starvation Rate | starvation_rate | number | entity |  |  |  |  |  | false | false | Gets the starvation rate of the target. |
-| Forward Vehicle Movement | steer_forward | number | entity |  |  |  |  |  | false | false | Gets the value of a vehicle moving forward or backward. |
-| Sideways Vehicle Movement | steer_sideways | number | entity |  |  |  |  |  | false | false | Gets the value of the vehicle moving left or right. |
-| Target Block Face | target_block_face | text | entity |  |  |  |  |  | false | false | Gets as the direction of the side of the block that the target is facing. |
-| Target Block Location | target_block_location | location | entity |  |  |  |  |  | false | false | Gets the location of the block the target is looking at. |
-| Target Fluid Location | target_fluid_location | location | entity |  |  |  |  |  | false | false | Gets the location of the fluid the target is looking at. |
-| Attack Target | targeted_entity | text | entity |  |  |  |  |  | false | false | Gets the current target for the mob to attack. |
-| UNIX time | timestamp | number |  |  |  |  |  |  | false | false | Gets the current time as a single number in milliseconds. |
-| Unsaturated Regeneration Rate | unsaturated_regen_rate | number | entity |  |  |  |  |  | false | false | Gets the player's health regeneration rate while unsaturated. |
-| Web Request Link | url | text |  |  |  |  | The "Server Response" event |  | false | false | Gets the web request link. |
-| Web Request Response | url_response | text |  |  |  |  | The "Server Response" event |  | false | false | Receives the response to a sent web request. |
-| Web Request Response Code | url_response_code | number |  |  |  |  | Server Response Event |  | false | false | Gets the response code for a sent web request. |
-| Player Client Language | user_locale | text | entity |  |  |  | Players |  | false | false | Gets the current language of the player's client. |
-| UUID | uuid | text | entity |  |  |  |  |  | false | false | Gets the universally unique identifier (UUID) of the target. |
-| Vehicle | vehicle | text | entity |  |  |  |  |  | false | false | Gets the UUID of the entity the target is riding. |
-| Velocity Vector | velocity | vector | entity |  |  |  |  |  | false | false | Gets the target's velocity vector (not walking, but external forces). |
-| Walking Speed | walking_speed | number | entity |  |  |  |  |  | false | false | Gets the target's current walking speed (attribute). |
-| World Clear Weather Duration | world_clear_weather_duration | number |  |  |  |  |  |  | false | false | Gets the current clear weather duration in the world. |
-| World Existence Time | world_game_time | number |  |  |  |  |  |  | false | false | Gets the existence time of the world in ticks. |
-| World ID | world_id | text |  |  |  |  |  |  | false | false | Gets the world ID. |
-| Current Moon Phase | world_moon_phase | text |  |  |  |  |  |  | false | false | Gets the current moon phase in the world. |
-| World Size | world_size | number |  |  |  |  |  |  | false | false | Gets the current world size. |
-| World Rain Duration | world_thunder_duration | number |  |  |  |  |  |  | false | false | Gets the current rain duration in the world. |
-| Current World Time | world_time | number |  |  |  |  |  |  | false | false | Gets the current world time in ticks. |
-| Current world weather | world_weather | text |  |  |  |  |  |  | false | false | Gets the current world weather type. |
-| World Current Weather Duration | world_weather_duration | number |  |  |  |  |  |  | false | false | Gets the current weather duration in the world. |
-| X Coordinate | x_coordinate | number | entity |  |  |  |  |  | false | false | Gets the X coordinate of the target's location. |
-| Y Coordinate | y_coordinate | number | entity |  |  |  |  |  | false | false | Gets the Y coordinate of the target's location. |
-| Horizontal Rotate | yaw | number | entity |  |  |  |  |  | false | false | Gets the horizontal (left/right) rotation (yaw) of the target. |
-| Z Coordinate | z_coordinate | number | entity |  |  |  |  |  | false | false | Gets the Z coordinate of the target's location. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Selector | Element type | Key type | Value type |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![absorption_health](../../icons/game_values/absorption_health.png) | absorption_health | Additional Health | Gets the target's absorption (gold) health. | number |  |  | false | false | entity |  |  |  |
+| ![active_item_used_time](../../icons/game_values/active_item_used_time.png) | active_item_used_time | Item usage time | Gets the current usage time of the item held in the hand. | number |  |  | false | false | entity |  |  |  |
+| ![age](../../icons/game_values/age.png) | age | Target Age | Gets the target's age in ticks. | number |  |  | false | false | entity |  |  |  |
+| ![all_entities_names](../../icons/game_values/all_entities_names.png) | all_entities_names | All Entity Names | Gets the names of all entities in the world. | array |  |  | false | false |  | text |  |  |
+| ![all_entities_uuids](../../icons/game_values/all_entities_uuids.png) | all_entities_uuids | All Entity UUIDs | Gets the UUIDs of all entities in the world. | array |  |  | false | false |  | text |  |  |
+| ![all_players_names](../../icons/game_values/all_players_names.png) | all_players_names | All Player Names | Gets the names of all players in the world. | array |  |  | false | false |  | text |  |  |
+| ![all_players_uuids](../../icons/game_values/all_players_uuids.png) | all_players_uuids | All Player UUIDs | Gets the UUIDs of all players in the world. | array |  |  | false | false |  | text |  |  |
+| ![anticheat_check](../../icons/game_values/event_anticheat_check.png) | anticheat_check | Anticheat Check | Gets the name of the anticheat check that flagged the player. | text | Anticheat Flags a Player Event |  | false | false |  |  |  |  |
+| ![anticheat_violations](../../icons/game_values/event_anticheat_violations.png) | anticheat_violations | Anticheat Violations | Gets the number of anticheat check violations the player has. | number | Anticheat Flags a Player Event |  | false | false |  |  |  |  |
+| ![armor_items](../../icons/game_values/armor_items.png) | armor_items | Armor Items | Gets items in the target's armor slots. | array |  |  | false | false | entity | item |  |  |
+| ![armor_points](../../icons/game_values/armor_points.png) | armor_points | Defense Points | Gets the target's armor, which can be modified by items. | number |  |  | false | false | entity |  |  |  |
+| ![armor_toughness](../../icons/game_values/armor_toughness.png) | armor_toughness | Armor Hardness | Gets the target's armor hardness, which can be modified with items. | number |  |  | false | false | entity |  |  |  |
+| ![arrows_in_body](../../icons/game_values/arrows_in_body.png) | arrows_in_body | Number of Arrows In Body | Gets the number of arrows in the target's body. | number |  |  | false | false | entity |  |  |  |
+| ![attached_leads](../../icons/game_values/attached_leads.png) | attached_leads | Attached Leads | Gets the UUID of the entities that are attached to the target with a lead. | array |  |  | false | false | entity | text |  |  |
+| ![attack_cooldown_strength](../../icons/game_values/attack_cooldown_strength.png) | attack_cooldown_strength | Attack Cooldown Strength | Gets the attack cooldown strength multiplier (How much of your base attack damage is nullified by your attack cooldown) | number |  |  | false | false | entity |  |  |  |
+| ![attack_cooldown_ticks](../../icons/game_values/attack_cooldown_ticks.png) | attack_cooldown_ticks | Attack Cooldown in Ticks | Gets the current attack cooldown of the target, measured in ticks. | number |  |  | false | false | entity |  |  |  |
+| ![attack_damage](../../icons/game_values/attack_damage.png) | attack_damage | Attack Damage | Gives the target's attack damage, modifiable by items. | number |  |  | false | false | entity |  |  |  |
+| ![attack_speed](../../icons/game_values/attack_speed.png) | attack_speed | Attack Speed | Gets the target's attack speed, which can be modified by items. | number |  |  | false | false | entity |  |  |  |
+| ![block_beneath](../../icons/game_values/block_beneath.png) | block_beneath | Block Location Under Target | Gets the location of the block supporting the target. | location |  |  | false | false | entity |  |  |  |
+| ![blocks_beneath](../../icons/game_values/blocks_beneath.png) | blocks_beneath | Block Locations Under Target | Gets the location of all blocks supporting the target. | array |  |  | false | false | entity | location |  |  |
+| ![body_yaw](../../icons/game_values/body_yaw.png) | body_yaw | Body rotation | Gets rotation of target's body. | number |  |  | false | false | entity |  |  |  |
+| ![cape_location](../../icons/game_values/cape_location.png) | cape_location | Cape Location | Gets the location of a player's cape. | location | Player |  | false | false | entity |  |  |  |
+| ![cardinal_direction](../../icons/game_values/cardinal_direction.png) | cardinal_direction | Cardinal Direction | Gets the cardinal direction (north, west, south, east) of the target. | text |  |  | false | false | entity |  |  |  |
+| ![chat_visibility](../../icons/game_values/chat_visibility.png) | chat_visibility | Chat Visibility | Gets the player's chat visibility status, defined in their game settings. | text | Player |  | false | false | entity |  |  |  |
+| ![client_brand_name](../../icons/game_values/client_brand_name.png) | client_brand_name | Player Client Name | Gets the name of the player's client. | text | Players |  | false | false | entity |  |  |  |
+| ![client_view_distance](../../icons/game_values/client_view_distance.png) | client_view_distance | Player Render Distance | Gets the render distance of the player, as set in the game's settings. | number | Player |  | false | false | entity |  |  |  |
+| ![clientside_locale](../../icons/game_values/clientside_locale.png) | clientside_locale | Player Client Locale | Gets the player's client locale. | text | Players |  | false | false | entity |  |  |  |
+| ![cpu_usage](../../icons/game_values/cpu_usage.png) | cpu_usage | CPU Usage Percentage | Gets the percentage of the world's CPU utilization on the server. | number |  |  | false | false |  |  |  |  |
+| ![currency_transaction_amount](../../icons/game_values/event_currency_transaction_amount.png) | currency_transaction_amount | Emerald Transaction Amount | Gets the number of emeralds spent in the transaction. | text | Player Makes a Transaction Event |  | false | false |  |  |  |  |
+| ![currency_transaction_reason](../../icons/game_values/event_currency_transaction_reason.png) | currency_transaction_reason | Transaction Request Reason | Gets the reason for the emerald transaction request. | text | Player Makes a Transaction Event |  | false | false |  |  |  |  |
+| ![currency_transaction_result](../../icons/game_values/event_currency_transaction_result.png) | currency_transaction_result | Transaction Result | Gets the result of the completed transaction. | text | Player Makes a Transaction Event |  | false | false |  |  |  |  |
+| ![current_health](../../icons/game_values/current_health.png) | current_health | Current Health | Gets the target's remaining health. | number |  |  | false | false | entity |  |  |  |
+| ![current_input_list](../../icons/game_values/current_input_list.png) | current_input_list | Current Pressed Movement Keys | Gets the currently pressed movement keys. | array | Players |  | false | false | entity | text |  |  |
+| ![cursor_item](../../icons/game_values/cursor_item.png) | cursor_item | Cursor Item | Gets the item at the target cursor (used when moving inventory items). | item |  |  | false | false | entity |  |  |  |
+| ![custom_inventory_items](../../icons/game_values/custom_inventory_items.png) | custom_inventory_items | List of items in open inventory | Returns a list containing the items that are in the currently open inventory menu. | array |  |  | false | false | player | item |  |  |
+| ![death_screen_score](../../icons/game_values/death_screen_score.png) | death_screen_score | Score Count | Gets the score displayed on the death screen. | number | Players |  | false | false | entity |  |  |  |
+| ![delay_reload_count](../../icons/game_values/delay_reload_count.png) | delay_reload_count | Current world freeze time | Gets the current time for which the world is frozen. | number |  |  | false | false |  |  |  |  |
+| ![direction_of_view](../../icons/game_values/direction_of_view.png) | direction_of_view | View Vector | Get the direction vector of the target's view. | vector |  |  | false | false | entity |  |  |  |
+| ![display_entity_left_rotation](../../icons/game_values/display_entity_left_rotation.png) | display_entity_left_rotation | Display Entity Left Rotation | Gets a display entity's rotation to the left as a vector. | vector | Display Entities |  | false | false | entity |  |  |  |
+| ![display_entity_right_rotation](../../icons/game_values/display_entity_right_rotation.png) | display_entity_right_rotation | Display Entity Right Rotation | Gets a display entity's rotation to the right as a vector. | vector | Display Entities |  | false | false | entity |  |  |  |
+| ![display_entity_scale](../../icons/game_values/display_entity_scale.png) | display_entity_scale | Display Entity Scale | Gets the scale of a display entity as a vector. | vector | Display Entities |  | false | false | entity |  |  |  |
+| ![display_entity_translation](../../icons/game_values/display_entity_translation.png) | display_entity_translation | Display Entity Offset | Gets the offset of a display entity as a vector. | vector | Display Entities |  | false | false | entity |  |  |  |
+| ![display_name](../../icons/game_values/display_name.png) | display_name | Display Name | Gets the target's display name. | text |  |  | false | false | entity |  |  |  |
+| ![enchantment_seed](../../icons/game_values/enchantment_seed.png) | enchantment_seed | Current Enchantment Seed | Gets the player's current enchantment seed. | number |  |  | false | false | entity |  |  |  |
+| ![entity_fuse_ticks](../../icons/game_values/entity_fuse_ticks.png) | entity_fuse_ticks | Entity Fuse Time | Gets the entity's time before it explodes. | number | Creepers<br/>TNT<br/>Fireworks |  | false | false | entity |  |  |  |
+| ![entity_height](../../icons/game_values/entity_height.png) | entity_height | Hitbox Height | Gets the height of the target's hitbox. | number |  |  | false | false | entity |  |  |  |
+| ![entity_item](../../icons/game_values/entity_item.png) | entity_item | Entity Item | Gets the object form of the target. | item |  |  | false | false | entity |  |  |  |
+| ![entity_pathfinder_point_index](../../icons/game_values/entity_pathfinder_point_index.png) | entity_pathfinder_point_index | Path point index | Gets the current path point index the mob is moving along. | number |  |  | false | false | entity |  |  |  |
+| ![entity_pathfinder_points](../../icons/game_values/entity_pathfinder_points.png) | entity_pathfinder_points | Current path | Gets a list of all points that make up the current path of the mob. | array |  |  | false | false | entity | location |  |  |
+| ![entity_pick_item_stack](../../icons/game_values/entity_pick_item_stack.png) | entity_pick_item_stack | Entity Pick Item | Gets the item obtained by middle-clicking (MMB) on the entity. | item |  |  | false | false | entity |  |  |  |
+| ![entity_ticks_lived](../../icons/game_values/entity_ticks_lived.png) | entity_ticks_lived | Target Lifetime | Gets the number of ticks the entity has been alive. | number |  |  | false | false | entity |  |  |  |
+| ![entity_type](../../icons/game_values/entity_type.png) | entity_type | Entity Type | Gets the entity type of the target. | text |  |  | false | false | entity |  |  |  |
+| ![entity_width_x](../../icons/game_values/entity_width_x.png) | entity_width_x | Hitbox X Size | Gets the size of the target's hitbox in the x-axis. | number |  |  | false | false | entity |  |  |  |
+| ![entity_width_z](../../icons/game_values/entity_width_z.png) | entity_width_z | Hitbox Z Size | Gets the size of the target's hitbox in the z-axis. | number |  |  | false | false | entity |  |  |  |
+| ![event_added_items](../../icons/game_values/event_added_items.png) | event_added_items | Distributed Items | Produces a dictionary of slotted items with LMB/RMB or duplication with mouse wheel. | map | Drag Items Event |  | false | false |  |  | number | item |
+| ![event_advancement_tab_name](../../icons/game_values/event_advancement_tab_name.png) | event_advancement_tab_name | Event Advancement Tab Name | The name of the current opened advancements tab. | text | "Player Open Advancement Tab" event |  | true | false |  |  |  |  |
+| ![event_anvil_damage_state](../../icons/game_values/event_anvil_damage_state.png) | event_anvil_damage_state | New Anvil Damage State | Gets the new damage state of the anvil. | text | Event "Player Damages Anvil" |  | false | false |  |  |  |  |
+| ![event_anvil_rename_input](../../icons/game_values/event_anvil_rename_input.png) | event_anvil_rename_input | Anvil Rename Input | Gets the new name of the item in an anvil. | text | "Player Anvil Rename Input" event. |  | false | false |  |  |  |  |
+| ![event_block](../../icons/game_values/event_block.png) | event_block | Event Block | Gets the ID of the block associated with the event. | text |  |  | false | false |  |  |  |  |
+| ![event_block_break_progress](../../icons/game_values/event_block_break_progress.png) | event_block_break_progress | Block Break Progress | Gets the block break progress associated with the event. | number | Player Block Break Progress Update<br/>Entity Block Break Progress Update |  | false | false |  |  |  |  |
+| ![event_block_face](../../icons/game_values/event_block_face.png) | event_block_face | Event Block Face | Gets as directions the side of the block that was hit by the event. | text | Interaction Events<br/>Block Place or Break Events<br/>Projectile Hit Event<br/>Piston Events |  | false | false |  |  |  |  |
+| ![event_block_location](../../icons/game_values/event_block_location.png) | event_block_location | Event Block Location | Gets the location of the block in the event. | location |  |  | false | false |  |  |  |  |
+| ![event_blocks_involved](../../icons/game_values/event_blocks_involved.png) | event_blocks_involved | Involved Event Blocks | Gets a list of the locations of all enabled blocks in the event. | array | Explosion Events<br/>Piston Events |  | false | false |  | location |  |  |
+| ![event_chat_message](../../icons/game_values/event_chat_message.png) | event_chat_message | Chat Message | Receives the message sent by the target in the event. | text | Player Event Message |  | false | false |  |  |  |  |
+| ![event_close_inventory_cause](../../icons/game_values/event_close_inventory_cause.png) | event_close_inventory_cause | Inventory close reason | Gets the reason for closing the target's open inventory in an event. | text | Inventory close event |  | false | false |  |  |  |  |
+| ![event_combust_duration](../../icons/game_values/event_combust_duration.png) | event_combust_duration | Entity Combust Duration | Gets the duration an entity burns from the event. | number | Event "Player catches fire"<br/>Event "Entity catches fire" |  | false | false |  |  |  |  |
+| ![event_combust_reason](../../icons/game_values/event_combust_reason.png) | event_combust_reason | Entity Combust Reason | Gets the reason an entity caught fire from the event. | text | Event "Player catches fire"<br/>Event "Entity catches fire" |  | false | false |  |  |  |  |
+| ![event_custom_click_dialog_view_data](../../icons/game_values/event_custom_click_dialog_view_data.png) | event_custom_click_dialog_view_data | Dialog Menu Data | Gets the data entered by the player in the dialog menu. | any | Event "Player triggers custom click" |  | false | false |  |  |  |  |
+| ![event_custom_click_key](../../icons/game_values/event_custom_click_key.png) | event_custom_click_key | Custom Click ID | Gets the identifier of the custom click in the dialog menu or chat. | text | Event "Player triggers custom click" |  | false | false |  |  |  |  |
+| ![event_damage](../../icons/game_values/event_damage.png) | event_damage | Damage Dealt | Gets the amount of damage dealt in an event. | number |  |  | false | false |  |  |  |  |
+| ![event_damage_cause](../../icons/game_values/event_damage_cause.png) | event_damage_cause | Cause of Damage Received | Gets the cause or type of damage taken in an event. | text |  |  | false | false |  |  |  |  |
+| ![event_death_screen_message](../../icons/game_values/event_death_screen_message.png) | event_death_screen_message | Death Screen Message | Gets the message displayed on the death screen. | text | Event "Player dies" |  | false | false |  |  |  |  |
+| ![event_drag_type](../../icons/game_values/event_drag_type.png) | event_drag_type | Inventory Drag Type | Gets the drag type of items over the target's open inventory in the event. | text | Drag Item Event |  | false | false |  |  |  |  |
+| ![event_enchantment_bonus](../../icons/game_values/event_enchantment_bonus.png) | event_enchantment_bonus | Bookshelf Count | Gets the number of bookshelves associated with the event. | number | Player Enchant Item Event |  | false | false |  |  |  |  |
+| ![event_enchantment_hint](../../icons/game_values/event_enchantment_hint.png) | event_enchantment_hint | Suggested Enchantment | Gets the name of the suggested enchantment in the enchanting table. | text | Event "Player enchants an item" |  | false | false |  |  |  |  |
+| ![event_enchantment_level_hint](../../icons/game_values/event_enchantment_level_hint.png) | event_enchantment_level_hint | Required Enchantment Experience Level | Gets the required experience level for the selected enchantment. | number | Event "Player enchants an item" |  | false | false |  |  |  |  |
+| ![event_enchantment_offers](../../icons/game_values/event_enchantment_offers.png) | event_enchantment_offers | Event Enchantment Offers | Gets the list of enchantments offered to the player associated with the event. | array | Player Enchant Item Event |  | false | false |  | text |  |  |
+| ![event_enchantments_to_add](../../icons/game_values/event_enchantments_to_add.png) | event_enchantments_to_add | Applied Enchantments | Gets a map of enchantments applied to the item. | map | Event "Player enchants an item" |  | false | false |  |  | text | number |
+| ![event_entity_unleash_reason](../../icons/game_values/event_entity_unleash_reason.png) | event_entity_unleash_reason | Entity Unleash Reason | Gets the reason why the entity was unleashed. | text | Unleash Events |  | false | false |  |  |  |  |
+| ![event_equipment_slot](../../icons/game_values/event_equipment_slot.png) | event_equipment_slot | Event Slot Type | Gets the type of the equipped slot of the target in the event. | text |  |  | false | false |  |  |  |  |
+| ![event_exhaustion_amount](../../icons/game_values/event_exhaustion_amount.png) | event_exhaustion_amount | Exhaustion Amount | Gets the amount of exhaustion received. | number | Player Exhaustion |  | false | false |  |  |  |  |
+| ![event_exhaustion_reason](../../icons/game_values/event_exhaustion_reason.png) | event_exhaustion_reason | Exhaustion Reason | Gets the reason for the exhaustion | text | Player Exhaustion |  | false | false |  |  |  |  |
+| ![event_experience](../../icons/game_values/event_experience.png) | event_experience | Amount of Event Experience | Gets the number of experience points in an event. | number |  |  | false | false |  |  |  |  |
+| ![event_fail_move_reason](../../icons/game_values/event_fail_move_reason.png) | event_fail_move_reason | Reason for failed move | Gets the reason for a failed move | text | Player Failed to Move Event |  | false | false |  |  |  |  |
+| ![event_final_damage](../../icons/game_values/event_final_damage.png) | event_final_damage | Final Damage | Gets the final damage dealt in the event. | number |  |  | false | false |  |  |  |  |
+| ![event_fish_state](../../icons/game_values/event_fish_state.png) | event_fish_state | Fishing Event Reason | Gets the reason for the fishing event. | text | Fishing Event |  | false | false |  |  |  |  |
+| ![event_food_level](../../icons/game_values/event_food_level.png) | event_food_level | Event Hunger Replenished | Get the number of hunger points replenished. | number | Hunger Level Change Event |  | false | false |  |  |  |  |
+| ![event_from_location](../../icons/game_values/event_from_location.png) | event_from_location | Previous Location | Previous location of the player | location |  |  | false | false |  |  |  |  |
+| ![event_gamemode](../../icons/game_values/event_gamemode.png) | event_gamemode | Event Game Mode | Gets the game mode associated with the event. | text | Event "Player requests game mode change menu" |  | false | false |  |  |  |  |
+| ![event_hanging_break_cause](../../icons/game_values/event_hanging_break_cause.png) | event_hanging_break_cause | Reason for Hanging Entity Removal | Gets the reason for removing a hanging entity (painting, frame). | text | Hanging Entity Break Event |  | false | false |  |  |  |  |
+| ![event_heal_amount](../../icons/game_values/event_heal_amount.png) | event_heal_amount | Health Restored Amount | Gets the amount of health restored in an event. | number | Player heals with an event<br/>Entity event restores health |  | false | false |  |  |  |  |
+| ![event_heal_cause](../../icons/game_values/event_heal_cause.png) | event_heal_cause | Healing Cause | Gets the reason for the event's health recovery. | text | Player heals with an event<br/>Entity event restores health |  | false | false |  |  |  |  |
+| ![event_hotbar_slot](../../icons/game_values/event_hotbar_slot.png) | event_hotbar_slot | Event Hotbar Slot | Gets the current hotbar slot number in the event. | number |  |  | false | false |  |  |  |  |
+| ![event_input_list](../../icons/game_values/event_input_list.png) | event_input_list | List of Pressed Movement Keys | Gets the list of pressed movement keys from the event. | array | Event "Player changes movement keys pressed"<br/>Event "Player moves in a vehicle"<br/>Event "Player jumps in a vehicle" |  | false | false |  | text |  |  |
+| ![event_interaction](../../icons/game_values/event_block_interact_action.png) | event_interaction | Event Interaction Type | Gets the interaction type of the target in the event. | text | Right Click Event<br/>Left Click Event<br/>Interaction Event |  | false | false |  |  |  |  |
+| ![event_inventory_action](../../icons/game_values/event_inventory_action.png) | event_inventory_action | Inventory Action on Click | Gets the current action in the inventory menu when it is clicked. | text |  |  | false | false |  |  |  |  |
+| ![event_inventory_click_type](../../icons/game_values/event_inventory_click_type.png) | event_inventory_click_type | Inventory Click Type | Gets the click type of the target's open inventory in the event. | text |  |  | false | false |  |  |  |  |
+| ![event_item](../../icons/game_values/event_item.png) | event_item | Event Item | Receives an item in an event. | item |  |  | false | false |  |  |  |  |
+| ![event_item_cooldown](../../icons/game_values/event_item_cooldown.png) | event_item_cooldown | Event Item Cooldown | Gets the item cooldown from the event. | number | Event "Player uses item with cooldown"<br/>Event "Player receives cooldown for item group" |  | false | false |  |  |  |  |
+| ![event_item_cooldown_group](../../icons/game_values/event_item_cooldown_group.png) | event_item_cooldown_group | Cooldown Item Group | Gets the item group affected by the cooldown from the event. | text | Event "Player uses item with cooldown"<br/>Event "Player receives cooldown for item group" |  | false | false |  |  |  |  |
+| ![event_item_damage](../../icons/game_values/event_item_damage.png) | event_item_damage | Item Damage Dealt | Gets the amount of damage dealt to the item. | number | Event "Player Damages Item" |  | false | false |  |  |  |  |
+| ![event_items](../../icons/game_values/event_items.png) | event_items | Event Items | Gets all the items in the event. | array |  |  | false | false |  | item |  |  |
+| ![event_knockback_cause](../../icons/game_values/event_knockback_cause.png) | event_knockback_cause | Knockback Cause | Gets the cause of the knockback of the event. | text | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false |  |  |  |  |
+| ![event_knockback_event_type](../../icons/game_values/event_knockback_event_type.png) | event_knockback_event_type | Knockback Type | Gets the type of knockback of the event. | text | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false |  |  |  |  |
+| ![event_knockback_vector](../../icons/game_values/event_knockback_vector.png) | event_knockback_vector | Knockback Vector | Gets the vector of the motion of the knockback of the event. | vector | "Player Knockback" event<br/>"Entity Knockback" event |  | false | false |  |  |  |  |
+| ![event_message](../../icons/game_values/event_message.png) | event_message | Event Message | Receives the system message sent in an event. | text |  |  | false | false |  |  |  |  |
+| ![event_new_equipments](../../icons/game_values/event_new_equipments.png) | event_new_equipments | Equipment | Gets the equipment from the event. | map | Event "Player changes equipment"<br/>Event "Entity changes equipment" |  | false | false |  |  | text | item |
+| ![event_new_fishing_hook_state](../../icons/game_values/event_new_fishing_hook_state.png) | event_new_fishing_hook_state | New Fishing Hook State | Gets the new fishing hook state. | text | Event "Fishing hook changes state" |  | false | false |  |  |  |  |
+| ![event_new_location](../../icons/game_values/event_new_location.png) | event_new_location | New Player Location | Gets the player's new location. | location |  |  | false | false |  |  |  |  |
+| ![event_new_potion_effect](../../icons/game_values/event_new_potion_effect.png) | event_new_potion_effect | New potion effect | Gets new potion effect of the event. | potion | Event "Player gets an effect from a lingering potion" |  | false | false |  |  |  |  |
+| ![event_new_vault_state](../../icons/game_values/event_new_vault_state.png) | event_new_vault_state | New Vault State | Gets the new vault state. | text | Event "Vault changes state"<br/>Event "Player changes vault state" |  | false | false |  |  |  |  |
+| ![event_old_equipments](../../icons/game_values/event_old_equipments.png) | event_old_equipments | Previous Event Equipment | Gets the previous equipment from the event. | map | Event "Player changes equipment"<br/>Event "Entity changes equipment" |  | false | false |  |  | text | item |
+| ![event_old_item](../../icons/game_values/event_old_item.png) | event_old_item | creative_plus.game_value.event_old_item.name | creative_plus.game_value.event_old_item.description | item | creative_plus.game_value.event_old_item.work_with.player_inventory_slot_change_event |  | false | false |  |  |  |  |
+| ![event_old_vault_state](../../icons/game_values/event_old_vault_state.png) | event_old_vault_state | Previous Vault State | Gets the previous vault state. | text | Event "Vault changes state"<br/>Event "Player changes vault state" |  | false | false |  |  |  |  |
+| ![event_power](../../icons/game_values/event_power.png) | event_power | Complete Power Percentage | Gets the percentage of execution power (bow draw, horse jump) of the event. | number | Player Event Shoots<br/>Horse Jump Event |  | false | false |  |  |  |  |
+| ![event_projectile_item](../../icons/game_values/event_projectile_item.png) | event_projectile_item | Event Projectile Item | Gets an event projectile item. | item | Player Event Shoots |  | false | false |  |  |  |  |
+| ![event_query_info](../../icons/game_values/event_query_info.png) | event_query_info | Debug Info | Gets the debug information of the target block or entity. | text | Player Receives Block Information Event<br/>Player Receives Entity Info Event |  | false | false |  |  |  |  |
+| ![event_replaced_block](../../icons/game_values/event_replaced_block.png) | event_replaced_block | Event replaced block | Gets the ID of the replaced block. | text | Place Block Event |  | false | false |  |  |  |  |
+| ![event_sign_lines](../../icons/game_values/event_sign_lines.png) | event_sign_lines | Sign Lines | Gets the lines on a Sign as a list. | array | "Player Change Sign" event |  | false | false |  | text |  |  |
+| ![event_sign_side](../../icons/game_values/event_sign_side.png) | event_sign_side | Sign Side | Gets the side the text is on. | text | "Player Change Sign" event |  | false | false |  |  |  |  |
+| ![event_slot](../../icons/game_values/event_slot.png) | event_slot | Event Slot | Produces the slot number in the event. | number |  |  | false | false |  |  |  |  |
+| ![event_slot_type](../../icons/game_values/event_slot_type.png) | event_slot_type | Clicked Slot Type | Gets the current slot type of the inventory menu when clicked. | text |  |  | false | false |  |  |  |  |
+| ![event_slots_involved](../../icons/game_values/event_slots_involved.png) | event_slots_involved | Involved Slots | Gets a list of all enabled slots in the target's open inventory in the event. | array | Drag Item Event |  | false | false |  | number |  |  |
+| ![event_teleport_cause](../../icons/game_values/event_teleport_cause.png) | event_teleport_cause | Teleport Cause | Gets the reason for teleporting in an event. | text | Player Teleport Event<br/>Enderman Escape Event |  | false | false |  |  |  |  |
+| ![event_ticks_held_for](../../icons/game_values/event_ticks_held_for.png) | event_ticks_held_for | Item Use Ticks | Gets the number of ticks to use an item. | number | Player Event "Stops using an item" |  | false | false |  |  |  |  |
+| ![event_time_skip_amount](../../icons/game_values/event_time_skip_amount.png) | event_time_skip_amount | Number of Skip Time ticks | Gets the number of time skip ticks in the world. | number | Time Skip Event |  | false | false |  |  |  |  |
+| ![event_time_skip_reason](../../icons/game_values/event_time_skip_reason.png) | event_time_skip_reason | Skip Time Reason | Gets the reason for skipping time in the world. | text | Time Skip Event |  | false | false |  |  |  |  |
+| ![event_transform_reason](../../icons/game_values/event_transform_reason.png) | event_transform_reason | Entity transform reason | Gets the reason for the entity transformation. | text | Entity Transform Event |  | false | false |  |  |  |  |
+| ![event_transformed_entities](../../icons/game_values/event_transformed_entities.png) | event_transformed_entities | Event transformed entities | Get transformed entities of the event. | array | Entity Transform Event |  | false | false |  | text |  |  |
+| ![event_tree_type](../../icons/game_values/event_tree_type.png) | event_tree_type | Tree Type | Gets the type of tree in the event. | text | Grow Tree Player Event<br/>Tree Grows World Event |  | false | false |  |  |  |  |
+| ![event_velocity](../../icons/game_values/event_velocity_vector.png) | event_velocity | Velocity Vector | Gets the velocity vector of the event. | vector | "Player Change Velocity Vector" event. |  | false | false |  |  |  |  |
+| ![experience_level](../../icons/game_values/experience_level.png) | experience_level | Experience Level | Get the target's experience levels. | number |  |  | false | false | entity |  |  |  |
+| ![experience_progress](../../icons/game_values/experience_progress.png) | experience_progress | Experience Progress | Gets the percentage progress of the target's current experience level. | number |  |  | false | false | entity |  |  |  |
+| ![eye_location](../../icons/game_values/eye_location.png) | eye_location | Eye Location | Gets the location of the target at eye height. | location |  |  | false | false | entity |  |  |  |
+| ![fall_distance](../../icons/game_values/fall_distance.png) | fall_distance | Fall Distance | Gets the target's fall distance in blocks. | number |  |  | false | false | entity |  |  |  |
+| ![fire_ticks](../../icons/game_values/fire_ticks.png) | fire_ticks | Burning Time | Get the target's remaining fire ticks. | number |  |  | false | false | entity |  |  |  |
+| ![flying_speed](../../icons/game_values/flying_speed.png) | flying_speed | Flying Speed | Gets the target's current flying speed (attribute). | number |  |  | false | false | entity |  |  |  |
+| ![food_exhaustion](../../icons/game_values/food_exhaustion.png) | food_exhaustion | Food Exhaustion | Gets the target's food exhaustion level, which increases based on the player's actions. | number |  |  | false | false | entity |  |  |  |
+| ![food_level](../../icons/game_values/food_level.png) | food_level | Hunger Level | Gets the target's remaining food. | number |  |  | false | false | entity |  |  |  |
+| ![food_saturation](../../icons/game_values/food_saturation.png) | food_saturation | Saturation Level | Gets the target's food saturation based on the types of food eaten. | number |  |  | false | false | entity |  |  |  |
+| ![freeze_ticks](../../icons/game_values/freeze_ticks.png) | freeze_ticks | Freeze Time | Get the target's current freeze time. | number |  |  | false | false | entity |  |  |  |
+| ![gamemode](../../icons/game_values/gamemode.png) | gamemode | Game Mode | Gets the player's current game mode. | text | Players |  | false | false | entity |  |  |  |
+| ![held_slot](../../icons/game_values/held_slot.png) | held_slot | Choose Slot in Hot Bar | Gets the target's selected hotbar slot. | number |  |  | false | false | entity |  |  |  |
+| ![hitbox_midpoint_location](../../icons/game_values/hitbox_midpoint_location.png) | hitbox_midpoint_location | Hitbox Center | Gets the location of the center of the target's hitbox. | location |  |  | false | false | entity |  |  |  |
+| ![hotbar_items](../../icons/game_values/hotbar_items.png) | hotbar_items | Hotbar Items | Gets the items in the target's hotbar. | array |  |  | false | false | entity | item |  |  |
+| ![idle_duration](../../icons/game_values/idle_duration.png) | idle_duration | Idle Duration | Gets the current idle duration of the player. | number |  |  | false | false | entity |  |  |  |
+| ![inventory_items](../../icons/game_values/inventory_items.png) | inventory_items | Inventory Items | Gets the items in the target's inventory (including the hot bar). | array |  |  | false | false | entity | item |  |  |
+| ![invulnerability_ticks](../../icons/game_values/invulnerability_ticks.png) | invulnerability_ticks | Invulnerability Time | Gets the target's remaining invulnerability ticks. | number |  |  | false | false | entity |  |  |  |
+| ![item_usage_progress](../../icons/game_values/item_usage_progress.png) | item_usage_progress | Item Usage Progress | Gets the target's percentage progress on using an item in hand, such as food. | number |  |  | false | false | entity |  |  |  |
+| ![last_damage_cause](../../icons/game_values/last_damage_cause.png) | last_damage_cause | Last Damage Cause | Gets the target's last damage cause. | text |  |  | false | false | entity |  |  |  |
+| ![last_death_location](../../icons/game_values/last_death_location.png) | last_death_location | Last Death Location | Gets the location of the player's last death. | location |  |  | false | false | entity |  |  |  |
+| ![lead_holder](../../icons/game_values/lead_holder.png) | lead_holder | Lead Holder | Gets the UUID of the entity that leads the target on the lead. | text |  |  | false | false | entity |  |  |  |
+| ![location](../../icons/game_values/location.png) | location | Location | Gets the target's location. | location |  |  | false | false | entity |  |  |  |
+| ![main_hand](../../icons/game_values/main_hand.png) | main_hand | Main Hand | Get the player's main hand. | text | Player |  | false | false | player |  |  |  |
+| ![main_hand_item](../../icons/game_values/main_hand_item.png) | main_hand_item | Main Hand Item | Gets the item in the target's main hand. | item |  |  | false | false | entity |  |  |  |
+| ![max_health](../../icons/game_values/max_health.png) | max_health | Max Health | Gets the target's maximum health. | number |  |  | false | false | entity |  |  |  |
+| ![max_invulnerability_ticks](../../icons/game_values/max_invulnerability_ticks.png) | max_invulnerability_ticks | Total Invulnerability Ticks | Gets the max amount of time the target can have invulnerability ticks for. | number |  |  | false | false | entity |  |  |  |
+| ![merchant_recipe_count](../../icons/game_values/merchant_recipe_count.png) | merchant_recipe_count | Merchant Recipe Count | Gets the number of Merchant Recipe counts. | number |  |  | false | false | entity |  |  |  |
+| ![name](../../icons/game_values/name.png) | name | Name | Gets the target's name. | text |  |  | false | false | entity |  |  |  |
+| ![off_hand_item](../../icons/game_values/off_hand_item.png) | off_hand_item | Offhand Item | Gets the item in the target's secondary hand. | item |  |  | false | false | entity |  |  |  |
+| ![open_inventory_custom_id](../../icons/game_values/open_inventory_custom_id.png) | open_inventory_custom_id | Open Inventory Custom ID | Gets the custom ID of the target's open inventory. | text | Players |  | false | false | entity |  |  |  |
+| ![open_inventory_size](../../icons/game_values/open_inventory_size.png) | open_inventory_size | Opened Inventory Size | Gets the size of the currently opened inventory. | number | Players |  | false | false | entity |  |  |  |
+| ![open_inventory_title](../../icons/game_values/open_inventory_title.png) | open_inventory_title | Open Inventory Title | Gets the title of the target's open inventory. | text | Players |  | false | false | entity |  |  |  |
+| ![open_inventory_type](../../icons/game_values/open_inventory_type.png) | open_inventory_type | Open Inventory Type | Get the target's open inventory type. | text | Players |  | false | false | entity |  |  |  |
+| ![origin](../../icons/game_values/origin.png) | origin | First Spawn Location | Gets the location of the target's first appearance. | location |  |  | false | false | both |  |  |  |
+| ![owner_uuid](../../icons/game_values/owner_uuid.png) | owner_uuid | UUID of world owner | Gets the UUID of the owner of the world. | text |  |  | false | false |  |  |  |  |
+| ![particle_cpu_usage](../../icons/game_values/particle_cpu_usage.png) | particle_cpu_usage | Particle CPU Usage | Gets the percent of CPU usage caused by particles. | number |  |  | false | false |  |  |  |  |
+| ![particle_visibility](../../icons/game_values/particle_visibility.png) | particle_visibility | Particle Visibility | Gets the player's particle visibility setting value. | text | Players |  | false | false | entity |  |  |  |
+| ![passengers](../../icons/game_values/passengers.png) | passengers | Passengers | Gets the UUID of the entities that are traveling to the target. | array |  |  | false | false | entity | text |  |  |
+| ![ping](../../icons/game_values/ping.png) | ping | Player Ping | Gets the latency between player and server in milliseconds. | number |  |  | false | false | entity |  |  |  |
+| ![pitch](../../icons/game_values/pitch.png) | pitch | Vertical Pitch | Gets the vertical (up/down) pitch of the target. | number |  |  | false | false | entity |  |  |  |
+| ![player_count](../../icons/game_values/player_count.png) | player_count | Number of players in the world | Gets the number of players in the world. | number |  |  | false | false |  |  |  |  |
+| ![player_ender_pearls](../../icons/game_values/player_ender_pearls.png) | player_ender_pearls | Ender Pearl List | Gets the list of the player's in-flight ender pearls. | array | Players |  | false | false | entity | text |  |  |
+| ![player_enderchest_items](../../icons/game_values/player_enderchest_items.png) | player_enderchest_items | Ender Chest Items | Gets the items in the target's Ender Chest. | array | Players |  | false | false | player | item |  |  |
+| ![pose](../../icons/game_values/pose.png) | pose | Entity Pose | Gets the entity's pose. | text |  |  | false | false | entity |  |  |  |
+| ![potion_effects](../../icons/game_values/potion_effects.png) | potion_effects | Potion Effects | Get the target's potion effects in effect. | array |  |  | false | false | entity | potion |  |  |
+| ![projectile_owner_uuid](../../icons/game_values/projectile_owner_uuid.png) | projectile_owner_uuid | Projectile Owner UUID | Gets the owner of the target projectile. | text | Any Projectile |  | false | false | entity |  |  |  |
+| ![projectile_power](../../icons/game_values/projectile_power.png) | projectile_power | Projectile Motion Vector | Gets the motion vector of a projectile | vector | Fireballs<br/>Dragon Charges<br/>Wither Skulls |  | false | false | entity |  |  |  |
+| ![protocol_version](../../icons/game_values/protocol_version.png) | protocol_version | Client Protocol Version | Get the protocol version of the player's client. | number |  |  | false | false | entity |  |  |  |
+| ![remaining_air](../../icons/game_values/remaining_air.png) | remaining_air | Remaining Air | Gets the target's remaining air ticks. | number |  |  | false | false | entity |  |  |  |
+| ![response_headers](../../icons/game_values/event_response_headers.png) | response_headers | Web Request Response Headers | Gets the headers of the response to the sent web request. | map | Event "Server responds" |  | false | false |  |  | text | any |
+| ![saddle_item](../../icons/game_values/saddle_item.png) | saddle_item | Saddle Item | Gets the saddle or carpet equipped on the target. | item | Pigs<br/>Horses<br/>Lamas |  | false | false | entity |  |  |  |
+| ![saturated_regen_rate](../../icons/game_values/saturated_regen_rate.png) | saturated_regen_rate | Saturated Regeneration Rate | Gets the player's health regeneration rate while saturated. | number |  |  | false | false | entity |  |  |  |
+| ![selection_size](../../icons/game_values/selection_size.png) | selection_size | Number of Selected Targets | Gets the number of targets in the selection. | number |  |  | false | false |  |  |  |  |
+| ![selection_target_names](../../icons/game_values/selection_target_names.png) | selection_target_names | Names of selected targets | Gets the name of each target in the selection. | array |  |  | false | false |  | text |  |  |
+| ![selection_target_uuids](../../icons/game_values/selection_target_uuids.png) | selection_target_uuids | UUID of selected targets | Gets the UUID of each target in the selection. | array |  |  | false | false |  | text |  |  |
+| ![server_current_tick](../../icons/game_values/server_current_tick.png) | server_current_tick | Server Current Time | Gets the server's current time in ticks. | number |  |  | false | false |  |  |  |  |
+| ![server_tps](../../icons/game_values/server_tps.png) | server_tps | Server TPS | Gets the number of Ticks Per Second (TPS) that the server can handle. | number |  |  | false | false |  |  |  |  |
+| ![spawn_location](../../icons/game_values/spawn_location.png) | spawn_location | World Spawn Location | Gets the location of the world's spawn point. | location |  |  | false | false |  |  |  |  |
+| ![spawn_reason](../../icons/game_values/spawn_reason.png) | spawn_reason | Spawn Reason | Gets the reason for the target to spawn. | text |  |  | false | false | entity |  |  |  |
+| ![start_reload_tick](../../icons/game_values/start_reload_tick.png) | start_reload_tick | World freeze start time | Gets the world freeze start time in ticks. | number |  |  | false | false |  |  |  |  |
+| ![starvation_rate](../../icons/game_values/starvation_rate.png) | starvation_rate | Starvation Rate | Gets the starvation rate of the target. | number |  |  | false | false | entity |  |  |  |
+| ![steer_forward](../../icons/game_values/steer_forward.png) | steer_forward | Forward Vehicle Movement | Gets the value of a vehicle moving forward or backward. | number |  |  | false | false | entity |  |  |  |
+| ![steer_sideways](../../icons/game_values/steer_sideways.png) | steer_sideways | Sideways Vehicle Movement | Gets the value of the vehicle moving left or right. | number |  |  | false | false | entity |  |  |  |
+| ![target_block_face](../../icons/game_values/target_block_face.png) | target_block_face | Target Block Face | Gets as the direction of the side of the block that the target is facing. | text |  |  | false | false | entity |  |  |  |
+| ![target_block_location](../../icons/game_values/target_block_location.png) | target_block_location | Target Block Location | Gets the location of the block the target is looking at. | location |  |  | false | false | entity |  |  |  |
+| ![target_fluid_location](../../icons/game_values/target_fluid_location.png) | target_fluid_location | Target Fluid Location | Gets the location of the fluid the target is looking at. | location |  |  | false | false | entity |  |  |  |
+| ![targeted_entity](../../icons/game_values/targeted_entity.png) | targeted_entity | Attack Target | Gets the current target for the mob to attack. | text |  |  | false | false | entity |  |  |  |
+| ![timestamp](../../icons/game_values/timestamp.png) | timestamp | UNIX time | Gets the current time as a single number in milliseconds. | number |  |  | false | false |  |  |  |  |
+| ![unsaturated_regen_rate](../../icons/game_values/unsaturated_regen_rate.png) | unsaturated_regen_rate | Unsaturated Regeneration Rate | Gets the player's health regeneration rate while unsaturated. | number |  |  | false | false | entity |  |  |  |
+| ![url](../../icons/game_values/event_url.png) | url | Web Request Link | Gets the web request link. | text | The "Server Response" event |  | false | false |  |  |  |  |
+| ![url_response](../../icons/game_values/event_url_response.png) | url_response | Web Request Response | Receives the response to a sent web request. | text | The "Server Response" event |  | false | false |  |  |  |  |
+| ![url_response_code](../../icons/game_values/event_url_response_code.png) | url_response_code | Web Request Response Code | Gets the response code for a sent web request. | number | Server Response Event |  | false | false |  |  |  |  |
+| ![user_locale](../../icons/game_values/user_locale.png) | user_locale | Player Client Language | Gets the current language of the player's client. | text | Players |  | false | false | entity |  |  |  |
+| ![uuid](../../icons/game_values/uuid.png) | uuid | UUID | Gets the universally unique identifier (UUID) of the target. | text |  |  | false | false | entity |  |  |  |
+| ![vehicle](../../icons/game_values/vehicle.png) | vehicle | Vehicle | Gets the UUID of the entity the target is riding. | text |  |  | false | false | entity |  |  |  |
+| ![velocity](../../icons/game_values/velocity.png) | velocity | Velocity Vector | Gets the target's velocity vector (not walking, but external forces). | vector |  |  | false | false | entity |  |  |  |
+| ![walking_speed](../../icons/game_values/walking_speed.png) | walking_speed | Walking Speed | Gets the target's current walking speed (attribute). | number |  |  | false | false | entity |  |  |  |
+| ![world_clear_weather_duration](../../icons/game_values/world_clear_weather_duration.png) | world_clear_weather_duration | World Clear Weather Duration | Gets the current clear weather duration in the world. | number |  |  | false | false |  |  |  |  |
+| ![world_game_time](../../icons/game_values/world_game_time.png) | world_game_time | World Existence Time | Gets the existence time of the world in ticks. | number |  |  | false | false |  |  |  |  |
+| ![world_id](../../icons/game_values/world_id.png) | world_id | World ID | Gets the world ID. | text |  |  | false | false |  |  |  |  |
+| ![world_moon_phase](../../icons/game_values/world_moon_phase.png) | world_moon_phase | Current Moon Phase | Gets the current moon phase in the world. | text |  |  | false | false |  |  |  |  |
+| ![world_size](../../icons/game_values/world_size.png) | world_size | World Size | Gets the current world size. | number |  |  | false | false |  |  |  |  |
+| ![world_thunder_duration](../../icons/game_values/world_thunder_duration.png) | world_thunder_duration | World Rain Duration | Gets the current rain duration in the world. | number |  |  | false | false |  |  |  |  |
+| ![world_time](../../icons/game_values/world_time.png) | world_time | Current World Time | Gets the current world time in ticks. | number |  |  | false | false |  |  |  |  |
+| ![world_weather](../../icons/game_values/world_weather.png) | world_weather | Current world weather | Gets the current world weather type. | text |  |  | false | false |  |  |  |  |
+| ![world_weather_duration](../../icons/game_values/world_weather_duration.png) | world_weather_duration | World Current Weather Duration | Gets the current weather duration in the world. | number |  |  | false | false |  |  |  |  |
+| ![x_coordinate](../../icons/game_values/x_coordinate.png) | x_coordinate | X Coordinate | Gets the X coordinate of the target's location. | number |  |  | false | false | entity |  |  |  |
+| ![y_coordinate](../../icons/game_values/y_coordinate.png) | y_coordinate | Y Coordinate | Gets the Y coordinate of the target's location. | number |  |  | false | false | entity |  |  |  |
+| ![yaw](../../icons/game_values/yaw.png) | yaw | Horizontal Rotate | Gets the horizontal (left/right) rotation (yaw) of the target. | number |  |  | false | false | entity |  |  |  |
+| ![z_coordinate](../../icons/game_values/z_coordinate.png) | z_coordinate | Z Coordinate | Gets the Z coordinate of the target's location. | number |  |  | false | false | entity |  |  |  |

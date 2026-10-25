@@ -1,4 +1,4 @@
-import { promises as fs } from 'fs';
+import { existsSync, promises as fs } from 'fs';
 import fetch from 'node-fetch';
 import path from 'path';
 
@@ -111,6 +111,29 @@ const markdownCell = (value: unknown) =>
     .replace(/\|/g, '\\|')
     .replace(/\r?\n/g, '<br/>');
 
+const iconMarkdown = (type: 'actions' | 'events' | 'game_values', id: string) => {
+  const iconAliases: Record<string, string> = {
+    event_interaction: 'event_block_interact_action',
+    event_velocity: 'event_velocity_vector',
+  };
+  let iconId = type === 'game_values' ? iconAliases[id] || id : id;
+  const iconPath = (candidate: string) =>
+    path.resolve(ROOT, 'icons', type, `${candidate}.png`);
+
+  if (!existsSync(iconPath(iconId)) && type === 'game_values') {
+    const eventIconId = `event_${id}`;
+    if (existsSync(iconPath(eventIconId))) iconId = eventIconId;
+  }
+  if (!existsSync(iconPath(iconId)))
+    throw new Error(`Could not find icon for ${type} entry ${id}`);
+
+  const relativePath =
+    type === 'actions'
+      ? `../../../icons/${type}/${iconId}.png`
+      : `../../icons/${type}/${iconId}.png`;
+  return `![${id}](${relativePath})`;
+};
+
 const localizeList = (
   properties: Properties,
   entryKey: string,
@@ -166,18 +189,15 @@ const generateActionDocs = async (
     const rows = entries
       .sort((left, right) => left.id.localeCompare(right.id))
       .map((action) => [
+        iconMarkdown('actions', action.id),
+        action.id,
+        localize(properties, `creative_plus.action.${action.id}.name`, missing),
         localize(
           properties,
-          `creative_plus.action.${action.id}.name`,
+          `creative_plus.action.${action.id}.description`,
           missing
         ),
-        action.id,
         action.category,
-        action.subcategory,
-        action.type,
-        ('args' in action ? action.args : [])
-          .map((argument) => `${argument.id}: ${argument.type}`)
-          .join('<br/>'),
         localizeList(
           properties,
           `creative_plus.action.${action.id}`,
@@ -192,13 +212,13 @@ const generateActionDocs = async (
           action.additionalInfo,
           missing
         ),
-        formatFlag(action.deprecated),
         formatFlag(action.unused),
-        localize(
-          properties,
-          `creative_plus.action.${action.id}.description`,
-          missing
-        ),
+        formatFlag(action.deprecated),
+        action.subcategory,
+        action.type,
+        ('args' in action ? action.args : [])
+          .map((argument) => `${argument.id}: ${argument.type}`)
+          .join('<br/>'),
       ]);
 
     await writeMarkdown(
@@ -206,17 +226,18 @@ const generateActionDocs = async (
       `${object[0].toUpperCase()}${object.slice(1)} actions`,
       markdownTable(
         [
-          'Name',
+          'Icon',
           'ID',
+          'Name',
+          'Description',
           'Category',
+          'Works with',
+          'Additional info',
+          'Unused',
+          'Deprecated',
           'Subcategory',
           'Type',
           'Arguments',
-          'Works with',
-          'Additional info',
-          'Deprecated',
-          'Unused',
-          'Description',
         ],
         rows
       )
@@ -233,12 +254,14 @@ const generateEventDocs = async (
   const rows = events
     .sort((left, right) => left.id.localeCompare(right.id))
     .map((event) => [
+      iconMarkdown('events', event.id),
+      event.id,
+      localize(properties, `creative_plus.trigger.${event.id}.name`, missing),
       localize(
         properties,
-        `creative_plus.trigger.${event.id}.name`,
+        `creative_plus.trigger.${event.id}.description`,
         missing
       ),
-      event.id,
       event.category,
       event.cancellable,
       localizeList(
@@ -255,13 +278,8 @@ const generateEventDocs = async (
         event.additionalInfo,
         missing
       ),
-      formatFlag(event.deprecated),
       formatFlag(event.unused),
-      localize(
-        properties,
-        `creative_plus.trigger.${event.id}.description`,
-        missing
-      ),
+      formatFlag(event.deprecated),
     ]);
 
   await writeMarkdown(
@@ -269,15 +287,16 @@ const generateEventDocs = async (
     'Events',
     markdownTable(
       [
-        'Name',
+        'Icon',
         'ID',
+        'Name',
+        'Description',
         'Category',
         'Cancellable',
         'Works with',
         'Additional info',
-        'Deprecated',
         'Unused',
-        'Description',
+        'Deprecated',
       ],
       rows
     )
@@ -293,17 +312,15 @@ const generateGameValueDocs = async (
   const rows = values
     .sort((left, right) => left.id.localeCompare(right.id))
     .map((value) => [
+      iconMarkdown('game_values', value.id),
+      value.id,
+      localize(properties, `creative_plus.game_value.${value.id}.name`, missing),
       localize(
         properties,
-        `creative_plus.game_value.${value.id}.name`,
+        `creative_plus.game_value.${value.id}.description`,
         missing
       ),
-      value.id,
       value.type,
-      value.selector,
-      'elementType' in value ? value.elementType : '',
-      'keyType' in value ? value.keyType : '',
-      'valueType' in value ? value.valueType : '',
       localizeList(
         properties,
         `creative_plus.game_value.${value.id}`,
@@ -320,11 +337,10 @@ const generateGameValueDocs = async (
       ),
       formatFlag(value.deprecated),
       formatFlag(value.unused),
-      localize(
-        properties,
-        `creative_plus.game_value.${value.id}.description`,
-        missing
-      ),
+      value.selector,
+      'elementType' in value ? value.elementType : '',
+      'keyType' in value ? value.keyType : '',
+      'valueType' in value ? value.valueType : '',
     ]);
 
   await writeMarkdown(
@@ -332,18 +348,19 @@ const generateGameValueDocs = async (
     'Game values',
     markdownTable(
       [
-        'Name',
+        'Icon',
         'ID',
-        'Type',
+        'Name',
+        'Description',
+        'Category',
+        'Works with',
+        'Additional info',
+        'Unused',
+        'Deprecated',
         'Selector',
         'Element type',
         'Key type',
         'Value type',
-        'Works with',
-        'Additional info',
-        'Deprecated',
-        'Unused',
-        'Description',
       ],
       rows
     )

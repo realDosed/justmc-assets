@@ -1,38 +1,38 @@
 # Select actions
 
-| Name | ID | Category | Subcategory | Type | Arguments | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Додати всіх сутностей | select_add_all_entities | select | add | basic |  |  |  | false | false | Додає до вибірки всіх сутностей зі світу. |
-| Додати всіх мобів | select_add_all_mobs | select | add | basic |  |  |  | false | false | Додає до вибірки всіх мобів зі світу. |
-| Додати всіх гравців | select_add_all_players | select | add | basic |  |  |  | false | false | Додає до вибірки всіх гравців зі світу. |
-| Додати сутність за умовою | select_add_entity_by_conditional | select | add | basic_with_conditional |  |  |  | false | false | Додає сутностей, якщо виконується зазначена умова. |
-| Додати сутність за іменем/UUID | select_add_entity_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Додає до вибірки сутність із зазначеним іменем/UUID. |
-| Додати ціль події | select_add_event_target | select | add | basic | selection_type: enum |  |  | false | false | Додає до вибірки ціль, яка запустила подію. |
-| Додати останню сутність, що з'явилася | select_add_last_entity | select | add | basic |  |  |  | false | false | Додає до вибірки останню сутність, що з'явилася у світі. |
-| Додати останнього моба, що з'явився | select_add_last_mob | select | add | basic |  |  |  | false | false | Додає до вибірки останнього моба, що з'явився у світі. |
-| Додати моба за іменем/UUID | select_add_mob_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Додає до вибірки моба із зазначеним іменем/UUID. |
-| Додати гравця за умовою | select_add_player_by_conditional | select | add | basic_with_conditional |  |  |  | false | false | Додає гравців, якщо виконується зазначена умова. |
-| Додати гравця за іменем/UUID | select_add_player_by_name | select | add | basic | name_or_uuid: text |  |  | false | false | Додає до вибірки гравця із зазначеним іменем/UUID. |
-| Додати випадкову сутність | select_add_random_entity | select | add | basic |  |  |  | false | false | Додає до вибірки випадкову сутність зі світу. |
-| Додати випадкового моба | select_add_random_mob | select | add | basic |  |  |  | false | false | Додає до вибірки випадкового моба зі світу. |
-| Додати випадкового гравця | select_add_random_player | select | add | basic |  |  |  | false | false | Додає до вибірки випадкового гравця зі світу. |
-| Выбрать всех сущностей | select_all_entities | select | creation | basic |  |  |  | false | false | Выбирает всех сущностей в мире. |
-| Выбрать всех мобов | select_all_mobs | select | creation | basic |  |  |  | false | false | Выбирает всех мобов в мире. |
-| Выбрать всех игроков | select_all_players | select | creation | basic |  |  |  | false | false | Выбирает всех игроков в мире. |
-| Выбрать сущность по условию | select_entity_by_conditional | select | creation | basic_with_conditional |  |  |  | false | false | Выбирает сущностей, если выполняется указанное условие. |
-| Выбрать сущность по имени | select_entity_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Выбирает сущность или сущностей по имени или UUID. |
-| Выбрать цель события | select_event_target | select | creation | basic | selection_type: enum |  |  | false | false | Выбирает цель, которая запустила событие. |
-| Відфільтрувати вибірку за умовою | select_filter_by_conditional | select | filter | basic_with_conditional |  |  |  | false | false | Залишає у вибірці ті цілі, які відповідають обраній умові. |
-| Відфільтрувати вибірку за відстанню | select_filter_by_distance | select | filter | basic | location: location<br/>selection_size: number<br/>ignore_y_axis: enum<br/>compare_mode: enum |  |  | false | false | Залишає у вибірці ті цілі, які знаходяться на відстані до місцезнаходження. |
-| Фільтр рейкастом | select_filter_by_raycast | select | filter | basic | variable: variable<br/>origin: location<br/>max_distance: number<br/>ray_size: number<br/>selection_size: number<br/>consider_blocks: enum<br/>ignore_passable_blocks: enum<br/>fluid_collision_mode: enum |  |  | false | false | Залишає у вибірці лише ті цілі, в які потрапив запущений промінь. Ширина променя працює лише на сутностей (збільшує або зменшує хітбокси істот). |
-| Выбрать случайную сущность с выборки | select_filter_randomly | select | filter | basic | size: number |  |  | false | false | Выбирает случайную сущность с выборки. |
-| Інвертувати вибірку | select_invert | select | creation | basic |  |  |  | false | false | Створює нову вибірку, до якої входять усі істоти, крім обраних. |
-| Выбрать последнюю появившуюся сущность | select_last_entity | select | creation | basic |  |  |  | false | false | Выбирает последнюю появившуюся сущность в мире. |
-| Выбрать последнего появившегося моба | select_last_mob | select | creation | basic |  |  |  | false | false | Выбирает последнего появившегося моба в мире. |
-| Выбрать моба по имени | select_mob_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Выбирает моба или мобов по имени или UUID. |
-| Выбрать игрока по условию | select_player_by_conditional | select | creation | basic_with_conditional |  |  |  | false | false | Выбирает игроков, если выполняется указанное условие. |
-| Выбрать игрока по имени | select_player_by_name | select | creation | basic | name_or_uuid: text |  |  | false | false | Выбирает игрока или игроков по имени или UUID. |
-| Выбрать случайную сущность | select_random_entity | select | creation | basic |  |  |  | false | false | Выбирает случайную сущность в мире. |
-| Выбрать случайного моба | select_random_mob | select | creation | basic |  |  |  | false | false | Выбирает случайного моба в мире. |
-| Выбрать случайного игрока | select_random_player | select | creation | basic |  |  |  | false | false | Выбирает случайного игрока в мире. |
-| Сбросить выборку | select_reset | select | creation | basic |  |  |  | false | false | Сбрасывает всю выборку. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Subcategory | Type | Arguments |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![select_add_all_entities](../../../icons/actions/select_add_all_entities.png) | select_add_all_entities | Додати всіх сутностей | Додає до вибірки всіх сутностей зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_add_all_mobs](../../../icons/actions/select_add_all_mobs.png) | select_add_all_mobs | Додати всіх мобів | Додає до вибірки всіх мобів зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_add_all_players](../../../icons/actions/select_add_all_players.png) | select_add_all_players | Додати всіх гравців | Додає до вибірки всіх гравців зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_add_entity_by_conditional](../../../icons/actions/select_add_entity_by_conditional.png) | select_add_entity_by_conditional | Додати сутність за умовою | Додає сутностей, якщо виконується зазначена умова. | select |  |  | false | false | add | basic_with_conditional |  |
+| ![select_add_entity_by_name](../../../icons/actions/select_add_entity_by_name.png) | select_add_entity_by_name | Додати сутність за іменем/UUID | Додає до вибірки сутність із зазначеним іменем/UUID. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_event_target](../../../icons/actions/select_add_event_target.png) | select_add_event_target | Додати ціль події | Додає до вибірки ціль, яка запустила подію. | select |  |  | false | false | add | basic | selection_type: enum |
+| ![select_add_last_entity](../../../icons/actions/select_add_last_entity.png) | select_add_last_entity | Додати останню сутність, що з'явилася | Додає до вибірки останню сутність, що з'явилася у світі. | select |  |  | false | false | add | basic |  |
+| ![select_add_last_mob](../../../icons/actions/select_add_last_mob.png) | select_add_last_mob | Додати останнього моба, що з'явився | Додає до вибірки останнього моба, що з'явився у світі. | select |  |  | false | false | add | basic |  |
+| ![select_add_mob_by_name](../../../icons/actions/select_add_mob_by_name.png) | select_add_mob_by_name | Додати моба за іменем/UUID | Додає до вибірки моба із зазначеним іменем/UUID. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_player_by_conditional](../../../icons/actions/select_add_player_by_conditional.png) | select_add_player_by_conditional | Додати гравця за умовою | Додає гравців, якщо виконується зазначена умова. | select |  |  | false | false | add | basic_with_conditional |  |
+| ![select_add_player_by_name](../../../icons/actions/select_add_player_by_name.png) | select_add_player_by_name | Додати гравця за іменем/UUID | Додає до вибірки гравця із зазначеним іменем/UUID. | select |  |  | false | false | add | basic | name_or_uuid: text |
+| ![select_add_random_entity](../../../icons/actions/select_add_random_entity.png) | select_add_random_entity | Додати випадкову сутність | Додає до вибірки випадкову сутність зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_add_random_mob](../../../icons/actions/select_add_random_mob.png) | select_add_random_mob | Додати випадкового моба | Додає до вибірки випадкового моба зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_add_random_player](../../../icons/actions/select_add_random_player.png) | select_add_random_player | Додати випадкового гравця | Додає до вибірки випадкового гравця зі світу. | select |  |  | false | false | add | basic |  |
+| ![select_all_entities](../../../icons/actions/select_all_entities.png) | select_all_entities | Выбрать всех сущностей | Выбирает всех сущностей в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_all_mobs](../../../icons/actions/select_all_mobs.png) | select_all_mobs | Выбрать всех мобов | Выбирает всех мобов в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_all_players](../../../icons/actions/select_all_players.png) | select_all_players | Выбрать всех игроков | Выбирает всех игроков в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_entity_by_conditional](../../../icons/actions/select_entity_by_conditional.png) | select_entity_by_conditional | Выбрать сущность по условию | Выбирает сущностей, если выполняется указанное условие. | select |  |  | false | false | creation | basic_with_conditional |  |
+| ![select_entity_by_name](../../../icons/actions/select_entity_by_name.png) | select_entity_by_name | Выбрать сущность по имени | Выбирает сущность или сущностей по имени или UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_event_target](../../../icons/actions/select_event_target.png) | select_event_target | Выбрать цель события | Выбирает цель, которая запустила событие. | select |  |  | false | false | creation | basic | selection_type: enum |
+| ![select_filter_by_conditional](../../../icons/actions/select_filter_by_conditional.png) | select_filter_by_conditional | Відфільтрувати вибірку за умовою | Залишає у вибірці ті цілі, які відповідають обраній умові. | select |  |  | false | false | filter | basic_with_conditional |  |
+| ![select_filter_by_distance](../../../icons/actions/select_filter_by_distance.png) | select_filter_by_distance | Відфільтрувати вибірку за відстанню | Залишає у вибірці ті цілі, які знаходяться на відстані до місцезнаходження. | select |  |  | false | false | filter | basic | location: location<br/>selection_size: number<br/>ignore_y_axis: enum<br/>compare_mode: enum |
+| ![select_filter_by_raycast](../../../icons/actions/select_filter_by_raycast.png) | select_filter_by_raycast | Фільтр рейкастом | Залишає у вибірці лише ті цілі, в які потрапив запущений промінь. Ширина променя працює лише на сутностей (збільшує або зменшує хітбокси істот). | select |  |  | false | false | filter | basic | variable: variable<br/>origin: location<br/>max_distance: number<br/>ray_size: number<br/>selection_size: number<br/>consider_blocks: enum<br/>ignore_passable_blocks: enum<br/>fluid_collision_mode: enum |
+| ![select_filter_randomly](../../../icons/actions/select_filter_randomly.png) | select_filter_randomly | Выбрать случайную сущность с выборки | Выбирает случайную сущность с выборки. | select |  |  | false | false | filter | basic | size: number |
+| ![select_invert](../../../icons/actions/select_invert.png) | select_invert | Інвертувати вибірку | Створює нову вибірку, до якої входять усі істоти, крім обраних. | select |  |  | false | false | creation | basic |  |
+| ![select_last_entity](../../../icons/actions/select_last_entity.png) | select_last_entity | Выбрать последнюю появившуюся сущность | Выбирает последнюю появившуюся сущность в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_last_mob](../../../icons/actions/select_last_mob.png) | select_last_mob | Выбрать последнего появившегося моба | Выбирает последнего появившегося моба в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_mob_by_name](../../../icons/actions/select_mob_by_name.png) | select_mob_by_name | Выбрать моба по имени | Выбирает моба или мобов по имени или UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_player_by_conditional](../../../icons/actions/select_player_by_conditional.png) | select_player_by_conditional | Выбрать игрока по условию | Выбирает игроков, если выполняется указанное условие. | select |  |  | false | false | creation | basic_with_conditional |  |
+| ![select_player_by_name](../../../icons/actions/select_player_by_name.png) | select_player_by_name | Выбрать игрока по имени | Выбирает игрока или игроков по имени или UUID. | select |  |  | false | false | creation | basic | name_or_uuid: text |
+| ![select_random_entity](../../../icons/actions/select_random_entity.png) | select_random_entity | Выбрать случайную сущность | Выбирает случайную сущность в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_random_mob](../../../icons/actions/select_random_mob.png) | select_random_mob | Выбрать случайного моба | Выбирает случайного моба в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_random_player](../../../icons/actions/select_random_player.png) | select_random_player | Выбрать случайного игрока | Выбирает случайного игрока в мире. | select |  |  | false | false | creation | basic |  |
+| ![select_reset](../../../icons/actions/select_reset.png) | select_reset | Сбросить выборку | Сбрасывает всю выборку. | select |  |  | false | false | creation | basic |  |

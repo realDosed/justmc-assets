@@ -1,225 +1,225 @@
 # Game values
 
-| Name | ID | Type | Selector | Element type | Key type | Value type | Works with | Additional info | Deprecated | Unused | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Дополнительное здоровье | absorption_health | number | entity |  |  |  |  |  | false | false | Получает количество единиц поглощательного (золотого) здоровья цели. |
-| Час використання предмета | active_item_used_time | number | entity |  |  |  |  |  | false | false | Отримує час використання предмета в руці. |
-| Вік цілі | age | number | entity |  |  |  |  |  | false | false | Отримує вік цілі у тіках. |
-| Імена всіх сутностей | all_entities_names | array |  | text |  |  |  |  | false | false | Отримує імена всіх сутностей, що перебувають у світі. |
-| UUID всіх сутностей | all_entities_uuids | array |  | text |  |  |  |  | false | false | Отримує UUID всіх сутностей, що перебувають у світі. |
-| Імена всіх гравців | all_players_names | array |  | text |  |  |  |  | false | false | Отримує імена всіх гравців, що перебувають у світі. |
-| UUID всіх гравців | all_players_uuids | array |  | text |  |  |  |  | false | false | Отримує UUID всіх гравців, що перебувають у світі. |
-| Перевірка античита | anticheat_check | text |  |  |  |  | Подією "Античит засік гравця" |  | false | false | Отримує назву перевірки античита, на якій засікли гравця. |
-| Спрацювань античита | anticheat_violations | number |  |  |  |  | Подією "Античит засік гравця" |  | false | false | Отримує кількість спрацювань перевірки античита у гравця. |
-| Предметы брони | armor_items | array | entity | item |  |  |  |  | false | false | Получает предметы в слотах брони цели. |
-| Очки защиты | armor_points | number | entity |  |  |  |  |  | false | false | Получает количество единиц брони цели, которое можно изменить предметами. |
-| Твёрдость брони | armor_toughness | number | entity |  |  |  |  |  | false | false | Получает количество единиц твёрдости брони цели, которое можно изменить предметами. |
-| Кількість стріл у тілі | arrows_in_body | number | entity |  |  |  |  |  | false | false | Отримує кількість стріл у тілі цілі. |
-| Привязанные сущности | attached_leads | array | entity | text |  |  |  |  | false | false | Получает UUID сущностей, которые привязаны поводком к цели. |
-| Кулдаун атаки | attack_cooldown_strength | number | entity |  |  |  |  |  | false | false | Отримує поточний кулдаун атаки цілі. |
-| Кулдаун атаки у тіках | attack_cooldown_ticks | number | entity |  |  |  |  |  | false | false | Отримує поточний кулдаун атаки цілі у тіках. |
-| Урон от атаки | attack_damage | number | entity |  |  |  |  |  | false | false | Получает количество единиц урона от атак цели, которое можно изменить предметами. |
-| Скорость атаки | attack_speed | number | entity |  |  |  |  |  | false | false | Получает скорость атаки цели, которую можно изменить предметами. |
-| Місцезнаходження блоку під ціллю | block_beneath | location | entity |  |  |  |  |  | false | false | Отримує місцезнаходження блоку під ціллю. |
-| Блоки під ціллю | blocks_beneath | array | entity | location |  |  |  |  | false | false | Отримує місцезнаходження всіх блоків, що знаходяться під ціллю. |
-| Поворот тіла | body_yaw | number | entity |  |  |  |  |  | false | false | Отримує поворот тіла цілі. |
-| Місцезнаходження плаща | cape_location | location | entity |  |  |  | Гравцями |  | false | false | Отримує місцезнаходження плаща гравця. |
-| Кардинальное направление | cardinal_direction | text | entity |  |  |  |  |  | false | false | Получает кардинальное направление (север, запад, юг, восток) цели. |
-| Видимість чату | chat_visibility | text | entity |  |  |  | Гравцями |  | false | false | Отримує статус видимості чату гравця. |
-| Название клиента игрока | client_brand_name | text | entity |  |  |  | Гравцями |  | false | false | Получает название клиента игрока. |
-| Дальність прорисовки гравця | client_view_distance | number | entity |  |  |  | Гравцями |  | false | false | Отримує дальність прорисовки гравця, встановлену в налаштуваннях гри. |
-| Мова клієнта гравця | clientside_locale | text | entity |  |  |  | Гравцями |  | false | false | Отримує мову клієнта гравця. |
-| Процент использования процессора | cpu_usage | number |  |  |  |  |  |  | false | false | Получает процент загрузки миром процессора сервера. |
-| Кількість смарагдів у транзакції | currency_transaction_amount | text |  |  |  |  | Подією "Гравець здійснює транзакцію" |  | false | false | Отримує кількість витрачених смарагдів у транзакції. |
-| Причина запиту транзакції | currency_transaction_reason | text |  |  |  |  | Подією "Гравець здійснює транзакцію" |  | false | false | Отримує причину запиту транзакції в смарагдах. |
-| Результат транзакції | currency_transaction_result | text |  |  |  |  | Подією "Гравець здійснює транзакцію" |  | false | false | Отримує результат здійсненої транзакції. |
-| Текущее здоровье | current_health | number | entity |  |  |  |  |  | false | false | Получает оставшееся количество единиц здоровья цели. |
-| Поточні натиснуті клавіші пересування | current_input_list | array | entity | text |  |  | Гравцями |  | false | false | Отримує натиснуті на даний момент клавіші пересування. |
-| Предмет на курсоре | cursor_item | item | entity |  |  |  |  |  | false | false | Получает предмет на курсоре цели (используется при переносе предметов в инвентаре). |
-| Список предметов в открытом инвентаре | custom_inventory_items | array | player | item |  |  |  |  | false | false | Возвращает список, содержащий предметы, которые находятся в текущем открытом инвентарном меню. |
-| Кількість очок | death_screen_score | number | entity |  |  |  | Гравцями |  | false | false | Отримує кількість очок, що відображаються на екрані смерті. |
-| creative_plus.game_value.delay_reload_count.name | delay_reload_count | number |  |  |  |  |  |  | false | false | creative_plus.game_value.delay_reload_count.description |
-| Направление взгляда | direction_of_view | vector | entity |  |  |  |  |  | false | false | Получает вектор направления взгляда цели. |
-| Лівий поворот візуалізатора | display_entity_left_rotation | vector | entity |  |  |  | Візуалізаторами |  | false | false | Отримує лівий поворот візуалізатора у вигляді вектора. |
-| Правий поворот візуалізатора | display_entity_right_rotation | vector | entity |  |  |  | Візуалізаторами |  | false | false | Отримує правий поворот візуалізатора у вигляді вектора. |
-| Масштаб візуалізатора | display_entity_scale | vector | entity |  |  |  | Візуалізаторами |  | false | false | Отримує масштаб візуалізатора у вигляді вектора. |
-| Зміщення візуалізатора | display_entity_translation | vector | entity |  |  |  | Візуалізаторами |  | false | false | Отримує зміщення візуалізатора у вигляді вектора. |
-| Відображуване ім'я | display_name | text | entity |  |  |  |  |  | false | false | Отримує відображуване ім'я цілі. |
-| Поточний сід зачарувань | enchantment_seed | number | entity |  |  |  |  |  | false | false | Отримує поточний сід зачарувань гравця. |
-| Час до вибуху | entity_fuse_ticks | number | entity |  |  |  | Крипером<br/>Динамітом<br/>Феєрверками |  | false | false | Отримує час до вибуху сутності. |
-| Висота хітбоксу | entity_height | number | entity |  |  |  |  |  | false | false | Отримує розмір хітбоксу цілі по осі Y. |
-| Предмет сущности | entity_item | item | entity |  |  |  |  |  | false | false | Получает предметную форму цели. |
-| Індекс точки на шляху | entity_pathfinder_point_index | number | entity |  |  |  |  |  | false | false | Отримує поточний індекс точки шляху, по якому рухається моб. |
-| Поточний шлях | entity_pathfinder_points | array | entity | location |  |  |  |  | false | false | Отримує список усіх точок, які складають поточний шлях мобу. |
-| Отримуваний предмет істоти | entity_pick_item_stack | item | entity |  |  |  |  |  | false | false | Отримує предмет, що видається при натисканні коліщатком (СКМ) по істоті. |
-| Час життя цілі | entity_ticks_lived | number | entity |  |  |  |  |  | false | false | Отримує кількість тіків існування цілі. |
-| Тип сущности | entity_type | text | entity |  |  |  |  |  | false | false | Получает тип сущности цели. |
-| Ширина хітбоксу | entity_width_x | number | entity |  |  |  |  |  | false | false | Отримує розмір хітбоксу цілі по осі X. |
-| Довжина хітбоксу | entity_width_z | number | entity |  |  |  |  |  | false | false | Отримує розмір хітбоксу цілі по осі Z. |
-| Розподілені предмети | event_added_items | map |  |  | number | item | Подією "Гравець перетягує предмет в інвентарі" |  | false | false | Видає словник розподілених по слотах предметів за допомогою ЛКМ/ПКМ або дублювання за допомогою колісця миші. |
-| Ім'я вкладки досягнень | event_advancement_tab_name | text |  |  |  |  | Подією "Гравець змінив вкладку в меню досягнень" |  | true | false | Отримує ім'я поточної вкладки досягнень події. |
-| Новий стан поломки ковадла | event_anvil_damage_state | text |  |  |  |  | Подією "Гравець пошкоджує ковадло" |  | false | false | Отримує новий стан поломки ковадла. |
-| Нова назва предмета | event_anvil_rename_input | text |  |  |  |  | Подією "Гравець перейменовує предмет" |  | false | false | Отримує нову назву предмета на ковадлі. |
-| Блок події | event_block | text |  |  |  |  |  |  | false | false | Отримує ID блоку, пов'язаного з подією. |
-| Прогрес поломки блока | event_block_break_progress | number |  |  |  |  | Оновленням поломки блока гравцем<br/>Оновленням поломки блока істотою |  | false | false | Отримує прогрес поломки блока, пов'язаного з подією. |
-| Сторона блока события | event_block_face | text |  |  |  |  | Подіями взаємодії<br/>Подіями встановлення або зламу блоків<br/>Подією "Влучення снаряда гравця"<br/>Подіями поршнів |  | false | false | Получает как направления сторону блока, задетую в событии. |
-| Местоположение блока события | event_block_location | location |  |  |  |  |  |  | false | false | Получает местоположение блока в событии. |
-| Задействованные блоки события | event_blocks_involved | array |  | location |  |  | Подіями вибухів<br/>Подіями поршнів |  | false | false | Получает список местоположений всех задействованных блоков в событии. |
-| Сообщение чата | event_chat_message | text |  |  |  |  | Подією "Гравець пише повідомлення до чату" |  | false | false | Получает сообщение, отправленное целью в событии. |
-| Причина закрытия инвентаря | event_close_inventory_cause | text |  |  |  |  | Подією "Гравець закриває інвентар" |  | false | false | Получает причину закрытия открытого инвентаря цели в событии. |
-| Тривалість горіння істоти | event_combust_duration | number |  |  |  |  | Подією "Гравець загорівся"<br/>Подією "Істота загорілась" |  | false | false | Отримує тривалість горіння істоти з події. |
-| Причина займання істоти | event_combust_reason | text |  |  |  |  | Подією "Гравець загорівся"<br/>Подією "Істота загорілася" |  | false | false | Отримує причину займання істоти з події. |
-| Дані діалогового вікна | event_custom_click_dialog_view_data | any |  |  |  |  | Подією "Гравець викликає кастомний клік" |  | false | false | Отримує дані, введені гравцем у діалогове вікно. |
-| ID кастомного кліку | event_custom_click_key | text |  |  |  |  | Подією "Гравець викликає кастомний клік" |  | false | false | Отримує ідентифікатор кастомного кліку у діалоговому вікні або чаті. |
-| Нанесённый урон | event_damage | number |  |  |  |  |  |  | false | false | Получает количество единиц нанесённого урона в событии. |
-| Причина полученного урона | event_damage_cause | text |  |  |  |  |  |  | false | false | Получает причину или тип полученного урона в событии. |
-| Повідомлення при смерті | event_death_screen_message | text |  |  |  |  | Подією "Гравець помирає" |  | false | false | Отримує повідомлення, що відображається на екрані смерті. |
-| Тип перетягивания по инвентарю | event_drag_type | text |  |  |  |  | Подією "Гравець перетягує предмет в інвентарі" |  | false | false | Получает тип перетягивания предметов по открытому инвентарю цели в событии. |
-| Кількість книжкових полиць | event_enchantment_bonus | number |  |  |  |  | Подією "Гравець вибирає зачарування" |  | false | false | Отримує кількість книжкових полиць, пов'язаних з подією. |
-| Запропоноване зачарування | event_enchantment_hint | text |  |  |  |  | Подією "Гравець зачаровує предмет" |  | false | false | Отримує назву запропонованого зачарування в столі зачарувань. |
-| Необхідний рівень досвіду зачарування | event_enchantment_level_hint | number |  |  |  |  | Подією "Гравець зачаровує предмет" |  | false | false | Отримує необхідний рівень досвіду для вибраного зачарування. |
-| Пропоновані зачарування події | event_enchantment_offers | array |  | text |  |  | Подією "Гравець вибирає зачарування" |  | false | false | Отримує список пропонованих гравцю зачарувань, пов'язаних з подією. |
-| Отримані зачарування | event_enchantments_to_add | map |  |  | text | number | Подією "Гравець зачаровує предмет" |  | false | false | Отримує словник отриманих зачарувань предмета. |
-| Причина відв'язування істоти | event_entity_unleash_reason | text |  |  |  |  | Подіями відв'язування |  | false | false | Отримує причину, через яку істота була відв'язана. |
-| Тип задействованного слота | event_equipment_slot | text |  |  |  |  |  |  | false | false | Получает тип задействованного слота цели в событии. |
-| Виснаження події | event_exhaustion_amount | number |  |  |  |  | Подією "Гравець виснажується" |  | false | false | Отримує кількість отриманого виснаження. |
-| Причина виснаження | event_exhaustion_reason | text |  |  |  |  | Подією "Гравець виснажується" |  | false | false | Отримує причину виснаження. |
-| Количество опыта события | event_experience | number |  |  |  |  |  |  | false | false | Получает количество единиц опыта в событии. |
-| Причина невдалого переміщення | event_fail_move_reason | text |  |  |  |  | Подією "Гравцю не вдалося пересунутися" |  | false | false | Отримує причину невдалого переміщення. |
-| Кінцевий урон | event_final_damage | number |  |  |  |  |  |  | false | false | Отримує кінцеву кількість одиниць завданого урону в події. |
-| Причина события рыбалки | event_fish_state | text |  |  |  |  | Подією "Гравець рибалить" |  | false | false | Получает причину события рыбалки. |
-| Восполненный голод события | event_food_level | number |  |  |  |  | Подією "Зміна рівня голоду гравця" |  | false | false | Получает количество единиц восполненного голода. |
-| Старе місцеположення гравця | event_from_location | location |  |  |  |  |  |  | false | false | Отримує старе місцеположення гравця. |
-| Режим гри події | event_gamemode | text |  |  |  |  | Подією "Гравець запросив меню зміни режиму гри" |  | false | false | Отримує режим гри, пов'язаний з подією. |
-| Причина удаление висящей сущности | event_hanging_break_cause | text |  |  |  |  | Подією "Злам висячої сутності" |  | false | false | Получает причину удаления висящей сущности (картины, рамки). |
-| Количество восстановленного здоровья | event_heal_amount | number |  |  |  |  | Подією "Гравець відновлює здоров'я"<br/>Подією "Сутність відновлює здоров'я" |  | false | false | Получает количество единиц восстановленного здоровья в событии. |
-| Причина исцеления | event_heal_cause | text |  |  |  |  | Подією "Гравець відновлює здоров'я"<br/>Подією "Сутність відновлює здоров'я" |  | false | false | Получает причину восстановления здоровья в событии. |
-| Слот хот-бара у події | event_hotbar_slot | number |  |  |  |  |  |  | false | false | Отримує поточний номер слота хот-бара у події. |
-| Список натиснутих клавіш пересування | event_input_list | array |  | text |  |  | Подією "Гравець змінює натиснуті клавіші пересування"<br/>Подією "Гравець пересувається на транспорті"<br/>Подією "Гравець стрибає на транспорті" |  | false | false | Отримує список натиснутих клавіш пересування події. |
-| Тип взаимодействия события | event_interaction | text |  |  |  |  | Подією "Гравець кликає правою кнопкою"<br/>Подією "Гравець кликає лівою кнопкою"<br/>Подією "Гравець взаємодіє зі світом" |  | false | false | Получает тип взаимодействия цели в событии. |
-| Дія в інвентарі при кліку | event_inventory_action | text |  |  |  |  |  |  | false | false | Отримує поточну дію в інвентарному меню при кліку по ньому. |
-| Тип клика по инвентарю | event_inventory_click_type | text |  |  |  |  |  |  | false | false | Получает тип клика по открытому инвентарю цели в событии. |
-| Предмет события | event_item | item |  |  |  |  |  |  | false | false | Получает предмет в событии. |
-| Затримка предмета події | event_item_cooldown | number |  |  |  |  | Подією "Гравець використовує предмет із затримкою"<br/>Подією "Гравець отримує затримку для групи предметів" |  | false | false | Отримує затримку предмета події. |
-| Група предмета із затримкою | event_item_cooldown_group | text |  |  |  |  | Подією "Гравець використовує предмет із затримкою"<br/>Подією "Гравець отримує затримку для групи предметів" |  | false | false | Отримує групу предмета, на який поширюється затримка з події. |
-| Завданий предмету урон | event_item_damage | number |  |  |  |  | Подією "Гравець пошкоджує предмет" |  | false | false | Отримує кількість одиниць завданого предмету урону. |
-| Предмети події | event_items | array |  | item |  |  |  |  | false | false | Отримує всі предмети в події. |
-| Причина відштовхування | event_knockback_cause | text |  |  |  |  | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false | Отримує причину відштовхування в події. |
-| Тип відштовхування | event_knockback_event_type | text |  |  |  |  | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false | Отримує тип відштовхування в події. |
-| Вектор відштовхування | event_knockback_vector | vector |  |  |  |  | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false | Отримує вектор відштовхування в події. |
-| Сообщение события | event_message | text |  |  |  |  |  |  | false | false | Получает системное сообщение, отправленное в событии. |
-| Екіпірування | event_new_equipments | map |  |  | text | item | Подією "Гравець змінює екіпірування"<br/>Подією "Істота змінює екіпірування" |  | false | false | Отримує екіпірування з події. |
-| Новий стан поплавця | event_new_fishing_hook_state | text |  |  |  |  | Подією "Поплавець вудки змінює стан" |  | false | false | Отримує новий стан поплавця. |
-| Нове місцезнаходження гравця | event_new_location | location |  |  |  |  |  |  | false | false | Отримує нове місцезнаходження гравця. |
-| Новий ефект | event_new_potion_effect | potion |  |  |  |  | Подією "Гравець отримує ефект від вибухового зілля" |  | false | false | Отримує новий ефект події. |
-| Новий стан скарбниці | event_new_vault_state | text |  |  |  |  | Подією "Скарбниця змінює стан"<br/>Подією "Гравець змінює стан скарбниці" |  | false | false | Отримує новий стан скарбниці. |
-| Попереднє екіпірування події | event_old_equipments | map |  |  | text | item | Подією "Гравець змінює екіпірування"<br/>Подією "Істота змінює екіпірування" |  | false | false | Отримує попереднє екіпірування події. |
-| creative_plus.game_value.event_old_item.name | event_old_item | item |  |  |  |  | creative_plus.game_value.event_old_item.work_with.player_inventory_slot_change_event |  | false | false | creative_plus.game_value.event_old_item.description |
-| Попередній стан скарбниці | event_old_vault_state | text |  |  |  |  | Подією "Скарбниця змінює стан"<br/>Подією "Гравець змінює стан скарбниці" |  | false | false | Отримує попередній стан скарбниці. |
-| Процент натяжения лука/арбалета | event_power | number |  |  |  |  | Подією "Гравець стріляє"<br/>Подією "Гравець стрибає на коні" |  | false | false | Получает процент силы выполнения (натяжения лука, прыжка на коне) события. |
-| Предмет снаряда події | event_projectile_item | item |  |  |  |  | Подією "Гравець стріляє" |  | false | false | Отримує предмет снаряда події. |
-| Налагоджувальна інформація | event_query_info | text |  |  |  |  | Подією "Гравець отримує інформацію про блок"<br/>Подією "Гравець отримує інформацію про сутність" |  | false | false | Отримує налагоджувальну інформацію цільового блоку або сутності. |
-| Замінений блок | event_replaced_block | text |  |  |  |  | Подією "Гравець ставить блок" |  | false | false | Отримує ID заміненого блоку події. |
-| Рядки таблички | event_sign_lines | array |  | text |  |  | Подією "Гравець змінює табличку" |  | false | false | Отримує рядки таблички у вигляді списку. |
-| Сторона таблички | event_sign_side | text |  |  |  |  | Подією "Гравець змінює табличку" |  | false | false | Отримує сторону таблички у вигляді тексту. |
-| Слот события | event_slot | number |  |  |  |  |  |  | false | false | Получает слот в событии (не переведено - денег не хватило). |
-| Тип слота при кліку | event_slot_type | text |  |  |  |  |  |  | false | false | Отримує поточний тип слота інвентарного меню при кліку по ньому. |
-| Задействованные слоты | event_slots_involved | array |  | number |  |  | Подією "Гравець перетягує предмет в інвентарі" |  | false | false | Получает список всех задействованных слотов открытого инвентаря цели в событии. |
-| Причина телепортації | event_teleport_cause | text |  |  |  |  | Подією "Гравець телепортувався"<br/>Подією "Ендермен тікає" |  | false | false | Отримує причину телепортації у події. |
-| Кількість тіків використання предмета | event_ticks_held_for | number |  |  |  |  | Подією "Гравець перестає використовувати предмет" |  | false | false | Отримує кількість тіків використання предмета. |
-| Количество тиков пропуска времени | event_time_skip_amount | number |  |  |  |  | Подією "Пропуск часу" |  | false | false | Получает количество тиков пропуска времени в мире. |
-| Причина пропуска времени | event_time_skip_reason | text |  |  |  |  | Подією "Пропуск часу" |  | false | false | Получает причину пропуска времени в мире. |
-| Причина заміни сутності | event_transform_reason | text |  |  |  |  | Подією "Сутність замінюється іншою сутністю" |  | false | false | Отримує причину заміни сутності події. |
-| Замінені сутності події | event_transformed_entities | array |  | text |  |  | Подією "Сутність замінюється іншою сутністю" |  | false | false | Отримує замінених сутностей події. |
-| Тип дерева | event_tree_type | text |  |  |  |  | Подією "Гравець вирощує дерево"<br/>Подією "Дерево виростає" |  | false | false | Отримує тип дерева у події. |
-| Вектор швидкості | event_velocity | vector |  |  |  |  | Подією "Гравець змінив вектор швидкості" |  | false | false | Отримує вектор швидкості в події. |
-| Уровень опыта | experience_level | number | entity |  |  |  |  |  | false | false | Получает количество уровней опыта цели. |
-| Прогресс опыта | experience_progress | number | entity |  |  |  |  |  | false | false | Получает процентный прогресс текущего уровня опыта цели. |
-| Местоположение глаз | eye_location | location | entity |  |  |  |  |  | false | false | Получает местоположение цели на высоте глаз. |
-| Дистанция падения | fall_distance | number | entity |  |  |  |  |  | false | false | Получает дистанцию падения цели в блоках. |
-| Время горения | fire_ticks | number | entity |  |  |  |  |  | false | false | Получает оставшееся количество тиков горения цели. |
-| Швидкість польоту | flying_speed | number | entity |  |  |  |  |  | false | false | Отримує поточну швидкість польоту цілі (атрибут). |
-| Уровень истощения | food_exhaustion | number | entity |  |  |  |  |  | false | false | Получает уровень истощения цели, который увеличивается от выполненных действий игрока. |
-| Уровень голода | food_level | number | entity |  |  |  |  |  | false | false | Получает оставшееся количество единиц еды цели. |
-| Уровень насыщения | food_saturation | number | entity |  |  |  |  |  | false | false | Получает количество единиц насыщения едой цели, которое зависит от видов съеденной еды. |
-| Час заморозки | freeze_ticks | number | entity |  |  |  |  |  | false | false | Отримує поточний час заморозки цілі. |
-| Режим гри | gamemode | text | entity |  |  |  | Гравцями |  | false | false | Отримує поточний режим гри гравця. |
-| Выбранный слот в хот-баре | held_slot | number | entity |  |  |  |  |  | false | false | Получает выбранный слот хот-бара цели. |
-| Центр хітбоксу | hitbox_midpoint_location | location | entity |  |  |  |  |  | false | false | Отримує місцезнаходження центру хітбоксу цілі. |
-| Предметы в хот-баре | hotbar_items | array | entity | item |  |  |  |  | false | false | Получает предметы в хот-баре цели. |
-| Тривалість простою | idle_duration | number | entity |  |  |  |  |  | false | false | Отримує поточну тривалість простою гравця. |
-| Предметы в инвентаре | inventory_items | array | entity | item |  |  |  |  | false | false | Получает предметы в инвентаре цели (включая хот-бар). |
-| Время бессмертия | invulnerability_ticks | number | entity |  |  |  |  |  | false | false | Получает оставшееся количество тиков неуязвимости цели. |
-| Прогресс использования предмета | item_usage_progress | number | entity |  |  |  |  |  | false | false | Получает процентный прогресс использования целью предмета в руке, например еды. |
-| Остання причина урону | last_damage_cause | text | entity |  |  |  |  |  | false | false | Отримує останню причину урону цілі. |
-| Місцеположення останньої смерті | last_death_location | location | entity |  |  |  |  |  | false | false | Отримує місцеположення останньої смерті гравця. |
-| Поводырь | lead_holder | text | entity |  |  |  |  |  | false | false | Получает UUID сущности, которая ведёт цель на поводке. |
-| Местоположение | location | location | entity |  |  |  |  |  | false | false | Получает местоположение цели. |
-| Ведуча рука | main_hand | text | player |  |  |  | Гравцем |  | false | false | Отримує ведучу руку гравця. |
-| Предмет в ведущей руке | main_hand_item | item | entity |  |  |  |  |  | false | false | Получает предмет в ведущей руке цели. |
-| Максимальное здоровье | max_health | number | entity |  |  |  |  |  | false | false | Получает максимальное количество единиц здоровья цели. |
-| Загальний час невразливості | max_invulnerability_ticks | number | entity |  |  |  |  |  | false | false | Отримує кількість тіків, на яку видана невразливість для цілі. |
-| Кількість торгів Жителя | merchant_recipe_count | number | entity |  |  |  |  |  | false | false | Отримує кількість торгів Жителя. |
-| Имя | name | text | entity |  |  |  |  |  | false | false | Получает имя цели. |
-| Предмет во второй руке | off_hand_item | item | entity |  |  |  |  |  | false | false | Получает предмет во второстепенной руке цели. |
-| Кастомний ID відкритого інвентаря | open_inventory_custom_id | text | entity |  |  |  | Гравцями |  | false | false | Отримує кастомний ID відкритого інвентаря цілі. |
-| Розмір відкритого інвентаря | open_inventory_size | number | entity |  |  |  | Гравцями |  | false | false | Отримує розмір поточного відкритого інвентаря. |
-| Заголовок открытого инвентаря | open_inventory_title | text | entity |  |  |  | Гравцями |  | false | false | Получает заголовок открытого инвентаря цели. |
-| Тип відкритого інвентаря | open_inventory_type | text | entity |  |  |  | Гравцями |  | false | false | Отримує тип відкритого інвентаря цілі. |
-| Місцезнаходження першої появи | origin | location | both |  |  |  |  |  | false | false | Отримує місцезнаходження першої появи цілі. |
-| UUID власника світу | owner_uuid | text |  |  |  |  |  |  | false | false | Отримує UUID власника світу. |
-| Відсоток використання процесора частинками | particle_cpu_usage | number |  |  |  |  |  |  | false | false | Отримує відсоток навантаження процесора сервера створенням частинок. |
-| Видимість частинок | particle_visibility | text | entity |  |  |  | Гравцями |  | false | false | Отримує значення налаштувань видимості частинок гравця. |
-| Пассажиры | passengers | array | entity | text |  |  |  |  | false | false | Получает UUID сущностей, которые едут на цели. |
-| Пинг игрока | ping | number | entity |  |  |  |  |  | false | false | Получает задержку между игроком и сервером в миллисекундах. |
-| Вертикальный поворот | pitch | number | entity |  |  |  |  |  | false | false | Получает вертикальный (вверх/вниз) поворот (pitch) цели. |
-| Количество игроков в мире | player_count | number |  |  |  |  |  |  | false | false | Получает количество игроков, находящихся в мире. |
-| Список ендер-перлин | player_ender_pearls | array | entity | text |  |  | Гравцями |  | false | false | Отримує список ендер-перлин гравця, що не приземлились. |
-| Предмети в ендер-скрині | player_enderchest_items | array | player | item |  |  | Гравцями |  | false | false | Отримує предмети в ендер-скрині цілі. |
-| Поза істоти | pose | text | entity |  |  |  |  |  | false | false | Отримує позу істоти. |
-| Эффекты зелий | potion_effects | array | entity | potion |  |  |  |  | false | false | Получает действующие эффекты зелий цели. |
-| UUID власника снаряду | projectile_owner_uuid | text | entity |  |  |  | Будь-якими снарядами |  | false | false | Отримує UUID власника снаряду. |
-| Вектор руху снаряда | projectile_power | vector | entity |  |  |  | Вогняними кулями<br/>Зарядами дракона<br/>Головами Іссушувача |  | false | false | Отримує вектор руху снаряда. |
-| Версия протокола клиента | protocol_version | number | entity |  |  |  |  |  | false | false | Получает версию протокола клиента игрока. |
-| Оставшийся воздух | remaining_air | number | entity |  |  |  |  |  | false | false | Получает оставшееся количество тиков воздуха цели. |
-| Заголовки відповіді на веб-запит | response_headers | map |  |  | text | any | Подією "Відповідь від сервера" |  | false | false | Отримує заголовки відповіді на надісланий веб-запит. |
-| Предмет на седле | saddle_item | item | entity |  |  |  | Свинями<br/>Кіньми<br/>Ламами |  | false | false | Получает седло или ковёр, надетые на цель. |
-| Швидкість регенерації від насичення | saturated_regen_rate | number | entity |  |  |  |  |  | false | false | Отримує швидкість регенерації гравця з насиченням. |
-| Количество выбранных объектов | selection_size | number |  |  |  |  |  |  | false | false | Получает количество целей в выборке. |
-| Имена выбранных объектов | selection_target_names | array |  | text |  |  |  |  | false | false | Получает имя каждой цели в выборке. |
-| UUID выбранных объектов | selection_target_uuids | array |  | text |  |  |  |  | false | false | Получает UUID каждой цели в выборке. |
-| Текущее время сервера | server_current_tick | number |  |  |  |  |  |  | false | false | Получает текущее время сервера в тиках. |
-| TPS сервера | server_tps | number |  |  |  |  |  |  | false | false | Получает количество Тиков За Секунду (TPS), которое может обработать сервер. |
-| Местоположение спавна | spawn_location | location |  |  |  |  |  |  | false | false | Получает местоположение точки появления цели. |
-| Причина спавну | spawn_reason | text | entity |  |  |  |  |  | false | false | Отримує причину спавну цілі. |
-| creative_plus.game_value.start_reload_tick.name | start_reload_tick | number |  |  |  |  |  |  | false | false | creative_plus.game_value.start_reload_tick.description |
-| Швидкість голодування | starvation_rate | number | entity |  |  |  |  |  | false | false | Отримує швидкість голодування цілі. |
-| Прямолінійний рух транспорту | steer_forward | number | entity |  |  |  |  |  | false | false | Отримує значення руху транспорту вперед або назад. |
-| Рух транспорту вбік | steer_sideways | number | entity |  |  |  |  |  | false | false | Отримує значення руху транспорту вліво або вправо. |
-| Сторона целевого блока | target_block_face | text | entity |  |  |  |  |  | false | false | Получает как направление стороны блока, на которую смотрит цель. |
-| Местоположение целевого блока | target_block_location | location | entity |  |  |  |  |  | false | false | Получает местоположение блока, на который смотрит цель. |
-| Местоположение целевой жидкости | target_fluid_location | location | entity |  |  |  |  |  | false | false | Получает местоположение жидкости, на которую смотрит цель. |
-| Ціль для атаки | targeted_entity | text | entity |  |  |  |  |  | false | false | Отримує поточну ціль для атаки моба. |
-| UNIX-время | timestamp | number |  |  |  |  |  |  | false | false | Получает текущее время как одно число в миллисекундах. |
-| Швидкість регенерації без насичення | unsaturated_regen_rate | number | entity |  |  |  |  |  | false | false | Отримує швидкість регенерації гравця без насичення. |
-| Посилання веб-запиту | url | text |  |  |  |  | Подією "Відповідь від сервера" |  | false | false | Отримує посилання веб-запиту. |
-| Ответ на веб-запрос | url_response | text |  |  |  |  | Подією "Відповідь від сервера" |  | false | false | Получает ответ на отправленный веб-запрос. |
-| Код відповіді на веб-запит | url_response_code | number |  |  |  |  | Подією "Відповідь від сервера" |  | false | false | Отримує код відповіді на надісланий веб-запит. |
-| Язык клиента игрока | user_locale | text | entity |  |  |  | Гравцями |  | false | false | Получает текущий язык клиента игрока. |
-| UUID | uuid | text | entity |  |  |  |  |  | false | false | Получает универсальный уникальный идентификатор (UUID) цели. |
-| Транспорт | vehicle | text | entity |  |  |  |  |  | false | false | Получает UUID сущности, которую оседлала цель. |
-| Вектор скорости | velocity | vector | entity |  |  |  |  |  | false | false | Получает вектор скорости движения цели (не ходьбы, а внешних сил). |
-| Швидкість ходьби | walking_speed | number | entity |  |  |  |  |  | false | false | Отримує поточну швидкість ходьби цілі (атрибут). |
-| Тривалість ясної погоди у світі | world_clear_weather_duration | number |  |  |  |  |  |  | false | false | Отримує поточну тривалість ясної погоди у світі. |
-| Час існування світу | world_game_time | number |  |  |  |  |  |  | false | false | Отримує час існування світу в тіках. |
-| ID світу | world_id | text |  |  |  |  |  |  | false | false | Отримує ідентифікатор світу. |
-| Поточна фаза місяця | world_moon_phase | text |  |  |  |  |  |  | false | false | Отримує поточну фазу місяця у світі. |
-| Розмір світу | world_size | number |  |  |  |  |  |  | false | false | Отримує поточний розмір світу у чанках. |
-| Тривалість дощу у світі | world_thunder_duration | number |  |  |  |  |  |  | false | false | Отримує поточну тривалість дощу у світі. |
-| Текущее время мира | world_time | number |  |  |  |  |  |  | false | false | Получает текущее время мира в тиках. |
-| Поточна погода світу | world_weather | text |  |  |  |  |  |  | false | false | Отримує тип поточної погоди світу. |
-| Тривалість поточної погоди світу | world_weather_duration | number |  |  |  |  |  |  | false | false | Отримує тривалість поточної погоди світу. |
-| Координата X | x_coordinate | number | entity |  |  |  |  |  | false | false | Получает координату X местоположения цели. |
-| Координата Y | y_coordinate | number | entity |  |  |  |  |  | false | false | Получает координату Y местоположения цели. |
-| Горизонтальный поворот | yaw | number | entity |  |  |  |  |  | false | false | Получает вертикальный (влево/вправо) поворот (yaw) цели. |
-| Координата Z | z_coordinate | number | entity |  |  |  |  |  | false | false | Получает координату Z местоположения цели. |
+| Icon | ID | Name | Description | Category | Works with | Additional info | Unused | Deprecated | Selector | Element type | Key type | Value type |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ![absorption_health](../../icons/game_values/absorption_health.png) | absorption_health | Дополнительное здоровье | Получает количество единиц поглощательного (золотого) здоровья цели. | number |  |  | false | false | entity |  |  |  |
+| ![active_item_used_time](../../icons/game_values/active_item_used_time.png) | active_item_used_time | Час використання предмета | Отримує час використання предмета в руці. | number |  |  | false | false | entity |  |  |  |
+| ![age](../../icons/game_values/age.png) | age | Вік цілі | Отримує вік цілі у тіках. | number |  |  | false | false | entity |  |  |  |
+| ![all_entities_names](../../icons/game_values/all_entities_names.png) | all_entities_names | Імена всіх сутностей | Отримує імена всіх сутностей, що перебувають у світі. | array |  |  | false | false |  | text |  |  |
+| ![all_entities_uuids](../../icons/game_values/all_entities_uuids.png) | all_entities_uuids | UUID всіх сутностей | Отримує UUID всіх сутностей, що перебувають у світі. | array |  |  | false | false |  | text |  |  |
+| ![all_players_names](../../icons/game_values/all_players_names.png) | all_players_names | Імена всіх гравців | Отримує імена всіх гравців, що перебувають у світі. | array |  |  | false | false |  | text |  |  |
+| ![all_players_uuids](../../icons/game_values/all_players_uuids.png) | all_players_uuids | UUID всіх гравців | Отримує UUID всіх гравців, що перебувають у світі. | array |  |  | false | false |  | text |  |  |
+| ![anticheat_check](../../icons/game_values/event_anticheat_check.png) | anticheat_check | Перевірка античита | Отримує назву перевірки античита, на якій засікли гравця. | text | Подією "Античит засік гравця" |  | false | false |  |  |  |  |
+| ![anticheat_violations](../../icons/game_values/event_anticheat_violations.png) | anticheat_violations | Спрацювань античита | Отримує кількість спрацювань перевірки античита у гравця. | number | Подією "Античит засік гравця" |  | false | false |  |  |  |  |
+| ![armor_items](../../icons/game_values/armor_items.png) | armor_items | Предметы брони | Получает предметы в слотах брони цели. | array |  |  | false | false | entity | item |  |  |
+| ![armor_points](../../icons/game_values/armor_points.png) | armor_points | Очки защиты | Получает количество единиц брони цели, которое можно изменить предметами. | number |  |  | false | false | entity |  |  |  |
+| ![armor_toughness](../../icons/game_values/armor_toughness.png) | armor_toughness | Твёрдость брони | Получает количество единиц твёрдости брони цели, которое можно изменить предметами. | number |  |  | false | false | entity |  |  |  |
+| ![arrows_in_body](../../icons/game_values/arrows_in_body.png) | arrows_in_body | Кількість стріл у тілі | Отримує кількість стріл у тілі цілі. | number |  |  | false | false | entity |  |  |  |
+| ![attached_leads](../../icons/game_values/attached_leads.png) | attached_leads | Привязанные сущности | Получает UUID сущностей, которые привязаны поводком к цели. | array |  |  | false | false | entity | text |  |  |
+| ![attack_cooldown_strength](../../icons/game_values/attack_cooldown_strength.png) | attack_cooldown_strength | Кулдаун атаки | Отримує поточний кулдаун атаки цілі. | number |  |  | false | false | entity |  |  |  |
+| ![attack_cooldown_ticks](../../icons/game_values/attack_cooldown_ticks.png) | attack_cooldown_ticks | Кулдаун атаки у тіках | Отримує поточний кулдаун атаки цілі у тіках. | number |  |  | false | false | entity |  |  |  |
+| ![attack_damage](../../icons/game_values/attack_damage.png) | attack_damage | Урон от атаки | Получает количество единиц урона от атак цели, которое можно изменить предметами. | number |  |  | false | false | entity |  |  |  |
+| ![attack_speed](../../icons/game_values/attack_speed.png) | attack_speed | Скорость атаки | Получает скорость атаки цели, которую можно изменить предметами. | number |  |  | false | false | entity |  |  |  |
+| ![block_beneath](../../icons/game_values/block_beneath.png) | block_beneath | Місцезнаходження блоку під ціллю | Отримує місцезнаходження блоку під ціллю. | location |  |  | false | false | entity |  |  |  |
+| ![blocks_beneath](../../icons/game_values/blocks_beneath.png) | blocks_beneath | Блоки під ціллю | Отримує місцезнаходження всіх блоків, що знаходяться під ціллю. | array |  |  | false | false | entity | location |  |  |
+| ![body_yaw](../../icons/game_values/body_yaw.png) | body_yaw | Поворот тіла | Отримує поворот тіла цілі. | number |  |  | false | false | entity |  |  |  |
+| ![cape_location](../../icons/game_values/cape_location.png) | cape_location | Місцезнаходження плаща | Отримує місцезнаходження плаща гравця. | location | Гравцями |  | false | false | entity |  |  |  |
+| ![cardinal_direction](../../icons/game_values/cardinal_direction.png) | cardinal_direction | Кардинальное направление | Получает кардинальное направление (север, запад, юг, восток) цели. | text |  |  | false | false | entity |  |  |  |
+| ![chat_visibility](../../icons/game_values/chat_visibility.png) | chat_visibility | Видимість чату | Отримує статус видимості чату гравця. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![client_brand_name](../../icons/game_values/client_brand_name.png) | client_brand_name | Название клиента игрока | Получает название клиента игрока. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![client_view_distance](../../icons/game_values/client_view_distance.png) | client_view_distance | Дальність прорисовки гравця | Отримує дальність прорисовки гравця, встановлену в налаштуваннях гри. | number | Гравцями |  | false | false | entity |  |  |  |
+| ![clientside_locale](../../icons/game_values/clientside_locale.png) | clientside_locale | Мова клієнта гравця | Отримує мову клієнта гравця. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![cpu_usage](../../icons/game_values/cpu_usage.png) | cpu_usage | Процент использования процессора | Получает процент загрузки миром процессора сервера. | number |  |  | false | false |  |  |  |  |
+| ![currency_transaction_amount](../../icons/game_values/event_currency_transaction_amount.png) | currency_transaction_amount | Кількість смарагдів у транзакції | Отримує кількість витрачених смарагдів у транзакції. | text | Подією "Гравець здійснює транзакцію" |  | false | false |  |  |  |  |
+| ![currency_transaction_reason](../../icons/game_values/event_currency_transaction_reason.png) | currency_transaction_reason | Причина запиту транзакції | Отримує причину запиту транзакції в смарагдах. | text | Подією "Гравець здійснює транзакцію" |  | false | false |  |  |  |  |
+| ![currency_transaction_result](../../icons/game_values/event_currency_transaction_result.png) | currency_transaction_result | Результат транзакції | Отримує результат здійсненої транзакції. | text | Подією "Гравець здійснює транзакцію" |  | false | false |  |  |  |  |
+| ![current_health](../../icons/game_values/current_health.png) | current_health | Текущее здоровье | Получает оставшееся количество единиц здоровья цели. | number |  |  | false | false | entity |  |  |  |
+| ![current_input_list](../../icons/game_values/current_input_list.png) | current_input_list | Поточні натиснуті клавіші пересування | Отримує натиснуті на даний момент клавіші пересування. | array | Гравцями |  | false | false | entity | text |  |  |
+| ![cursor_item](../../icons/game_values/cursor_item.png) | cursor_item | Предмет на курсоре | Получает предмет на курсоре цели (используется при переносе предметов в инвентаре). | item |  |  | false | false | entity |  |  |  |
+| ![custom_inventory_items](../../icons/game_values/custom_inventory_items.png) | custom_inventory_items | Список предметов в открытом инвентаре | Возвращает список, содержащий предметы, которые находятся в текущем открытом инвентарном меню. | array |  |  | false | false | player | item |  |  |
+| ![death_screen_score](../../icons/game_values/death_screen_score.png) | death_screen_score | Кількість очок | Отримує кількість очок, що відображаються на екрані смерті. | number | Гравцями |  | false | false | entity |  |  |  |
+| ![delay_reload_count](../../icons/game_values/delay_reload_count.png) | delay_reload_count | creative_plus.game_value.delay_reload_count.name | creative_plus.game_value.delay_reload_count.description | number |  |  | false | false |  |  |  |  |
+| ![direction_of_view](../../icons/game_values/direction_of_view.png) | direction_of_view | Направление взгляда | Получает вектор направления взгляда цели. | vector |  |  | false | false | entity |  |  |  |
+| ![display_entity_left_rotation](../../icons/game_values/display_entity_left_rotation.png) | display_entity_left_rotation | Лівий поворот візуалізатора | Отримує лівий поворот візуалізатора у вигляді вектора. | vector | Візуалізаторами |  | false | false | entity |  |  |  |
+| ![display_entity_right_rotation](../../icons/game_values/display_entity_right_rotation.png) | display_entity_right_rotation | Правий поворот візуалізатора | Отримує правий поворот візуалізатора у вигляді вектора. | vector | Візуалізаторами |  | false | false | entity |  |  |  |
+| ![display_entity_scale](../../icons/game_values/display_entity_scale.png) | display_entity_scale | Масштаб візуалізатора | Отримує масштаб візуалізатора у вигляді вектора. | vector | Візуалізаторами |  | false | false | entity |  |  |  |
+| ![display_entity_translation](../../icons/game_values/display_entity_translation.png) | display_entity_translation | Зміщення візуалізатора | Отримує зміщення візуалізатора у вигляді вектора. | vector | Візуалізаторами |  | false | false | entity |  |  |  |
+| ![display_name](../../icons/game_values/display_name.png) | display_name | Відображуване ім'я | Отримує відображуване ім'я цілі. | text |  |  | false | false | entity |  |  |  |
+| ![enchantment_seed](../../icons/game_values/enchantment_seed.png) | enchantment_seed | Поточний сід зачарувань | Отримує поточний сід зачарувань гравця. | number |  |  | false | false | entity |  |  |  |
+| ![entity_fuse_ticks](../../icons/game_values/entity_fuse_ticks.png) | entity_fuse_ticks | Час до вибуху | Отримує час до вибуху сутності. | number | Крипером<br/>Динамітом<br/>Феєрверками |  | false | false | entity |  |  |  |
+| ![entity_height](../../icons/game_values/entity_height.png) | entity_height | Висота хітбоксу | Отримує розмір хітбоксу цілі по осі Y. | number |  |  | false | false | entity |  |  |  |
+| ![entity_item](../../icons/game_values/entity_item.png) | entity_item | Предмет сущности | Получает предметную форму цели. | item |  |  | false | false | entity |  |  |  |
+| ![entity_pathfinder_point_index](../../icons/game_values/entity_pathfinder_point_index.png) | entity_pathfinder_point_index | Індекс точки на шляху | Отримує поточний індекс точки шляху, по якому рухається моб. | number |  |  | false | false | entity |  |  |  |
+| ![entity_pathfinder_points](../../icons/game_values/entity_pathfinder_points.png) | entity_pathfinder_points | Поточний шлях | Отримує список усіх точок, які складають поточний шлях мобу. | array |  |  | false | false | entity | location |  |  |
+| ![entity_pick_item_stack](../../icons/game_values/entity_pick_item_stack.png) | entity_pick_item_stack | Отримуваний предмет істоти | Отримує предмет, що видається при натисканні коліщатком (СКМ) по істоті. | item |  |  | false | false | entity |  |  |  |
+| ![entity_ticks_lived](../../icons/game_values/entity_ticks_lived.png) | entity_ticks_lived | Час життя цілі | Отримує кількість тіків існування цілі. | number |  |  | false | false | entity |  |  |  |
+| ![entity_type](../../icons/game_values/entity_type.png) | entity_type | Тип сущности | Получает тип сущности цели. | text |  |  | false | false | entity |  |  |  |
+| ![entity_width_x](../../icons/game_values/entity_width_x.png) | entity_width_x | Ширина хітбоксу | Отримує розмір хітбоксу цілі по осі X. | number |  |  | false | false | entity |  |  |  |
+| ![entity_width_z](../../icons/game_values/entity_width_z.png) | entity_width_z | Довжина хітбоксу | Отримує розмір хітбоксу цілі по осі Z. | number |  |  | false | false | entity |  |  |  |
+| ![event_added_items](../../icons/game_values/event_added_items.png) | event_added_items | Розподілені предмети | Видає словник розподілених по слотах предметів за допомогою ЛКМ/ПКМ або дублювання за допомогою колісця миші. | map | Подією "Гравець перетягує предмет в інвентарі" |  | false | false |  |  | number | item |
+| ![event_advancement_tab_name](../../icons/game_values/event_advancement_tab_name.png) | event_advancement_tab_name | Ім'я вкладки досягнень | Отримує ім'я поточної вкладки досягнень події. | text | Подією "Гравець змінив вкладку в меню досягнень" |  | true | false |  |  |  |  |
+| ![event_anvil_damage_state](../../icons/game_values/event_anvil_damage_state.png) | event_anvil_damage_state | Новий стан поломки ковадла | Отримує новий стан поломки ковадла. | text | Подією "Гравець пошкоджує ковадло" |  | false | false |  |  |  |  |
+| ![event_anvil_rename_input](../../icons/game_values/event_anvil_rename_input.png) | event_anvil_rename_input | Нова назва предмета | Отримує нову назву предмета на ковадлі. | text | Подією "Гравець перейменовує предмет" |  | false | false |  |  |  |  |
+| ![event_block](../../icons/game_values/event_block.png) | event_block | Блок події | Отримує ID блоку, пов'язаного з подією. | text |  |  | false | false |  |  |  |  |
+| ![event_block_break_progress](../../icons/game_values/event_block_break_progress.png) | event_block_break_progress | Прогрес поломки блока | Отримує прогрес поломки блока, пов'язаного з подією. | number | Оновленням поломки блока гравцем<br/>Оновленням поломки блока істотою |  | false | false |  |  |  |  |
+| ![event_block_face](../../icons/game_values/event_block_face.png) | event_block_face | Сторона блока события | Получает как направления сторону блока, задетую в событии. | text | Подіями взаємодії<br/>Подіями встановлення або зламу блоків<br/>Подією "Влучення снаряда гравця"<br/>Подіями поршнів |  | false | false |  |  |  |  |
+| ![event_block_location](../../icons/game_values/event_block_location.png) | event_block_location | Местоположение блока события | Получает местоположение блока в событии. | location |  |  | false | false |  |  |  |  |
+| ![event_blocks_involved](../../icons/game_values/event_blocks_involved.png) | event_blocks_involved | Задействованные блоки события | Получает список местоположений всех задействованных блоков в событии. | array | Подіями вибухів<br/>Подіями поршнів |  | false | false |  | location |  |  |
+| ![event_chat_message](../../icons/game_values/event_chat_message.png) | event_chat_message | Сообщение чата | Получает сообщение, отправленное целью в событии. | text | Подією "Гравець пише повідомлення до чату" |  | false | false |  |  |  |  |
+| ![event_close_inventory_cause](../../icons/game_values/event_close_inventory_cause.png) | event_close_inventory_cause | Причина закрытия инвентаря | Получает причину закрытия открытого инвентаря цели в событии. | text | Подією "Гравець закриває інвентар" |  | false | false |  |  |  |  |
+| ![event_combust_duration](../../icons/game_values/event_combust_duration.png) | event_combust_duration | Тривалість горіння істоти | Отримує тривалість горіння істоти з події. | number | Подією "Гравець загорівся"<br/>Подією "Істота загорілась" |  | false | false |  |  |  |  |
+| ![event_combust_reason](../../icons/game_values/event_combust_reason.png) | event_combust_reason | Причина займання істоти | Отримує причину займання істоти з події. | text | Подією "Гравець загорівся"<br/>Подією "Істота загорілася" |  | false | false |  |  |  |  |
+| ![event_custom_click_dialog_view_data](../../icons/game_values/event_custom_click_dialog_view_data.png) | event_custom_click_dialog_view_data | Дані діалогового вікна | Отримує дані, введені гравцем у діалогове вікно. | any | Подією "Гравець викликає кастомний клік" |  | false | false |  |  |  |  |
+| ![event_custom_click_key](../../icons/game_values/event_custom_click_key.png) | event_custom_click_key | ID кастомного кліку | Отримує ідентифікатор кастомного кліку у діалоговому вікні або чаті. | text | Подією "Гравець викликає кастомний клік" |  | false | false |  |  |  |  |
+| ![event_damage](../../icons/game_values/event_damage.png) | event_damage | Нанесённый урон | Получает количество единиц нанесённого урона в событии. | number |  |  | false | false |  |  |  |  |
+| ![event_damage_cause](../../icons/game_values/event_damage_cause.png) | event_damage_cause | Причина полученного урона | Получает причину или тип полученного урона в событии. | text |  |  | false | false |  |  |  |  |
+| ![event_death_screen_message](../../icons/game_values/event_death_screen_message.png) | event_death_screen_message | Повідомлення при смерті | Отримує повідомлення, що відображається на екрані смерті. | text | Подією "Гравець помирає" |  | false | false |  |  |  |  |
+| ![event_drag_type](../../icons/game_values/event_drag_type.png) | event_drag_type | Тип перетягивания по инвентарю | Получает тип перетягивания предметов по открытому инвентарю цели в событии. | text | Подією "Гравець перетягує предмет в інвентарі" |  | false | false |  |  |  |  |
+| ![event_enchantment_bonus](../../icons/game_values/event_enchantment_bonus.png) | event_enchantment_bonus | Кількість книжкових полиць | Отримує кількість книжкових полиць, пов'язаних з подією. | number | Подією "Гравець вибирає зачарування" |  | false | false |  |  |  |  |
+| ![event_enchantment_hint](../../icons/game_values/event_enchantment_hint.png) | event_enchantment_hint | Запропоноване зачарування | Отримує назву запропонованого зачарування в столі зачарувань. | text | Подією "Гравець зачаровує предмет" |  | false | false |  |  |  |  |
+| ![event_enchantment_level_hint](../../icons/game_values/event_enchantment_level_hint.png) | event_enchantment_level_hint | Необхідний рівень досвіду зачарування | Отримує необхідний рівень досвіду для вибраного зачарування. | number | Подією "Гравець зачаровує предмет" |  | false | false |  |  |  |  |
+| ![event_enchantment_offers](../../icons/game_values/event_enchantment_offers.png) | event_enchantment_offers | Пропоновані зачарування події | Отримує список пропонованих гравцю зачарувань, пов'язаних з подією. | array | Подією "Гравець вибирає зачарування" |  | false | false |  | text |  |  |
+| ![event_enchantments_to_add](../../icons/game_values/event_enchantments_to_add.png) | event_enchantments_to_add | Отримані зачарування | Отримує словник отриманих зачарувань предмета. | map | Подією "Гравець зачаровує предмет" |  | false | false |  |  | text | number |
+| ![event_entity_unleash_reason](../../icons/game_values/event_entity_unleash_reason.png) | event_entity_unleash_reason | Причина відв'язування істоти | Отримує причину, через яку істота була відв'язана. | text | Подіями відв'язування |  | false | false |  |  |  |  |
+| ![event_equipment_slot](../../icons/game_values/event_equipment_slot.png) | event_equipment_slot | Тип задействованного слота | Получает тип задействованного слота цели в событии. | text |  |  | false | false |  |  |  |  |
+| ![event_exhaustion_amount](../../icons/game_values/event_exhaustion_amount.png) | event_exhaustion_amount | Виснаження події | Отримує кількість отриманого виснаження. | number | Подією "Гравець виснажується" |  | false | false |  |  |  |  |
+| ![event_exhaustion_reason](../../icons/game_values/event_exhaustion_reason.png) | event_exhaustion_reason | Причина виснаження | Отримує причину виснаження. | text | Подією "Гравець виснажується" |  | false | false |  |  |  |  |
+| ![event_experience](../../icons/game_values/event_experience.png) | event_experience | Количество опыта события | Получает количество единиц опыта в событии. | number |  |  | false | false |  |  |  |  |
+| ![event_fail_move_reason](../../icons/game_values/event_fail_move_reason.png) | event_fail_move_reason | Причина невдалого переміщення | Отримує причину невдалого переміщення. | text | Подією "Гравцю не вдалося пересунутися" |  | false | false |  |  |  |  |
+| ![event_final_damage](../../icons/game_values/event_final_damage.png) | event_final_damage | Кінцевий урон | Отримує кінцеву кількість одиниць завданого урону в події. | number |  |  | false | false |  |  |  |  |
+| ![event_fish_state](../../icons/game_values/event_fish_state.png) | event_fish_state | Причина события рыбалки | Получает причину события рыбалки. | text | Подією "Гравець рибалить" |  | false | false |  |  |  |  |
+| ![event_food_level](../../icons/game_values/event_food_level.png) | event_food_level | Восполненный голод события | Получает количество единиц восполненного голода. | number | Подією "Зміна рівня голоду гравця" |  | false | false |  |  |  |  |
+| ![event_from_location](../../icons/game_values/event_from_location.png) | event_from_location | Старе місцеположення гравця | Отримує старе місцеположення гравця. | location |  |  | false | false |  |  |  |  |
+| ![event_gamemode](../../icons/game_values/event_gamemode.png) | event_gamemode | Режим гри події | Отримує режим гри, пов'язаний з подією. | text | Подією "Гравець запросив меню зміни режиму гри" |  | false | false |  |  |  |  |
+| ![event_hanging_break_cause](../../icons/game_values/event_hanging_break_cause.png) | event_hanging_break_cause | Причина удаление висящей сущности | Получает причину удаления висящей сущности (картины, рамки). | text | Подією "Злам висячої сутності" |  | false | false |  |  |  |  |
+| ![event_heal_amount](../../icons/game_values/event_heal_amount.png) | event_heal_amount | Количество восстановленного здоровья | Получает количество единиц восстановленного здоровья в событии. | number | Подією "Гравець відновлює здоров'я"<br/>Подією "Сутність відновлює здоров'я" |  | false | false |  |  |  |  |
+| ![event_heal_cause](../../icons/game_values/event_heal_cause.png) | event_heal_cause | Причина исцеления | Получает причину восстановления здоровья в событии. | text | Подією "Гравець відновлює здоров'я"<br/>Подією "Сутність відновлює здоров'я" |  | false | false |  |  |  |  |
+| ![event_hotbar_slot](../../icons/game_values/event_hotbar_slot.png) | event_hotbar_slot | Слот хот-бара у події | Отримує поточний номер слота хот-бара у події. | number |  |  | false | false |  |  |  |  |
+| ![event_input_list](../../icons/game_values/event_input_list.png) | event_input_list | Список натиснутих клавіш пересування | Отримує список натиснутих клавіш пересування події. | array | Подією "Гравець змінює натиснуті клавіші пересування"<br/>Подією "Гравець пересувається на транспорті"<br/>Подією "Гравець стрибає на транспорті" |  | false | false |  | text |  |  |
+| ![event_interaction](../../icons/game_values/event_block_interact_action.png) | event_interaction | Тип взаимодействия события | Получает тип взаимодействия цели в событии. | text | Подією "Гравець кликає правою кнопкою"<br/>Подією "Гравець кликає лівою кнопкою"<br/>Подією "Гравець взаємодіє зі світом" |  | false | false |  |  |  |  |
+| ![event_inventory_action](../../icons/game_values/event_inventory_action.png) | event_inventory_action | Дія в інвентарі при кліку | Отримує поточну дію в інвентарному меню при кліку по ньому. | text |  |  | false | false |  |  |  |  |
+| ![event_inventory_click_type](../../icons/game_values/event_inventory_click_type.png) | event_inventory_click_type | Тип клика по инвентарю | Получает тип клика по открытому инвентарю цели в событии. | text |  |  | false | false |  |  |  |  |
+| ![event_item](../../icons/game_values/event_item.png) | event_item | Предмет события | Получает предмет в событии. | item |  |  | false | false |  |  |  |  |
+| ![event_item_cooldown](../../icons/game_values/event_item_cooldown.png) | event_item_cooldown | Затримка предмета події | Отримує затримку предмета події. | number | Подією "Гравець використовує предмет із затримкою"<br/>Подією "Гравець отримує затримку для групи предметів" |  | false | false |  |  |  |  |
+| ![event_item_cooldown_group](../../icons/game_values/event_item_cooldown_group.png) | event_item_cooldown_group | Група предмета із затримкою | Отримує групу предмета, на який поширюється затримка з події. | text | Подією "Гравець використовує предмет із затримкою"<br/>Подією "Гравець отримує затримку для групи предметів" |  | false | false |  |  |  |  |
+| ![event_item_damage](../../icons/game_values/event_item_damage.png) | event_item_damage | Завданий предмету урон | Отримує кількість одиниць завданого предмету урону. | number | Подією "Гравець пошкоджує предмет" |  | false | false |  |  |  |  |
+| ![event_items](../../icons/game_values/event_items.png) | event_items | Предмети події | Отримує всі предмети в події. | array |  |  | false | false |  | item |  |  |
+| ![event_knockback_cause](../../icons/game_values/event_knockback_cause.png) | event_knockback_cause | Причина відштовхування | Отримує причину відштовхування в події. | text | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false |  |  |  |  |
+| ![event_knockback_event_type](../../icons/game_values/event_knockback_event_type.png) | event_knockback_event_type | Тип відштовхування | Отримує тип відштовхування в події. | text | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false |  |  |  |  |
+| ![event_knockback_vector](../../icons/game_values/event_knockback_vector.png) | event_knockback_vector | Вектор відштовхування | Отримує вектор відштовхування в події. | vector | Подією "Гравець відштовхується"<br/>Подією "Істота відштовхується" |  | false | false |  |  |  |  |
+| ![event_message](../../icons/game_values/event_message.png) | event_message | Сообщение события | Получает системное сообщение, отправленное в событии. | text |  |  | false | false |  |  |  |  |
+| ![event_new_equipments](../../icons/game_values/event_new_equipments.png) | event_new_equipments | Екіпірування | Отримує екіпірування з події. | map | Подією "Гравець змінює екіпірування"<br/>Подією "Істота змінює екіпірування" |  | false | false |  |  | text | item |
+| ![event_new_fishing_hook_state](../../icons/game_values/event_new_fishing_hook_state.png) | event_new_fishing_hook_state | Новий стан поплавця | Отримує новий стан поплавця. | text | Подією "Поплавець вудки змінює стан" |  | false | false |  |  |  |  |
+| ![event_new_location](../../icons/game_values/event_new_location.png) | event_new_location | Нове місцезнаходження гравця | Отримує нове місцезнаходження гравця. | location |  |  | false | false |  |  |  |  |
+| ![event_new_potion_effect](../../icons/game_values/event_new_potion_effect.png) | event_new_potion_effect | Новий ефект | Отримує новий ефект події. | potion | Подією "Гравець отримує ефект від вибухового зілля" |  | false | false |  |  |  |  |
+| ![event_new_vault_state](../../icons/game_values/event_new_vault_state.png) | event_new_vault_state | Новий стан скарбниці | Отримує новий стан скарбниці. | text | Подією "Скарбниця змінює стан"<br/>Подією "Гравець змінює стан скарбниці" |  | false | false |  |  |  |  |
+| ![event_old_equipments](../../icons/game_values/event_old_equipments.png) | event_old_equipments | Попереднє екіпірування події | Отримує попереднє екіпірування події. | map | Подією "Гравець змінює екіпірування"<br/>Подією "Істота змінює екіпірування" |  | false | false |  |  | text | item |
+| ![event_old_item](../../icons/game_values/event_old_item.png) | event_old_item | creative_plus.game_value.event_old_item.name | creative_plus.game_value.event_old_item.description | item | creative_plus.game_value.event_old_item.work_with.player_inventory_slot_change_event |  | false | false |  |  |  |  |
+| ![event_old_vault_state](../../icons/game_values/event_old_vault_state.png) | event_old_vault_state | Попередній стан скарбниці | Отримує попередній стан скарбниці. | text | Подією "Скарбниця змінює стан"<br/>Подією "Гравець змінює стан скарбниці" |  | false | false |  |  |  |  |
+| ![event_power](../../icons/game_values/event_power.png) | event_power | Процент натяжения лука/арбалета | Получает процент силы выполнения (натяжения лука, прыжка на коне) события. | number | Подією "Гравець стріляє"<br/>Подією "Гравець стрибає на коні" |  | false | false |  |  |  |  |
+| ![event_projectile_item](../../icons/game_values/event_projectile_item.png) | event_projectile_item | Предмет снаряда події | Отримує предмет снаряда події. | item | Подією "Гравець стріляє" |  | false | false |  |  |  |  |
+| ![event_query_info](../../icons/game_values/event_query_info.png) | event_query_info | Налагоджувальна інформація | Отримує налагоджувальну інформацію цільового блоку або сутності. | text | Подією "Гравець отримує інформацію про блок"<br/>Подією "Гравець отримує інформацію про сутність" |  | false | false |  |  |  |  |
+| ![event_replaced_block](../../icons/game_values/event_replaced_block.png) | event_replaced_block | Замінений блок | Отримує ID заміненого блоку події. | text | Подією "Гравець ставить блок" |  | false | false |  |  |  |  |
+| ![event_sign_lines](../../icons/game_values/event_sign_lines.png) | event_sign_lines | Рядки таблички | Отримує рядки таблички у вигляді списку. | array | Подією "Гравець змінює табличку" |  | false | false |  | text |  |  |
+| ![event_sign_side](../../icons/game_values/event_sign_side.png) | event_sign_side | Сторона таблички | Отримує сторону таблички у вигляді тексту. | text | Подією "Гравець змінює табличку" |  | false | false |  |  |  |  |
+| ![event_slot](../../icons/game_values/event_slot.png) | event_slot | Слот события | Получает слот в событии (не переведено - денег не хватило). | number |  |  | false | false |  |  |  |  |
+| ![event_slot_type](../../icons/game_values/event_slot_type.png) | event_slot_type | Тип слота при кліку | Отримує поточний тип слота інвентарного меню при кліку по ньому. | text |  |  | false | false |  |  |  |  |
+| ![event_slots_involved](../../icons/game_values/event_slots_involved.png) | event_slots_involved | Задействованные слоты | Получает список всех задействованных слотов открытого инвентаря цели в событии. | array | Подією "Гравець перетягує предмет в інвентарі" |  | false | false |  | number |  |  |
+| ![event_teleport_cause](../../icons/game_values/event_teleport_cause.png) | event_teleport_cause | Причина телепортації | Отримує причину телепортації у події. | text | Подією "Гравець телепортувався"<br/>Подією "Ендермен тікає" |  | false | false |  |  |  |  |
+| ![event_ticks_held_for](../../icons/game_values/event_ticks_held_for.png) | event_ticks_held_for | Кількість тіків використання предмета | Отримує кількість тіків використання предмета. | number | Подією "Гравець перестає використовувати предмет" |  | false | false |  |  |  |  |
+| ![event_time_skip_amount](../../icons/game_values/event_time_skip_amount.png) | event_time_skip_amount | Количество тиков пропуска времени | Получает количество тиков пропуска времени в мире. | number | Подією "Пропуск часу" |  | false | false |  |  |  |  |
+| ![event_time_skip_reason](../../icons/game_values/event_time_skip_reason.png) | event_time_skip_reason | Причина пропуска времени | Получает причину пропуска времени в мире. | text | Подією "Пропуск часу" |  | false | false |  |  |  |  |
+| ![event_transform_reason](../../icons/game_values/event_transform_reason.png) | event_transform_reason | Причина заміни сутності | Отримує причину заміни сутності події. | text | Подією "Сутність замінюється іншою сутністю" |  | false | false |  |  |  |  |
+| ![event_transformed_entities](../../icons/game_values/event_transformed_entities.png) | event_transformed_entities | Замінені сутності події | Отримує замінених сутностей події. | array | Подією "Сутність замінюється іншою сутністю" |  | false | false |  | text |  |  |
+| ![event_tree_type](../../icons/game_values/event_tree_type.png) | event_tree_type | Тип дерева | Отримує тип дерева у події. | text | Подією "Гравець вирощує дерево"<br/>Подією "Дерево виростає" |  | false | false |  |  |  |  |
+| ![event_velocity](../../icons/game_values/event_velocity_vector.png) | event_velocity | Вектор швидкості | Отримує вектор швидкості в події. | vector | Подією "Гравець змінив вектор швидкості" |  | false | false |  |  |  |  |
+| ![experience_level](../../icons/game_values/experience_level.png) | experience_level | Уровень опыта | Получает количество уровней опыта цели. | number |  |  | false | false | entity |  |  |  |
+| ![experience_progress](../../icons/game_values/experience_progress.png) | experience_progress | Прогресс опыта | Получает процентный прогресс текущего уровня опыта цели. | number |  |  | false | false | entity |  |  |  |
+| ![eye_location](../../icons/game_values/eye_location.png) | eye_location | Местоположение глаз | Получает местоположение цели на высоте глаз. | location |  |  | false | false | entity |  |  |  |
+| ![fall_distance](../../icons/game_values/fall_distance.png) | fall_distance | Дистанция падения | Получает дистанцию падения цели в блоках. | number |  |  | false | false | entity |  |  |  |
+| ![fire_ticks](../../icons/game_values/fire_ticks.png) | fire_ticks | Время горения | Получает оставшееся количество тиков горения цели. | number |  |  | false | false | entity |  |  |  |
+| ![flying_speed](../../icons/game_values/flying_speed.png) | flying_speed | Швидкість польоту | Отримує поточну швидкість польоту цілі (атрибут). | number |  |  | false | false | entity |  |  |  |
+| ![food_exhaustion](../../icons/game_values/food_exhaustion.png) | food_exhaustion | Уровень истощения | Получает уровень истощения цели, который увеличивается от выполненных действий игрока. | number |  |  | false | false | entity |  |  |  |
+| ![food_level](../../icons/game_values/food_level.png) | food_level | Уровень голода | Получает оставшееся количество единиц еды цели. | number |  |  | false | false | entity |  |  |  |
+| ![food_saturation](../../icons/game_values/food_saturation.png) | food_saturation | Уровень насыщения | Получает количество единиц насыщения едой цели, которое зависит от видов съеденной еды. | number |  |  | false | false | entity |  |  |  |
+| ![freeze_ticks](../../icons/game_values/freeze_ticks.png) | freeze_ticks | Час заморозки | Отримує поточний час заморозки цілі. | number |  |  | false | false | entity |  |  |  |
+| ![gamemode](../../icons/game_values/gamemode.png) | gamemode | Режим гри | Отримує поточний режим гри гравця. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![held_slot](../../icons/game_values/held_slot.png) | held_slot | Выбранный слот в хот-баре | Получает выбранный слот хот-бара цели. | number |  |  | false | false | entity |  |  |  |
+| ![hitbox_midpoint_location](../../icons/game_values/hitbox_midpoint_location.png) | hitbox_midpoint_location | Центр хітбоксу | Отримує місцезнаходження центру хітбоксу цілі. | location |  |  | false | false | entity |  |  |  |
+| ![hotbar_items](../../icons/game_values/hotbar_items.png) | hotbar_items | Предметы в хот-баре | Получает предметы в хот-баре цели. | array |  |  | false | false | entity | item |  |  |
+| ![idle_duration](../../icons/game_values/idle_duration.png) | idle_duration | Тривалість простою | Отримує поточну тривалість простою гравця. | number |  |  | false | false | entity |  |  |  |
+| ![inventory_items](../../icons/game_values/inventory_items.png) | inventory_items | Предметы в инвентаре | Получает предметы в инвентаре цели (включая хот-бар). | array |  |  | false | false | entity | item |  |  |
+| ![invulnerability_ticks](../../icons/game_values/invulnerability_ticks.png) | invulnerability_ticks | Время бессмертия | Получает оставшееся количество тиков неуязвимости цели. | number |  |  | false | false | entity |  |  |  |
+| ![item_usage_progress](../../icons/game_values/item_usage_progress.png) | item_usage_progress | Прогресс использования предмета | Получает процентный прогресс использования целью предмета в руке, например еды. | number |  |  | false | false | entity |  |  |  |
+| ![last_damage_cause](../../icons/game_values/last_damage_cause.png) | last_damage_cause | Остання причина урону | Отримує останню причину урону цілі. | text |  |  | false | false | entity |  |  |  |
+| ![last_death_location](../../icons/game_values/last_death_location.png) | last_death_location | Місцеположення останньої смерті | Отримує місцеположення останньої смерті гравця. | location |  |  | false | false | entity |  |  |  |
+| ![lead_holder](../../icons/game_values/lead_holder.png) | lead_holder | Поводырь | Получает UUID сущности, которая ведёт цель на поводке. | text |  |  | false | false | entity |  |  |  |
+| ![location](../../icons/game_values/location.png) | location | Местоположение | Получает местоположение цели. | location |  |  | false | false | entity |  |  |  |
+| ![main_hand](../../icons/game_values/main_hand.png) | main_hand | Ведуча рука | Отримує ведучу руку гравця. | text | Гравцем |  | false | false | player |  |  |  |
+| ![main_hand_item](../../icons/game_values/main_hand_item.png) | main_hand_item | Предмет в ведущей руке | Получает предмет в ведущей руке цели. | item |  |  | false | false | entity |  |  |  |
+| ![max_health](../../icons/game_values/max_health.png) | max_health | Максимальное здоровье | Получает максимальное количество единиц здоровья цели. | number |  |  | false | false | entity |  |  |  |
+| ![max_invulnerability_ticks](../../icons/game_values/max_invulnerability_ticks.png) | max_invulnerability_ticks | Загальний час невразливості | Отримує кількість тіків, на яку видана невразливість для цілі. | number |  |  | false | false | entity |  |  |  |
+| ![merchant_recipe_count](../../icons/game_values/merchant_recipe_count.png) | merchant_recipe_count | Кількість торгів Жителя | Отримує кількість торгів Жителя. | number |  |  | false | false | entity |  |  |  |
+| ![name](../../icons/game_values/name.png) | name | Имя | Получает имя цели. | text |  |  | false | false | entity |  |  |  |
+| ![off_hand_item](../../icons/game_values/off_hand_item.png) | off_hand_item | Предмет во второй руке | Получает предмет во второстепенной руке цели. | item |  |  | false | false | entity |  |  |  |
+| ![open_inventory_custom_id](../../icons/game_values/open_inventory_custom_id.png) | open_inventory_custom_id | Кастомний ID відкритого інвентаря | Отримує кастомний ID відкритого інвентаря цілі. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![open_inventory_size](../../icons/game_values/open_inventory_size.png) | open_inventory_size | Розмір відкритого інвентаря | Отримує розмір поточного відкритого інвентаря. | number | Гравцями |  | false | false | entity |  |  |  |
+| ![open_inventory_title](../../icons/game_values/open_inventory_title.png) | open_inventory_title | Заголовок открытого инвентаря | Получает заголовок открытого инвентаря цели. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![open_inventory_type](../../icons/game_values/open_inventory_type.png) | open_inventory_type | Тип відкритого інвентаря | Отримує тип відкритого інвентаря цілі. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![origin](../../icons/game_values/origin.png) | origin | Місцезнаходження першої появи | Отримує місцезнаходження першої появи цілі. | location |  |  | false | false | both |  |  |  |
+| ![owner_uuid](../../icons/game_values/owner_uuid.png) | owner_uuid | UUID власника світу | Отримує UUID власника світу. | text |  |  | false | false |  |  |  |  |
+| ![particle_cpu_usage](../../icons/game_values/particle_cpu_usage.png) | particle_cpu_usage | Відсоток використання процесора частинками | Отримує відсоток навантаження процесора сервера створенням частинок. | number |  |  | false | false |  |  |  |  |
+| ![particle_visibility](../../icons/game_values/particle_visibility.png) | particle_visibility | Видимість частинок | Отримує значення налаштувань видимості частинок гравця. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![passengers](../../icons/game_values/passengers.png) | passengers | Пассажиры | Получает UUID сущностей, которые едут на цели. | array |  |  | false | false | entity | text |  |  |
+| ![ping](../../icons/game_values/ping.png) | ping | Пинг игрока | Получает задержку между игроком и сервером в миллисекундах. | number |  |  | false | false | entity |  |  |  |
+| ![pitch](../../icons/game_values/pitch.png) | pitch | Вертикальный поворот | Получает вертикальный (вверх/вниз) поворот (pitch) цели. | number |  |  | false | false | entity |  |  |  |
+| ![player_count](../../icons/game_values/player_count.png) | player_count | Количество игроков в мире | Получает количество игроков, находящихся в мире. | number |  |  | false | false |  |  |  |  |
+| ![player_ender_pearls](../../icons/game_values/player_ender_pearls.png) | player_ender_pearls | Список ендер-перлин | Отримує список ендер-перлин гравця, що не приземлились. | array | Гравцями |  | false | false | entity | text |  |  |
+| ![player_enderchest_items](../../icons/game_values/player_enderchest_items.png) | player_enderchest_items | Предмети в ендер-скрині | Отримує предмети в ендер-скрині цілі. | array | Гравцями |  | false | false | player | item |  |  |
+| ![pose](../../icons/game_values/pose.png) | pose | Поза істоти | Отримує позу істоти. | text |  |  | false | false | entity |  |  |  |
+| ![potion_effects](../../icons/game_values/potion_effects.png) | potion_effects | Эффекты зелий | Получает действующие эффекты зелий цели. | array |  |  | false | false | entity | potion |  |  |
+| ![projectile_owner_uuid](../../icons/game_values/projectile_owner_uuid.png) | projectile_owner_uuid | UUID власника снаряду | Отримує UUID власника снаряду. | text | Будь-якими снарядами |  | false | false | entity |  |  |  |
+| ![projectile_power](../../icons/game_values/projectile_power.png) | projectile_power | Вектор руху снаряда | Отримує вектор руху снаряда. | vector | Вогняними кулями<br/>Зарядами дракона<br/>Головами Іссушувача |  | false | false | entity |  |  |  |
+| ![protocol_version](../../icons/game_values/protocol_version.png) | protocol_version | Версия протокола клиента | Получает версию протокола клиента игрока. | number |  |  | false | false | entity |  |  |  |
+| ![remaining_air](../../icons/game_values/remaining_air.png) | remaining_air | Оставшийся воздух | Получает оставшееся количество тиков воздуха цели. | number |  |  | false | false | entity |  |  |  |
+| ![response_headers](../../icons/game_values/event_response_headers.png) | response_headers | Заголовки відповіді на веб-запит | Отримує заголовки відповіді на надісланий веб-запит. | map | Подією "Відповідь від сервера" |  | false | false |  |  | text | any |
+| ![saddle_item](../../icons/game_values/saddle_item.png) | saddle_item | Предмет на седле | Получает седло или ковёр, надетые на цель. | item | Свинями<br/>Кіньми<br/>Ламами |  | false | false | entity |  |  |  |
+| ![saturated_regen_rate](../../icons/game_values/saturated_regen_rate.png) | saturated_regen_rate | Швидкість регенерації від насичення | Отримує швидкість регенерації гравця з насиченням. | number |  |  | false | false | entity |  |  |  |
+| ![selection_size](../../icons/game_values/selection_size.png) | selection_size | Количество выбранных объектов | Получает количество целей в выборке. | number |  |  | false | false |  |  |  |  |
+| ![selection_target_names](../../icons/game_values/selection_target_names.png) | selection_target_names | Имена выбранных объектов | Получает имя каждой цели в выборке. | array |  |  | false | false |  | text |  |  |
+| ![selection_target_uuids](../../icons/game_values/selection_target_uuids.png) | selection_target_uuids | UUID выбранных объектов | Получает UUID каждой цели в выборке. | array |  |  | false | false |  | text |  |  |
+| ![server_current_tick](../../icons/game_values/server_current_tick.png) | server_current_tick | Текущее время сервера | Получает текущее время сервера в тиках. | number |  |  | false | false |  |  |  |  |
+| ![server_tps](../../icons/game_values/server_tps.png) | server_tps | TPS сервера | Получает количество Тиков За Секунду (TPS), которое может обработать сервер. | number |  |  | false | false |  |  |  |  |
+| ![spawn_location](../../icons/game_values/spawn_location.png) | spawn_location | Местоположение спавна | Получает местоположение точки появления цели. | location |  |  | false | false |  |  |  |  |
+| ![spawn_reason](../../icons/game_values/spawn_reason.png) | spawn_reason | Причина спавну | Отримує причину спавну цілі. | text |  |  | false | false | entity |  |  |  |
+| ![start_reload_tick](../../icons/game_values/start_reload_tick.png) | start_reload_tick | creative_plus.game_value.start_reload_tick.name | creative_plus.game_value.start_reload_tick.description | number |  |  | false | false |  |  |  |  |
+| ![starvation_rate](../../icons/game_values/starvation_rate.png) | starvation_rate | Швидкість голодування | Отримує швидкість голодування цілі. | number |  |  | false | false | entity |  |  |  |
+| ![steer_forward](../../icons/game_values/steer_forward.png) | steer_forward | Прямолінійний рух транспорту | Отримує значення руху транспорту вперед або назад. | number |  |  | false | false | entity |  |  |  |
+| ![steer_sideways](../../icons/game_values/steer_sideways.png) | steer_sideways | Рух транспорту вбік | Отримує значення руху транспорту вліво або вправо. | number |  |  | false | false | entity |  |  |  |
+| ![target_block_face](../../icons/game_values/target_block_face.png) | target_block_face | Сторона целевого блока | Получает как направление стороны блока, на которую смотрит цель. | text |  |  | false | false | entity |  |  |  |
+| ![target_block_location](../../icons/game_values/target_block_location.png) | target_block_location | Местоположение целевого блока | Получает местоположение блока, на который смотрит цель. | location |  |  | false | false | entity |  |  |  |
+| ![target_fluid_location](../../icons/game_values/target_fluid_location.png) | target_fluid_location | Местоположение целевой жидкости | Получает местоположение жидкости, на которую смотрит цель. | location |  |  | false | false | entity |  |  |  |
+| ![targeted_entity](../../icons/game_values/targeted_entity.png) | targeted_entity | Ціль для атаки | Отримує поточну ціль для атаки моба. | text |  |  | false | false | entity |  |  |  |
+| ![timestamp](../../icons/game_values/timestamp.png) | timestamp | UNIX-время | Получает текущее время как одно число в миллисекундах. | number |  |  | false | false |  |  |  |  |
+| ![unsaturated_regen_rate](../../icons/game_values/unsaturated_regen_rate.png) | unsaturated_regen_rate | Швидкість регенерації без насичення | Отримує швидкість регенерації гравця без насичення. | number |  |  | false | false | entity |  |  |  |
+| ![url](../../icons/game_values/event_url.png) | url | Посилання веб-запиту | Отримує посилання веб-запиту. | text | Подією "Відповідь від сервера" |  | false | false |  |  |  |  |
+| ![url_response](../../icons/game_values/event_url_response.png) | url_response | Ответ на веб-запрос | Получает ответ на отправленный веб-запрос. | text | Подією "Відповідь від сервера" |  | false | false |  |  |  |  |
+| ![url_response_code](../../icons/game_values/event_url_response_code.png) | url_response_code | Код відповіді на веб-запит | Отримує код відповіді на надісланий веб-запит. | number | Подією "Відповідь від сервера" |  | false | false |  |  |  |  |
+| ![user_locale](../../icons/game_values/user_locale.png) | user_locale | Язык клиента игрока | Получает текущий язык клиента игрока. | text | Гравцями |  | false | false | entity |  |  |  |
+| ![uuid](../../icons/game_values/uuid.png) | uuid | UUID | Получает универсальный уникальный идентификатор (UUID) цели. | text |  |  | false | false | entity |  |  |  |
+| ![vehicle](../../icons/game_values/vehicle.png) | vehicle | Транспорт | Получает UUID сущности, которую оседлала цель. | text |  |  | false | false | entity |  |  |  |
+| ![velocity](../../icons/game_values/velocity.png) | velocity | Вектор скорости | Получает вектор скорости движения цели (не ходьбы, а внешних сил). | vector |  |  | false | false | entity |  |  |  |
+| ![walking_speed](../../icons/game_values/walking_speed.png) | walking_speed | Швидкість ходьби | Отримує поточну швидкість ходьби цілі (атрибут). | number |  |  | false | false | entity |  |  |  |
+| ![world_clear_weather_duration](../../icons/game_values/world_clear_weather_duration.png) | world_clear_weather_duration | Тривалість ясної погоди у світі | Отримує поточну тривалість ясної погоди у світі. | number |  |  | false | false |  |  |  |  |
+| ![world_game_time](../../icons/game_values/world_game_time.png) | world_game_time | Час існування світу | Отримує час існування світу в тіках. | number |  |  | false | false |  |  |  |  |
+| ![world_id](../../icons/game_values/world_id.png) | world_id | ID світу | Отримує ідентифікатор світу. | text |  |  | false | false |  |  |  |  |
+| ![world_moon_phase](../../icons/game_values/world_moon_phase.png) | world_moon_phase | Поточна фаза місяця | Отримує поточну фазу місяця у світі. | text |  |  | false | false |  |  |  |  |
+| ![world_size](../../icons/game_values/world_size.png) | world_size | Розмір світу | Отримує поточний розмір світу у чанках. | number |  |  | false | false |  |  |  |  |
+| ![world_thunder_duration](../../icons/game_values/world_thunder_duration.png) | world_thunder_duration | Тривалість дощу у світі | Отримує поточну тривалість дощу у світі. | number |  |  | false | false |  |  |  |  |
+| ![world_time](../../icons/game_values/world_time.png) | world_time | Текущее время мира | Получает текущее время мира в тиках. | number |  |  | false | false |  |  |  |  |
+| ![world_weather](../../icons/game_values/world_weather.png) | world_weather | Поточна погода світу | Отримує тип поточної погоди світу. | text |  |  | false | false |  |  |  |  |
+| ![world_weather_duration](../../icons/game_values/world_weather_duration.png) | world_weather_duration | Тривалість поточної погоди світу | Отримує тривалість поточної погоди світу. | number |  |  | false | false |  |  |  |  |
+| ![x_coordinate](../../icons/game_values/x_coordinate.png) | x_coordinate | Координата X | Получает координату X местоположения цели. | number |  |  | false | false | entity |  |  |  |
+| ![y_coordinate](../../icons/game_values/y_coordinate.png) | y_coordinate | Координата Y | Получает координату Y местоположения цели. | number |  |  | false | false | entity |  |  |  |
+| ![yaw](../../icons/game_values/yaw.png) | yaw | Горизонтальный поворот | Получает вертикальный (влево/вправо) поворот (yaw) цели. | number |  |  | false | false | entity |  |  |  |
+| ![z_coordinate](../../icons/game_values/z_coordinate.png) | z_coordinate | Координата Z | Получает координату Z местоположения цели. | number |  |  | false | false | entity |  |  |  |
