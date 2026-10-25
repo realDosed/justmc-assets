@@ -50,6 +50,56 @@ export const info = (...args: any[]) =>
 export const warn = (...args: any[]) =>
   console.log(chalk.yellow('warn'), ...args);
 
+export const createProgress = (label: string, total: number) => {
+  let lastOutput = '';
+  const render = (current: string, processed: number) => {
+    const completed = Math.min(processed, total);
+    const left = Math.max(total - completed, 0);
+    const output = `${label}: ${completed}/${total} processed, ${left} left - ${current}`;
+    if (output === lastOutput) return;
+    lastOutput = output;
+
+    if (process.stdout.isTTY) {
+      process.stdout.write(`\r\x1b[2K${output}`);
+      return;
+    }
+    if (completed % 10 === 0 || completed === total)
+      console.log(output);
+  };
+
+  return {
+    update: render,
+    end() {
+      if (process.stdout.isTTY) process.stdout.write('\n');
+      else if (lastOutput) console.log(lastOutput);
+    },
+    complete(current = 'done') {
+      if (total > 0) render(current, total);
+      else console.log(`${label}: 0/0 processed, 0 left`);
+      if (process.stdout.isTTY) process.stdout.write('\n');
+    },
+  };
+};
+
+export async function mapWithProgress<T, R>(
+  label: string,
+  items: T[],
+  getName: (item: T) => string,
+  callback: (item: T, index: number) => Promise<R> | R
+): Promise<R[]> {
+  const progress = createProgress(label, items.length);
+  let processed = 0;
+  const results = await Promise.all(
+    items.map(async (item, index) => {
+      const result = await callback(item, index);
+      progress.update(getName(item), ++processed);
+      return result;
+    })
+  );
+  progress.complete();
+  return results;
+}
+
 let shouldExit = false;
 export const error = (...args: any[]) => {
   shouldExit = true;
@@ -68,7 +118,62 @@ if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR);
 export const PATCHES_DIR = path.resolve(__dirname, '../patches');
 
 export const SOURCE_CACHE_DIR = path.resolve(CACHE_DIR, 'creative-plus');
-export const SOURCE_ROOT = SOURCE_CACHE_DIR;
+export const LOCAL_CONFIG_PATH = path.resolve(
+  __dirname,
+  '../local.config.json'
+);
+
+type LocalConfig = {
+  sourceProjectPath: string;
+  gitlabRepositoryUrl: string;
+};
+
+const readLocalConfig = (): Partial<LocalConfig> => {
+  if (!fs.existsSync(LOCAL_CONFIG_PATH)) return {};
+
+  const parsed: unknown = JSON.parse(
+    fs.readFileSync(LOCAL_CONFIG_PATH, 'utf8')
+  );
+  if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed))
+    throw new Error(`Invalid local configuration: ${LOCAL_CONFIG_PATH}`);
+
+  const config = parsed as Record<string, unknown>;
+  if (
+    (config.sourceProjectPath !== undefined &&
+      typeof config.sourceProjectPath !== 'string') ||
+    (config.gitlabRepositoryUrl !== undefined &&
+      typeof config.gitlabRepositoryUrl !== 'string')
+  )
+    throw new Error(`Invalid local configuration: ${LOCAL_CONFIG_PATH}`);
+
+  return config as Partial<LocalConfig>;
+};
+
+export const LOCAL_CONFIG = readLocalConfig();
+export const LOCAL_SOURCE_PROJECT_DIR = LOCAL_CONFIG.sourceProjectPath
+  ? path.resolve(LOCAL_CONFIG.sourceProjectPath)
+  : undefined;
+export const LOCAL_SOURCE_ROOT = LOCAL_SOURCE_PROJECT_DIR
+  ? path.resolve(
+      LOCAL_SOURCE_PROJECT_DIR,
+      'src/main/kotlin/ru/justmc/creativeplus'
+    )
+  : undefined;
+
+if (
+  LOCAL_SOURCE_PROJECT_DIR &&
+  fs.existsSync(LOCAL_SOURCE_PROJECT_DIR) &&
+  !fs.existsSync(LOCAL_SOURCE_ROOT!)
+) {
+  throw new Error(
+    `Local source folder exists, but expected Kotlin sources were not found under ${LOCAL_SOURCE_ROOT}`
+  );
+}
+
+export const SOURCE_ROOT =
+  LOCAL_SOURCE_ROOT && fs.existsSync(LOCAL_SOURCE_ROOT)
+    ? LOCAL_SOURCE_ROOT
+    : SOURCE_CACHE_DIR;
 
 export type KotlinSourceFile = {
   path: string;
@@ -96,16 +201,24 @@ export async function getKotlinFiles(
 export const sourcePath = (relativePath: string) =>
   path.resolve(SOURCE_ROOT, relativePath);
 
-export const readSourceFile = (relativePath: string) =>
-  fs.promises.readFile(sourcePath(relativePath), 'utf8');
+export const readSourceFile = async (relativePath: string) => {
+  const progress = createProgress('Reading source', 1);
+  const content = await fs.promises.readFile(sourcePath(relativePath), 'utf8');
+  progress.update(relativePath, 1);
+  progress.complete();
+  return content;
+};
 
 export async function getSourceFiles(relativePath: string) {
   const files = await getKotlinFiles(sourcePath(relativePath));
-  return Promise.all(
-    files.map(async (filePath) => ({
+  return mapWithProgress(
+    'Reading source files',
+    files,
+    (filePath) => path.relative(SOURCE_ROOT, filePath),
+    async (filePath) => ({
       path: filePath,
       content: await fs.promises.readFile(filePath, 'utf8'),
-    }))
+    })
   );
 }
 
@@ -124,11 +237,14 @@ export async function getImportedKotlinSources(contents: string) {
 
   allSourceFiles ??= (async () => {
     const files = await getKotlinFiles();
-    return Promise.all(
-      files.map(async (filePath) => ({
+    return mapWithProgress(
+      'Indexing source files',
+      files,
+      (filePath) => path.relative(SOURCE_ROOT, filePath),
+      async (filePath) => ({
         path: filePath,
         content: await fs.promises.readFile(filePath, 'utf8'),
-      }))
+      })
     );
   })();
 
@@ -202,8 +318,11 @@ export const extractIconTexture = (
 
 export async function loadCachedTextureValues(): Promise<Record<string, string>> {
   const files = await getKotlinFiles();
-  const contents = await Promise.all(
-    files.map((file) => fs.promises.readFile(file, 'utf8'))
+  const contents = await mapWithProgress(
+    'Reading texture values',
+    files,
+    (filePath) => path.relative(SOURCE_ROOT, filePath),
+    (filePath) => fs.promises.readFile(filePath, 'utf8')
   );
 
   return extractTextureValues(contents);

@@ -16,6 +16,7 @@ import {
   loadCachedTextureValues,
   extractValueTypeIcons,
   getSourceFiles,
+  mapWithProgress,
   readSourceFile,
   getImportedKotlinSources,
   uncommentKotlinDeclarations,
@@ -118,23 +119,22 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
 
-  let icons: Dictionary<EventMenuIcon> = {};
-  await Promise.all(
-    triggerMenuFiles.map(async (file) => {
+  const iconsByFile = await mapWithProgress(
+    'Extracting trigger menus',
+    triggerMenuFiles,
+    (file) => file.path,
+    async (file) => {
       const triggersMenuFile = file.content.replace(/^\s*\/\/\s?/gm, '');
       const importedSources = await getImportedKotlinSources(file.content);
-
-      icons = {
-        ...icons,
-        ...extractTriggerMenuIcons(
-          triggersMenuFile,
-          valueTypeIcons,
-          textureValues,
-          importedSources
-        ),
-      };
-    })
+      return extractTriggerMenuIcons(
+        triggersMenuFile,
+        valueTypeIcons,
+        textureValues,
+        importedSources
+      );
+    }
   );
+  const icons: Dictionary<EventMenuIcon> = Object.assign({}, ...iconsByFile);
 
   /////////////////////////////////////////////////////////////////////////////
 

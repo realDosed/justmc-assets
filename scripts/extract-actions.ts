@@ -18,6 +18,7 @@ import {
   extractValueTypeIcons,
   extractIconTexture,
   loadCachedTextureValues,
+  mapWithProgress,
   getSourceFiles,
   getImportedKotlinSources,
   uncommentKotlinDeclarations,
@@ -314,24 +315,23 @@ const getArguments = (
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
 
-  let icons: Dictionary<ActionMenuIcon> = {};
-  await Promise.all(
-    actionMenuFiles.map(async (file) => {
+  const iconsByFile = await mapWithProgress(
+    'Extracting action menus',
+    actionMenuFiles,
+    (file) => file.path,
+    async (file) => {
       const actionsMenuFile = file.content.replace(/^\s*\/\/\s?/gm, '');
       const importedSources = await getImportedKotlinSources(file.content);
-
-      icons = {
-        ...icons,
-        ...extractActionMenuIcons(
-          actionsMenuFile,
-          actionNames,
-          valueTypeIcons,
-          textureValues,
-          importedSources
-        ),
-      };
-    })
+      return extractActionMenuIcons(
+        actionsMenuFile,
+        actionNames,
+        valueTypeIcons,
+        textureValues,
+        importedSources
+      );
+    }
   );
+  const icons: Dictionary<ActionMenuIcon> = Object.assign({}, ...iconsByFile);
 
   exitIfAnyErrors();
 
@@ -352,8 +352,11 @@ const getArguments = (
   const actionPatches: Dictionary = JSON.parse(
     await fs.readFile(ACTIONS_PATCHES_FILE, 'utf-8')
   );
-  const actions = await Promise.all(
-    actionFiles.map(async (file) => {
+  const actions = await mapWithProgress(
+    'Extracting actions',
+    actionFiles,
+    (file) => file.path,
+    async (file) => {
       const contents = removeComments(
         uncommentKotlinDeclarations(file.content)
       );
@@ -398,7 +401,7 @@ const getArguments = (
           ? { additionalInfo: icon.additionalInfo }
           : {}),
       };
-    })
+    }
   );
 
   exitIfAnyErrors();

@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import { info, success } from './common';
+import { createProgress, info, success } from './common';
 
 const content = `
 import ActionsData from './ActionsData';
@@ -43,6 +43,9 @@ export const gameValues = gameValuesData as GameValuesData;
   info('generating index.ts...');
 
   await fs.writeFile(path.resolve(__dirname, '../src/index.ts'), content);
+  const progress = createProgress('Generating files', 1);
+  progress.update('src/index.ts', 1);
+  progress.complete();
 
   success('generated index.ts');
 })();
