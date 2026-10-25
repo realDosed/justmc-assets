@@ -4,6 +4,7 @@ import path from 'path';
 
 import { info, success, warn } from './common';
 import Action from '../src/types/Action';
+import ActionArgument from '../src/types/ActionArgument';
 import Event from '../src/types/Event';
 import GameValue from '../src/types/GameValue';
 
@@ -111,6 +112,13 @@ const markdownCell = (value: unknown) =>
     .replace(/\|/g, '\\|')
     .replace(/\r?\n/g, '<br/>');
 
+const formatActionArgument = (argument: ActionArgument) =>
+  argument.type === 'enum'
+    ? `${argument.id}: enum<br/>${argument.values
+        .map((value) => `&nbsp;&nbsp;- ${markdownCell(value)}`)
+        .join('<br/>')}`
+    : `${argument.id}: ${argument.type}`;
+
 const iconMarkdown = (type: 'actions' | 'events' | 'game_values', id: string) => {
   const iconAliases: Record<string, string> = {
     event_interaction: 'event_block_interact_action',
@@ -197,7 +205,10 @@ const generateActionDocs = async (
           `creative_plus.action.${action.id}.description`,
           missing
         ),
-        action.category,
+        `${action.category}${action.subcategory ? `/${action.subcategory}` : ''}`,
+        ('args' in action ? action.args : [])
+          .map(formatActionArgument)
+          .join('<br/>'),
         localizeList(
           properties,
           `creative_plus.action.${action.id}`,
@@ -212,13 +223,7 @@ const generateActionDocs = async (
           action.additionalInfo,
           missing
         ),
-        formatFlag(action.unused),
-        formatFlag(action.deprecated),
-        action.subcategory,
-        action.type,
-        ('args' in action ? action.args : [])
-          .map((argument) => `${argument.id}: ${argument.type}`)
-          .join('<br/>'),
+        `${formatFlag(action.unused)}/${formatFlag(action.deprecated)}`,
       ]);
 
     await writeMarkdown(
@@ -230,14 +235,11 @@ const generateActionDocs = async (
           'ID',
           'Name',
           'Description',
-          'Category',
+          'Category/Subcategory',
+          'Arguments',
           'Works with',
           'Additional info',
-          'Unused',
-          'Deprecated',
-          'Subcategory',
-          'Type',
-          'Arguments',
+          'Unused/Deprecated',
         ],
         rows
       )
@@ -278,8 +280,7 @@ const generateEventDocs = async (
         event.additionalInfo,
         missing
       ),
-      formatFlag(event.unused),
-      formatFlag(event.deprecated),
+      `${formatFlag(event.unused)}/${formatFlag(event.deprecated)}`,
     ]);
 
   await writeMarkdown(
@@ -295,8 +296,7 @@ const generateEventDocs = async (
         'Cancellable',
         'Works with',
         'Additional info',
-        'Unused',
-        'Deprecated',
+        'Unused/Deprecated',
       ],
       rows
     )
@@ -335,12 +335,7 @@ const generateGameValueDocs = async (
         value.additionalInfo,
         missing
       ),
-      formatFlag(value.deprecated),
-      formatFlag(value.unused),
-      value.selector,
-      'elementType' in value ? value.elementType : '',
-      'keyType' in value ? value.keyType : '',
-      'valueType' in value ? value.valueType : '',
+      `${formatFlag(value.unused)}/${formatFlag(value.deprecated)}`,
     ]);
 
   await writeMarkdown(
@@ -355,12 +350,7 @@ const generateGameValueDocs = async (
         'Category',
         'Works with',
         'Additional info',
-        'Unused',
-        'Deprecated',
-        'Selector',
-        'Element type',
-        'Key type',
-        'Value type',
+        'Unused/Deprecated',
       ],
       rows
     )
