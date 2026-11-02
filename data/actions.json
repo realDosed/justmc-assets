@@ -3242,20 +3242,24 @@
     "type": "basic",
     "args": [
       {
-        "id": "can_float",
+        "id": "navigation_type",
         "plural": false,
         "type": "enum",
         "valueSlots": [
-          12
+          11
         ],
         "values": [
-          "TRUE",
-          "FALSE",
-          "NOT_SET"
+          "DEFAULT",
+          "GROUND",
+          "FLYING",
+          "WATER_BOUND",
+          "AMPHIBIOUS",
+          "SPIDER",
+          "CLIMBER"
         ]
       },
       {
-        "id": "can_open_door",
+        "id": "can_float",
         "plural": false,
         "type": "enum",
         "valueSlots": [
@@ -3268,11 +3272,24 @@
         ]
       },
       {
-        "id": "can_pass_door",
+        "id": "can_open_door",
         "plural": false,
         "type": "enum",
         "valueSlots": [
           14
+        ],
+        "values": [
+          "TRUE",
+          "FALSE",
+          "NOT_SET"
+        ]
+      },
+      {
+        "id": "can_pass_door",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          15
         ],
         "values": [
           "TRUE",
@@ -12413,19 +12430,6 @@
         ]
       },
       {
-        "id": "replace_vanilla",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          9
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "input",
         "plural": false,
         "type": "item",
@@ -12435,19 +12439,6 @@
         "descriptionSlots": [
           21
         ]
-      },
-      {
-        "id": "input_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          3
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
       },
       {
         "id": "result",
@@ -12483,6 +12474,35 @@
           25
         ],
         "size": "int"
+      },
+      {
+        "id": "replace_vanilla",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          9
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "input_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          3
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
       },
       {
         "id": "recipe_type",
@@ -12533,6 +12553,41 @@
         ]
       },
       {
+        "id": "items",
+        "plural": true,
+        "type": "item",
+        "valueSlots": [
+          30,
+          31,
+          32,
+          39,
+          40,
+          41,
+          48,
+          49,
+          50
+        ],
+        "descriptionSlots": [
+          29,
+          38,
+          47,
+          33,
+          42,
+          51
+        ]
+      },
+      {
+        "id": "result",
+        "plural": false,
+        "type": "item",
+        "valueSlots": [
+          25
+        ],
+        "descriptionSlots": [
+          34
+        ]
+      },
+      {
         "id": "replace_vanilla",
         "plural": false,
         "type": "enum",
@@ -12546,48 +12601,147 @@
         "defaultValue": "false"
       },
       {
-        "id": "items",
-        "plural": true,
-        "type": "item",
-        "valueSlots": [
-          12,
-          13,
-          14,
-          21,
-          22,
-          23,
-          30,
-          31,
-          32
-        ],
-        "descriptionSlots": [
-          39,
-          40,
-          41
-        ]
-      },
-      {
-        "id": "input_only_types",
+        "id": "recipe_match_slot_1",
         "plural": false,
         "type": "enum",
         "valueSlots": [
-          27
+          3
         ],
         "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
       },
       {
-        "id": "result",
+        "id": "recipe_match_slot_2",
         "plural": false,
-        "type": "item",
+        "type": "enum",
         "valueSlots": [
-          25
+          4
         ],
-        "descriptionSlots": [
-          34
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_3",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          5
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_4",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          12
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_5",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          13
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_6",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          14
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_7",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          21
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_8",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          22
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match_slot_9",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          23
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
         ]
       },
       {
@@ -12638,19 +12792,6 @@
         ]
       },
       {
-        "id": "replace_vanilla",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          9
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "template",
         "plural": false,
         "type": "item",
@@ -12660,19 +12801,6 @@
         "descriptionSlots": [
           21
         ]
-      },
-      {
-        "id": "template_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          3
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
       },
       {
         "id": "base",
@@ -12686,19 +12814,6 @@
         ]
       },
       {
-        "id": "base_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          4
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "addition",
         "plural": false,
         "type": "item",
@@ -12710,19 +12825,6 @@
         ]
       },
       {
-        "id": "addition_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          5
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "result",
         "plural": false,
         "type": "item",
@@ -12731,6 +12833,67 @@
         ],
         "descriptionSlots": [
           25
+        ]
+      },
+      {
+        "id": "replace_vanilla",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          9
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "template_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          3
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "base_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          4
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "recipe_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          5
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
         ]
       },
       {
@@ -12767,19 +12930,6 @@
         ]
       },
       {
-        "id": "replace_vanilla",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          9
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "template",
         "plural": false,
         "type": "item",
@@ -12789,19 +12939,6 @@
         "descriptionSlots": [
           21
         ]
-      },
-      {
-        "id": "template_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          3
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
       },
       {
         "id": "base",
@@ -12815,19 +12952,6 @@
         ]
       },
       {
-        "id": "base_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          4
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "addition",
         "plural": false,
         "type": "item",
@@ -12839,19 +12963,6 @@
         ]
       },
       {
-        "id": "addition_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          5
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "trim",
         "plural": false,
         "type": "item",
@@ -12860,6 +12971,67 @@
         ],
         "descriptionSlots": [
           25
+        ]
+      },
+      {
+        "id": "replace_vanilla",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          9
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "template_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          3
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "base_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          4
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "addition_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          5
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
         ]
       },
       {
@@ -12896,6 +13068,28 @@
         ]
       },
       {
+        "id": "input",
+        "plural": false,
+        "type": "item",
+        "valueSlots": [
+          13
+        ],
+        "descriptionSlots": [
+          22
+        ]
+      },
+      {
+        "id": "result",
+        "plural": false,
+        "type": "item",
+        "valueSlots": [
+          15
+        ],
+        "descriptionSlots": [
+          24
+        ]
+      },
+      {
         "id": "replace_vanilla",
         "plural": false,
         "type": "enum",
@@ -12909,38 +13103,19 @@
         "defaultValue": "false"
       },
       {
-        "id": "input",
-        "plural": false,
-        "type": "item",
-        "valueSlots": [
-          13
-        ],
-        "descriptionSlots": [
-          22
-        ]
-      },
-      {
-        "id": "input_only_type",
+        "id": "input_match",
         "plural": false,
         "type": "enum",
         "valueSlots": [
           17
         ],
         "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
-        "id": "result",
-        "plural": false,
-        "type": "item",
-        "valueSlots": [
-          15
-        ],
-        "descriptionSlots": [
-          24
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
         ]
       }
     ]
@@ -12965,19 +13140,6 @@
         ]
       },
       {
-        "id": "replace_vanilla",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          9
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "input",
         "plural": false,
         "type": "item",
@@ -12987,19 +13149,6 @@
         "descriptionSlots": [
           21
         ]
-      },
-      {
-        "id": "input_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          3
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
       },
       {
         "id": "material",
@@ -13013,19 +13162,6 @@
         ]
       },
       {
-        "id": "material_only_type",
-        "plural": false,
-        "type": "enum",
-        "valueSlots": [
-          5
-        ],
-        "values": [
-          "TRUE",
-          "FALSE"
-        ],
-        "defaultValue": "false"
-      },
-      {
         "id": "result",
         "plural": false,
         "type": "item",
@@ -13034,6 +13170,51 @@
         ],
         "descriptionSlots": [
           25
+        ]
+      },
+      {
+        "id": "replace_vanilla",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          9
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "input_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          3
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
+        ]
+      },
+      {
+        "id": "material_match",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          5
+        ],
+        "values": [
+          "EXACT",
+          "IGNORE_NAME_DURABILITY",
+          "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+          "CUSTOM_TAGS_CONTAINS",
+          "MINECRAFT_TAG",
+          "ITEM_TYPE"
         ]
       },
       {
@@ -15223,6 +15404,84 @@
     ]
   },
   {
+    "id": "if_game_has_custom_recipe",
+    "name": "has_custom_recipe",
+    "object": "world",
+    "category": "if_game",
+    "subcategory": null,
+    "type": "container",
+    "args": [
+      {
+        "id": "names",
+        "plural": true,
+        "type": "text",
+        "valueSlots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "descriptionSlots": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "id": "is_vanilla_recipe",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          34
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "compare_type",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          35
+        ],
+        "values": [
+          "ANY",
+          "ALL"
+        ]
+      }
+    ]
+  },
+  {
     "id": "if_game_has_entity",
     "name": "has_entity",
     "object": "world",
@@ -16787,6 +17046,84 @@
           "CREATIVE",
           "ADVENTURE",
           "SPECTATOR"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "if_player_has_custom_recipe_discovered",
+    "name": "has_custom_recipe_discovered",
+    "object": "player",
+    "category": "if_player",
+    "subcategory": "misc",
+    "type": "container",
+    "args": [
+      {
+        "id": "names",
+        "plural": true,
+        "type": "text",
+        "valueSlots": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "descriptionSlots": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "id": "is_vanilla_recipe",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          34
+        ],
+        "values": [
+          "TRUE",
+          "FALSE"
+        ],
+        "defaultValue": "false"
+      },
+      {
+        "id": "compare_type",
+        "plural": false,
+        "type": "enum",
+        "valueSlots": [
+          35
+        ],
+        "values": [
+          "ANY",
+          "ALL"
         ]
       }
     ]

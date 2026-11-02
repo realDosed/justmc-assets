@@ -2,7 +2,7 @@
 
 | Icon | ID | Name | Description | Category/Subcategory | Arguments | Works with | Additional info | Unused/Deprecated |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ![if_variable_block_equals](../../../icons/actions/if_variable_block_equals.png) | if_variable_block_equals | creative_plus.action.if_variable_block_equals.name | creative_plus.action.if_variable_block_equals.description | if_variable | value: block<br/>compare: block |  |  | false/false |
+| ![if_variable_block_equals](../../../icons/actions/if_variable_block_equals.png) | if_variable_block_equals | Блок дорівнює | Перевіряє, чи блок дорівнює хоча б одному значенню із зазначених. | if_variable | value: block<br/>compare: block |  |  | false/false |
 | ![if_variable_block_is_minecraft_tagged](../../../icons/actions/if_variable_block_is_minecraft_tagged.png) | if_variable_block_is_minecraft_tagged | Блок має Minecraft-тег | Перевіряє, чи має блок вказаний Minecraft-тег (наприклад, "mineable/shovel"). | if_variable | block: block<br/>namespace: text |  | Minecraft-тег має починатися з "#minecraft:" | false/false |
 | ![if_variable_block_is_solid](../../../icons/actions/if_variable_block_is_solid.png) | if_variable_block_is_solid | Блок є повним | Перевіряє, чи є вказаний блок повним. | if_variable | block: block |  |  | false/false |
 | ![if_variable_equals](../../../icons/actions/if_variable_equals.png) | if_variable_equals | Равна | Проверяет, равна ли переменная хотя бы одному из сравниваемых значений. | if_variable | value: any<br/>compare: any<br/>compare_type: enum<br/>&nbsp;&nbsp;- ANY<br/>&nbsp;&nbsp;- ALL |  |  | false/false |

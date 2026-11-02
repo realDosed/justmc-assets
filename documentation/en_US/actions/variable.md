@@ -2,7 +2,7 @@
 
 | Icon | ID | Name | Description | Category/Subcategory | Arguments | Works with | Additional info | Unused/Deprecated |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ![if_variable_block_equals](../../../icons/actions/if_variable_block_equals.png) | if_variable_block_equals | creative_plus.action.if_variable_block_equals.name | creative_plus.action.if_variable_block_equals.description | if_variable | value: block<br/>compare: block |  |  | false/false |
+| ![if_variable_block_equals](../../../icons/actions/if_variable_block_equals.png) | if_variable_block_equals | Block Equals | Checks if a block is equal to at least one of the specified values. | if_variable | value: block<br/>compare: block |  |  | false/false |
 | ![if_variable_block_is_minecraft_tagged](../../../icons/actions/if_variable_block_is_minecraft_tagged.png) | if_variable_block_is_minecraft_tagged | Block Has Minecraft Tag | Checks whether the block has the specified Minecraft tag (e.g. "mineable/shovel"). | if_variable | block: block<br/>namespace: text |  | The Minecraft tag must start with "#minecraft:" | false/false |
 | ![if_variable_block_is_solid](../../../icons/actions/if_variable_block_is_solid.png) | if_variable_block_is_solid | Block Is Solid | Checks if the specified block is solid. | if_variable | block: block |  |  | false/false |
 | ![if_variable_equals](../../../icons/actions/if_variable_equals.png) | if_variable_equals | Equals | Checks if a variable is equal to at least one of the compared values. | if_variable | value: any<br/>compare: any<br/>compare_type: enum<br/>&nbsp;&nbsp;- ANY<br/>&nbsp;&nbsp;- ALL |  |  | false/false |
