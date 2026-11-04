@@ -21,6 +21,7 @@ import {
   mapWithProgress,
   getSourceFiles,
   getImportedKotlinSources,
+  extractSubcategoryMenuPositions,
   logDataSummary,
   isExcludedDataId,
   readSourceFile,
@@ -48,11 +49,6 @@ const ARGUMENT_DECLARATION =
 const ARGUMENT_VALUE_SLOTS = /parsing\s*=\s*(.*)/;
 const ARGUMENT_DESCRIPTION_SLOTS = /descriptions?\s*=\s*(.*)/;
 const SLOTS = /(?:\(?([\d]+)\.\.([\d]+)\)?)|([\d]+)/g;
-
-const ENUM_REGEX =
-  /enum\s*?class\s*(.*?)(?:\(.*?\))?\s*\{(.*?)\}(?!\s*\)|,)/gms;
-const ENUM_MEMBER_REGEX =
-  /(?:(?:^|,)\s*)(?:\b(?!ItemStack|BlockDirection)([A-Z_][\w]*)(?!\))\b(?:\(.*?\))?)/gm;
 
 type Enums = Dictionary<string[]>;
 
@@ -227,20 +223,6 @@ const getSlots = (content: string) => {
   );
 };
 
-const getEnums = (content: string) => {
-  const enumMatches = matches(content, ENUM_REGEX);
-
-  const enums = enumMatches.reduce<Enums>((acc, [, name, body]) => {
-    acc[name] = matches(body.split(';')[0], ENUM_MEMBER_REGEX).map(
-      ([, match]) => match
-    );
-
-    return acc;
-  }, {});
-
-  return enums;
-};
-
 const readBalancedBlock = (
   content: string,
   start: number,
@@ -266,6 +248,71 @@ const readBalancedBlock = (
   }
 
   return -1;
+};
+
+const getEnumEntries = (body: string) => {
+  const entries: string[] = [];
+  let start = 0;
+  let parentheses = 0;
+  let brackets = 0;
+  let braces = 0;
+  let inString = false;
+  let escaped = false;
+
+  for (let index = 0; index < body.length; index++) {
+    const char = body[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === '\\') escaped = true;
+      else if (char === '"') inString = false;
+      continue;
+    }
+
+    if (char === '"') inString = true;
+    else if (char === '(') parentheses++;
+    else if (char === ')') parentheses--;
+    else if (char === '[') brackets++;
+    else if (char === ']') brackets--;
+    else if (char === '{') braces++;
+    else if (char === '}') braces--;
+    else if (
+      parentheses === 0 &&
+      brackets === 0 &&
+      braces === 0 &&
+      (char === ',' || char === ';')
+    ) {
+      entries.push(body.slice(start, index));
+      if (char === ';') {
+        start = body.length;
+        break;
+      }
+      start = index + 1;
+    }
+  }
+
+  if (start < body.length) entries.push(body.slice(start));
+  return entries
+    .map((entry) => entry.match(/^\s*([A-Z_][\w]*)\b/)?.[1])
+    .filter((name): name is string => Boolean(name));
+};
+
+const ENUM_DECLARATION = /\benum\s+class\s+([A-Za-z_]\w*)\b/g;
+
+const getEnums = (content: string) => {
+  const enums: Enums = {};
+
+  for (const match of content.matchAll(ENUM_DECLARATION)) {
+    const name = match[1];
+    const declarationEnd = match.index! + match[0].length;
+    const bodyStart = content.indexOf('{', declarationEnd);
+    if (bodyStart < 0) continue;
+
+    const bodyEnd = readBalancedBlock(content, bodyStart, '{', '}');
+    if (bodyEnd < 0) continue;
+    enums[name] = getEnumEntries(content.slice(bodyStart + 1, bodyEnd));
+  }
+
+  return enums;
 };
 
 const getArgumentDeclarations = (content: string) =>
@@ -486,6 +533,12 @@ const getArguments = (
     },
     {}
   );
+  const menuActionPositions = Object.assign(
+    {},
+    ...actionMenuFiles.map((file) =>
+      extractSubcategoryMenuPositions(file.content, MENU_ACTION_REFERENCES)
+    )
+  );
 
   exitIfAnyErrors();
 
@@ -556,6 +609,7 @@ const getArguments = (
         object,
         category,
         subcategory: icon?.subcategory || null,
+        ...(menuActionPositions[name] || {}),
         type: actionType,
         args: getArguments(id, enums, {}, contents),
         ...(!TOP_LEVEL_ACTION_CATEGORIES.has(category) &&

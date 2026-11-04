@@ -70,6 +70,8 @@ type BaseAction = WithMetadata & {
   object: string;
   category: ActionCategory;
   subcategory: string | null;
+  slot?: number;
+  page?: number;
 };
 
 type ActionWithArguments = BaseAction & {

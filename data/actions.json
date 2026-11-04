@@ -39,6 +39,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -63,6 +65,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -111,6 +115,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [],
     "additionalInfo": [
@@ -123,6 +129,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [],
     "additionalInfo": [
@@ -135,6 +143,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -144,6 +154,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -153,6 +165,8 @@
     "object": "code",
     "category": "control",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -204,6 +218,8 @@
     "object": "controller",
     "category": "controller",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -213,6 +229,8 @@
     "object": "controller",
     "category": "controller",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -237,6 +255,8 @@
     "object": "controller",
     "category": "controller",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -264,6 +284,8 @@
     "object": "controller",
     "category": "controller",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -288,6 +310,8 @@
     "object": "controller",
     "category": "controller",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -334,6 +358,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -355,6 +381,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -376,6 +404,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -397,6 +427,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -442,6 +474,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -488,6 +522,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 40,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -511,6 +547,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 41,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -533,6 +571,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -542,6 +582,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 44,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -554,6 +596,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -593,6 +637,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -658,6 +704,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -686,6 +734,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 33,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -711,6 +761,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -736,6 +788,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -770,6 +824,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -796,6 +852,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -822,6 +880,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -864,6 +924,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 32,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -888,6 +950,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -913,6 +977,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -938,6 +1004,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 35,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -964,6 +1032,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -986,6 +1056,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 34,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1011,6 +1083,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1058,6 +1132,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1095,6 +1171,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1122,6 +1200,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 43,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1146,6 +1226,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 0,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -1171,6 +1253,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 1,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -1208,6 +1292,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 3,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -1234,6 +1320,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 2,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -1338,6 +1426,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 4,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -1378,6 +1468,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1414,6 +1506,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 38,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1436,6 +1530,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1461,6 +1557,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1489,6 +1587,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1515,6 +1615,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1526,15 +1628,19 @@
         ],
         "values": [
           "CROAKING",
+          "CROUCHING",
           "DIGGING",
           "DYING",
           "EMERGING",
           "FALL_FLYING",
+          "INHALING",
           "LONG_JUMPING",
           "ROARING",
+          "SITTING",
           "SLEEPING",
-          "SNEAKING",
           "SNIFFING",
+          "SHOOTING",
+          "SLIDING",
           "SPIN_ATTACK",
           "STANDING",
           "SWIMMING",
@@ -1549,6 +1655,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1573,6 +1681,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1594,6 +1704,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1624,6 +1736,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 37,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1661,6 +1775,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1686,6 +1802,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1776,6 +1894,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1806,6 +1926,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 39,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1829,6 +1951,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1884,6 +2008,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 36,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1909,6 +2035,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "appearance",
+    "slot": 42,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1931,6 +2059,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -1943,6 +2073,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -1956,6 +2088,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -1968,6 +2102,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -1992,6 +2128,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2019,6 +2157,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2056,6 +2196,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2099,6 +2241,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2136,6 +2280,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2161,6 +2307,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2198,6 +2346,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2271,6 +2421,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2357,6 +2509,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2404,6 +2558,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2440,6 +2596,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2477,6 +2635,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2543,6 +2703,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2579,6 +2741,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2604,6 +2768,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2628,6 +2794,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2660,6 +2828,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2686,6 +2856,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2722,6 +2894,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2747,6 +2921,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2772,6 +2948,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2797,6 +2975,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2867,6 +3047,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "display_entity",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2892,6 +3074,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -2904,6 +3088,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -2916,6 +3102,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -2940,6 +3128,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -2956,6 +3146,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -2970,6 +3162,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -2982,6 +3176,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3018,6 +3214,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -3030,6 +3228,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3054,6 +3254,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3079,6 +3281,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3104,6 +3308,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3129,6 +3335,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3154,6 +3362,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3180,6 +3390,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3214,6 +3426,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3239,6 +3453,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3308,6 +3524,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3333,6 +3551,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3358,6 +3578,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3386,6 +3608,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3410,6 +3634,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3437,6 +3663,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3462,6 +3690,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3487,6 +3717,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "goals",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3524,6 +3756,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3567,6 +3801,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3588,6 +3824,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3614,7 +3852,9 @@
           "HAND",
           "HEAD",
           "LEGS",
-          "OFF_HAND"
+          "OFF_HAND",
+          "BODY",
+          "SADDLE"
         ]
       }
     ]
@@ -3625,6 +3865,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3694,6 +3936,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3772,6 +4016,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -3781,6 +4027,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3854,6 +4102,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -3863,6 +4113,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3937,6 +4189,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -3962,6 +4216,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4038,6 +4294,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4064,7 +4322,9 @@
           "HAND",
           "HEAD",
           "LEGS",
-          "OFF_HAND"
+          "OFF_HAND",
+          "BODY",
+          "SADDLE"
         ]
       }
     ]
@@ -4075,6 +4335,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4099,6 +4361,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4123,6 +4387,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4149,6 +4415,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4185,6 +4453,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4210,6 +4480,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "miscellaneous",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -4235,6 +4507,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4267,6 +4541,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4288,6 +4564,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4334,6 +4612,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4379,6 +4659,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4413,6 +4695,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -4422,6 +4706,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4443,6 +4729,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4466,6 +4754,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4488,6 +4778,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4510,6 +4802,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4544,6 +4838,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4565,6 +4861,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4598,6 +4896,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "movement",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4631,6 +4931,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -4640,6 +4942,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4673,6 +4977,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4757,6 +5063,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4834,6 +5142,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4856,6 +5166,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4902,6 +5214,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4924,6 +5238,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4959,6 +5275,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -4981,6 +5299,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5053,6 +5373,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5083,6 +5405,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5108,6 +5432,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5130,6 +5456,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5152,6 +5480,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5179,6 +5509,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5201,6 +5533,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5223,6 +5557,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5262,6 +5598,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5296,6 +5634,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5325,6 +5665,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5353,6 +5695,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5375,6 +5719,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5409,6 +5755,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5431,6 +5779,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5456,6 +5806,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5481,6 +5833,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5518,6 +5872,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5544,6 +5900,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5569,6 +5927,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5594,6 +5954,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5633,6 +5995,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "parameters",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5658,6 +6022,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 44,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -5671,6 +6037,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 0,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -5734,6 +6102,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 1,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -5797,6 +6167,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 43,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5823,6 +6195,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [],
     "worksWith": [
@@ -5838,6 +6212,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5863,6 +6239,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5885,6 +6263,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5928,6 +6308,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5950,6 +6332,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 32,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -5975,6 +6359,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6000,6 +6386,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6027,6 +6415,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6049,6 +6439,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 34,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6060,9 +6452,7 @@
         ],
         "values": [
           "WAXED",
-          "Material",
-          "UNSET",
-          "Material"
+          "UNSET"
         ]
       }
     ],
@@ -6076,6 +6466,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 35,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6101,6 +6493,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 36,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6128,6 +6522,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6153,6 +6549,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6174,6 +6572,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6196,6 +6596,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6218,6 +6620,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6241,6 +6645,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 40,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6263,6 +6669,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6287,6 +6695,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6312,6 +6722,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 6,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6358,6 +6770,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 4,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6385,6 +6799,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 3,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6407,6 +6823,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 2,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6441,6 +6859,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6463,6 +6883,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6485,6 +6907,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6509,6 +6933,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 7,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6534,6 +6960,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6559,6 +6987,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 42,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6726,6 +7156,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6748,6 +7180,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6791,6 +7225,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 33,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6816,6 +7252,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 39,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6842,6 +7280,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 41,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6864,6 +7304,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 5,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -6901,6 +7343,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 38,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6922,6 +7366,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6947,6 +7393,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -6992,6 +7440,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7014,6 +7464,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7043,6 +7495,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7069,6 +7523,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7099,6 +7555,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7128,6 +7586,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7167,6 +7627,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7219,6 +7681,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7243,6 +7707,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7270,6 +7736,8 @@
     "object": "entity",
     "category": "entity",
     "subcategory": "settings",
+    "slot": 37,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7300,6 +7768,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7345,6 +7815,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7392,6 +7864,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7425,6 +7899,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7492,6 +7968,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 6,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -7546,6 +8024,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 7,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -7578,6 +8058,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 9,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -7636,6 +8118,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 10,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -7657,6 +8141,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 8,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -7732,6 +8218,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7756,6 +8244,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7831,6 +8321,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7863,6 +8355,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7941,6 +8435,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -7995,6 +8491,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8035,7 +8533,13 @@
           "TALL_BIRCH",
           "TALL_REDWOOD",
           "WARPED_FUNGUS",
-          "AZALEA"
+          "AZALEA",
+          "MANGROVE",
+          "TALL_MANGROVE",
+          "CHERRY",
+          "MEGA_PINE",
+          "PALE_OAK_CREAKING",
+          "PALE_OAK"
         ]
       }
     ]
@@ -8046,6 +8550,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "block",
+    "slot": 1,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8103,6 +8609,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 2,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8138,6 +8646,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "block",
+    "slot": 11,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8221,6 +8731,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 43,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8254,6 +8766,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8329,6 +8843,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 4,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8390,6 +8906,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 5,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8414,6 +8932,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8481,6 +9001,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8552,6 +9074,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8588,6 +9112,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 41,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8624,6 +9150,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8721,6 +9249,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 12,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8802,6 +9332,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 0,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -8845,6 +9377,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8881,6 +9415,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -8942,6 +9478,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9027,6 +9565,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9062,6 +9602,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9097,6 +9639,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 38,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9135,6 +9679,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 37,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9174,6 +9720,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 36,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9211,6 +9759,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9260,6 +9810,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 35,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9296,6 +9848,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9334,6 +9888,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9381,6 +9937,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9428,6 +9986,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9475,6 +10035,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 39,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9514,6 +10076,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 40,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9550,6 +10114,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9593,6 +10159,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9629,6 +10197,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9665,6 +10235,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 32,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9701,6 +10273,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9761,6 +10335,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9836,6 +10412,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9872,6 +10450,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 42,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -9907,6 +10487,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 3,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -9985,6 +10567,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 33,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10023,6 +10607,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 34,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10063,6 +10649,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 44,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10084,6 +10672,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "block",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10120,6 +10710,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10190,6 +10782,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10246,6 +10840,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10324,6 +10920,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10499,6 +11097,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10542,6 +11142,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10627,6 +11229,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10671,6 +11275,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10703,6 +11309,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10747,6 +11355,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10815,6 +11425,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10870,6 +11482,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -10938,6 +11552,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11017,6 +11633,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11060,6 +11678,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11164,6 +11784,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11185,6 +11807,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11346,6 +11970,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11392,6 +12018,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11459,6 +12087,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11491,6 +12121,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11580,6 +12212,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "entity",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11623,6 +12257,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -11632,6 +12268,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11691,6 +12329,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11718,6 +12358,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11745,6 +12387,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11796,6 +12440,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11822,6 +12468,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11848,6 +12496,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11876,6 +12526,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11936,6 +12588,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11961,6 +12615,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -11988,6 +12644,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12015,6 +12673,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12041,6 +12701,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12062,6 +12724,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12088,6 +12752,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12152,6 +12818,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12177,6 +12845,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12202,6 +12872,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12234,6 +12906,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12262,6 +12936,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12287,6 +12963,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12312,6 +12990,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12333,6 +13013,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12358,6 +13040,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12383,6 +13067,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12407,6 +13093,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "event",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -12416,6 +13104,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12539,6 +13229,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12778,6 +13470,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -12916,6 +13610,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13054,6 +13750,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13126,6 +13824,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13239,6 +13939,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -13248,6 +13950,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "recipe",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13315,6 +14019,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13336,6 +14042,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13368,6 +14076,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13389,6 +14099,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13421,6 +14133,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13454,6 +14168,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13534,6 +14250,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13577,6 +14295,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13634,6 +14354,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13680,6 +14402,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13724,6 +14448,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "scoreboard",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13756,6 +14482,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13778,6 +14506,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13825,6 +14555,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13847,6 +14579,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13869,6 +14603,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13907,6 +14643,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "settings",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -13921,9 +14659,6 @@
           "DO_DAYLIGHT_CYCLE",
           "DO_ENTITY_DROPS",
           "DO_FIRE_TICK",
-          "GameRules",
-          "Material",
-          "IntGameRuleLimiter",
           "DO_IMMEDIATE_RESPAWN",
           "DO_INSOMNIA",
           "DO_MOB_LOOT",
@@ -13941,7 +14676,6 @@
           "PROJECTILES_CAN_BREAK_BLOCKS",
           "SHOW_DEATH_MESSAGES",
           "NATURAL_REGENERATION",
-          "GameRules",
           "UNIVERSAL_ANGER",
           "PLAYERS_SLEEPING_PERCENTAGE",
           "REDUCED_DEBUG_INFO",
@@ -13956,13 +14690,7 @@
           "MOB_EXPLOSION_DROP_DECAY",
           "DO_LIMITED_CRAFTING",
           "PLAYERS_NETHER_PORTAL_DEFAULT_DELAY",
-          "GameRules",
-          "Material",
-          "IntGameRuleLimiter",
           "PLAYERS_NETHER_PORTAL_CREATIVE_DELAY",
-          "GameRules",
-          "Material",
-          "IntGameRuleLimiter",
           "SNOW_ACCUMULATION_HEIGHT",
           "DO_WARDEN_SPAWNING",
           "ENDER_PEARLS_VANISH_ON_DEATH",
@@ -13996,6 +14724,8 @@
     "object": "world",
     "category": "game",
     "subcategory": "web",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -14069,6 +14799,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 17,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14090,6 +14822,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 18,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14122,6 +14856,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 19,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14155,6 +14891,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 13,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14164,6 +14902,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 21,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14173,6 +14913,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 14,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14245,6 +14987,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14302,6 +15046,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 16,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14311,6 +15057,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14320,6 +15068,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14388,6 +15138,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 12,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14397,6 +15149,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 20,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14421,6 +15175,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14430,6 +15186,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14475,6 +15233,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14484,6 +15244,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14541,6 +15303,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14630,6 +15394,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14676,6 +15442,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14685,6 +15453,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 11,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -14694,6 +15464,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14740,6 +15512,8 @@
     "object": "entity",
     "category": "if_entity",
     "subcategory": null,
+    "slot": 15,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14795,6 +15569,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14859,6 +15635,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14916,6 +15694,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 20,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -14999,6 +15779,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 18,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15020,6 +15802,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15099,6 +15883,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15165,6 +15951,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 13,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15203,7 +15991,12 @@
           "SUICIDE",
           "THORNS",
           "VOID",
-          "WITHER"
+          "WITHER",
+          "KILL",
+          "COMMAND",
+          "SONIC_BOOM",
+          "WORLD_BORDER",
+          "CAMPFIRE"
         ]
       }
     ]
@@ -15214,6 +16007,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -15223,6 +16018,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15299,6 +16096,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 12,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15329,6 +16128,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 11,
+    "page": 1,
     "type": "container",
     "args": [],
     "worksWith": [
@@ -15341,6 +16142,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -15350,6 +16153,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15409,6 +16214,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 21,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15487,6 +16294,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15544,6 +16353,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15601,6 +16412,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 14,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15630,6 +16443,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 15,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15658,6 +16473,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 16,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15683,7 +16500,18 @@
           "PLING",
           "SNARE_DRUM",
           "STICKS",
-          "XYLOPHONE"
+          "XYLOPHONE",
+          "ZOMBIE",
+          "SKELETON",
+          "CREEPER",
+          "WITHER_SKELETON",
+          "DRAGON",
+          "PIGLIN",
+          "CUSTOM_HEAD",
+          "TRUMPET",
+          "TRUMPET_EXPOSED",
+          "TRUMPET_OXIDIZED",
+          "TRUMPET_WEATHERED"
         ]
       }
     ]
@@ -15694,6 +16522,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 17,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15715,6 +16545,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15806,6 +16638,8 @@
     "object": "world",
     "category": "if_game",
     "subcategory": null,
+    "slot": 19,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15889,6 +16723,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -15948,6 +16784,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16018,6 +16856,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16063,6 +16903,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16138,6 +16980,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16209,6 +17053,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16284,6 +17130,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16355,6 +17203,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16412,6 +17262,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16469,6 +17321,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16528,6 +17382,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "item",
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16598,6 +17454,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16619,6 +17477,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16651,6 +17511,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16684,6 +17546,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16752,6 +17616,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16841,6 +17707,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16886,6 +17754,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "location",
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -16975,6 +17845,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17032,6 +17904,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17056,6 +17930,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17134,6 +18010,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17161,6 +18039,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17218,6 +18098,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17259,6 +18141,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17281,6 +18165,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17316,7 +18202,13 @@
           "CARTOGRAPHY",
           "GRINDSTONE",
           "STONECUTTER",
-          "COMPOSTER"
+          "COMPOSTER",
+          "CHISELED_BOOKSHELF",
+          "JUKEBOX",
+          "SMITHING_NEW",
+          "DECORATED_POT",
+          "CRAFTER",
+          "SHELF"
         ]
       }
     ]
@@ -17327,6 +18219,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17384,6 +18278,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "misc",
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17430,6 +18326,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 11,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17439,6 +18337,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 12,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17448,6 +18348,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17457,6 +18359,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17466,6 +18370,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17475,6 +18381,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17484,6 +18392,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17493,6 +18403,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17502,6 +18414,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17511,6 +18425,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17520,6 +18436,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17529,6 +18447,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17538,6 +18458,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17547,6 +18469,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 14,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17556,6 +18480,8 @@
     "object": "player",
     "category": "if_player",
     "subcategory": "toggleable",
+    "slot": 13,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -17565,6 +18491,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 21,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17623,6 +18551,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 23,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17658,6 +18588,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 22,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17679,6 +18611,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17748,6 +18682,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 13,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17814,6 +18750,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17848,6 +18786,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -17926,6 +18866,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 14,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18011,6 +18953,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 16,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18083,6 +19027,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 19,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18185,6 +19131,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 18,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18267,6 +19215,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 17,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18288,6 +19238,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 20,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18323,6 +19275,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18357,6 +19311,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18391,6 +19347,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 24,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18461,6 +19419,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 25,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18532,6 +19492,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18588,6 +19550,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18667,6 +19631,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 26,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18738,6 +19704,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 27,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18809,6 +19777,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -18956,6 +19926,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19016,6 +19988,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 28,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19082,6 +20056,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19153,6 +20129,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 12,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19224,6 +20202,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19308,6 +20288,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 11,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19379,6 +20361,8 @@
     "object": "variable",
     "category": "if_variable",
     "subcategory": null,
+    "slot": 15,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -19453,6 +20437,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19486,6 +20472,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19519,6 +20507,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19552,6 +20542,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19611,6 +20603,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19635,6 +20629,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19657,6 +20653,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19666,6 +20664,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19675,6 +20675,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19684,6 +20686,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19693,6 +20697,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19714,6 +20720,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19735,6 +20743,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19756,6 +20766,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19778,6 +20790,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19800,6 +20814,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19811,15 +20827,19 @@
         ],
         "values": [
           "CROAKING",
+          "CROUCHING",
           "DIGGING",
           "DYING",
           "EMERGING",
           "FALL_FLYING",
+          "INHALING",
           "LONG_JUMPING",
           "ROARING",
+          "SITTING",
           "SLEEPING",
-          "SNEAKING",
           "SNIFFING",
+          "SHOOTING",
+          "SLIDING",
           "SPIN_ATTACK",
           "STANDING",
           "SWIMMING",
@@ -19846,6 +20866,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19880,6 +20902,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19903,6 +20927,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "appearance",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19925,6 +20951,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19934,6 +20962,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -19943,6 +20973,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19964,6 +20996,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -19996,6 +21030,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20057,6 +21093,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20148,6 +21186,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20169,6 +21209,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20226,6 +21268,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20271,6 +21315,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20360,6 +21406,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20440,6 +21488,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20508,6 +21558,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20598,6 +21650,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20656,6 +21710,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20724,6 +21780,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -20733,6 +21791,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20754,6 +21814,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -20763,6 +21825,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20808,6 +21872,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "communication",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20827,7 +21893,8 @@
           "PLAYER",
           "RECORD",
           "VOICE",
-          "WEATHER"
+          "WEATHER",
+          "UI"
         ]
       }
     ]
@@ -20838,6 +21905,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20887,6 +21956,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -20896,6 +21967,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20961,6 +22034,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -20982,6 +22057,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -20991,6 +22068,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21030,6 +22109,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21064,6 +22145,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21085,6 +22168,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21118,6 +22203,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21139,6 +22226,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "inventory_menus",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21243,6 +22332,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -21252,6 +22343,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -21261,6 +22354,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21286,6 +22381,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21332,6 +22429,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -21341,6 +22440,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21397,6 +22498,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21452,6 +22555,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -21461,6 +22566,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21507,6 +22614,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21584,6 +22693,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -21593,6 +22704,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21651,6 +22764,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21672,6 +22787,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21727,6 +22844,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21753,7 +22872,9 @@
           "HAND",
           "HEAD",
           "LEGS",
-          "OFF_HAND"
+          "OFF_HAND",
+          "BODY",
+          "SADDLE"
         ]
       }
     ]
@@ -21764,6 +22885,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21808,6 +22931,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21841,6 +22966,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21905,6 +23032,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21938,6 +23067,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "item_management",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21960,6 +23091,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -21981,6 +23114,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22050,6 +23185,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22117,6 +23254,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -22126,6 +23265,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -22135,6 +23276,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22156,6 +23299,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22200,6 +23345,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22267,6 +23414,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22288,6 +23437,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "miscellaneous",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22324,6 +23475,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22345,6 +23498,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22366,6 +23521,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22412,6 +23569,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22457,6 +23616,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22491,6 +23652,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -22500,6 +23663,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22583,6 +23748,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22604,6 +23771,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22626,6 +23795,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22648,6 +23819,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22682,6 +23855,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22703,6 +23878,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22736,6 +23913,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22757,6 +23936,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22818,6 +23999,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "movement",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22870,6 +24053,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -22879,6 +24064,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22912,6 +24099,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -22996,6 +24185,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23031,6 +24222,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23111,6 +24304,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23133,6 +24328,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23179,6 +24376,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23201,6 +24400,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23223,6 +24424,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23245,6 +24448,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23317,6 +24522,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23342,6 +24549,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23364,6 +24573,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23398,6 +24609,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23433,6 +24646,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23455,6 +24670,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23477,6 +24694,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23511,6 +24730,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23545,6 +24766,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23567,6 +24790,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23589,6 +24814,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23611,6 +24838,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23645,6 +24874,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23667,6 +24898,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23701,6 +24934,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23726,6 +24961,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23760,6 +24997,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23785,6 +25024,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "parameters",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23810,6 +25051,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23831,6 +25074,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23907,6 +25152,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -23998,6 +25245,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24066,6 +25315,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24133,6 +25384,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24200,6 +25453,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24256,6 +25511,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24360,6 +25617,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "particle",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24462,6 +25721,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [],
     "additionalInfo": [
@@ -24474,6 +25735,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24496,6 +25759,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24518,6 +25783,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24540,6 +25807,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24563,6 +25832,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24599,6 +25870,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24621,6 +25894,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24643,6 +25918,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24665,6 +25942,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24687,6 +25966,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24708,6 +25989,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24757,6 +26040,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "settings",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24778,6 +26063,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -24787,6 +26074,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24829,6 +26118,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24893,6 +26184,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24933,6 +26226,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -24966,6 +26261,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25001,6 +26298,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25048,6 +26347,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25126,6 +26427,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25178,6 +26481,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25256,6 +26561,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25288,6 +26595,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -25297,6 +26606,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -25306,6 +26617,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25358,6 +26671,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25379,6 +26694,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25457,6 +26774,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25479,6 +26798,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25501,6 +26822,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25523,6 +26846,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25548,6 +26873,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25570,6 +26897,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25592,6 +26921,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25614,6 +26945,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25659,6 +26992,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25705,6 +27040,8 @@
     "object": "player",
     "category": "player",
     "subcategory": "world",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -25800,6 +27137,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 7,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -25870,6 +27209,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 4,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -25914,6 +27255,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 5,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -25959,6 +27302,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 0,
+    "page": 1,
     "type": "container",
     "args": []
   },
@@ -25968,6 +27313,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 2,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26001,6 +27348,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 9,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26092,6 +27441,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 6,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26135,6 +27486,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 8,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26216,6 +27569,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 3,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26273,6 +27628,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 10,
+    "page": 1,
     "type": "container",
     "args": [
       {
@@ -26342,6 +27699,8 @@
     "object": "repeat",
     "category": "repeat",
     "subcategory": null,
+    "slot": 1,
+    "page": 1,
     "type": "container_with_conditional",
     "args": []
   },
@@ -26351,6 +27710,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26360,6 +27721,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26369,6 +27732,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26378,6 +27743,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 13,
+    "page": 1,
     "type": "basic_with_conditional",
     "args": []
   },
@@ -26387,6 +27754,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26433,6 +27802,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26459,6 +27830,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26468,6 +27841,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26477,6 +27852,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26523,6 +27900,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 12,
+    "page": 1,
     "type": "basic_with_conditional",
     "args": []
   },
@@ -26532,6 +27911,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26578,6 +27959,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26587,6 +27970,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26596,6 +27981,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "add",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26605,6 +27992,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26614,6 +28003,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26623,6 +28014,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26632,6 +28025,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 14,
+    "page": 1,
     "type": "basic_with_conditional",
     "args": []
   },
@@ -26641,6 +28036,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26687,6 +28084,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26713,6 +28112,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26722,6 +28123,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26731,6 +28134,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26740,6 +28145,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26786,6 +28193,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 13,
+    "page": 1,
     "type": "basic_with_conditional",
     "args": []
   },
@@ -26795,6 +28204,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26841,6 +28252,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26850,6 +28263,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26859,6 +28274,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26868,6 +28285,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "creation",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": []
   },
@@ -26877,6 +28296,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "filter",
+    "slot": 0,
+    "page": 1,
     "type": "basic_with_conditional",
     "args": []
   },
@@ -26886,6 +28307,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "filter",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -26943,6 +28366,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "filter",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27048,6 +28473,8 @@
     "object": "select",
     "category": "select",
     "subcategory": "filter",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27116,6 +28543,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27175,6 +28604,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27233,6 +28664,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27278,6 +28711,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27339,6 +28774,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27398,6 +28835,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27443,6 +28882,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27499,6 +28940,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27532,6 +28975,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27565,6 +29010,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27621,6 +29068,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27677,6 +29126,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27710,6 +29161,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27743,6 +29196,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27800,6 +29255,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27856,6 +29313,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27889,6 +29348,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27945,6 +29406,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -27995,6 +29458,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "list",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28052,6 +29517,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28122,6 +29589,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28168,6 +29637,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28259,6 +29730,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28303,6 +29776,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28335,6 +29810,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28381,6 +29858,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28478,6 +29957,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28510,6 +29991,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28542,6 +30025,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28574,6 +30059,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28606,6 +30093,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28672,6 +30161,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28788,6 +30279,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28831,7 +30324,10 @@
           16
         ],
         "values": [
-          "COPY_TO_CLIPBOARD"
+          "COPY_TO_CLIPBOARD",
+          "SUGGEST_COMMAND",
+          "OPEN_URL",
+          "CHANGE_PAGE"
         ]
       }
     ]
@@ -28842,6 +30338,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28939,6 +30437,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -28982,6 +30482,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29036,6 +30538,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29079,6 +30583,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29122,6 +30628,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29165,6 +30673,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29208,6 +30718,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "component",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29251,6 +30763,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29319,6 +30833,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 7,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29480,6 +30996,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 44,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29547,7 +31065,10 @@
           34
         ],
         "values": [
-          "FLOATS"
+          "FLOATS",
+          "BOOLEANS",
+          "STRINGS",
+          "COLORS"
         ]
       },
       {
@@ -29558,7 +31079,11 @@
           35
         ],
         "values": [
-          "SET"
+          "SET",
+          "ADD",
+          "REMOVE_ALL",
+          "REMOVE_FIRST",
+          "REMOVE_LAST"
         ]
       }
     ]
@@ -29569,6 +31094,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 41,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29614,6 +31141,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 43,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29659,6 +31188,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29703,6 +31234,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 15,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29735,6 +31268,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 39,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29767,6 +31302,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -29799,6 +31336,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 32,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29847,6 +31386,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 38,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29960,6 +31501,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 21,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -29992,6 +31535,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 35,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30030,6 +31575,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30073,6 +31620,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 13,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30138,6 +31687,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30192,6 +31743,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30224,6 +31777,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 19,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30256,6 +31811,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30303,6 +31860,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30338,6 +31897,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30394,6 +31955,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30439,6 +32002,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 25,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30483,6 +32048,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30515,6 +32082,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30559,6 +32128,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30604,6 +32175,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30636,6 +32209,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 34,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30668,6 +32243,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 0,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30700,6 +32277,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30732,6 +32311,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 37,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -30776,6 +32357,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 17,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30808,6 +32391,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 6,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30840,6 +32425,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 23,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30872,6 +32459,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 42,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30917,6 +32506,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 44,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -30982,6 +32573,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 30,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31026,6 +32619,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 2,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31058,6 +32653,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 27,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31090,6 +32687,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 11,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31134,6 +32733,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 42,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31178,6 +32779,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 38,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31223,6 +32826,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 34,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31304,6 +32909,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 43,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31336,7 +32943,10 @@
           15
         ],
         "values": [
-          "FLOATS"
+          "FLOATS",
+          "BOOLEANS",
+          "STRINGS",
+          "COLORS"
         ]
       }
     ]
@@ -31347,6 +32957,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 41,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31379,6 +32991,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 40,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31505,6 +33119,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31574,6 +33190,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 32,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31606,6 +33224,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31662,6 +33282,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31706,6 +33328,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 8,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31818,6 +33442,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 9,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -31872,6 +33498,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -31939,6 +33567,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32008,6 +33638,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 16,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32089,6 +33721,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 40,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32144,6 +33778,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32188,6 +33824,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 33,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32292,6 +33930,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 39,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32430,6 +34070,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 22,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32473,6 +34115,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 36,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32523,6 +34167,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32577,6 +34223,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 14,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32703,6 +34351,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32789,6 +34439,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 20,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -32857,6 +34509,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32916,6 +34570,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -32974,6 +34630,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 26,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33042,6 +34700,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 10,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33089,6 +34749,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 4,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33134,6 +34796,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 5,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33178,6 +34842,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33250,6 +34916,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33317,6 +34985,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33360,6 +35030,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33408,6 +35080,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 35,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33452,6 +35126,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 1,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33495,6 +35171,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33538,6 +35216,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 36,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33616,6 +35296,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 18,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33684,6 +35366,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 24,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33731,6 +35415,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 31,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33788,6 +35474,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 3,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33831,6 +35519,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -33875,6 +35565,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 29,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33943,6 +35635,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 28,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -33986,6 +35680,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 33,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34122,6 +35818,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 12,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -34178,6 +35876,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 37,
+    "page": 2,
     "type": "basic",
     "args": [
       {
@@ -34221,6 +35921,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "item",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34290,6 +35992,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34359,6 +36063,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34417,6 +36123,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34484,6 +36192,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34527,6 +36237,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34619,6 +36331,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34695,6 +36409,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34742,6 +36458,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34774,6 +36492,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34838,6 +36558,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34896,6 +36618,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -34951,6 +36675,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35032,6 +36758,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35091,6 +36819,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35134,6 +36864,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35226,6 +36958,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35285,6 +37019,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35342,6 +37078,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35397,6 +37135,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "location",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35500,6 +37240,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35582,6 +37324,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35630,6 +37374,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35708,6 +37454,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35845,6 +37593,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35879,6 +37629,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35948,6 +37700,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -35993,6 +37747,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36174,6 +37930,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36208,6 +37966,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36264,6 +38024,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36331,6 +38093,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36365,6 +38129,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36454,6 +38220,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36488,6 +38256,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36576,6 +38346,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "map",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36634,6 +38406,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36681,6 +38455,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36726,6 +38502,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36770,6 +38548,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36802,6 +38582,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36834,6 +38616,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36866,6 +38650,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36898,6 +38684,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36930,6 +38718,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36962,6 +38752,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -36997,6 +38789,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37029,6 +38823,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37073,6 +38869,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37117,6 +38915,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37161,6 +38961,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37204,6 +39006,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37248,6 +39052,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37289,7 +39095,8 @@
           "PLAYER",
           "RECORD",
           "VOICE",
-          "WEATHER"
+          "WEATHER",
+          "UI"
         ]
       }
     ]
@@ -37300,6 +39107,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37354,6 +39163,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37401,6 +39212,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37445,6 +39258,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37488,6 +39303,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37545,6 +39362,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37602,6 +39421,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "misc",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37659,6 +39480,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37692,6 +39515,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37751,6 +39576,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37796,6 +39623,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37868,6 +39697,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37932,6 +39763,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -37989,6 +39822,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38033,6 +39868,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38092,6 +39929,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38151,6 +39990,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38184,6 +40025,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38257,6 +40100,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38328,6 +40173,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38365,6 +40212,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 31,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38422,6 +40271,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38455,6 +40306,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 32,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38512,6 +40365,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38557,6 +40412,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 33,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38638,6 +40495,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 34,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38715,6 +40574,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38774,6 +40635,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38833,6 +40696,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38892,6 +40757,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -38951,6 +40818,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39067,6 +40936,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39112,6 +40983,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39169,6 +41042,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39226,6 +41101,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39271,6 +41148,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39329,6 +41208,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39445,6 +41326,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39504,6 +41387,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39563,6 +41448,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39622,6 +41509,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 30,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39715,6 +41604,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "numerical",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39772,6 +41663,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39804,6 +41697,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39848,6 +41743,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39880,6 +41777,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39912,6 +41811,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39944,6 +41845,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -39988,6 +41891,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40020,6 +41925,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40064,6 +41971,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40119,6 +42028,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40162,6 +42073,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40205,6 +42118,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40249,6 +42164,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40305,6 +42222,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "particle",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40348,6 +42267,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40380,6 +42301,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40442,7 +42365,11 @@
           17
         ],
         "values": [
-          "EQUALS"
+          "EQUALS",
+          "NAME_CONTAINS",
+          "PART_CONTAINS",
+          "STARTS_WITH",
+          "ENDS_WITH"
         ]
       },
       {
@@ -40466,6 +42393,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40542,6 +42471,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40627,6 +42558,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40685,6 +42618,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "setting",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40731,6 +42666,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 27,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40803,6 +42740,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40835,6 +42774,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 23,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40879,6 +42820,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40911,6 +42854,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 29,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -40984,6 +42929,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41033,6 +42980,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41106,7 +43055,6 @@
           "YYYY_MM_DD",
           "EEE_D_MMMM",
           "EEE_MMMM_D",
-          "MMMM",
           "EEEE",
           "HH_MM_SS",
           "H_MM_A",
@@ -41122,6 +43070,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41166,6 +43116,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41233,6 +43185,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41265,6 +43219,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41434,6 +43390,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41489,6 +43447,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41524,6 +43484,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41569,6 +43531,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41658,6 +43622,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 25,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41690,6 +43656,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41847,6 +43815,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41928,6 +43898,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -41972,6 +43944,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42051,6 +44025,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42094,6 +44070,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 22,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42138,6 +44116,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42184,6 +44164,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42254,6 +44236,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42301,6 +44285,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 28,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42346,6 +44332,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 24,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42392,6 +44380,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42425,6 +44415,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 26,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42470,6 +44462,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "text",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42526,6 +44520,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42584,6 +44580,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42629,6 +44627,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42672,6 +44672,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42715,6 +44717,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42758,6 +44762,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42813,6 +44819,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 20,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42856,6 +44864,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42910,6 +44920,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42953,6 +44965,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -42998,6 +45012,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43030,6 +45046,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43074,6 +45092,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43117,6 +45137,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43161,6 +45183,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43216,6 +45240,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43285,6 +45311,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43352,6 +45380,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43409,6 +45439,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43453,6 +45485,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43511,6 +45545,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43568,6 +45604,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "vector",
+    "slot": 21,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43600,6 +45638,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 2,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43644,6 +45684,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 1,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43690,6 +45732,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 7,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43734,6 +45778,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 0,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43780,6 +45826,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 8,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43812,6 +45860,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 12,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43844,6 +45894,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 4,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43888,6 +45940,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 9,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43920,6 +45974,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 3,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43952,6 +46008,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 19,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -43986,6 +46044,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 13,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44032,6 +46092,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 10,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44064,6 +46126,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 11,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44096,6 +46160,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 6,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44141,6 +46207,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 17,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44186,6 +46254,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 14,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44218,6 +46288,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 5,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44278,6 +46350,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 15,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44313,6 +46387,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 16,
+    "page": 1,
     "type": "basic",
     "args": [
       {
@@ -44348,6 +46424,8 @@
     "object": "variable",
     "category": "set_variable",
     "subcategory": "world",
+    "slot": 18,
+    "page": 1,
     "type": "basic",
     "args": [
       {

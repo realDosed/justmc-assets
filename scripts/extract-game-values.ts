@@ -15,6 +15,7 @@ import {
   CachedIcon,
   GAME_VALUE_ICONS_CACHE_FILE,
   extractValueTypeIcons,
+  extractMenuPositions,
   extractIconTexture,
   loadCachedTextureValues,
   readSourceFile,
@@ -111,6 +112,8 @@ const extractGameValueMenuIcons = (
 
 const REGISTERED_GAME_VALUES =
   /val\s*(.*?)\s*=\s*register\("(.*)",\s*ValueTypes.([\w]*)/g;
+const GAME_VALUE_MENU_GROUPS =
+  /private\s+val\s+(\w+)\s*=\s*buildList\s*\{/g;
 const NEXT_GAME_VALUE = /^[ \t]{4}val\s+[A-Z][A-Z0-9_]*\s*=\s*register\(/gm;
 const VALUE_CONTAINER_TYPE =
   /DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
@@ -197,6 +200,21 @@ const selectorFromBody = (
       references[match[1]] || !/^\s*\/\//.test(beforeCall);
     return references;
   }, {});
+  const menuGameValuePositions = Object.assign(
+    {},
+    ...matches(originalGameValuesMenuFile, GAME_VALUE_MENU_GROUPS).map(
+      (group, index, groups) => {
+        const start = group.index!;
+        const end =
+          groups[index + 1]?.index ?? originalGameValuesMenuFile.length;
+        return extractMenuPositions(
+          originalGameValuesMenuFile.slice(start, end),
+          MENU_GAME_VALUE_REFERENCES,
+          36
+        );
+      }
+    )
+  );
   const importedSources = await getImportedKotlinSources(gameValuesMenuFile);
 
   const valueTypeIcons = await extractValueTypeIcons();
@@ -286,6 +304,7 @@ const selectorFromBody = (
       id: _gameValue.id,
       type: _gameValue.type,
       selector: _gameValue.selector,
+      ...(menuGameValuePositions[_gameValue.name] || {}),
       ...('elementType' in _gameValue
         ? { elementType: _gameValue.elementType }
         : {}),

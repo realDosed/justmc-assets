@@ -2,102 +2,142 @@
   {
     "id": "current_health",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "max_health",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "absorption_health",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "food_level",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "food_saturation",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "food_exhaustion",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "saturated_regen_rate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "unsaturated_regen_rate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "starvation_rate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "attack_damage",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "attack_speed",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "attack_cooldown_ticks",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "attack_cooldown_strength",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "armor_points",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "armor_toughness",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 14,
+    "page": 1
   },
   {
     "id": "invulnerability_ticks",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "max_invulnerability_ticks",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "experience_level",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "experience_progress",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 18,
+    "page": 1
   },
   {
     "id": "death_screen_score",
     "type": "number",
     "selector": "entity",
+    "slot": 19,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -105,52 +145,72 @@
   {
     "id": "fire_ticks",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 20,
+    "page": 1
   },
   {
     "id": "freeze_ticks",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 21,
+    "page": 1
   },
   {
     "id": "remaining_air",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 22,
+    "page": 1
   },
   {
     "id": "fall_distance",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 23,
+    "page": 1
   },
   {
     "id": "held_slot",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 24,
+    "page": 1
   },
   {
     "id": "walking_speed",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 25,
+    "page": 1
   },
   {
     "id": "flying_speed",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 26,
+    "page": 1
   },
   {
     "id": "ping",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 27,
+    "page": 1
   },
   {
     "id": "protocol_version",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 28,
+    "page": 1
   },
   {
     "id": "client_view_distance",
     "type": "number",
     "selector": "entity",
+    "slot": 29,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -158,47 +218,65 @@
   {
     "id": "item_usage_progress",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 30,
+    "page": 1
   },
   {
     "id": "active_item_used_time",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 31,
+    "page": 1
   },
   {
     "id": "entity_ticks_lived",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 32,
+    "page": 1
   },
   {
     "id": "arrows_in_body",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 33,
+    "page": 1
   },
   {
     "id": "age",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 34,
+    "page": 1
   },
   {
     "id": "steer_forward",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 35,
+    "page": 1
   },
   {
     "id": "steer_sideways",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 0,
+    "page": 2
   },
   {
     "id": "merchant_recipe_count",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 1,
+    "page": 2
   },
   {
     "id": "open_inventory_size",
     "type": "number",
     "selector": "entity",
+    "slot": 2,
+    "page": 2,
     "worksWith": [
       "players"
     ]
@@ -206,22 +284,30 @@
   {
     "id": "entity_width_x",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 3,
+    "page": 2
   },
   {
     "id": "entity_height",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 4,
+    "page": 2
   },
   {
     "id": "entity_width_z",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 5,
+    "page": 2
   },
   {
     "id": "entity_fuse_ticks",
     "type": "number",
     "selector": "entity",
+    "slot": 6,
+    "page": 2,
     "worksWith": [
       "creeper",
       "tnt",
@@ -232,6 +318,8 @@
     "id": "projectile_power",
     "type": "vector",
     "selector": "entity",
+    "slot": 7,
+    "page": 2,
     "worksWith": [
       "fireball",
       "dragon_fireball",
@@ -241,47 +329,65 @@
   {
     "id": "enchantment_seed",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 8,
+    "page": 2
   },
   {
     "id": "idle_duration",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 9,
+    "page": 2
   },
   {
     "id": "entity_pathfinder_point_index",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 10,
+    "page": 2
   },
   {
     "id": "location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "target_block_location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "target_fluid_location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "target_block_face",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "eye_location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "cape_location",
     "type": "location",
     "selector": "entity",
+    "slot": 5,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -289,122 +395,168 @@
   {
     "id": "x_coordinate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "y_coordinate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "z_coordinate",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "pitch",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "yaw",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "direction_of_view",
     "type": "vector",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "cardinal_direction",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "hitbox_midpoint_location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "spawn_location",
     "type": "location",
-    "selector": null
+    "selector": null,
+    "slot": 14,
+    "page": 1
   },
   {
     "id": "origin",
     "type": "location",
-    "selector": "both"
+    "selector": "both",
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "velocity",
     "type": "vector",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 24,
+    "page": 1
   },
   {
     "id": "body_yaw",
     "type": "number",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "block_beneath",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "blocks_beneath",
     "type": "array",
     "selector": "entity",
+    "slot": 18,
+    "page": 1,
     "elementType": "location"
   },
   {
     "id": "last_death_location",
     "type": "location",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 19,
+    "page": 1
   },
   {
     "id": "main_hand_item",
     "type": "item",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "off_hand_item",
     "type": "item",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "armor_items",
     "type": "array",
     "selector": "entity",
+    "slot": 2,
+    "page": 1,
     "elementType": "item"
   },
   {
     "id": "hotbar_items",
     "type": "array",
     "selector": "entity",
+    "slot": 3,
+    "page": 1,
     "elementType": "item"
   },
   {
     "id": "inventory_items",
     "type": "array",
     "selector": "entity",
+    "slot": 4,
+    "page": 1,
     "elementType": "item"
   },
   {
     "id": "custom_inventory_items",
     "type": "array",
     "selector": "player",
+    "slot": 5,
+    "page": 1,
     "elementType": "item"
   },
   {
     "id": "cursor_item",
     "type": "item",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "saddle_item",
     "type": "item",
     "selector": "entity",
+    "slot": 7,
+    "page": 1,
     "worksWith": [
       "pig",
       "horse",
@@ -414,17 +566,23 @@
   {
     "id": "entity_item",
     "type": "item",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "entity_pick_item_stack",
     "type": "item",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_enderchest_items",
     "type": "array",
     "selector": "player",
+    "slot": 10,
+    "page": 1,
     "elementType": "item",
     "worksWith": [
       "player"
@@ -433,27 +591,37 @@
   {
     "id": "name",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "uuid",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "display_name",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "entity_type",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "client_brand_name",
     "type": "text",
     "selector": "entity",
+    "slot": 4,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -462,6 +630,8 @@
     "id": "user_locale",
     "type": "text",
     "selector": "entity",
+    "slot": 5,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -470,6 +640,8 @@
     "id": "clientside_locale",
     "type": "text",
     "selector": "entity",
+    "slot": 6,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -478,6 +650,8 @@
     "id": "open_inventory_title",
     "type": "text",
     "selector": "entity",
+    "slot": 7,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -486,6 +660,8 @@
     "id": "open_inventory_type",
     "type": "text",
     "selector": "entity",
+    "slot": 8,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -494,6 +670,8 @@
     "id": "open_inventory_custom_id",
     "type": "text",
     "selector": "entity",
+    "slot": 9,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -502,6 +680,8 @@
     "id": "gamemode",
     "type": "text",
     "selector": "entity",
+    "slot": 10,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -509,45 +689,61 @@
   {
     "id": "last_damage_cause",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "potion_effects",
     "type": "array",
     "selector": "entity",
+    "slot": 12,
+    "page": 1,
     "elementType": "potion"
   },
   {
     "id": "vehicle",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "passengers",
     "type": "array",
     "selector": "entity",
+    "slot": 14,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "lead_holder",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "attached_leads",
     "type": "array",
     "selector": "entity",
+    "slot": 16,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "targeted_entity",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "player_ender_pearls",
     "type": "array",
     "selector": "entity",
+    "slot": 18,
+    "page": 1,
     "elementType": "text",
     "worksWith": [
       "player"
@@ -556,12 +752,16 @@
   {
     "id": "spawn_reason",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 25,
+    "page": 1
   },
   {
     "id": "main_hand",
     "type": "text",
     "selector": "player",
+    "slot": 26,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -569,12 +769,16 @@
   {
     "id": "pose",
     "type": "text",
-    "selector": "entity"
+    "selector": "entity",
+    "slot": 28,
+    "page": 1
   },
   {
     "id": "current_input_list",
     "type": "array",
     "selector": "entity",
+    "slot": 27,
+    "page": 1,
     "elementType": "text",
     "worksWith": [
       "player"
@@ -584,6 +788,8 @@
     "id": "chat_visibility",
     "type": "text",
     "selector": "entity",
+    "slot": 29,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -592,6 +798,8 @@
     "id": "particle_visibility",
     "type": "text",
     "selector": "entity",
+    "slot": 30,
+    "page": 1,
     "worksWith": [
       "player"
     ]
@@ -600,6 +808,8 @@
     "id": "projectile_owner_uuid",
     "type": "text",
     "selector": "entity",
+    "slot": 19,
+    "page": 1,
     "worksWith": [
       "projectile"
     ]
@@ -608,6 +818,8 @@
     "id": "display_entity_translation",
     "type": "vector",
     "selector": "entity",
+    "slot": 20,
+    "page": 1,
     "worksWith": [
       "display"
     ]
@@ -616,6 +828,8 @@
     "id": "display_entity_left_rotation",
     "type": "vector",
     "selector": "entity",
+    "slot": 21,
+    "page": 1,
     "worksWith": [
       "display"
     ]
@@ -624,6 +838,8 @@
     "id": "display_entity_right_rotation",
     "type": "vector",
     "selector": "entity",
+    "slot": 22,
+    "page": 1,
     "worksWith": [
       "display"
     ]
@@ -632,6 +848,8 @@
     "id": "display_entity_scale",
     "type": "vector",
     "selector": "entity",
+    "slot": 23,
+    "page": 1,
     "worksWith": [
       "display"
     ]
@@ -640,17 +858,23 @@
     "id": "entity_pathfinder_points",
     "type": "array",
     "selector": "entity",
+    "slot": 31,
+    "page": 1,
     "elementType": "location"
   },
   {
     "id": "event_block_location",
     "type": "location",
-    "selector": null
+    "selector": null,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "event_block_face",
     "type": "text",
     "selector": null,
+    "slot": 1,
+    "page": 1,
     "worksWith": [
       "interact_events",
       "place_break_events",
@@ -661,12 +885,16 @@
   {
     "id": "event_block",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "event_blocks_involved",
     "type": "array",
     "selector": null,
+    "slot": 3,
+    "page": 1,
     "elementType": "location",
     "worksWith": [
       "explosion_events",
@@ -677,6 +905,8 @@
     "id": "event_interaction",
     "type": "text",
     "selector": null,
+    "slot": 4,
+    "page": 1,
     "worksWith": [
       "right_click_event",
       "left_click_event",
@@ -686,32 +916,44 @@
   {
     "id": "event_from_location",
     "type": "location",
-    "selector": null
+    "selector": null,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "event_new_location",
     "type": "location",
-    "selector": null
+    "selector": null,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "event_damage",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "event_final_damage",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "event_damage_cause",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "event_knockback_event_type",
     "type": "text",
     "selector": null,
+    "slot": 10,
+    "page": 1,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -721,6 +963,8 @@
     "id": "event_knockback_cause",
     "type": "text",
     "selector": null,
+    "slot": 11,
+    "page": 1,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -730,6 +974,8 @@
     "id": "event_knockback_vector",
     "type": "vector",
     "selector": null,
+    "slot": 12,
+    "page": 1,
     "worksWith": [
       "player_knockback",
       "entity_knockback"
@@ -739,6 +985,8 @@
     "id": "event_velocity",
     "type": "vector",
     "selector": null,
+    "slot": 13,
+    "page": 1,
     "worksWith": [
       "player_velocity"
     ]
@@ -747,6 +995,8 @@
     "id": "event_chat_message",
     "type": "text",
     "selector": null,
+    "slot": 14,
+    "page": 1,
     "worksWith": [
       "player_chat_event"
     ]
@@ -754,12 +1004,16 @@
   {
     "id": "event_message",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "event_custom_click_key",
     "type": "text",
     "selector": null,
+    "slot": 16,
+    "page": 1,
     "worksWith": [
       "player_custom_click"
     ]
@@ -768,6 +1022,8 @@
     "id": "event_custom_click_dialog_view_data",
     "type": "any",
     "selector": null,
+    "slot": 17,
+    "page": 1,
     "worksWith": [
       "player_custom_click"
     ]
@@ -776,6 +1032,8 @@
     "id": "event_death_screen_message",
     "type": "text",
     "selector": null,
+    "slot": 18,
+    "page": 1,
     "worksWith": [
       "player_death_event"
     ]
@@ -784,6 +1042,8 @@
     "id": "event_heal_amount",
     "type": "number",
     "selector": null,
+    "slot": 22,
+    "page": 1,
     "worksWith": [
       "player_heal_event",
       "entity_heal_event"
@@ -793,6 +1053,8 @@
     "id": "event_heal_cause",
     "type": "text",
     "selector": null,
+    "slot": 23,
+    "page": 1,
     "worksWith": [
       "player_heal_event",
       "entity_heal_event"
@@ -802,6 +1064,8 @@
     "id": "event_exhaustion_amount",
     "type": "number",
     "selector": null,
+    "slot": 11,
+    "page": 2,
     "worksWith": [
       "player_exhaustion_event"
     ]
@@ -810,6 +1074,8 @@
     "id": "event_exhaustion_reason",
     "type": "text",
     "selector": null,
+    "slot": 12,
+    "page": 2,
     "worksWith": [
       "player_exhaustion_event"
     ]
@@ -818,6 +1084,8 @@
     "id": "event_new_potion_effect",
     "type": "potion",
     "selector": null,
+    "slot": 24,
+    "page": 1,
     "worksWith": [
       "player_imbue_potion_cloud_event"
     ]
@@ -826,6 +1094,8 @@
     "id": "event_power",
     "type": "number",
     "selector": null,
+    "slot": 25,
+    "page": 1,
     "worksWith": [
       "player_shoot_bow_event",
       "player_horse_jump_event"
@@ -834,18 +1104,24 @@
   {
     "id": "event_item",
     "type": "item",
-    "selector": null
+    "selector": null,
+    "slot": 26,
+    "page": 1
   },
   {
     "id": "event_items",
     "type": "array",
     "selector": null,
+    "slot": 27,
+    "page": 1,
     "elementType": "item"
   },
   {
     "id": "event_old_item",
     "type": "item",
     "selector": null,
+    "slot": 28,
+    "page": 1,
     "worksWith": [
       "player_inventory_slot_change_event"
     ]
@@ -853,22 +1129,30 @@
   {
     "id": "event_equipment_slot",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 1,
+    "page": 2
   },
   {
     "id": "event_slot",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 29,
+    "page": 1
   },
   {
     "id": "event_hotbar_slot",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 19,
+    "page": 1
   },
   {
     "id": "event_added_items",
     "type": "map",
     "selector": null,
+    "slot": 34,
+    "page": 1,
     "keyType": "number",
     "valueType": "item",
     "worksWith": [
@@ -879,6 +1163,8 @@
     "id": "event_old_equipments",
     "type": "map",
     "selector": null,
+    "slot": 35,
+    "page": 1,
     "keyType": "text",
     "valueType": "item",
     "worksWith": [
@@ -890,6 +1176,8 @@
     "id": "event_new_equipments",
     "type": "map",
     "selector": null,
+    "slot": 0,
+    "page": 2,
     "keyType": "text",
     "valueType": "item",
     "worksWith": [
@@ -900,12 +1188,16 @@
   {
     "id": "event_slot_type",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 20,
+    "page": 1
   },
   {
     "id": "event_close_inventory_cause",
     "type": "text",
     "selector": null,
+    "slot": 30,
+    "page": 1,
     "worksWith": [
       "player_close_inventory_event"
     ]
@@ -913,17 +1205,23 @@
   {
     "id": "event_inventory_click_type",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 31,
+    "page": 1
   },
   {
     "id": "event_inventory_action",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 21,
+    "page": 1
   },
   {
     "id": "event_drag_type",
     "type": "text",
     "selector": null,
+    "slot": 32,
+    "page": 1,
     "worksWith": [
       "player_drag_inventory_event"
     ]
@@ -932,6 +1230,8 @@
     "id": "event_slots_involved",
     "type": "array",
     "selector": null,
+    "slot": 33,
+    "page": 1,
     "elementType": "number",
     "worksWith": [
       "player_drag_inventory_event"
@@ -941,6 +1241,8 @@
     "id": "event_fish_state",
     "type": "text",
     "selector": null,
+    "slot": 2,
+    "page": 2,
     "worksWith": [
       "player_fish_event"
     ]
@@ -949,6 +1251,8 @@
     "id": "event_new_fishing_hook_state",
     "type": "text",
     "selector": null,
+    "slot": 3,
+    "page": 2,
     "worksWith": [
       "fishing_hook_state_change"
     ]
@@ -957,6 +1261,8 @@
     "id": "event_tree_type",
     "type": "text",
     "selector": null,
+    "slot": 4,
+    "page": 2,
     "worksWith": [
       "player_structure_grow_event",
       "structure_grow_event"
@@ -965,12 +1271,16 @@
   {
     "id": "event_experience",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 5,
+    "page": 2
   },
   {
     "id": "event_hanging_break_cause",
     "type": "text",
     "selector": null,
+    "slot": 6,
+    "page": 2,
     "worksWith": [
       "hanging_break_event"
     ]
@@ -979,6 +1289,8 @@
     "id": "event_entity_unleash_reason",
     "type": "text",
     "selector": null,
+    "slot": 7,
+    "page": 2,
     "worksWith": [
       "entity_unleash_events"
     ]
@@ -987,6 +1299,8 @@
     "id": "event_time_skip_reason",
     "type": "text",
     "selector": null,
+    "slot": 8,
+    "page": 2,
     "worksWith": [
       "time_skip_event"
     ]
@@ -995,6 +1309,8 @@
     "id": "event_time_skip_amount",
     "type": "number",
     "selector": null,
+    "slot": 9,
+    "page": 2,
     "worksWith": [
       "time_skip_event"
     ]
@@ -1003,6 +1319,8 @@
     "id": "event_food_level",
     "type": "number",
     "selector": null,
+    "slot": 10,
+    "page": 2,
     "worksWith": [
       "player_food_level_change_event"
     ]
@@ -1011,6 +1329,8 @@
     "id": "event_item_cooldown",
     "type": "number",
     "selector": null,
+    "slot": 13,
+    "page": 2,
     "worksWith": [
       "player_item_cooldown",
       "player_item_group_cooldown"
@@ -1020,6 +1340,8 @@
     "id": "event_item_cooldown_group",
     "type": "text",
     "selector": null,
+    "slot": 14,
+    "page": 2,
     "worksWith": [
       "player_item_cooldown",
       "player_item_group_cooldown"
@@ -1029,6 +1351,8 @@
     "id": "event_item_damage",
     "type": "number",
     "selector": null,
+    "slot": 15,
+    "page": 2,
     "worksWith": [
       "player_damage_item"
     ]
@@ -1037,6 +1361,8 @@
     "id": "event_combust_duration",
     "type": "number",
     "selector": null,
+    "slot": 16,
+    "page": 2,
     "worksWith": [
       "player_combust",
       "entity_combust"
@@ -1046,6 +1372,8 @@
     "id": "event_combust_reason",
     "type": "text",
     "selector": null,
+    "slot": 17,
+    "page": 2,
     "worksWith": [
       "player_combust",
       "entity_combust"
@@ -1055,6 +1383,8 @@
     "id": "event_projectile_item",
     "type": "item",
     "selector": null,
+    "slot": 18,
+    "page": 2,
     "worksWith": [
       "player_shoot_bow_event"
     ]
@@ -1063,6 +1393,8 @@
     "id": "event_teleport_cause",
     "type": "text",
     "selector": null,
+    "slot": 19,
+    "page": 2,
     "worksWith": [
       "player_teleport_event",
       "enderman_escape_event"
@@ -1072,6 +1404,8 @@
     "id": "event_block_break_progress",
     "type": "number",
     "selector": null,
+    "slot": 21,
+    "page": 2,
     "worksWith": [
       "player_block_break_progress_update",
       "entity_block_break_progress_update"
@@ -1081,6 +1415,8 @@
     "id": "event_ticks_held_for",
     "type": "number",
     "selector": null,
+    "slot": 20,
+    "page": 2,
     "worksWith": [
       "player_stop_using_item"
     ]
@@ -1089,6 +1425,8 @@
     "id": "event_query_info",
     "type": "text",
     "selector": null,
+    "slot": 22,
+    "page": 2,
     "worksWith": [
       "player_query_block_info",
       "player_query_entity_info"
@@ -1107,6 +1445,8 @@
     "id": "event_gamemode",
     "type": "text",
     "selector": null,
+    "slot": 23,
+    "page": 2,
     "worksWith": [
       "player_ask_gamemode_change"
     ]
@@ -1115,6 +1455,8 @@
     "id": "event_sign_lines",
     "type": "array",
     "selector": null,
+    "slot": 24,
+    "page": 2,
     "elementType": "text",
     "worksWith": [
       "sign_change_event"
@@ -1124,6 +1466,8 @@
     "id": "event_sign_side",
     "type": "text",
     "selector": null,
+    "slot": 25,
+    "page": 2,
     "worksWith": [
       "sign_change_event"
     ]
@@ -1132,6 +1476,8 @@
     "id": "event_old_vault_state",
     "type": "text",
     "selector": null,
+    "slot": 26,
+    "page": 2,
     "worksWith": [
       "vault_change_state",
       "player_vault_change_state"
@@ -1141,6 +1487,8 @@
     "id": "event_new_vault_state",
     "type": "text",
     "selector": null,
+    "slot": 27,
+    "page": 2,
     "worksWith": [
       "vault_change_state",
       "player_vault_change_state"
@@ -1150,6 +1498,8 @@
     "id": "event_anvil_rename_input",
     "type": "text",
     "selector": null,
+    "slot": 28,
+    "page": 2,
     "worksWith": [
       "player_anvil_rename_input"
     ]
@@ -1158,6 +1508,8 @@
     "id": "event_anvil_damage_state",
     "type": "text",
     "selector": null,
+    "slot": 29,
+    "page": 2,
     "worksWith": [
       "player_anvil_damaged"
     ]
@@ -1166,6 +1518,8 @@
     "id": "event_enchantment_hint",
     "type": "text",
     "selector": null,
+    "slot": 30,
+    "page": 2,
     "worksWith": [
       "player_enchant_item"
     ]
@@ -1174,6 +1528,8 @@
     "id": "event_enchantments_to_add",
     "type": "map",
     "selector": null,
+    "slot": 31,
+    "page": 2,
     "keyType": "text",
     "valueType": "number",
     "worksWith": [
@@ -1184,6 +1540,8 @@
     "id": "event_enchantment_level_hint",
     "type": "number",
     "selector": null,
+    "slot": 32,
+    "page": 2,
     "worksWith": [
       "player_enchant_item"
     ]
@@ -1192,6 +1550,8 @@
     "id": "event_enchantment_offers",
     "type": "array",
     "selector": null,
+    "slot": 33,
+    "page": 2,
     "elementType": "text",
     "worksWith": [
       "player_prepare_item_enchant"
@@ -1201,6 +1561,8 @@
     "id": "event_enchantment_bonus",
     "type": "number",
     "selector": null,
+    "slot": 34,
+    "page": 2,
     "worksWith": [
       "player_prepare_item_enchant"
     ]
@@ -1209,6 +1571,8 @@
     "id": "event_input_list",
     "type": "array",
     "selector": null,
+    "slot": 35,
+    "page": 2,
     "elementType": "text",
     "worksWith": [
       "player_input_event",
@@ -1220,6 +1584,8 @@
     "id": "event_fail_move_reason",
     "type": "text",
     "selector": null,
+    "slot": 0,
+    "page": 3,
     "worksWith": [
       "player_fail_move_event"
     ]
@@ -1228,6 +1594,8 @@
     "id": "event_transformed_entities",
     "type": "array",
     "selector": null,
+    "slot": 1,
+    "page": 3,
     "elementType": "text",
     "worksWith": [
       "entity_transform_event"
@@ -1237,6 +1605,8 @@
     "id": "event_transform_reason",
     "type": "text",
     "selector": null,
+    "slot": 2,
+    "page": 3,
     "worksWith": [
       "entity_transform_event"
     ]
@@ -1245,6 +1615,8 @@
     "id": "event_replaced_block",
     "type": "text",
     "selector": null,
+    "slot": 3,
+    "page": 3,
     "worksWith": [
       "player_place_block_event"
     ]
@@ -1253,6 +1625,8 @@
     "id": "url_response",
     "type": "text",
     "selector": null,
+    "slot": 5,
+    "page": 3,
     "worksWith": [
       "web_response_event"
     ]
@@ -1261,6 +1635,8 @@
     "id": "url_response_code",
     "type": "number",
     "selector": null,
+    "slot": 7,
+    "page": 3,
     "worksWith": [
       "web_response_event"
     ]
@@ -1269,6 +1645,8 @@
     "id": "response_headers",
     "type": "map",
     "selector": null,
+    "slot": 6,
+    "page": 3,
     "keyType": "text",
     "valueType": "any",
     "worksWith": [
@@ -1279,6 +1657,8 @@
     "id": "url",
     "type": "text",
     "selector": null,
+    "slot": 4,
+    "page": 3,
     "worksWith": [
       "web_response_event"
     ]
@@ -1287,6 +1667,8 @@
     "id": "currency_transaction_reason",
     "type": "text",
     "selector": null,
+    "slot": 8,
+    "page": 3,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1295,6 +1677,8 @@
     "id": "currency_transaction_amount",
     "type": "text",
     "selector": null,
+    "slot": 9,
+    "page": 3,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1303,6 +1687,8 @@
     "id": "currency_transaction_result",
     "type": "text",
     "selector": null,
+    "slot": 10,
+    "page": 3,
     "worksWith": [
       "player_currency_event"
     ]
@@ -1311,6 +1697,8 @@
     "id": "anticheat_check",
     "type": "text",
     "selector": null,
+    "slot": 11,
+    "page": 3,
     "worksWith": [
       "player_anticheat_flag_event"
     ]
@@ -1319,6 +1707,8 @@
     "id": "anticheat_violations",
     "type": "number",
     "selector": null,
+    "slot": 12,
+    "page": 3,
     "worksWith": [
       "player_anticheat_flag_event"
     ]
@@ -1326,132 +1716,182 @@
   {
     "id": "player_count",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "cpu_usage",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "particle_cpu_usage",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "server_tps",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "timestamp",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "server_current_tick",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "selection_size",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 18,
+    "page": 1
   },
   {
     "id": "selection_target_names",
     "type": "array",
     "selector": null,
+    "slot": 19,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "selection_target_uuids",
     "type": "array",
     "selector": null,
+    "slot": 20,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "world_time",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "world_game_time",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "world_weather",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "world_clear_weather_duration",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "world_weather_duration",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "world_thunder_duration",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "world_moon_phase",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 14,
+    "page": 1
   },
   {
     "id": "owner_uuid",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "world_size",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "world_id",
     "type": "text",
-    "selector": null
+    "selector": null,
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "all_players_names",
     "type": "array",
     "selector": null,
+    "slot": 21,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "all_players_uuids",
     "type": "array",
     "selector": null,
+    "slot": 22,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "all_entities_names",
     "type": "array",
     "selector": null,
+    "slot": 23,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "all_entities_uuids",
     "type": "array",
     "selector": null,
+    "slot": 24,
+    "page": 1,
     "elementType": "text"
   },
   {
     "id": "start_reload_tick",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "delay_reload_count",
     "type": "number",
-    "selector": null
+    "selector": null,
+    "slot": 7,
+    "page": 1
   }
 ]

@@ -23,7 +23,13 @@
     "TALL_BIRCH",
     "TALL_REDWOOD",
     "WARPED_FUNGUS",
-    "AZALEA"
+    "AZALEA",
+    "MANGROVE",
+    "TALL_MANGROVE",
+    "CHERRY",
+    "MEGA_PINE",
+    "PALE_OAK_CREAKING",
+    "PALE_OAK"
   ],
   "Panda.Gene": [
     "NORMAL",
@@ -40,7 +46,9 @@
     "HAND",
     "HEAD",
     "LEGS",
-    "OFF_HAND"
+    "OFF_HAND",
+    "BODY",
+    "SADDLE"
   ],
   "DyeColor": [
     "BLACK",
@@ -89,7 +97,12 @@
     "SUICIDE",
     "THORNS",
     "VOID",
-    "WITHER"
+    "WITHER",
+    "KILL",
+    "COMMAND",
+    "SONIC_BOOM",
+    "WORLD_BORDER",
+    "CAMPFIRE"
   ],
   "RegainReason": [
     "CUSTOM",
@@ -128,7 +141,18 @@
     "PLING",
     "SNARE_DRUM",
     "STICKS",
-    "XYLOPHONE"
+    "XYLOPHONE",
+    "ZOMBIE",
+    "SKELETON",
+    "CREEPER",
+    "WITHER_SKELETON",
+    "DRAGON",
+    "PIGLIN",
+    "CUSTOM_HEAD",
+    "TRUMPET",
+    "TRUMPET_EXPOSED",
+    "TRUMPET_OXIDIZED",
+    "TRUMPET_WEATHERED"
   ],
   "TargetBlockInfo.FluidMode": [
     "NEVER",
@@ -161,7 +185,13 @@
     "CARTOGRAPHY",
     "GRINDSTONE",
     "STONECUTTER",
-    "COMPOSTER"
+    "COMPOSTER",
+    "CHISELED_BOOKSHELF",
+    "JUKEBOX",
+    "SMITHING_NEW",
+    "DECORATED_POT",
+    "CRAFTER",
+    "SHELF"
   ],
   "BossBar.Color": [
     "PINK",
@@ -253,15 +283,19 @@
   ],
   "Pose": [
     "CROAKING",
+    "CROUCHING",
     "DIGGING",
     "DYING",
     "EMERGING",
     "FALL_FLYING",
+    "INHALING",
     "LONG_JUMPING",
     "ROARING",
+    "SITTING",
     "SLEEPING",
-    "SNEAKING",
     "SNIFFING",
+    "SHOOTING",
+    "SLIDING",
     "SPIN_ATTACK",
     "STANDING",
     "SWIMMING",
@@ -355,7 +389,8 @@
     "PLAYER",
     "RECORD",
     "VOICE",
-    "WEATHER"
+    "WEATHER",
+    "UI"
   ],
   "WeatheringCopperState": [
     "UNAFFECTED",

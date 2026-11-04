@@ -7,6 +7,159 @@ export const toPrettyPrintJson = (value: any) => JSON.stringify(value, null, 2);
 export const matches = (input: string, regexp: RegExp) =>
   Array.from(input.matchAll(regexp));
 
+export type MenuPosition = {
+  slot: number;
+  page: number;
+};
+
+const positionsFromMatches = (
+  content: string,
+  itemMatches: RegExpMatchArray[],
+  pageSize = 45
+) => {
+  const positions: Dictionary<MenuPosition> = {};
+  let itemIndex = 0;
+
+  for (const match of itemMatches) {
+    const lineStart = content.lastIndexOf('\n', match.index) + 1;
+    const beforeCall = content.slice(lineStart, match.index);
+    if (/^\s*\/\//.test(beforeCall)) continue;
+
+    const name = match[1];
+    if (!Object.prototype.hasOwnProperty.call(positions, name)) {
+      positions[name] = {
+        slot: itemIndex % pageSize,
+        page: Math.floor(itemIndex / pageSize) + 1,
+      };
+    }
+    itemIndex++;
+  }
+
+  return positions;
+};
+
+export const extractMenuPositions = (
+  content: string,
+  regexp: RegExp,
+  pageSize = 45
+) => positionsFromMatches(content, matches(content, regexp), pageSize);
+
+const findClosingDelimiter = (
+  content: string,
+  start: number,
+  opening: string,
+  closing: string
+) => {
+  let depth = 0;
+  let quote: string | null = null;
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+
+  for (let index = start; index < content.length; index++) {
+    const character = content[index];
+    const nextCharacter = content[index + 1];
+
+    if (lineComment) {
+      if (character === '\n') lineComment = false;
+      continue;
+    }
+
+    if (blockComment) {
+      if (character === '*' && nextCharacter === '/') {
+        blockComment = false;
+        index++;
+      }
+      continue;
+    }
+
+    if (quote) {
+      if (escaped) escaped = false;
+      else if (character === '\\') escaped = true;
+      else if (character === quote) quote = null;
+      continue;
+    }
+
+    if (character === '/' && nextCharacter === '/') {
+      lineComment = true;
+      index++;
+      continue;
+    }
+
+    if (character === '/' && nextCharacter === '*') {
+      blockComment = true;
+      index++;
+      continue;
+    }
+
+    if (character === '"' || character === "'") {
+      quote = character;
+      continue;
+    }
+
+    if (character === opening) depth++;
+    else if (character === closing && --depth === 0) return index;
+  }
+
+  return -1;
+};
+
+const findSubcategoryRanges = (content: string) => {
+  const ranges: Array<[number, number]> = [];
+
+  for (const match of matches(content, /\bsubcategory\s*\(/g)) {
+    const lineStart = content.lastIndexOf('\n', match.index) + 1;
+    if (/^\s*\/\//.test(content.slice(lineStart, match.index))) continue;
+
+    const openingParenthesis = content.indexOf('(', match.index);
+    const closingParenthesis = findClosingDelimiter(
+      content,
+      openingParenthesis,
+      '(',
+      ')'
+    );
+    if (closingParenthesis < 0) continue;
+
+    let bodyStart = closingParenthesis + 1;
+    while (/\s/.test(content[bodyStart] || '')) bodyStart++;
+    if (content[bodyStart] !== '{') continue;
+
+    const bodyEnd = findClosingDelimiter(content, bodyStart, '{', '}');
+    if (bodyEnd >= 0) ranges.push([bodyStart, bodyEnd + 1]);
+  }
+
+  return ranges;
+};
+
+export const extractSubcategoryMenuPositions = (
+  content: string,
+  regexp: RegExp,
+  pageSize = 45
+) => {
+  const ranges = findSubcategoryRanges(content);
+  if (!ranges.length) return extractMenuPositions(content, regexp, pageSize);
+
+  const allMatches = matches(content, regexp);
+  const rootMatches = allMatches.filter(
+    (match) =>
+      !ranges.some(([start, end]) => match.index! >= start && match.index! < end)
+  );
+  const positions = positionsFromMatches(content, rootMatches, pageSize);
+
+  for (const [start, end] of ranges) {
+    Object.assign(
+      positions,
+      positionsFromMatches(
+        content.slice(start, end),
+        matches(content.slice(start, end), regexp),
+        pageSize
+      )
+    );
+  }
+
+  return positions;
+};
+
 const COMMENT_REGEX = /\/\/.*/g;
 
 export const removeComments = (contents: string) =>

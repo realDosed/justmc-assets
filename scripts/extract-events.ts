@@ -13,6 +13,7 @@ import {
   Dictionary,
   warn,
   extractIconTexture,
+  extractSubcategoryMenuPositions,
   loadCachedTextureValues,
   extractValueTypeIcons,
   getSourceFiles,
@@ -131,6 +132,16 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
     },
     {}
   );
+  const menuTriggerPositions = Object.assign(
+    {},
+    ...triggerMenuFiles.map((file) =>
+      extractSubcategoryMenuPositions(
+        file.content,
+        MENU_TRIGGER_REFERENCES,
+        Number.MAX_SAFE_INTEGER
+      )
+    )
+  );
 
   const valueTypeIcons = await extractValueTypeIcons();
   const textureValues = await loadCachedTextureValues();
@@ -196,6 +207,7 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
           id,
           category,
           cancellable: false,
+          ...(menuTriggerPositions[name] || {}),
           ...(isDeprecated ? { deprecated: true } : {}),
           ...(menuReference === false ? { unused: true } : {}),
         };
@@ -206,6 +218,7 @@ const REGISTERED_EVENT_REGEX = /val\s*(.*?)\s*=\s*register.*\("(.*)"\)/g;
         id,
         category: icon.category,
         cancellable: icon.cancellable,
+        ...(menuTriggerPositions[name] || {}),
         ...(menuReference === false ? { unused: true } : {}),
         ...(icon.worksWith?.length ? { worksWith: icon.worksWith } : {}),
         ...(icon.additionalInfo?.length

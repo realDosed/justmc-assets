@@ -2,32 +2,44 @@
   {
     "id": "player_join",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_quit",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_rejoin",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "player_chat",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_custom_click",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "player_ask_gamemode_change",
     "category": "player",
     "cancellable": true,
+    "slot": 5,
+    "page": 1,
     "worksWith": [
       "combination_f3_f4",
       "combination_f3_n"
@@ -54,6 +66,8 @@
     "id": "player_request_stats",
     "category": "player",
     "cancellable": false,
+    "slot": 7,
+    "page": 1,
     "additionalInfo": [
       "menu_can_be_closed_with_close_inventory_action"
     ]
@@ -62,6 +76,8 @@
     "id": "player_skin_change",
     "category": "player",
     "cancellable": true,
+    "slot": 6,
+    "page": 1,
     "worksWith": [
       "skin_command",
       "skin_change_action"
@@ -73,12 +89,16 @@
   {
     "id": "player_currency_transaction",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "player_anticheat_flag",
     "category": "player",
     "cancellable": false,
+    "slot": 9,
+    "page": 1,
     "worksWith": [
       "anticheat_world_settings"
     ]
@@ -87,6 +107,8 @@
     "id": "player_interact",
     "category": "player",
     "cancellable": true,
+    "slot": 2,
+    "page": 1,
     "additionalInfo": [
       "right_click_and_left_click"
     ]
@@ -94,22 +116,30 @@
   {
     "id": "player_right_click",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_left_click",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_place_block",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_break_block",
     "category": "player",
     "cancellable": true,
+    "slot": 4,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -117,27 +147,37 @@
   {
     "id": "block_damage",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "block_damage_abort",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "player_block_break_progress_update",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_shear_block",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "player_pick_block",
     "category": "player",
     "cancellable": true,
+    "slot": 9,
+    "page": 1,
     "additionalInfo": [
       "about_picking"
     ]
@@ -145,17 +185,23 @@
   {
     "id": "player_sign_change",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "player_structure_grow",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "player_vault_change_state",
     "category": "player",
     "cancellable": true,
+    "slot": 12,
+    "page": 1,
     "worksWith": [
       "vault"
     ]
@@ -164,6 +210,8 @@
     "id": "player_block_dispense_loot",
     "category": "player",
     "cancellable": true,
+    "slot": 13,
+    "page": 1,
     "worksWith": [
       "vault"
     ]
@@ -172,6 +220,8 @@
     "id": "player_flowerpot_manipulate",
     "category": "player",
     "cancellable": true,
+    "slot": 14,
+    "page": 1,
     "worksWith": [
       "flower_pot"
     ]
@@ -179,12 +229,16 @@
   {
     "id": "player_harvest_block",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "player_query_block_info",
     "category": "player",
     "cancellable": true,
+    "slot": 16,
+    "page": 1,
     "additionalInfo": [
       "sneaking_not_fire_event"
     ]
@@ -192,52 +246,72 @@
   {
     "id": "player_arm_swing",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "player_right_click_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_right_click_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_imbue_potion_cloud",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "player_pickup_projectile",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_pickup_experience",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "player_tame_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "player_leash_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "player_unleash_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_pick_entity",
     "category": "player",
     "cancellable": true,
+    "slot": 8,
+    "page": 1,
     "additionalInfo": [
       "about_picking"
     ]
@@ -245,27 +319,37 @@
   {
     "id": "player_start_spectating_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_stop_spectating_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "player_toggle_entity_age_lock",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "player_feed_sulfur_cube_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "player_query_entity_info",
     "category": "player",
     "cancellable": true,
+    "slot": 13,
+    "page": 1,
     "additionalInfo": [
       "sneaking_not_fire_event"
     ]
@@ -273,12 +357,16 @@
   {
     "id": "player_open_inventory",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_click_inventory",
     "category": "player",
     "cancellable": true,
+    "slot": 2,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -287,6 +375,8 @@
     "id": "player_drag_inventory",
     "category": "player",
     "cancellable": true,
+    "slot": 4,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -295,6 +385,8 @@
     "id": "player_click_own_inventory",
     "category": "player",
     "cancellable": true,
+    "slot": 3,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -302,22 +394,30 @@
   {
     "id": "player_craft_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "player_close_inventory",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_swap_hands",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "player_equipment_changed",
     "category": "player",
     "cancellable": false,
+    "slot": 8,
+    "page": 1,
     "additionalInfo": [
       "fired_after_attributes_and_enchants_updated"
     ]
@@ -325,17 +425,23 @@
   {
     "id": "player_change_slot",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_pick_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "player_furnace_extract",
     "category": "player",
     "cancellable": false,
+    "slot": 14,
+    "page": 1,
     "worksWith": [
       "furnace",
       "blast_furnace",
@@ -345,12 +451,16 @@
   {
     "id": "player_item_mend",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 20,
+    "page": 1
   },
   {
     "id": "player_enchant_item",
     "category": "player",
     "cancellable": true,
+    "slot": 19,
+    "page": 1,
     "worksWith": [
       "enchanting_table"
     ]
@@ -359,6 +469,8 @@
     "id": "player_anvil_rename_input",
     "category": "player",
     "cancellable": false,
+    "slot": 16,
+    "page": 1,
     "worksWith": [
       "anvil"
     ],
@@ -370,6 +482,8 @@
     "id": "player_anvil_damaged",
     "category": "player",
     "cancellable": true,
+    "slot": 17,
+    "page": 1,
     "worksWith": [
       "anvil"
     ]
@@ -377,17 +491,23 @@
   {
     "id": "player_item_cooldown",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_item_group_cooldown",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "player_prepare_result",
     "category": "player",
     "cancellable": false,
+    "slot": 15,
+    "page": 1,
     "worksWith": [
       "anvil",
       "grindstone",
@@ -398,6 +518,8 @@
     "id": "player_prepare_item_craft",
     "category": "player",
     "cancellable": false,
+    "slot": 12,
+    "page": 1,
     "worksWith": [
       "crafting_table",
       "player_inventory"
@@ -407,6 +529,8 @@
     "id": "player_prepare_item_enchant",
     "category": "player",
     "cancellable": true,
+    "slot": 18,
+    "page": 1,
     "worksWith": [
       "enchanting_table"
     ]
@@ -414,12 +538,16 @@
   {
     "id": "player_inventory_slot_change",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "player_shot_bow",
     "category": "player",
     "cancellable": true,
+    "slot": 0,
+    "page": 1,
     "worksWith": [
       "bow",
       "crossbow"
@@ -429,6 +557,8 @@
     "id": "player_launch_projectile",
     "category": "player",
     "cancellable": true,
+    "slot": 2,
+    "page": 1,
     "worksWith": [
       "eggs",
       "snowball",
@@ -438,17 +568,23 @@
   {
     "id": "player_pickup_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_drop_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "player_consume_item",
     "category": "player",
     "cancellable": true,
+    "slot": 5,
+    "page": 1,
     "worksWith": [
       "food",
       "potions",
@@ -458,52 +594,72 @@
   {
     "id": "player_break_item",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_damage_item",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "player_stop_using_item",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "player_edit_book",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "player_fish",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_move",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_location_change",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_rotate",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "player_fail_move",
     "category": "player",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 18,
+    "page": 1
   },
   {
     "id": "player_load_crossbow",
     "category": "player",
     "cancellable": true,
+    "slot": 1,
+    "page": 1,
     "worksWith": [
       "crossbow"
     ]
@@ -511,67 +667,93 @@
   {
     "id": "player_jump",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_sneak",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "player_unsneak",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "player_teleport",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_start_sprint",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_stop_sprint",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "player_start_flight",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "player_stop_flight",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "player_start_gliding",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "player_stop_gliding",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 14,
+    "page": 1
   },
   {
     "id": "player_riptide",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "player_dismount",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "player_horse_jump",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "player_vehicle_jump",
@@ -591,6 +773,8 @@
     "id": "player_input_event",
     "category": "player",
     "cancellable": false,
+    "slot": 6,
+    "page": 1,
     "additionalInfo": [
       "input_list",
       "can_be_multiple_inputs"
@@ -599,37 +783,51 @@
   {
     "id": "player_take_damage",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_damage_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "entity_damage_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "player_damage_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_knockback",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "player_velocity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "player_resurrect",
     "category": "player",
     "cancellable": true,
+    "slot": 5,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -637,67 +835,93 @@
   {
     "id": "player_heal",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "player_food_level_change",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "player_exhaustion",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "player_projectile_hit",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "projectile_damage_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "player_pre_attack_entity",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "elder_guardian_appears_at_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "player_combust",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "player_death",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "player_kill_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "player_kill_mob",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "mob_kill_player",
     "category": "player",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "player_respawn",
     "category": "player",
     "cancellable": false,
+    "slot": 4,
+    "page": 1,
     "additionalInfo": [
       "wait_before_interacting"
     ]
@@ -705,42 +929,58 @@
   {
     "id": "entity_spawn",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "entity_removed_from_world",
     "category": "entity",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "entity_damage_entity",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "entity_kill_entity",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "entity_take_damage",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "entity_knockback",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "entity_heal",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "entity_resurrect",
     "category": "entity",
     "cancellable": true,
+    "slot": 7,
+    "page": 1,
     "additionalInfo": [
       "can_be_default_cancelled"
     ]
@@ -748,12 +988,16 @@
   {
     "id": "entity_death",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 26,
+    "page": 1
   },
   {
     "id": "entity_spell_cast",
     "category": "entity",
     "cancellable": true,
+    "slot": 22,
+    "page": 1,
     "worksWith": [
       "evoker",
       "illusioner"
@@ -762,27 +1006,37 @@
   {
     "id": "entity_teleport",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 23,
+    "page": 1
   },
   {
     "id": "enderman_escape",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 24,
+    "page": 1
   },
   {
     "id": "enderman_attack_player",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 25,
+    "page": 1
   },
   {
     "id": "firework_explode",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "hanging_break",
     "category": "entity",
     "cancellable": true,
+    "slot": 14,
+    "page": 1,
     "worksWith": [
       "item_frame",
       "painting",
@@ -792,62 +1046,86 @@
   {
     "id": "entity_combust",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 15,
+    "page": 1
   },
   {
     "id": "projectile_launch",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "projectile_damage_entity",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 9,
+    "page": 1
   },
   {
     "id": "projectile_kill_entity",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 10,
+    "page": 1
   },
   {
     "id": "projectile_hit",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "projective_collide",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "entity_drop_item",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "entity_pickup_item",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "item_despawn",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 18,
+    "page": 1
   },
   {
     "id": "item_merge",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 19,
+    "page": 1
   },
   {
     "id": "experience_orb_merge",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 20,
+    "page": 1
   },
   {
     "id": "entity_equipment_changed",
     "category": "entity",
     "cancellable": false,
+    "slot": 21,
+    "page": 1,
     "additionalInfo": [
       "fired_after_attributes_and_enchants_updated"
     ]
@@ -855,37 +1133,51 @@
   {
     "id": "vehicle_take_damage",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 27,
+    "page": 1
   },
   {
     "id": "block_fall",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 28,
+    "page": 1
   },
   {
     "id": "falling_block_land",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 29,
+    "page": 1
   },
   {
     "id": "entity_interact",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 30,
+    "page": 1
   },
   {
     "id": "dispenser_shear_sheep",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 31,
+    "page": 1
   },
   {
     "id": "sheep_regrow_wool",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 32,
+    "page": 1
   },
   {
     "id": "witch_throw_potion",
     "category": "entity",
     "cancellable": true,
+    "slot": 35,
+    "page": 1,
     "worksWith": [
       "witch"
     ]
@@ -894,6 +1186,8 @@
     "id": "fishing_hook_state_change",
     "category": "entity",
     "cancellable": false,
+    "slot": 36,
+    "page": 1,
     "worksWith": [
       "fishing_hook"
     ]
@@ -901,47 +1195,65 @@
   {
     "id": "entity_shot_bow",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 33,
+    "page": 1
   },
   {
     "id": "entity_load_crossbow",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 34,
+    "page": 1
   },
   {
     "id": "piglin_barter",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 37,
+    "page": 1
   },
   {
     "id": "goat_ram_entity",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 38,
+    "page": 1
   },
   {
     "id": "entity_transform",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 39,
+    "page": 1
   },
   {
     "id": "entity_start_gliding",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 40,
+    "page": 1
   },
   {
     "id": "entity_stop_gliding",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 41,
+    "page": 1
   },
   {
     "id": "entity_bell_ring",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 42,
+    "page": 1
   },
   {
     "id": "block_form_by_entity",
     "category": "entity",
     "cancellable": true,
+    "slot": 43,
+    "page": 1,
     "worksWith": [
       "snowman",
       "frost_walker"
@@ -951,6 +1263,8 @@
     "id": "entity_block_break_progress_update",
     "category": "entity",
     "cancellable": false,
+    "slot": 44,
+    "page": 1,
     "worksWith": [
       "zombie"
     ]
@@ -958,22 +1272,30 @@
   {
     "id": "entity_explode",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 45,
+    "page": 1
   },
   {
     "id": "entity_explosion",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 46,
+    "page": 1
   },
   {
     "id": "entity_unleash_event",
     "category": "entity",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 47,
+    "page": 1
   },
   {
     "id": "hopper_pickup_item",
     "category": "entity",
     "cancellable": true,
+    "slot": 48,
+    "page": 1,
     "additionalInfo": [
       "item_is_victim_entity"
     ]
@@ -981,22 +1303,30 @@
   {
     "id": "world_start",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "world_stop",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "world_reload",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 2,
+    "page": 1
   },
   {
     "id": "time_skip",
     "category": "world",
     "cancellable": true,
+    "slot": 3,
+    "page": 1,
     "worksWith": [
       "sleep",
       "code"
@@ -1005,27 +1335,37 @@
   {
     "id": "world_web_response",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "world_web_exception",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "block_ignite",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 0,
+    "page": 1
   },
   {
     "id": "block_burn",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 1,
+    "page": 1
   },
   {
     "id": "block_fade",
     "category": "world",
     "cancellable": true,
+    "slot": 2,
+    "page": 1,
     "worksWith": [
       "snow",
       "ice",
@@ -1038,37 +1378,51 @@
   {
     "id": "tnt_prime",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 5,
+    "page": 1
   },
   {
     "id": "block_explode",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 6,
+    "page": 1
   },
   {
     "id": "block_piston_extend",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 3,
+    "page": 1
   },
   {
     "id": "block_piston_retract",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 4,
+    "page": 1
   },
   {
     "id": "leaves_decay",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 7,
+    "page": 1
   },
   {
     "id": "structure_grow",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 8,
+    "page": 1
   },
   {
     "id": "block_grow",
     "category": "world",
     "cancellable": true,
+    "slot": 9,
+    "page": 1,
     "worksWith": [
       "seeds",
       "pumpkins_and_melons",
@@ -1079,6 +1433,8 @@
     "id": "block_flow",
     "category": "world",
     "cancellable": true,
+    "slot": 10,
+    "page": 1,
     "worksWith": [
       "liquids",
       "dragon_egg"
@@ -1087,22 +1443,30 @@
   {
     "id": "block_fertilize",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 11,
+    "page": 1
   },
   {
     "id": "redstone_level_change",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 12,
+    "page": 1
   },
   {
     "id": "brew_complete",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 13,
+    "page": 1
   },
   {
     "id": "block_form",
     "category": "world",
     "cancellable": true,
+    "slot": 14,
+    "page": 1,
     "worksWith": [
       "snow",
       "ice",
@@ -1114,6 +1478,8 @@
     "id": "block_spread",
     "category": "world",
     "cancellable": true,
+    "slot": 15,
+    "page": 1,
     "worksWith": [
       "mushrooms",
       "fire",
@@ -1123,77 +1489,107 @@
   {
     "id": "portal_create",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 16,
+    "page": 1
   },
   {
     "id": "bell_ring",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 17,
+    "page": 1
   },
   {
     "id": "note_play",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 18,
+    "page": 1
   },
   {
     "id": "dispenser_dispense_item",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 19,
+    "page": 1
   },
   {
     "id": "block_failed_dispense",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 21,
+    "page": 1
   },
   {
     "id": "dispenser_equip_armor",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 20,
+    "page": 1
   },
   {
     "id": "beacon_activate",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 23,
+    "page": 1
   },
   {
     "id": "beacon_deactivate",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 24,
+    "page": 1
   },
   {
     "id": "fluid_level_change",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 22,
+    "page": 1
   },
   {
     "id": "sponge_absorb",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 25,
+    "page": 1
   },
   {
     "id": "block_break_block",
     "category": "world",
-    "cancellable": false
+    "cancellable": false,
+    "slot": 26,
+    "page": 1
   },
   {
     "id": "moisture_change",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 27,
+    "page": 1
   },
   {
     "id": "sculk_bloom",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 28,
+    "page": 1
   },
   {
     "id": "item_moved_into_container",
     "category": "world",
-    "cancellable": true
+    "cancellable": true,
+    "slot": 29,
+    "page": 1
   },
   {
     "id": "vault_display_item",
     "category": "world",
     "cancellable": true,
+    "slot": 30,
+    "page": 1,
     "worksWith": [
       "vault"
     ]
@@ -1202,6 +1598,8 @@
     "id": "vault_change_state",
     "category": "world",
     "cancellable": true,
+    "slot": 31,
+    "page": 1,
     "worksWith": [
       "vault"
     ]
@@ -1210,6 +1608,8 @@
     "id": "block_dispense_loot",
     "category": "world",
     "cancellable": true,
+    "slot": 32,
+    "page": 1,
     "worksWith": [
       "vault"
     ]
@@ -1218,6 +1618,8 @@
     "id": "crafter_craft",
     "category": "world",
     "cancellable": true,
+    "slot": 33,
+    "page": 1,
     "worksWith": [
       "crafter"
     ]
@@ -1226,6 +1628,8 @@
     "id": "furnace_smelt",
     "category": "world",
     "cancellable": true,
+    "slot": 35,
+    "page": 1,
     "worksWith": [
       "furnace",
       "blast_furnace",
@@ -1236,6 +1640,8 @@
     "id": "furnace_start_smelt",
     "category": "world",
     "cancellable": false,
+    "slot": 34,
+    "page": 1,
     "worksWith": [
       "furnace",
       "blast_furnace",
@@ -1246,6 +1652,8 @@
     "id": "furnace_burn",
     "category": "world",
     "cancellable": true,
+    "slot": 36,
+    "page": 1,
     "worksWith": [
       "furnace",
       "blast_furnace",
@@ -1256,6 +1664,8 @@
     "id": "chunk_load",
     "category": "world",
     "cancellable": false,
+    "slot": 37,
+    "page": 1,
     "additionalInfo": [
       "event_block_location_set_to_bottom_corner"
     ]
@@ -1264,6 +1674,8 @@
     "id": "chunk_unload",
     "category": "world",
     "cancellable": false,
+    "slot": 38,
+    "page": 1,
     "additionalInfo": [
       "event_block_location_set_to_bottom_corner"
     ]

@@ -5,6 +5,8 @@ import WithId from './WithId';
 type BaseGameValue = WithMetadata &
   WithId & {
     selector: 'player' | 'entity' | 'both' | null;
+    slot?: number;
+    page?: number;
   };
 
 ///////////////////////////////////////////////////////////////////////////////

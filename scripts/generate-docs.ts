@@ -158,7 +158,18 @@ const localizeList = (
       )
     )
     .join('<br/>') || '';
-const formatFlag = (value?: true) => value === true;
+const formatStatus = (entry: { deprecated?: true; unused?: true }) =>
+  [
+    ...(entry.deprecated ? ['deprecated'] : []),
+    ...(entry.unused ? ['unused'] : []),
+  ].join(', ');
+
+const formatGameValueReturnType = (value: GameValue) => {
+  if (value.type === 'array') return `\`array<${value.elementType}>\``;
+  if (value.type === 'map')
+    return `\`map<${value.keyType}, ${value.valueType}>\``;
+  return value.type;
+};
 
 const markdownTable = (
   headers: string[],
@@ -223,7 +234,7 @@ const generateActionDocs = async (
           action.additionalInfo,
           missing
         ),
-        `${formatFlag(action.unused)}/${formatFlag(action.deprecated)}`,
+        formatStatus(action),
       ]);
 
     await writeMarkdown(
@@ -239,7 +250,7 @@ const generateActionDocs = async (
           'Arguments',
           'Works with',
           'Additional info',
-          'Unused/Deprecated',
+          'Status',
         ],
         rows
       )
@@ -280,7 +291,7 @@ const generateEventDocs = async (
         event.additionalInfo,
         missing
       ),
-      `${formatFlag(event.unused)}/${formatFlag(event.deprecated)}`,
+      formatStatus(event),
     ]);
 
   await writeMarkdown(
@@ -296,7 +307,7 @@ const generateEventDocs = async (
         'Cancellable',
         'Works with',
         'Additional info',
-        'Unused/Deprecated',
+        'Status',
       ],
       rows
     )
@@ -320,7 +331,7 @@ const generateGameValueDocs = async (
         `creative_plus.game_value.${value.id}.description`,
         missing
       ),
-      value.type,
+      formatGameValueReturnType(value),
       localizeList(
         properties,
         `creative_plus.game_value.${value.id}`,
@@ -335,7 +346,7 @@ const generateGameValueDocs = async (
         value.additionalInfo,
         missing
       ),
-      `${formatFlag(value.unused)}/${formatFlag(value.deprecated)}`,
+      formatStatus(value),
     ]);
 
   await writeMarkdown(
@@ -347,10 +358,10 @@ const generateGameValueDocs = async (
         'ID',
         'Name',
         'Description',
-        'Category',
+        'Return type',
         'Works with',
         'Additional info',
-        'Unused/Deprecated',
+        'Status',
       ],
       rows
     )

@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
-import { promises as fs, existsSync, mkdirSync, exists } from 'fs';
-import { createCanvas, loadImage, registerFont } from 'canvas';
+import { promises as fs, existsSync, mkdirSync, exists, readFileSync } from 'fs';
+import { createCanvas, loadImage } from 'canvas';
 import path from 'path';
+import opentype from 'opentype.js';
 
 import {
   Dictionary,
@@ -17,8 +18,6 @@ import {
   warn,
   type CachedIcon,
 } from './common';
-
-registerFont('Minecraft.ttf', { family: 'Minecraft' });
 
 const SIZE = 300;
 const FONT_SIZE = 165;
@@ -52,7 +51,9 @@ const HEAD_DEST_IMAGE_OPTIONS = {
 
 const canvas = createCanvas(SIZE, SIZE);
 const context = canvas.getContext('2d');
-context.font = `${FONT_SIZE}px Minecraft`;
+const iconFont = opentype.parse(
+  readFileSync(path.resolve(__dirname, '../Minecraft.ttf'))
+);
 
 const offCanvas = createCanvas(SIZE, SIZE);
 const offContext = offCanvas.getContext('2d');
@@ -60,6 +61,46 @@ const offContext = offCanvas.getContext('2d');
 const glint = fs
   .readFile(path.resolve(__dirname, '../enchanted_item_glint.png'))
   .then(loadImage);
+
+const drawText = (text: string, color: string, x: number, y: number) => {
+  const glyphs = iconFont.getPath(text, x, y, FONT_SIZE);
+  context.beginPath();
+
+  for (const command of glyphs.commands) {
+    switch (command.type) {
+      case 'M':
+        context.moveTo(command.x, command.y);
+        break;
+      case 'L':
+        context.lineTo(command.x, command.y);
+        break;
+      case 'C':
+        context.bezierCurveTo(
+          command.x1,
+          command.y1,
+          command.x2,
+          command.y2,
+          command.x,
+          command.y
+        );
+        break;
+      case 'Q':
+        context.quadraticCurveTo(
+          command.x1,
+          command.y1,
+          command.x,
+          command.y
+        );
+        break;
+      case 'Z':
+        context.closePath();
+        break;
+    }
+  }
+
+  context.fillStyle = color;
+  context.fill();
+};
 
 const getPlayerHeadId = (texture?: string): string => {
   if (!texture) return DEFAULT_PLAYER_HEAD_ID;
@@ -146,15 +187,12 @@ const drawIcon = async (icon: CachedIcon) => {
   if (!('amount' in icon) || icon.amount < 2) return canvas.toBuffer();
 
   const text = icon.amount.toString();
-  const { width } = context.measureText(text);
+  const width = iconFont.getAdvanceWidth(text, FONT_SIZE);
   const x = SIZE - width - TEXT_OFFSET_X;
   const y = SIZE - TEXT_OFFSET_Y;
 
-  context.fillStyle = SHADOW_COLOR;
-  context.fillText(text, x, y);
-
-  context.fillStyle = TEXT_COLOR;
-  context.fillText(text, x - SHADOW_OFFSET, y - SHADOW_OFFSET);
+  drawText(text, SHADOW_COLOR, x, y);
+  drawText(text, TEXT_COLOR, x - SHADOW_OFFSET, y - SHADOW_OFFSET);
 
   return canvas.toBuffer();
 };
@@ -198,6 +236,7 @@ const drawIcon = async (icon: CachedIcon) => {
           if (
             icon.material !== 'PLAYER_HEAD' &&
             icon.material !== 'AIR' &&
+            icon.amount < 2 &&
             (await fileExists(iconPath))
           )
             return;
