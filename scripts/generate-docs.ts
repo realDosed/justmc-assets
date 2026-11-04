@@ -165,9 +165,9 @@ const formatStatus = (entry: { deprecated?: true; unused?: true }) =>
   ].join(', ');
 
 const formatGameValueReturnType = (value: GameValue) => {
-  if (value.type === 'array') return `\`array<${value.elementType}>\``;
+  if (value.type === 'array') return `array<${value.elementType}>`;
   if (value.type === 'map')
-    return `\`map<${value.keyType}, ${value.valueType}>\``;
+    return `map<${value.keyType}, ${value.valueType}>`;
   return value.type;
 };
 
@@ -331,6 +331,11 @@ const generateGameValueDocs = async (
         `creative_plus.game_value.${value.id}.description`,
         missing
       ),
+      localize(
+        properties,
+        `creative_plus.menu.game_values.${value.category}.title`,
+        missing
+      ),
       formatGameValueReturnType(value),
       localizeList(
         properties,
@@ -358,6 +363,7 @@ const generateGameValueDocs = async (
         'ID',
         'Name',
         'Description',
+        'Category',
         'Return type',
         'Works with',
         'Additional info',

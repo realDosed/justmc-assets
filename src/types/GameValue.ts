@@ -2,8 +2,21 @@ import { ValueType, ValueTypes } from './ValueType';
 import WithMetadata from './WithMetadata';
 import WithId from './WithId';
 
+export const GameValueCategories = {
+  STATISTIC: 'statistic',
+  LOCATION: 'location',
+  ITEM: 'item',
+  INFO: 'info',
+  EVENT: 'event',
+  WORLD: 'world',
+} as const;
+
+export type GameValueCategory =
+  (typeof GameValueCategories)[keyof typeof GameValueCategories];
+
 type BaseGameValue = WithMetadata &
   WithId & {
+    category: GameValueCategory;
     selector: 'player' | 'entity' | 'both' | null;
     slot?: number;
     page?: number;

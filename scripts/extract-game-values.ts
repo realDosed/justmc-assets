@@ -27,7 +27,7 @@ import {
 } from './common';
 
 import { ValueTypes, valueTypeFromInternal } from '../src/types/ValueType';
-import GameValue from '../src/types/GameValue';
+import GameValue, { GameValueCategories } from '../src/types/GameValue';
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -114,6 +114,8 @@ const REGISTERED_GAME_VALUES =
   /val\s*(.*?)\s*=\s*register\("(.*)",\s*ValueTypes.([\w]*)/g;
 const GAME_VALUE_MENU_GROUPS =
   /private\s+val\s+(\w+)\s*=\s*buildList\s*\{/g;
+const GAME_VALUE_MENU_CATEGORIES =
+  /addGameValueMenu\s*\([\s\S]*?,\s*"(\w+)"\s*,\s*(\w+)\s*,\s*gameEnvironment\s*\)/g;
 const NEXT_GAME_VALUE = /^[ \t]{4}val\s+[A-Z][A-Z0-9_]*\s*=\s*register\(/gm;
 const VALUE_CONTAINER_TYPE =
   /DefinedValueContainer\s*\(\s*ValueTypes\.([A-Z_]+)/g;
@@ -215,6 +217,41 @@ const selectorFromBody = (
       }
     )
   );
+  const menuCategoriesByGroup = matches(
+    originalGameValuesMenuFile,
+    GAME_VALUE_MENU_CATEGORIES
+  ).reduce<Record<string, string>>((categories, [, category, group]) => {
+    categories[group] = category;
+    return categories;
+  }, {});
+  const menuGameValueCategories = Object.assign(
+    {},
+    ...matches(originalGameValuesMenuFile, GAME_VALUE_MENU_GROUPS).map(
+      (group, index, groups) => {
+        const start = group.index!;
+        const end =
+          groups[index + 1]?.index ?? originalGameValuesMenuFile.length;
+        const categoryId = menuCategoriesByGroup[group[1]];
+        const category = Object.values(GameValueCategories).find(
+          (value) => value === categoryId
+        );
+
+        if (!category) {
+          error(
+            `Could not find a valid game value category for menu group: ${group[1]}`
+          );
+          return {};
+        }
+
+        return Object.fromEntries(
+          matches(
+            originalGameValuesMenuFile.slice(start, end),
+            MENU_GAME_VALUE_REFERENCES
+          ).map(([, name]) => [name, category])
+        );
+      }
+    )
+  );
   const importedSources = await getImportedKotlinSources(gameValuesMenuFile);
 
   const valueTypeIcons = await extractValueTypeIcons();
@@ -253,6 +290,7 @@ const selectorFromBody = (
       id,
       name,
       type: type!,
+      category: EVENT_CONTEXT.test(body) ? GameValueCategories.EVENT : null,
       selector: selectorFromBody(body),
       ...inferGameValueCollectionTypes(type!, body),
     };
@@ -273,6 +311,11 @@ const selectorFromBody = (
 
   const gameValues = registeredGameValues.map((_gameValue) => {
     let icon = menuIcons[_gameValue.name];
+    const category =
+      menuGameValueCategories[_gameValue.name] || _gameValue.category;
+
+    if (!category)
+      return error(`Could not find category for game value: ${_gameValue.id}`);
 
     if (!icon) {
       warn(
@@ -303,6 +346,7 @@ const selectorFromBody = (
     let gameValue = {
       id: _gameValue.id,
       type: _gameValue.type,
+      category,
       selector: _gameValue.selector,
       ...(menuGameValuePositions[_gameValue.name] || {}),
       ...('elementType' in _gameValue

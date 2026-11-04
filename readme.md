@@ -6,8 +6,10 @@
 
 Generated data is available in `data/actions.json`, `data/events.json`, and
 `data/values.json`. Game values use `array` and `map` for collection types and
-include a `selector` (`player`, `entity`, `both`, or `null`). Actions include
-their category, subcategory, action name, and object group.
+include a `selector` (`player`, `entity`, `both`, or `null`) and a menu
+`category` (`statistic`, `location`, `item`, `info`, `event`, or `world`).
+Game values do not have subcategories. Actions include their category,
+subcategory, action name, and object group.
 Intentionally empty/default entries are excluded according to
 [`patches/excluded.json`](./patches/excluded.json) across generated data,
 documentation, and icons.

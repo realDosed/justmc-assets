@@ -2,6 +2,7 @@
   {
     "id": "current_health",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 0,
     "page": 1
@@ -9,6 +10,7 @@
   {
     "id": "max_health",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 1,
     "page": 1
@@ -16,6 +18,7 @@
   {
     "id": "absorption_health",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 2,
     "page": 1
@@ -23,6 +26,7 @@
   {
     "id": "food_level",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 3,
     "page": 1
@@ -30,6 +34,7 @@
   {
     "id": "food_saturation",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 4,
     "page": 1
@@ -37,6 +42,7 @@
   {
     "id": "food_exhaustion",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 5,
     "page": 1
@@ -44,6 +50,7 @@
   {
     "id": "saturated_regen_rate",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 6,
     "page": 1
@@ -51,6 +58,7 @@
   {
     "id": "unsaturated_regen_rate",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 7,
     "page": 1
@@ -58,6 +66,7 @@
   {
     "id": "starvation_rate",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 8,
     "page": 1
@@ -65,6 +74,7 @@
   {
     "id": "attack_damage",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 9,
     "page": 1
@@ -72,6 +82,7 @@
   {
     "id": "attack_speed",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 10,
     "page": 1
@@ -79,6 +90,7 @@
   {
     "id": "attack_cooldown_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 12,
     "page": 1
@@ -86,6 +98,7 @@
   {
     "id": "attack_cooldown_strength",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 11,
     "page": 1
@@ -93,6 +106,7 @@
   {
     "id": "armor_points",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 13,
     "page": 1
@@ -100,6 +114,7 @@
   {
     "id": "armor_toughness",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 14,
     "page": 1
@@ -107,6 +122,7 @@
   {
     "id": "invulnerability_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 15,
     "page": 1
@@ -114,6 +130,7 @@
   {
     "id": "max_invulnerability_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 16,
     "page": 1
@@ -121,6 +138,7 @@
   {
     "id": "experience_level",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 17,
     "page": 1
@@ -128,6 +146,7 @@
   {
     "id": "experience_progress",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 18,
     "page": 1
@@ -135,6 +154,7 @@
   {
     "id": "death_screen_score",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 19,
     "page": 1,
@@ -145,6 +165,7 @@
   {
     "id": "fire_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 20,
     "page": 1
@@ -152,6 +173,7 @@
   {
     "id": "freeze_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 21,
     "page": 1
@@ -159,6 +181,7 @@
   {
     "id": "remaining_air",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 22,
     "page": 1
@@ -166,6 +189,7 @@
   {
     "id": "fall_distance",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 23,
     "page": 1
@@ -173,6 +197,7 @@
   {
     "id": "held_slot",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 24,
     "page": 1
@@ -180,6 +205,7 @@
   {
     "id": "walking_speed",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 25,
     "page": 1
@@ -187,6 +213,7 @@
   {
     "id": "flying_speed",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 26,
     "page": 1
@@ -194,6 +221,7 @@
   {
     "id": "ping",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 27,
     "page": 1
@@ -201,6 +229,7 @@
   {
     "id": "protocol_version",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 28,
     "page": 1
@@ -208,6 +237,7 @@
   {
     "id": "client_view_distance",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 29,
     "page": 1,
@@ -218,6 +248,7 @@
   {
     "id": "item_usage_progress",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 30,
     "page": 1
@@ -225,6 +256,7 @@
   {
     "id": "active_item_used_time",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 31,
     "page": 1
@@ -232,6 +264,7 @@
   {
     "id": "entity_ticks_lived",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 32,
     "page": 1
@@ -239,6 +272,7 @@
   {
     "id": "arrows_in_body",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 33,
     "page": 1
@@ -246,6 +280,7 @@
   {
     "id": "age",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 34,
     "page": 1
@@ -253,6 +288,7 @@
   {
     "id": "steer_forward",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 35,
     "page": 1
@@ -260,6 +296,7 @@
   {
     "id": "steer_sideways",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 0,
     "page": 2
@@ -267,6 +304,7 @@
   {
     "id": "merchant_recipe_count",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 1,
     "page": 2
@@ -274,6 +312,7 @@
   {
     "id": "open_inventory_size",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 2,
     "page": 2,
@@ -284,6 +323,7 @@
   {
     "id": "entity_width_x",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 3,
     "page": 2
@@ -291,6 +331,7 @@
   {
     "id": "entity_height",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 4,
     "page": 2
@@ -298,6 +339,7 @@
   {
     "id": "entity_width_z",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 5,
     "page": 2
@@ -305,6 +347,7 @@
   {
     "id": "entity_fuse_ticks",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 6,
     "page": 2,
@@ -317,6 +360,7 @@
   {
     "id": "projectile_power",
     "type": "vector",
+    "category": "statistic",
     "selector": "entity",
     "slot": 7,
     "page": 2,
@@ -329,6 +373,7 @@
   {
     "id": "enchantment_seed",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 8,
     "page": 2
@@ -336,6 +381,7 @@
   {
     "id": "idle_duration",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 9,
     "page": 2
@@ -343,6 +389,7 @@
   {
     "id": "entity_pathfinder_point_index",
     "type": "number",
+    "category": "statistic",
     "selector": "entity",
     "slot": 10,
     "page": 2
@@ -350,6 +397,7 @@
   {
     "id": "location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 0,
     "page": 1
@@ -357,6 +405,7 @@
   {
     "id": "target_block_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 1,
     "page": 1
@@ -364,6 +413,7 @@
   {
     "id": "target_fluid_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 2,
     "page": 1
@@ -371,6 +421,7 @@
   {
     "id": "target_block_face",
     "type": "text",
+    "category": "location",
     "selector": "entity",
     "slot": 3,
     "page": 1
@@ -378,6 +429,7 @@
   {
     "id": "eye_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 4,
     "page": 1
@@ -385,6 +437,7 @@
   {
     "id": "cape_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 5,
     "page": 1,
@@ -395,6 +448,7 @@
   {
     "id": "x_coordinate",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 6,
     "page": 1
@@ -402,6 +456,7 @@
   {
     "id": "y_coordinate",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 7,
     "page": 1
@@ -409,6 +464,7 @@
   {
     "id": "z_coordinate",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 8,
     "page": 1
@@ -416,6 +472,7 @@
   {
     "id": "pitch",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 9,
     "page": 1
@@ -423,6 +480,7 @@
   {
     "id": "yaw",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 10,
     "page": 1
@@ -430,6 +488,7 @@
   {
     "id": "direction_of_view",
     "type": "vector",
+    "category": "location",
     "selector": "entity",
     "slot": 11,
     "page": 1
@@ -437,6 +496,7 @@
   {
     "id": "cardinal_direction",
     "type": "text",
+    "category": "location",
     "selector": "entity",
     "slot": 12,
     "page": 1
@@ -444,6 +504,7 @@
   {
     "id": "hitbox_midpoint_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 13,
     "page": 1
@@ -451,6 +512,7 @@
   {
     "id": "spawn_location",
     "type": "location",
+    "category": "location",
     "selector": null,
     "slot": 14,
     "page": 1
@@ -458,6 +520,7 @@
   {
     "id": "origin",
     "type": "location",
+    "category": "location",
     "selector": "both",
     "slot": 15,
     "page": 1
@@ -465,6 +528,7 @@
   {
     "id": "velocity",
     "type": "vector",
+    "category": "info",
     "selector": "entity",
     "slot": 24,
     "page": 1
@@ -472,6 +536,7 @@
   {
     "id": "body_yaw",
     "type": "number",
+    "category": "location",
     "selector": "entity",
     "slot": 16,
     "page": 1
@@ -479,6 +544,7 @@
   {
     "id": "block_beneath",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 17,
     "page": 1
@@ -486,6 +552,7 @@
   {
     "id": "blocks_beneath",
     "type": "array",
+    "category": "location",
     "selector": "entity",
     "slot": 18,
     "page": 1,
@@ -494,6 +561,7 @@
   {
     "id": "last_death_location",
     "type": "location",
+    "category": "location",
     "selector": "entity",
     "slot": 19,
     "page": 1
@@ -501,6 +569,7 @@
   {
     "id": "main_hand_item",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 0,
     "page": 1
@@ -508,6 +577,7 @@
   {
     "id": "off_hand_item",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 1,
     "page": 1
@@ -515,6 +585,7 @@
   {
     "id": "armor_items",
     "type": "array",
+    "category": "item",
     "selector": "entity",
     "slot": 2,
     "page": 1,
@@ -523,6 +594,7 @@
   {
     "id": "hotbar_items",
     "type": "array",
+    "category": "item",
     "selector": "entity",
     "slot": 3,
     "page": 1,
@@ -531,6 +603,7 @@
   {
     "id": "inventory_items",
     "type": "array",
+    "category": "item",
     "selector": "entity",
     "slot": 4,
     "page": 1,
@@ -539,6 +612,7 @@
   {
     "id": "custom_inventory_items",
     "type": "array",
+    "category": "item",
     "selector": "player",
     "slot": 5,
     "page": 1,
@@ -547,6 +621,7 @@
   {
     "id": "cursor_item",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 6,
     "page": 1
@@ -554,6 +629,7 @@
   {
     "id": "saddle_item",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 7,
     "page": 1,
@@ -566,6 +642,7 @@
   {
     "id": "entity_item",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 8,
     "page": 1
@@ -573,6 +650,7 @@
   {
     "id": "entity_pick_item_stack",
     "type": "item",
+    "category": "item",
     "selector": "entity",
     "slot": 9,
     "page": 1
@@ -580,6 +658,7 @@
   {
     "id": "player_enderchest_items",
     "type": "array",
+    "category": "item",
     "selector": "player",
     "slot": 10,
     "page": 1,
@@ -591,6 +670,7 @@
   {
     "id": "name",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 0,
     "page": 1
@@ -598,6 +678,7 @@
   {
     "id": "uuid",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 1,
     "page": 1
@@ -605,6 +686,7 @@
   {
     "id": "display_name",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 2,
     "page": 1
@@ -612,6 +694,7 @@
   {
     "id": "entity_type",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 3,
     "page": 1
@@ -619,6 +702,7 @@
   {
     "id": "client_brand_name",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 4,
     "page": 1,
@@ -629,6 +713,7 @@
   {
     "id": "user_locale",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 5,
     "page": 1,
@@ -639,6 +724,7 @@
   {
     "id": "clientside_locale",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 6,
     "page": 1,
@@ -649,6 +735,7 @@
   {
     "id": "open_inventory_title",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 7,
     "page": 1,
@@ -659,6 +746,7 @@
   {
     "id": "open_inventory_type",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 8,
     "page": 1,
@@ -669,6 +757,7 @@
   {
     "id": "open_inventory_custom_id",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 9,
     "page": 1,
@@ -679,6 +768,7 @@
   {
     "id": "gamemode",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 10,
     "page": 1,
@@ -689,6 +779,7 @@
   {
     "id": "last_damage_cause",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 11,
     "page": 1
@@ -696,6 +787,7 @@
   {
     "id": "potion_effects",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 12,
     "page": 1,
@@ -704,6 +796,7 @@
   {
     "id": "vehicle",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 13,
     "page": 1
@@ -711,6 +804,7 @@
   {
     "id": "passengers",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 14,
     "page": 1,
@@ -719,6 +813,7 @@
   {
     "id": "lead_holder",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 15,
     "page": 1
@@ -726,6 +821,7 @@
   {
     "id": "attached_leads",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 16,
     "page": 1,
@@ -734,6 +830,7 @@
   {
     "id": "targeted_entity",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 17,
     "page": 1
@@ -741,6 +838,7 @@
   {
     "id": "player_ender_pearls",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 18,
     "page": 1,
@@ -752,6 +850,7 @@
   {
     "id": "spawn_reason",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 25,
     "page": 1
@@ -759,6 +858,7 @@
   {
     "id": "main_hand",
     "type": "text",
+    "category": "info",
     "selector": "player",
     "slot": 26,
     "page": 1,
@@ -769,6 +869,7 @@
   {
     "id": "pose",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 28,
     "page": 1
@@ -776,6 +877,7 @@
   {
     "id": "current_input_list",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 27,
     "page": 1,
@@ -787,6 +889,7 @@
   {
     "id": "chat_visibility",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 29,
     "page": 1,
@@ -797,6 +900,7 @@
   {
     "id": "particle_visibility",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 30,
     "page": 1,
@@ -807,6 +911,7 @@
   {
     "id": "projectile_owner_uuid",
     "type": "text",
+    "category": "info",
     "selector": "entity",
     "slot": 19,
     "page": 1,
@@ -817,6 +922,7 @@
   {
     "id": "display_entity_translation",
     "type": "vector",
+    "category": "info",
     "selector": "entity",
     "slot": 20,
     "page": 1,
@@ -827,6 +933,7 @@
   {
     "id": "display_entity_left_rotation",
     "type": "vector",
+    "category": "info",
     "selector": "entity",
     "slot": 21,
     "page": 1,
@@ -837,6 +944,7 @@
   {
     "id": "display_entity_right_rotation",
     "type": "vector",
+    "category": "info",
     "selector": "entity",
     "slot": 22,
     "page": 1,
@@ -847,6 +955,7 @@
   {
     "id": "display_entity_scale",
     "type": "vector",
+    "category": "info",
     "selector": "entity",
     "slot": 23,
     "page": 1,
@@ -857,6 +966,7 @@
   {
     "id": "entity_pathfinder_points",
     "type": "array",
+    "category": "info",
     "selector": "entity",
     "slot": 31,
     "page": 1,
@@ -865,6 +975,7 @@
   {
     "id": "event_block_location",
     "type": "location",
+    "category": "event",
     "selector": null,
     "slot": 0,
     "page": 1
@@ -872,6 +983,7 @@
   {
     "id": "event_block_face",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 1,
     "page": 1,
@@ -885,6 +997,7 @@
   {
     "id": "event_block",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 2,
     "page": 1
@@ -892,6 +1005,7 @@
   {
     "id": "event_blocks_involved",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 3,
     "page": 1,
@@ -904,6 +1018,7 @@
   {
     "id": "event_interaction",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 4,
     "page": 1,
@@ -916,6 +1031,7 @@
   {
     "id": "event_from_location",
     "type": "location",
+    "category": "event",
     "selector": null,
     "slot": 5,
     "page": 1
@@ -923,6 +1039,7 @@
   {
     "id": "event_new_location",
     "type": "location",
+    "category": "event",
     "selector": null,
     "slot": 6,
     "page": 1
@@ -930,6 +1047,7 @@
   {
     "id": "event_damage",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 7,
     "page": 1
@@ -937,6 +1055,7 @@
   {
     "id": "event_final_damage",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 8,
     "page": 1
@@ -944,6 +1063,7 @@
   {
     "id": "event_damage_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 9,
     "page": 1
@@ -951,6 +1071,7 @@
   {
     "id": "event_knockback_event_type",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 10,
     "page": 1,
@@ -962,6 +1083,7 @@
   {
     "id": "event_knockback_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 11,
     "page": 1,
@@ -973,6 +1095,7 @@
   {
     "id": "event_knockback_vector",
     "type": "vector",
+    "category": "event",
     "selector": null,
     "slot": 12,
     "page": 1,
@@ -984,6 +1107,7 @@
   {
     "id": "event_velocity",
     "type": "vector",
+    "category": "event",
     "selector": null,
     "slot": 13,
     "page": 1,
@@ -994,6 +1118,7 @@
   {
     "id": "event_chat_message",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 14,
     "page": 1,
@@ -1004,6 +1129,7 @@
   {
     "id": "event_message",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 15,
     "page": 1
@@ -1011,6 +1137,7 @@
   {
     "id": "event_custom_click_key",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 16,
     "page": 1,
@@ -1021,6 +1148,7 @@
   {
     "id": "event_custom_click_dialog_view_data",
     "type": "any",
+    "category": "event",
     "selector": null,
     "slot": 17,
     "page": 1,
@@ -1031,6 +1159,7 @@
   {
     "id": "event_death_screen_message",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 18,
     "page": 1,
@@ -1041,6 +1170,7 @@
   {
     "id": "event_heal_amount",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 22,
     "page": 1,
@@ -1052,6 +1182,7 @@
   {
     "id": "event_heal_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 23,
     "page": 1,
@@ -1063,6 +1194,7 @@
   {
     "id": "event_exhaustion_amount",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 11,
     "page": 2,
@@ -1073,6 +1205,7 @@
   {
     "id": "event_exhaustion_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 12,
     "page": 2,
@@ -1083,6 +1216,7 @@
   {
     "id": "event_new_potion_effect",
     "type": "potion",
+    "category": "event",
     "selector": null,
     "slot": 24,
     "page": 1,
@@ -1093,6 +1227,7 @@
   {
     "id": "event_power",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 25,
     "page": 1,
@@ -1104,6 +1239,7 @@
   {
     "id": "event_item",
     "type": "item",
+    "category": "event",
     "selector": null,
     "slot": 26,
     "page": 1
@@ -1111,6 +1247,7 @@
   {
     "id": "event_items",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 27,
     "page": 1,
@@ -1119,6 +1256,7 @@
   {
     "id": "event_old_item",
     "type": "item",
+    "category": "event",
     "selector": null,
     "slot": 28,
     "page": 1,
@@ -1129,6 +1267,7 @@
   {
     "id": "event_equipment_slot",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 1,
     "page": 2
@@ -1136,6 +1275,7 @@
   {
     "id": "event_slot",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 29,
     "page": 1
@@ -1143,6 +1283,7 @@
   {
     "id": "event_hotbar_slot",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 19,
     "page": 1
@@ -1150,6 +1291,7 @@
   {
     "id": "event_added_items",
     "type": "map",
+    "category": "event",
     "selector": null,
     "slot": 34,
     "page": 1,
@@ -1162,6 +1304,7 @@
   {
     "id": "event_old_equipments",
     "type": "map",
+    "category": "event",
     "selector": null,
     "slot": 35,
     "page": 1,
@@ -1175,6 +1318,7 @@
   {
     "id": "event_new_equipments",
     "type": "map",
+    "category": "event",
     "selector": null,
     "slot": 0,
     "page": 2,
@@ -1188,6 +1332,7 @@
   {
     "id": "event_slot_type",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 20,
     "page": 1
@@ -1195,6 +1340,7 @@
   {
     "id": "event_close_inventory_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 30,
     "page": 1,
@@ -1205,6 +1351,7 @@
   {
     "id": "event_inventory_click_type",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 31,
     "page": 1
@@ -1212,6 +1359,7 @@
   {
     "id": "event_inventory_action",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 21,
     "page": 1
@@ -1219,6 +1367,7 @@
   {
     "id": "event_drag_type",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 32,
     "page": 1,
@@ -1229,6 +1378,7 @@
   {
     "id": "event_slots_involved",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 33,
     "page": 1,
@@ -1240,6 +1390,7 @@
   {
     "id": "event_fish_state",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 2,
     "page": 2,
@@ -1250,6 +1401,7 @@
   {
     "id": "event_new_fishing_hook_state",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 3,
     "page": 2,
@@ -1260,6 +1412,7 @@
   {
     "id": "event_tree_type",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 4,
     "page": 2,
@@ -1271,6 +1424,7 @@
   {
     "id": "event_experience",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 5,
     "page": 2
@@ -1278,6 +1432,7 @@
   {
     "id": "event_hanging_break_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 6,
     "page": 2,
@@ -1288,6 +1443,7 @@
   {
     "id": "event_entity_unleash_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 7,
     "page": 2,
@@ -1298,6 +1454,7 @@
   {
     "id": "event_time_skip_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 8,
     "page": 2,
@@ -1308,6 +1465,7 @@
   {
     "id": "event_time_skip_amount",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 9,
     "page": 2,
@@ -1318,6 +1476,7 @@
   {
     "id": "event_food_level",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 10,
     "page": 2,
@@ -1328,6 +1487,7 @@
   {
     "id": "event_item_cooldown",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 13,
     "page": 2,
@@ -1339,6 +1499,7 @@
   {
     "id": "event_item_cooldown_group",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 14,
     "page": 2,
@@ -1350,6 +1511,7 @@
   {
     "id": "event_item_damage",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 15,
     "page": 2,
@@ -1360,6 +1522,7 @@
   {
     "id": "event_combust_duration",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 16,
     "page": 2,
@@ -1371,6 +1534,7 @@
   {
     "id": "event_combust_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 17,
     "page": 2,
@@ -1382,6 +1546,7 @@
   {
     "id": "event_projectile_item",
     "type": "item",
+    "category": "event",
     "selector": null,
     "slot": 18,
     "page": 2,
@@ -1392,6 +1557,7 @@
   {
     "id": "event_teleport_cause",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 19,
     "page": 2,
@@ -1403,6 +1569,7 @@
   {
     "id": "event_block_break_progress",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 21,
     "page": 2,
@@ -1414,6 +1581,7 @@
   {
     "id": "event_ticks_held_for",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 20,
     "page": 2,
@@ -1424,6 +1592,7 @@
   {
     "id": "event_query_info",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 22,
     "page": 2,
@@ -1435,6 +1604,7 @@
   {
     "id": "event_advancement_tab_name",
     "type": "text",
+    "category": "event",
     "selector": null,
     "worksWith": [
       "player_open_advancements_tab"
@@ -1444,6 +1614,7 @@
   {
     "id": "event_gamemode",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 23,
     "page": 2,
@@ -1454,6 +1625,7 @@
   {
     "id": "event_sign_lines",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 24,
     "page": 2,
@@ -1465,6 +1637,7 @@
   {
     "id": "event_sign_side",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 25,
     "page": 2,
@@ -1475,6 +1648,7 @@
   {
     "id": "event_old_vault_state",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 26,
     "page": 2,
@@ -1486,6 +1660,7 @@
   {
     "id": "event_new_vault_state",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 27,
     "page": 2,
@@ -1497,6 +1672,7 @@
   {
     "id": "event_anvil_rename_input",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 28,
     "page": 2,
@@ -1507,6 +1683,7 @@
   {
     "id": "event_anvil_damage_state",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 29,
     "page": 2,
@@ -1517,6 +1694,7 @@
   {
     "id": "event_enchantment_hint",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 30,
     "page": 2,
@@ -1527,6 +1705,7 @@
   {
     "id": "event_enchantments_to_add",
     "type": "map",
+    "category": "event",
     "selector": null,
     "slot": 31,
     "page": 2,
@@ -1539,6 +1718,7 @@
   {
     "id": "event_enchantment_level_hint",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 32,
     "page": 2,
@@ -1549,6 +1729,7 @@
   {
     "id": "event_enchantment_offers",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 33,
     "page": 2,
@@ -1560,6 +1741,7 @@
   {
     "id": "event_enchantment_bonus",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 34,
     "page": 2,
@@ -1570,6 +1752,7 @@
   {
     "id": "event_input_list",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 35,
     "page": 2,
@@ -1583,6 +1766,7 @@
   {
     "id": "event_fail_move_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 0,
     "page": 3,
@@ -1593,6 +1777,7 @@
   {
     "id": "event_transformed_entities",
     "type": "array",
+    "category": "event",
     "selector": null,
     "slot": 1,
     "page": 3,
@@ -1604,6 +1789,7 @@
   {
     "id": "event_transform_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 2,
     "page": 3,
@@ -1614,6 +1800,7 @@
   {
     "id": "event_replaced_block",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 3,
     "page": 3,
@@ -1624,6 +1811,7 @@
   {
     "id": "url_response",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 5,
     "page": 3,
@@ -1634,6 +1822,7 @@
   {
     "id": "url_response_code",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 7,
     "page": 3,
@@ -1644,6 +1833,7 @@
   {
     "id": "response_headers",
     "type": "map",
+    "category": "event",
     "selector": null,
     "slot": 6,
     "page": 3,
@@ -1656,6 +1846,7 @@
   {
     "id": "url",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 4,
     "page": 3,
@@ -1666,6 +1857,7 @@
   {
     "id": "currency_transaction_reason",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 8,
     "page": 3,
@@ -1676,6 +1868,7 @@
   {
     "id": "currency_transaction_amount",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 9,
     "page": 3,
@@ -1686,6 +1879,7 @@
   {
     "id": "currency_transaction_result",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 10,
     "page": 3,
@@ -1696,6 +1890,7 @@
   {
     "id": "anticheat_check",
     "type": "text",
+    "category": "event",
     "selector": null,
     "slot": 11,
     "page": 3,
@@ -1706,6 +1901,7 @@
   {
     "id": "anticheat_violations",
     "type": "number",
+    "category": "event",
     "selector": null,
     "slot": 12,
     "page": 3,
@@ -1716,6 +1912,7 @@
   {
     "id": "player_count",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 0,
     "page": 1
@@ -1723,6 +1920,7 @@
   {
     "id": "cpu_usage",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 1,
     "page": 1
@@ -1730,6 +1928,7 @@
   {
     "id": "particle_cpu_usage",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 2,
     "page": 1
@@ -1737,6 +1936,7 @@
   {
     "id": "server_tps",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 3,
     "page": 1
@@ -1744,6 +1944,7 @@
   {
     "id": "timestamp",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 4,
     "page": 1
@@ -1751,6 +1952,7 @@
   {
     "id": "server_current_tick",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 5,
     "page": 1
@@ -1758,6 +1960,7 @@
   {
     "id": "selection_size",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 18,
     "page": 1
@@ -1765,6 +1968,7 @@
   {
     "id": "selection_target_names",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 19,
     "page": 1,
@@ -1773,6 +1977,7 @@
   {
     "id": "selection_target_uuids",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 20,
     "page": 1,
@@ -1781,6 +1986,7 @@
   {
     "id": "world_time",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 8,
     "page": 1
@@ -1788,6 +1994,7 @@
   {
     "id": "world_game_time",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 9,
     "page": 1
@@ -1795,6 +2002,7 @@
   {
     "id": "world_weather",
     "type": "text",
+    "category": "world",
     "selector": null,
     "slot": 10,
     "page": 1
@@ -1802,6 +2010,7 @@
   {
     "id": "world_clear_weather_duration",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 11,
     "page": 1
@@ -1809,6 +2018,7 @@
   {
     "id": "world_weather_duration",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 12,
     "page": 1
@@ -1816,6 +2026,7 @@
   {
     "id": "world_thunder_duration",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 13,
     "page": 1
@@ -1823,6 +2034,7 @@
   {
     "id": "world_moon_phase",
     "type": "text",
+    "category": "world",
     "selector": null,
     "slot": 14,
     "page": 1
@@ -1830,6 +2042,7 @@
   {
     "id": "owner_uuid",
     "type": "text",
+    "category": "world",
     "selector": null,
     "slot": 15,
     "page": 1
@@ -1837,6 +2050,7 @@
   {
     "id": "world_size",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 16,
     "page": 1
@@ -1844,6 +2058,7 @@
   {
     "id": "world_id",
     "type": "text",
+    "category": "world",
     "selector": null,
     "slot": 17,
     "page": 1
@@ -1851,6 +2066,7 @@
   {
     "id": "all_players_names",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 21,
     "page": 1,
@@ -1859,6 +2075,7 @@
   {
     "id": "all_players_uuids",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 22,
     "page": 1,
@@ -1867,6 +2084,7 @@
   {
     "id": "all_entities_names",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 23,
     "page": 1,
@@ -1875,6 +2093,7 @@
   {
     "id": "all_entities_uuids",
     "type": "array",
+    "category": "world",
     "selector": null,
     "slot": 24,
     "page": 1,
@@ -1883,6 +2102,7 @@
   {
     "id": "start_reload_tick",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 6,
     "page": 1
@@ -1890,6 +2110,7 @@
   {
     "id": "delay_reload_count",
     "type": "number",
+    "category": "world",
     "selector": null,
     "slot": 7,
     "page": 1
