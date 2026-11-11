@@ -1,46 +1,203 @@
 {
-  "Boolean": [
-    "TRUE",
-    "FALSE"
+  "Report.Type": [
+    "WARNING",
+    "ERROR",
+    "FATAL"
   ],
-  "DialogBase.DialogAfterAction": [
-    "CLOSE",
-    "WAIT_FOR_RESPONSE",
-    "NONE"
+  "ServerTypeEnum": [
+    "MOJANG",
+    "SERVER",
+    "SERVER_DEFAULT"
   ],
-  "DialogTypeEnum": [
-    "MULTI_ACTION",
-    "MULTI_ACTION_WITH_EXIT",
-    "CONFIRMATION",
-    "NOTICE"
+  "Axolotl.Variant": [
+    "LUCY",
+    "WILD",
+    "GOLD",
+    "CYAN",
+    "BLUE"
   ],
-  "TreeType": [
-    "TREE",
-    "ACACIA",
-    "BIG_TREE",
-    "BIRCH",
-    "BROWN_MUSHROOM",
-    "CHORUS_PLANT",
-    "COCOA_TREE",
-    "CRIMSON_FUNGUS",
-    "DARK_OAK",
-    "JUNGLE",
-    "JUNGLE_BUSH",
-    "MEGA_REDWOOD",
-    "REDWOOD",
-    "RED_MUSHROOM",
-    "SMALL_JUNGLE",
-    "SWAMP",
-    "TALL_BIRCH",
-    "TALL_REDWOOD",
-    "WARPED_FUNGUS",
-    "AZALEA",
-    "MANGROVE",
-    "TALL_MANGROVE",
-    "CHERRY",
-    "MEGA_PINE",
-    "PALE_OAK_CREAKING",
-    "PALE_OAK"
+  "DyeColor": [
+    "WHITE",
+    "ORANGE",
+    "MAGENTA",
+    "LIGHT_BLUE",
+    "YELLOW",
+    "LIME",
+    "PINK",
+    "GRAY",
+    "LIGHT_GRAY",
+    "CYAN",
+    "PURPLE",
+    "BLUE",
+    "BROWN",
+    "GREEN",
+    "RED",
+    "BLACK"
+  ],
+  "Llama.Color": [
+    "CREAMY",
+    "WHITE",
+    "BROWN",
+    "GRAY"
+  ],
+  "MushroomCow.Variant": [
+    "RED",
+    "BROWN"
+  ],
+  "Parrot.Variant": [
+    "RED",
+    "BLUE",
+    "GREEN",
+    "CYAN",
+    "GRAY"
+  ],
+  "Pose": [
+    "STANDING",
+    "FALL_FLYING",
+    "SLEEPING",
+    "SWIMMING",
+    "SPIN_ATTACK",
+    "CROUCHING",
+    "LONG_JUMPING",
+    "DYING",
+    "CROAKING",
+    "USING_TONGUE",
+    "SITTING",
+    "ROARING",
+    "SNIFFING",
+    "EMERGING",
+    "DIGGING",
+    "SLIDING",
+    "SHOOTING",
+    "INHALING"
+  ],
+  "Rabbit.Type": [
+    "BROWN",
+    "WHITE",
+    "BLACK",
+    "BLACK_AND_WHITE",
+    "GOLD",
+    "SALT_AND_PEPPER",
+    "THE_KILLER_BUNNY"
+  ],
+  "Billboard": [
+    "FIXED",
+    "VERTICAL",
+    "HORIZONTAL",
+    "CENTER"
+  ],
+  "ItemDisplay.ItemDisplayTransform": [
+    "NONE",
+    "THIRDPERSON_LEFTHAND",
+    "THIRDPERSON_RIGHTHAND",
+    "FIRSTPERSON_LEFTHAND",
+    "FIRSTPERSON_RIGHTHAND",
+    "HEAD",
+    "GUI",
+    "GROUND",
+    "FIXED"
+  ],
+  "TextDisplay.TextAlignment": [
+    "CENTER",
+    "LEFT",
+    "RIGHT"
+  ],
+  "EntityNavigationMode": [
+    "PATHFINDING",
+    "WAYPOINTS"
+  ],
+  "EnderDragon.Phase": [
+    "CIRCLING",
+    "STRAFING",
+    "FLY_TO_PORTAL",
+    "LAND_ON_PORTAL",
+    "LEAVE_PORTAL",
+    "BREATH_ATTACK",
+    "SEARCH_FOR_BREATH_ATTACK_TARGET",
+    "ROAR_BEFORE_ATTACK",
+    "CHARGE_PLAYER",
+    "DYING",
+    "HOVER"
+  ],
+  "InteractionHand": [
+    "MAIN_HAND",
+    "OFF_HAND"
+  ],
+  "EquipmentSlot": [
+    "HAND",
+    "OFF_HAND",
+    "FEET",
+    "LEGS",
+    "CHEST",
+    "HEAD",
+    "BODY",
+    "SADDLE"
+  ],
+  "TriState": [
+    "NOT_SET",
+    "FALSE",
+    "TRUE"
+  ],
+  "TriStateEnum": [
+    "NOT_SET",
+    "FALSE",
+    "TRUE"
+  ],
+  "AttributeTypeEnum": [
+    "GENERIC_MAX_HEALTH",
+    "GENERIC_MAX_ABSORPTION",
+    "GENERIC_FOLLOW_RANGE",
+    "GENERIC_KNOCKBACK_RESISTANCE",
+    "GENERIC_MOVEMENT_SPEED",
+    "GENERIC_FLYING_SPEED",
+    "GENERIC_ATTACK_DAMAGE",
+    "GENERIC_ATTACK_KNOCKBACK",
+    "GENERIC_ATTACK_SPEED",
+    "GENERIC_ARMOR",
+    "GENERIC_ARMOR_TOUGHNESS",
+    "GENERIC_LUCK",
+    "GENERIC_JUMP_STRENGTH",
+    "ZOMBIE_SPAWN_REINFORCEMENTS",
+    "GENERIC_FALL_DAMAGE_MULTIPLIER",
+    "GENERIC_SAFE_FALL_DISTANCE",
+    "GENERIC_SCALE",
+    "GENERIC_STEP_HEIGHT",
+    "GENERIC_GRAVITY",
+    "PLAYER_BLOCK_INTERACTION_RANGE",
+    "PLAYER_ENTITY_INTERACTION_RANGE",
+    "PLAYER_BLOCK_BREAK_SPEED",
+    "GENERIC_BURNING_TIME",
+    "GENERIC_EXPLOSION_KNOCKBACK_RESISTANCE",
+    "GENERIC_MOVEMENT_EFFICIENCY",
+    "GENERIC_OXYGEN_BONUS",
+    "GENERIC_WATER_MOVEMENT_EFFICIENCY",
+    "PLAYER_MINING_EFFICIENCY",
+    "PLAYER_SNEAKING_SPEED",
+    "PLAYER_SUBMERGED_MINING_SPEED",
+    "PLAYER_SWEEPING_DAMAGE_RATIO",
+    "TEMP_RANGE",
+    "WAYPOINT_TRANSMIT_RANGE",
+    "WAYPOINT_RECEIVE_RANGE",
+    "CAMERA_DISTANCE",
+    "BOUNCINESS",
+    "FRICTION_MODIFIER",
+    "AIR_DRAG_MODIFIER",
+    "NAME_TAG_DISTANCE",
+    "BELOW_NAME_DISTANCE"
+  ],
+  "WeatheringCopperState": [
+    "UNAFFECTED",
+    "EXPOSED",
+    "WEATHERED",
+    "OXIDIZED"
+  ],
+  "AdjacentBlockFaceEnum": [
+    "NORTH",
+    "EAST",
+    "SOUTH",
+    "WEST",
+    "UP",
+    "DOWN"
   ],
   "Panda.Gene": [
     "NORMAL",
@@ -51,124 +208,285 @@
     "WEAK",
     "AGGRESSIVE"
   ],
-  "EquipmentSlot": [
-    "CHEST",
-    "FEET",
-    "HAND",
-    "HEAD",
-    "LEGS",
-    "OFF_HAND",
-    "BODY",
-    "SADDLE"
+  "Sniffer.State": [
+    "IDLING",
+    "FEELING_HAPPY",
+    "SCENTING",
+    "SNIFFING",
+    "SEARCHING",
+    "DIGGING",
+    "RISING"
   ],
-  "DyeColor": [
-    "BLACK",
-    "BLUE",
-    "BROWN",
-    "CYAN",
-    "GRAY",
-    "GREEN",
-    "LIGHT_BLUE",
-    "LIGHT_GRAY",
-    "LIME",
-    "MAGENTA",
-    "ORANGE",
-    "PINK",
-    "PURPLE",
-    "RED",
-    "WHITE",
-    "YELLOW"
+  "TreeType": [
+    "TREE",
+    "BIG_TREE",
+    "REDWOOD",
+    "TALL_REDWOOD",
+    "BIRCH",
+    "JUNGLE",
+    "SMALL_JUNGLE",
+    "COCOA_TREE",
+    "JUNGLE_BUSH",
+    "RED_MUSHROOM",
+    "BROWN_MUSHROOM",
+    "SWAMP",
+    "ACACIA",
+    "DARK_OAK",
+    "MEGA_REDWOOD",
+    "MEGA_PINE",
+    "TALL_BIRCH",
+    "CHORUS_PLANT",
+    "CRIMSON_FUNGUS",
+    "WARPED_FUNGUS",
+    "AZALEA",
+    "MANGROVE",
+    "TALL_MANGROVE",
+    "CHERRY",
+    "PALE_OAK",
+    "PALE_OAK_CREAKING"
+  ],
+  "CopperGolemStatue.Pose": [
+    "STANDING",
+    "SITTING",
+    "RUNNING",
+    "STAR"
+  ],
+  "CreakingHeart.State": [
+    "UPROOTED",
+    "DORMANT",
+    "AWAKE"
+  ],
+  "DecoratedPot.Side": [
+    "BACK",
+    "LEFT",
+    "RIGHT",
+    "FRONT"
+  ],
+  "PotentSulfur.State": [
+    "DRY",
+    "WET",
+    "DORMANT",
+    "ERUPTING",
+    "CONTINUOUS"
+  ],
+  "DecoratedPot.WobbleStyle": [
+    "POSITIVE",
+    "NEGATIVE"
+  ],
+  "DialogBase.DialogAfterAction": [
+    "CLOSE",
+    "NONE",
+    "WAIT_FOR_RESPONSE"
+  ],
+  "DialogTypeEnum": [
+    "MULTI_ACTION",
+    "MULTI_ACTION_WITH_EXIT",
+    "CONFIRMATION",
+    "NOTICE"
+  ],
+  "ItemFrameRotationEnum": [
+    "NONE",
+    "CLOCKWISE_45",
+    "CLOCKWISE",
+    "CLOCKWISE_135",
+    "FLIPPED",
+    "FLIPPED_45",
+    "COUNTER_CLOCKWISE",
+    "COUNTER_CLOCKWISE_45"
+  ],
+  "PaintingBlockFaceEnum": [
+    "NORTH",
+    "EAST",
+    "SOUTH",
+    "WEST"
+  ],
+  "RecipeMatchEnum": [
+    "EXACT",
+    "IGNORE_NAME_DURABILITY",
+    "IGNORE_NAME_DURABILITY_ENCHANTMENTS",
+    "CUSTOM_TAGS_CONTAINS",
+    "MINECRAFT_TAG",
+    "ITEM_TYPE"
+  ],
+  "CookingBookCategory": [
+    "FOOD",
+    "BLOCKS",
+    "MISC"
+  ],
+  "CraftingBookCategory": [
+    "BUILDING",
+    "REDSTONE",
+    "EQUIPMENT",
+    "MISC"
+  ],
+  "Difficulty": [
+    "PEACEFUL",
+    "EASY",
+    "NORMAL",
+    "HARD"
+  ],
+  "CreativeGameRule": [
+    "DISABLE_RAIDS",
+    "DO_DAYLIGHT_CYCLE",
+    "DO_ENTITY_DROPS",
+    "DO_FIRE_TICK",
+    "DO_IMMEDIATE_RESPAWN",
+    "DO_INSOMNIA",
+    "DO_MOB_LOOT",
+    "DO_MOB_SPAWNING",
+    "DO_PATROL_SPAWNING",
+    "DO_TILE_DROPS",
+    "DO_TRADER_SPAWNING",
+    "DO_WEATHER_CYCLE",
+    "DROWNING_DAMAGE",
+    "FALL_DAMAGE",
+    "FIRE_DAMAGE",
+    "FORGIVE_DEAD_PLAYERS",
+    "KEEP_INVENTORY",
+    "MOB_GRIEFING",
+    "PROJECTILES_CAN_BREAK_BLOCKS",
+    "SHOW_DEATH_MESSAGES",
+    "NATURAL_REGENERATION",
+    "UNIVERSAL_ANGER",
+    "PLAYERS_SLEEPING_PERCENTAGE",
+    "REDUCED_DEBUG_INFO",
+    "FREEZE_DAMAGE",
+    "RANDOM_TICK_SPEED",
+    "MAX_ENTITY_CRAMMING",
+    "SPAWN_RADIUS",
+    "LAVA_SOURCE_CONVERSION",
+    "WATER_SOURCE_CONVERSION",
+    "TNT_EXPLOSION_DROP_DECAY",
+    "BLOCK_EXPLOSION_DROP_DECAY",
+    "MOB_EXPLOSION_DROP_DECAY",
+    "DO_LIMITED_CRAFTING",
+    "PLAYERS_NETHER_PORTAL_DEFAULT_DELAY",
+    "PLAYERS_NETHER_PORTAL_CREATIVE_DELAY",
+    "SNOW_ACCUMULATION_HEIGHT",
+    "DO_WARDEN_SPAWNING",
+    "ENDER_PEARLS_VANISH_ON_DEATH",
+    "DO_VINES_SPREAD",
+    "TNT_EXPLODER",
+    "LOCATOR_BAR",
+    "SPAWN_MONSTERS",
+    "PVP",
+    "SPAWNER_BLOCKS_WORK"
+  ],
+  "ContainingCheckMode": [
+    "ANY",
+    "ALL"
+  ],
+  "ItemComparisonMode": [
+    "EXACTLY",
+    "IGNORE_STACK_SIZE",
+    "IGNORE_DURABILITY_AND_STACK_SIZE",
+    "TYPE_ONLY"
   ],
   "EntityDamageEvent.DamageCause": [
-    "BLOCK_EXPLOSION",
+    "KILL",
+    "WORLD_BORDER",
     "CONTACT",
-    "CRAMMING",
-    "CUSTOM",
-    "DRAGON_BREATH",
-    "DROWNING",
-    "DRYOUT",
     "ENTITY_ATTACK",
-    "ENTITY_EXPLOSION",
     "ENTITY_SWEEP_ATTACK",
+    "PROJECTILE",
+    "SUFFOCATION",
     "FALL",
-    "FALLING_BLOCK",
     "FIRE",
     "FIRE_TICK",
-    "FLY_INTO_WALL",
-    "FREEZE",
-    "HOT_FLOOR",
-    "LAVA",
-    "LIGHTNING",
-    "MAGIC",
     "MELTING",
-    "POISON",
-    "PROJECTILE",
-    "STARVATION",
-    "SUFFOCATION",
-    "SUICIDE",
-    "THORNS",
+    "LAVA",
+    "DROWNING",
+    "BLOCK_EXPLOSION",
+    "ENTITY_EXPLOSION",
     "VOID",
+    "LIGHTNING",
+    "SUICIDE",
+    "STARVATION",
+    "POISON",
+    "MAGIC",
     "WITHER",
-    "KILL",
-    "COMMAND",
+    "FALLING_BLOCK",
+    "THORNS",
+    "DRAGON_BREATH",
+    "FLY_INTO_WALL",
+    "HOT_FLOOR",
+    "CAMPFIRE",
+    "CRAMMING",
+    "DRYOUT",
+    "FREEZE",
     "SONIC_BOOM",
-    "WORLD_BORDER",
-    "CAMPFIRE"
+    "CUSTOM"
+  ],
+  "InputTypeEnum": [
+    "FORWARD",
+    "BACKWARDS",
+    "LEFT",
+    "RIGHT",
+    "JUMP",
+    "SNEAK",
+    "SPRINT"
   ],
   "RegainReason": [
-    "CUSTOM",
+    "REGEN",
+    "SATIATED",
     "EATING",
     "ENDER_CRYSTAL",
     "MAGIC",
     "MAGIC_REGEN",
-    "REGEN",
-    "SATIATED",
+    "WITHER_SPAWN",
     "WITHER",
-    "WITHER_SPAWN"
+    "CUSTOM"
   ],
   "BlockIgniteEvent.IgniteCause": [
-    "ARROW",
+    "LAVA",
+    "FLINT_AND_STEEL",
+    "SPREAD",
+    "LIGHTNING",
+    "FIREBALL",
     "ENDER_CRYSTAL",
     "EXPLOSION",
-    "FIREBALL",
-    "FLINT_AND_STEEL",
-    "LAVA",
-    "LIGHTNING",
-    "SPREAD"
+    "ARROW"
   ],
   "Instrument": [
-    "BANJO",
-    "BASS_DRUM",
-    "BASS_GUITAR",
-    "BELL",
-    "BIT",
-    "CHIME",
-    "COW_BELL",
-    "DIDGERIDOO",
-    "FLUTE",
-    "GUITAR",
-    "IRON_XYLOPHONE",
     "PIANO",
-    "PLING",
+    "BASS_DRUM",
     "SNARE_DRUM",
     "STICKS",
+    "BASS_GUITAR",
+    "FLUTE",
+    "BELL",
+    "GUITAR",
+    "CHIME",
     "XYLOPHONE",
-    "ZOMBIE",
-    "SKELETON",
-    "CREEPER",
-    "WITHER_SKELETON",
-    "DRAGON",
-    "PIGLIN",
-    "CUSTOM_HEAD",
+    "IRON_XYLOPHONE",
+    "COW_BELL",
+    "DIDGERIDOO",
+    "BIT",
+    "BANJO",
+    "PLING",
     "TRUMPET",
     "TRUMPET_EXPOSED",
     "TRUMPET_OXIDIZED",
-    "TRUMPET_WEATHERED"
+    "TRUMPET_WEATHERED",
+    "ZOMBIE",
+    "SKELETON",
+    "CREEPER",
+    "DRAGON",
+    "WITHER_SKELETON",
+    "PIGLIN",
+    "CUSTOM_HEAD"
   ],
-  "TargetBlockInfo.FluidMode": [
+  "FluidCollisionMode": [
     "NEVER",
     "SOURCE_ONLY",
     "ALWAYS"
+  ],
+  "GameEnvironment.EnvironmentPrivilege": [
+    "BUILDER",
+    "DEVELOPER",
+    "BUILDER_AND_DEVELOPER",
+    "WHITELISTED",
+    "OWNER"
   ],
   "InventoryType": [
     "CHEST",
@@ -198,11 +516,16 @@
     "STONECUTTER",
     "COMPOSTER",
     "CHISELED_BOOKSHELF",
+    "SHELF",
     "JUKEBOX",
-    "SMITHING_NEW",
     "DECORATED_POT",
     "CRAFTER",
-    "SHELF"
+    "SMITHING_NEW"
+  ],
+  "EnchantmentTypeEnum": [
+    "NORMAL",
+    "STORED",
+    "BOTH"
   ],
   "BossBar.Color": [
     "PINK",
@@ -220,231 +543,48 @@
     "NOTCHED_12",
     "NOTCHED_20"
   ],
+  "SoundSource": [
+    "MASTER",
+    "MUSIC",
+    "RECORD",
+    "WEATHER",
+    "BLOCK",
+    "HOSTILE",
+    "NEUTRAL",
+    "PLAYER",
+    "AMBIENT",
+    "VOICE",
+    "UI"
+  ],
+  "ParticleCubeType": [
+    "SOLID",
+    "HOLLOW",
+    "WIREFRAME"
+  ],
   "WeatherType": [
     "DOWNFALL",
     "CLEAR"
   ],
-  "Villager.Profession": [
-    "NONE",
-    "ARMORER",
-    "BUTCHER",
-    "CARTOGRAPHER",
-    "CLERIC",
-    "FARMER",
-    "FISHERMAN",
-    "FLETCHER",
-    "LEATHERWORKER",
-    "LIBRARIAN",
-    "MASON",
-    "NITWIT",
-    "SHEPHERD",
-    "TOOLSMITH",
-    "WEAPONSMITH"
+  "CompareMode": [
+    "NEAREST",
+    "FARTHEST"
   ],
-  "Difficulty": [
-    "EASY",
-    "HARD",
-    "NORMAL",
-    "PEACEFUL"
-  ],
-  "FluidCollisionMode": [
-    "NEVER",
-    "SOURCE_ONLY",
-    "ALWAYS"
-  ],
-  "Axolotl.Variant": [
-    "BLUE",
-    "CYAN",
-    "GOLD",
-    "LUCY",
-    "WILD"
-  ],
-  "MushroomCow.Variant": [
-    "BROWN",
-    "RED"
-  ],
-  "Parrot.Variant": [
-    "BLUE",
-    "CYAN",
-    "GRAY",
-    "GREEN",
-    "RED"
-  ],
-  "Rabbit.Type": [
-    "BLACK",
-    "BLACK_AND_WHITE",
-    "BROWN",
-    "GOLD",
-    "SALT_AND_PEPPER",
-    "THE_KILLER_BUNNY",
-    "WHITE"
-  ],
-  "GameEnvironment.EnvironmentPrivilege": [
-    "BUILDER",
-    "DEVELOPER",
-    "BUILDER_AND_DEVELOPER",
-    "WHITELISTED",
-    "OWNER"
-  ],
-  "Llama.Color": [
-    "BROWN",
-    "CREAMY",
-    "GRAY",
-    "WHITE"
-  ],
-  "Pose": [
-    "CROAKING",
-    "CROUCHING",
-    "DIGGING",
-    "DYING",
-    "EMERGING",
-    "FALL_FLYING",
-    "INHALING",
-    "LONG_JUMPING",
-    "ROARING",
-    "SITTING",
-    "SLEEPING",
-    "SNIFFING",
-    "SHOOTING",
-    "SLIDING",
-    "SPIN_ATTACK",
-    "STANDING",
-    "SWIMMING",
-    "USING_TONGUE"
-  ],
-  "Villager.Type": [
-    "DESERT",
-    "JUNGLE",
-    "PLAINS",
-    "SAVANNA",
-    "SNOW",
-    "SWAMP",
-    "TAIGA"
-  ],
-  "AttributeModifier.Operation": [
-    "MULTIPLY_SCALAR_1",
-    "ADD_NUMBER",
-    "ADD_SCALAR"
-  ],
-  "InteractionHand": [
-    "MAIN_HAND",
-    "OFF_HAND"
-  ],
-  "EnderDragon.Phase": [
-    "BREATH_ATTACK",
-    "CHARGE_PLAYER",
-    "CIRCLING",
-    "DYING",
-    "FLY_TO_PORTAL",
-    "HOVER",
-    "LAND_ON_PORTAL",
-    "LEAVE_PORTAL",
-    "ROAR_BEFORE_ATTACK",
-    "SEARCH_FOR_BREATH_ATTACK_TARGET",
-    "STRAFING"
-  ],
-  "Report.Type": [
-    "WARNING",
-    "ERROR",
-    "FATAL"
-  ],
-  "Billboard": [
-    "CENTER",
-    "FIXED",
-    "HORIZONTAL",
-    "VERTICAL"
-  ],
-  "ItemDisplay.ItemDisplayTransform": [
-    "FIRSTPERSON_LEFTHAND",
-    "FIRSTPERSON_RIGHTHAND",
-    "FIXED",
-    "GROUND",
-    "GUI",
-    "HEAD",
-    "NONE",
-    "THIRDPERSON_LEFTHAND",
-    "THIRDPERSON_RIGHTHAND"
-  ],
-  "Sniffer.State": [
-    "DIGGING",
-    "FEELING_HAPPY",
-    "IDLING",
-    "RISING",
-    "SCENTING",
-    "SEARCHING",
-    "SNIFFING"
-  ],
-  "TextDisplay.TextAlignment": [
-    "CENTER",
-    "LEFT",
-    "RIGHT"
-  ],
-  "DecoratedPot.Side": [
-    "BACK",
-    "FRONT",
-    "LEFT",
-    "RIGHT"
+  "CellSaveMode": [
+    "APPEND",
+    "REPLACE"
   ],
   "TextDecoration.State": [
-    "FALSE",
     "NOT_SET",
+    "FALSE",
     "TRUE"
   ],
-  "SoundSource": [
-    "AMBIENT",
-    "BLOCK",
-    "HOSTILE",
-    "MASTER",
-    "MUSIC",
-    "NEUTRAL",
-    "PLAYER",
-    "RECORD",
-    "VOICE",
-    "WEATHER",
-    "UI"
+  "AttributeModifier.Operation": [
+    "ADD_NUMBER",
+    "ADD_SCALAR",
+    "MULTIPLY_SCALAR_1"
   ],
-  "WeatheringCopperState": [
-    "UNAFFECTED",
-    "EXPOSED",
-    "WEATHERED",
-    "OXIDIZED"
-  ],
-  "TriState": [
+  "Boolean": [
     "TRUE",
-    "FALSE",
-    "NOT_SET"
-  ],
-  "CopperGolemStatue.Pose": [
-    "STANDING",
-    "SITTING",
-    "RUNNING",
-    "STAR"
-  ],
-  "CreakingHeart.State": [
-    "UPROOTED",
-    "DORMANT",
-    "AWAKE"
-  ],
-  "PotentSulfur.State": [
-    "DRY",
-    "WET",
-    "DORMANT",
-    "ERUPTING",
-    "CONTINUOUS"
-  ],
-  "DecoratedPot.WobbleStyle": [
-    "POSITIVE",
-    "NEGATIVE"
-  ],
-  "CookingBookCategory": [
-    "FOOD",
-    "BLOCKS",
-    "MISC"
-  ],
-  "CraftingBookCategory": [
-    "BUILDING",
-    "REDSTONE",
-    "EQUIPMENT",
-    "MISC"
+    "FALSE"
   ]
 }

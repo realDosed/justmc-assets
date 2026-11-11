@@ -23,6 +23,7 @@ export { default as Event } from './types/Event';
 export * from './types/GameValue';
 export { default as GameValue } from './types/GameValue';
 export * from './types/ValueType';
+export * from './constants';
 
 export * from './ActionsData';
 export { default as ActionsData } from './ActionsData';

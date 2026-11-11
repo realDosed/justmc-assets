@@ -309,6 +309,7 @@ export const LOCAL_CONFIG_PATH = path.resolve(
 
 type LocalConfig = {
   sourceProjectPath: string;
+  serverCoreProjectPath: string;
   gitlabRepositoryUrl: string;
 };
 
@@ -325,6 +326,8 @@ const readLocalConfig = (): Partial<LocalConfig> => {
   if (
     (config.sourceProjectPath !== undefined &&
       typeof config.sourceProjectPath !== 'string') ||
+    (config.serverCoreProjectPath !== undefined &&
+      typeof config.serverCoreProjectPath !== 'string') ||
     (config.gitlabRepositoryUrl !== undefined &&
       typeof config.gitlabRepositoryUrl !== 'string')
   )

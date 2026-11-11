@@ -37,6 +37,10 @@ import ActionArgument, {
   NumberActionArgumentType,
 } from '../src/types/ActionArgument';
 import { ActionCategories } from '../src/ActionsData';
+import {
+  generateEnumsPatch,
+  getImportedEnumNames,
+} from './extract-enums';
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -796,8 +800,16 @@ const getArguments = (
             : defaultEnumName);
         const enumValuesName =
           resolvedEnumName === 'TriState' ? 'TriStateEnum' : resolvedEnumName;
-        const values =
-          _enums[type === 'boolean' ? 'Boolean' : enumValuesName || ''];
+        const enumKeys =
+          type === 'boolean'
+            ? ['Boolean']
+            : [
+                ...getImportedEnumNames(content, enumValuesName || ''),
+                enumValuesName || '',
+              ];
+        const values = enumKeys
+          .map((key) => _enums[key])
+          .find((enumValues) => enumValues !== undefined);
         if (!values)
           return error(
             `Could not get values of enum argument ${chalk.cyan(
@@ -1093,6 +1105,8 @@ const getArguments = (
 ///////////////////////////////////////////////////////////////////////////////
 
 (async () => {
+  await generateEnumsPatch();
+
   info('caching action icons...');
 
   const actionsRegistry = await readSourceFile('action/Actions.kt');

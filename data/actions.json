@@ -753,13 +753,13 @@
           13
         ],
         "values": [
-          "BLUE",
-          "CYAN",
-          "GOLD",
           "LUCY",
-          "WILD"
+          "WILD",
+          "GOLD",
+          "CYAN",
+          "BLUE"
         ],
-        "defaultValue": "BLUE"
+        "defaultValue": "LUCY"
       }
     ],
     "worksWith": [
@@ -935,24 +935,24 @@
           13
         ],
         "values": [
-          "BLACK",
+          "WHITE",
+          "ORANGE",
+          "MAGENTA",
+          "LIGHT_BLUE",
+          "YELLOW",
+          "LIME",
+          "PINK",
+          "GRAY",
+          "LIGHT_GRAY",
+          "CYAN",
+          "PURPLE",
           "BLUE",
           "BROWN",
-          "CYAN",
-          "GRAY",
           "GREEN",
-          "LIGHT_BLUE",
-          "LIGHT_GRAY",
-          "LIME",
-          "MAGENTA",
-          "ORANGE",
-          "PINK",
-          "PURPLE",
           "RED",
-          "WHITE",
-          "YELLOW"
+          "BLACK"
         ],
-        "defaultValue": "BLACK"
+        "defaultValue": "WHITE"
       }
     ],
     "worksWith": [
@@ -1236,12 +1236,12 @@
           13
         ],
         "values": [
-          "BROWN",
           "CREAMY",
-          "GRAY",
-          "WHITE"
+          "WHITE",
+          "BROWN",
+          "GRAY"
         ],
-        "defaultValue": "BROWN"
+        "defaultValue": "CREAMY"
       }
     ],
     "worksWith": [
@@ -1391,9 +1391,9 @@
           10
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1405,9 +1405,9 @@
           11
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1419,9 +1419,9 @@
           12
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1433,9 +1433,9 @@
           13
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1447,9 +1447,9 @@
           14
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1461,9 +1461,9 @@
           15
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -1475,9 +1475,9 @@
           16
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       }
@@ -1613,10 +1613,10 @@
           13
         ],
         "values": [
-          "BROWN",
-          "RED"
+          "RED",
+          "BROWN"
         ],
-        "defaultValue": "BROWN"
+        "defaultValue": "RED"
       }
     ],
     "worksWith": [
@@ -1641,13 +1641,13 @@
           13
         ],
         "values": [
+          "RED",
           "BLUE",
-          "CYAN",
-          "GRAY",
           "GREEN",
-          "RED"
+          "CYAN",
+          "GRAY"
         ],
-        "defaultValue": "BLUE"
+        "defaultValue": "RED"
       }
     ],
     "worksWith": [
@@ -1701,26 +1701,26 @@
           13
         ],
         "values": [
-          "CROAKING",
-          "CROUCHING",
-          "DIGGING",
-          "DYING",
-          "EMERGING",
-          "FALL_FLYING",
-          "INHALING",
-          "LONG_JUMPING",
-          "ROARING",
-          "SITTING",
-          "SLEEPING",
-          "SNIFFING",
-          "SHOOTING",
-          "SLIDING",
-          "SPIN_ATTACK",
           "STANDING",
+          "FALL_FLYING",
+          "SLEEPING",
           "SWIMMING",
-          "USING_TONGUE"
+          "SPIN_ATTACK",
+          "CROUCHING",
+          "LONG_JUMPING",
+          "DYING",
+          "CROAKING",
+          "USING_TONGUE",
+          "SITTING",
+          "ROARING",
+          "SNIFFING",
+          "EMERGING",
+          "DIGGING",
+          "SLIDING",
+          "SHOOTING",
+          "INHALING"
         ],
-        "defaultValue": "CROAKING"
+        "defaultValue": "STANDING"
       }
     ]
   },
@@ -1793,15 +1793,15 @@
           13
         ],
         "values": [
+          "BROWN",
+          "WHITE",
           "BLACK",
           "BLACK_AND_WHITE",
-          "BROWN",
           "GOLD",
           "SALT_AND_PEPPER",
-          "THE_KILLER_BUNNY",
-          "WHITE"
+          "THE_KILLER_BUNNY"
         ],
-        "defaultValue": "BLACK"
+        "defaultValue": "BROWN"
       }
     ],
     "worksWith": [
@@ -2025,9 +2025,9 @@
           13
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "TRUE"
       }
@@ -2233,12 +2233,12 @@
           13
         ],
         "values": [
-          "CENTER",
           "FIXED",
+          "VERTICAL",
           "HORIZONTAL",
-          "VERTICAL"
+          "CENTER"
         ],
-        "defaultValue": "CENTER"
+        "defaultValue": "FIXED"
       }
     ],
     "worksWith": [
@@ -2965,17 +2965,17 @@
           13
         ],
         "values": [
-          "FIRSTPERSON_LEFTHAND",
-          "FIRSTPERSON_RIGHTHAND",
-          "FIXED",
-          "GROUND",
-          "GUI",
-          "HEAD",
           "NONE",
           "THIRDPERSON_LEFTHAND",
-          "THIRDPERSON_RIGHTHAND"
+          "THIRDPERSON_RIGHTHAND",
+          "FIRSTPERSON_LEFTHAND",
+          "FIRSTPERSON_RIGHTHAND",
+          "HEAD",
+          "GUI",
+          "GROUND",
+          "FIXED"
         ],
-        "defaultValue": "FIRSTPERSON_LEFTHAND"
+        "defaultValue": "NONE"
       }
     ],
     "worksWith": [
@@ -3640,19 +3640,19 @@
           13
         ],
         "values": [
-          "BREATH_ATTACK",
-          "CHARGE_PLAYER",
           "CIRCLING",
-          "DYING",
+          "STRAFING",
           "FLY_TO_PORTAL",
-          "HOVER",
           "LAND_ON_PORTAL",
           "LEAVE_PORTAL",
-          "ROAR_BEFORE_ATTACK",
+          "BREATH_ATTACK",
           "SEARCH_FOR_BREATH_ATTACK_TARGET",
-          "STRAFING"
+          "ROAR_BEFORE_ATTACK",
+          "CHARGE_PLAYER",
+          "DYING",
+          "HOVER"
         ],
-        "defaultValue": "BREATH_ATTACK"
+        "defaultValue": "CIRCLING"
       }
     ],
     "worksWith": [
@@ -3723,9 +3723,9 @@
           13
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -3737,9 +3737,9 @@
           14
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       },
@@ -3751,9 +3751,9 @@
           15
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "NOT_SET"
       }
@@ -4116,16 +4116,16 @@
           26
         ],
         "values": [
-          "CHEST",
-          "FEET",
           "HAND",
-          "HEAD",
-          "LEGS",
           "OFF_HAND",
+          "FEET",
+          "LEGS",
+          "CHEST",
+          "HEAD",
           "BODY",
           "SADDLE"
         ],
-        "defaultValue": "CHEST"
+        "defaultValue": "HAND"
       }
     ]
   },
@@ -4624,16 +4624,16 @@
           26
         ],
         "values": [
-          "CHEST",
-          "FEET",
           "HAND",
-          "HEAD",
-          "LEGS",
           "OFF_HAND",
+          "FEET",
+          "LEGS",
+          "CHEST",
+          "HEAD",
           "BODY",
           "SADDLE"
         ],
-        "defaultValue": "CHEST"
+        "defaultValue": "HAND"
       }
     ]
   },
@@ -5087,11 +5087,11 @@
           13
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
-        "defaultValue": "TRUE"
+        "defaultValue": "NOT_SET"
       }
     ]
   },
@@ -8045,15 +8045,15 @@
           13
         ],
         "values": [
-          "DIGGING",
-          "FEELING_HAPPY",
           "IDLING",
-          "RISING",
+          "FEELING_HAPPY",
           "SCENTING",
+          "SNIFFING",
           "SEARCHING",
-          "SNIFFING"
+          "DIGGING",
+          "RISING"
         ],
-        "defaultValue": "DIGGING"
+        "defaultValue": "IDLING"
       }
     ],
     "worksWith": [
@@ -9206,31 +9206,31 @@
         ],
         "values": [
           "TREE",
-          "ACACIA",
           "BIG_TREE",
-          "BIRCH",
-          "BROWN_MUSHROOM",
-          "CHORUS_PLANT",
-          "COCOA_TREE",
-          "CRIMSON_FUNGUS",
-          "DARK_OAK",
-          "JUNGLE",
-          "JUNGLE_BUSH",
-          "MEGA_REDWOOD",
           "REDWOOD",
-          "RED_MUSHROOM",
-          "SMALL_JUNGLE",
-          "SWAMP",
-          "TALL_BIRCH",
           "TALL_REDWOOD",
+          "BIRCH",
+          "JUNGLE",
+          "SMALL_JUNGLE",
+          "COCOA_TREE",
+          "JUNGLE_BUSH",
+          "RED_MUSHROOM",
+          "BROWN_MUSHROOM",
+          "SWAMP",
+          "ACACIA",
+          "DARK_OAK",
+          "MEGA_REDWOOD",
+          "MEGA_PINE",
+          "TALL_BIRCH",
+          "CHORUS_PLANT",
+          "CRIMSON_FUNGUS",
           "WARPED_FUNGUS",
           "AZALEA",
           "MANGROVE",
           "TALL_MANGROVE",
           "CHERRY",
-          "MEGA_PINE",
-          "PALE_OAK_CREAKING",
-          "PALE_OAK"
+          "PALE_OAK",
+          "PALE_OAK_CREAKING"
         ],
         "defaultValue": "TREE"
       }
@@ -10703,9 +10703,9 @@
         ],
         "values": [
           "BACK",
-          "FRONT",
           "LEFT",
-          "RIGHT"
+          "RIGHT",
+          "FRONT"
         ],
         "defaultValue": "BACK"
       }
@@ -11404,24 +11404,24 @@
           14
         ],
         "values": [
-          "BLACK",
+          "WHITE",
+          "ORANGE",
+          "MAGENTA",
+          "LIGHT_BLUE",
+          "YELLOW",
+          "LIME",
+          "PINK",
+          "GRAY",
+          "LIGHT_GRAY",
+          "CYAN",
+          "PURPLE",
           "BLUE",
           "BROWN",
-          "CYAN",
-          "GRAY",
           "GREEN",
-          "LIGHT_BLUE",
-          "LIGHT_GRAY",
-          "LIME",
-          "MAGENTA",
-          "ORANGE",
-          "PINK",
-          "PURPLE",
           "RED",
-          "WHITE",
-          "YELLOW"
+          "BLACK"
         ],
-        "defaultValue": "BLACK"
+        "defaultValue": "WHITE"
       },
       {
         "id": "glowing",
@@ -12580,8 +12580,8 @@
         ],
         "values": [
           "CLOSE",
-          "WAIT_FOR_RESPONSE",
-          "NONE"
+          "NONE",
+          "WAIT_FOR_RESPONSE"
         ],
         "defaultValue": "CLOSE"
       },
@@ -16935,12 +16935,12 @@
           13
         ],
         "values": [
+          "PEACEFUL",
           "EASY",
-          "HARD",
           "NORMAL",
-          "PEACEFUL"
+          "HARD"
         ],
-        "defaultValue": "EASY"
+        "defaultValue": "PEACEFUL"
       }
     ]
   },
@@ -18511,42 +18511,41 @@
           13
         ],
         "values": [
-          "BLOCK_EXPLOSION",
+          "KILL",
+          "WORLD_BORDER",
           "CONTACT",
-          "CRAMMING",
-          "CUSTOM",
-          "DRAGON_BREATH",
-          "DROWNING",
-          "DRYOUT",
           "ENTITY_ATTACK",
-          "ENTITY_EXPLOSION",
           "ENTITY_SWEEP_ATTACK",
+          "PROJECTILE",
+          "SUFFOCATION",
           "FALL",
-          "FALLING_BLOCK",
           "FIRE",
           "FIRE_TICK",
-          "FLY_INTO_WALL",
-          "FREEZE",
-          "HOT_FLOOR",
-          "LAVA",
-          "LIGHTNING",
-          "MAGIC",
           "MELTING",
-          "POISON",
-          "PROJECTILE",
-          "STARVATION",
-          "SUFFOCATION",
-          "SUICIDE",
-          "THORNS",
+          "LAVA",
+          "DROWNING",
+          "BLOCK_EXPLOSION",
+          "ENTITY_EXPLOSION",
           "VOID",
+          "LIGHTNING",
+          "SUICIDE",
+          "STARVATION",
+          "POISON",
+          "MAGIC",
           "WITHER",
-          "KILL",
-          "COMMAND",
+          "FALLING_BLOCK",
+          "THORNS",
+          "DRAGON_BREATH",
+          "FLY_INTO_WALL",
+          "HOT_FLOOR",
+          "CAMPFIRE",
+          "CRAMMING",
+          "DRYOUT",
+          "FREEZE",
           "SONIC_BOOM",
-          "WORLD_BORDER",
-          "CAMPFIRE"
+          "CUSTOM"
         ],
-        "defaultValue": "BLOCK_EXPLOSION"
+        "defaultValue": "KILL"
       }
     ]
   },
@@ -19014,17 +19013,17 @@
           13
         ],
         "values": [
-          "CUSTOM",
+          "REGEN",
+          "SATIATED",
           "EATING",
           "ENDER_CRYSTAL",
           "MAGIC",
           "MAGIC_REGEN",
-          "REGEN",
-          "SATIATED",
+          "WITHER_SPAWN",
           "WITHER",
-          "WITHER_SPAWN"
+          "CUSTOM"
         ],
-        "defaultValue": "CUSTOM"
+        "defaultValue": "REGEN"
       }
     ]
   },
@@ -19046,16 +19045,16 @@
           13
         ],
         "values": [
-          "ARROW",
+          "LAVA",
+          "FLINT_AND_STEEL",
+          "SPREAD",
+          "LIGHTNING",
+          "FIREBALL",
           "ENDER_CRYSTAL",
           "EXPLOSION",
-          "FIREBALL",
-          "FLINT_AND_STEEL",
-          "LAVA",
-          "LIGHTNING",
-          "SPREAD"
+          "ARROW"
         ],
-        "defaultValue": "ARROW"
+        "defaultValue": "LAVA"
       }
     ]
   },
@@ -19077,35 +19076,35 @@
           13
         ],
         "values": [
-          "BANJO",
-          "BASS_DRUM",
-          "BASS_GUITAR",
-          "BELL",
-          "BIT",
-          "CHIME",
-          "COW_BELL",
-          "DIDGERIDOO",
-          "FLUTE",
-          "GUITAR",
-          "IRON_XYLOPHONE",
           "PIANO",
-          "PLING",
+          "BASS_DRUM",
           "SNARE_DRUM",
           "STICKS",
+          "BASS_GUITAR",
+          "FLUTE",
+          "BELL",
+          "GUITAR",
+          "CHIME",
           "XYLOPHONE",
-          "ZOMBIE",
-          "SKELETON",
-          "CREEPER",
-          "WITHER_SKELETON",
-          "DRAGON",
-          "PIGLIN",
-          "CUSTOM_HEAD",
+          "IRON_XYLOPHONE",
+          "COW_BELL",
+          "DIDGERIDOO",
+          "BIT",
+          "BANJO",
+          "PLING",
           "TRUMPET",
           "TRUMPET_EXPOSED",
           "TRUMPET_OXIDIZED",
-          "TRUMPET_WEATHERED"
+          "TRUMPET_WEATHERED",
+          "ZOMBIE",
+          "SKELETON",
+          "CREEPER",
+          "DRAGON",
+          "WITHER_SKELETON",
+          "PIGLIN",
+          "CUSTOM_HEAD"
         ],
-        "defaultValue": "BANJO"
+        "defaultValue": "PIANO"
       }
     ]
   },
@@ -20935,11 +20934,11 @@
           "STONECUTTER",
           "COMPOSTER",
           "CHISELED_BOOKSHELF",
+          "SHELF",
           "JUKEBOX",
-          "SMITHING_NEW",
           "DECORATED_POT",
           "CRAFTER",
-          "SHELF"
+          "SMITHING_NEW"
         ],
         "defaultValue": "CHEST"
       }
@@ -23802,26 +23801,26 @@
           12
         ],
         "values": [
-          "CROAKING",
-          "CROUCHING",
-          "DIGGING",
-          "DYING",
-          "EMERGING",
-          "FALL_FLYING",
-          "INHALING",
-          "LONG_JUMPING",
-          "ROARING",
-          "SITTING",
-          "SLEEPING",
-          "SNIFFING",
-          "SHOOTING",
-          "SLIDING",
-          "SPIN_ATTACK",
           "STANDING",
+          "FALL_FLYING",
+          "SLEEPING",
           "SWIMMING",
-          "USING_TONGUE"
+          "SPIN_ATTACK",
+          "CROUCHING",
+          "LONG_JUMPING",
+          "DYING",
+          "CROAKING",
+          "USING_TONGUE",
+          "SITTING",
+          "ROARING",
+          "SNIFFING",
+          "EMERGING",
+          "DIGGING",
+          "SLIDING",
+          "SHOOTING",
+          "INHALING"
         ],
-        "defaultValue": "CROAKING"
+        "defaultValue": "STANDING"
       },
       {
         "id": "locked",
@@ -23894,9 +23893,9 @@
           13
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "TRUE"
       }
@@ -24967,19 +24966,19 @@
           13
         ],
         "values": [
-          "AMBIENT",
-          "BLOCK",
-          "HOSTILE",
           "MASTER",
           "MUSIC",
+          "RECORD",
+          "WEATHER",
+          "BLOCK",
+          "HOSTILE",
           "NEUTRAL",
           "PLAYER",
-          "RECORD",
+          "AMBIENT",
           "VOICE",
-          "WEATHER",
           "UI"
         ],
-        "defaultValue": "AMBIENT"
+        "defaultValue": "MASTER"
       }
     ]
   },
@@ -25995,16 +25994,16 @@
           26
         ],
         "values": [
-          "CHEST",
-          "FEET",
           "HAND",
-          "HEAD",
-          "LEGS",
           "OFF_HAND",
+          "FEET",
+          "LEGS",
+          "CHEST",
+          "HEAD",
           "BODY",
           "SADDLE"
         ],
-        "defaultValue": "CHEST"
+        "defaultValue": "HAND"
       }
     ]
   },
@@ -35049,11 +35048,11 @@
           29
         ],
         "values": [
-          "FALSE",
           "NOT_SET",
+          "FALSE",
           "TRUE"
         ],
-        "defaultValue": "FALSE"
+        "defaultValue": "NOT_SET"
       },
       {
         "id": "italic",
@@ -35063,11 +35062,11 @@
           30
         ],
         "values": [
-          "FALSE",
           "NOT_SET",
+          "FALSE",
           "TRUE"
         ],
-        "defaultValue": "FALSE"
+        "defaultValue": "NOT_SET"
       },
       {
         "id": "underlined",
@@ -35077,11 +35076,11 @@
           31
         ],
         "values": [
-          "FALSE",
           "NOT_SET",
+          "FALSE",
           "TRUE"
         ],
-        "defaultValue": "FALSE"
+        "defaultValue": "NOT_SET"
       },
       {
         "id": "strikethrough",
@@ -35091,11 +35090,11 @@
           32
         ],
         "values": [
-          "FALSE",
           "NOT_SET",
+          "FALSE",
           "TRUE"
         ],
-        "defaultValue": "FALSE"
+        "defaultValue": "NOT_SET"
       },
       {
         "id": "obfuscated",
@@ -35105,11 +35104,11 @@
           33
         ],
         "values": [
-          "FALSE",
           "NOT_SET",
+          "FALSE",
           "TRUE"
         ],
-        "defaultValue": "FALSE"
+        "defaultValue": "NOT_SET"
       }
     ]
   },
@@ -39203,11 +39202,11 @@
           33
         ],
         "values": [
-          "MULTIPLY_SCALAR_1",
           "ADD_NUMBER",
-          "ADD_SCALAR"
+          "ADD_SCALAR",
+          "MULTIPLY_SCALAR_1"
         ],
-        "defaultValue": "MULTIPLY_SCALAR_1"
+        "defaultValue": "ADD_NUMBER"
       }
     ]
   },
@@ -40018,9 +40017,9 @@
           15
         ],
         "values": [
-          "TRUE",
+          "NOT_SET",
           "FALSE",
-          "NOT_SET"
+          "TRUE"
         ],
         "defaultValue": "TRUE"
       }
@@ -45146,19 +45145,19 @@
           15
         ],
         "values": [
-          "AMBIENT",
-          "BLOCK",
-          "HOSTILE",
           "MASTER",
           "MUSIC",
+          "RECORD",
+          "WEATHER",
+          "BLOCK",
+          "HOSTILE",
           "NEUTRAL",
           "PLAYER",
-          "RECORD",
+          "AMBIENT",
           "VOICE",
-          "WEATHER",
           "UI"
         ],
-        "defaultValue": "AMBIENT"
+        "defaultValue": "MASTER"
       }
     ]
   },
@@ -53165,9 +53164,9 @@
         ],
         "values": [
           "BACK",
-          "FRONT",
           "LEFT",
-          "RIGHT"
+          "RIGHT",
+          "FRONT"
         ],
         "defaultValue": "BACK"
       }

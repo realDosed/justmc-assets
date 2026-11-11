@@ -17,6 +17,7 @@
     "create:index": "ts-node scripts/create-index",
     "extract:events": "ts-node scripts/extract-events",
     "extract:values": "ts-node scripts/extract-game-values",
+    "extract:enums": "ts-node scripts/extract-enums",
     "extract:actions": "ts-node scripts/extract-actions",
     "extract:editor-data": "ts-node scripts/extract-editor-data",
     "extract": "yarn run extract:events && yarn run extract:values && yarn run extract:actions && yarn run extract:editor-data",
