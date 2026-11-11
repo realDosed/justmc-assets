@@ -1,0 +1,102 @@
+[
+  {
+    "id": "call_function",
+    "type": "action",
+    "slot": 3
+  },
+  {
+    "id": "control",
+    "type": "action",
+    "slot": 10
+  },
+  {
+    "id": "controller",
+    "type": "action",
+    "slot": 13
+  },
+  {
+    "id": "else",
+    "type": "action",
+    "slot": 12
+  },
+  {
+    "id": "entity",
+    "type": "action",
+    "slot": 29
+  },
+  {
+    "id": "entity_event",
+    "type": "handler",
+    "slot": 27
+  },
+  {
+    "id": "function",
+    "type": "handler",
+    "slot": 30
+  },
+  {
+    "id": "game",
+    "type": "action",
+    "slot": 20
+  },
+  {
+    "id": "if_entity",
+    "type": "action",
+    "slot": 28
+  },
+  {
+    "id": "if_game",
+    "type": "action",
+    "slot": 21
+  },
+  {
+    "id": "if_player",
+    "type": "action",
+    "slot": 1
+  },
+  {
+    "id": "if_variable",
+    "type": "action",
+    "slot": 19
+  },
+  {
+    "id": "player",
+    "type": "action",
+    "slot": 2
+  },
+  {
+    "id": "player_event",
+    "type": "handler",
+    "slot": 0
+  },
+  {
+    "id": "process",
+    "type": "handler",
+    "slot": 31
+  },
+  {
+    "id": "repeat",
+    "type": "action",
+    "slot": 22
+  },
+  {
+    "id": "select",
+    "type": "action",
+    "slot": 11
+  },
+  {
+    "id": "set_variable",
+    "type": "action",
+    "slot": 18
+  },
+  {
+    "id": "start_process",
+    "type": "action",
+    "slot": 4
+  },
+  {
+    "id": "world_event",
+    "type": "handler",
+    "slot": 9
+  }
+]

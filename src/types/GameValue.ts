@@ -25,7 +25,7 @@ type BaseGameValue = WithMetadata &
 ///////////////////////////////////////////////////////////////////////////////
 
 export type BasicGameValue = BaseGameValue & {
-  type: ValueTypes[keyof Omit<ValueTypes, 'LIST' | 'DICTIONARY'>];
+  type: ValueTypes[keyof Omit<ValueTypes, 'LIST' | 'DICTIONARY' | 'PARAMETER'>];
 };
 
 export type ListGameValue = BaseGameValue & {

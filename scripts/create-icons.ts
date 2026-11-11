@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { promises as fs, existsSync, mkdirSync, exists, readFileSync } from 'fs';
+import { promises as fs, readFileSync } from 'fs';
 import { createCanvas, loadImage } from 'canvas';
 import path from 'path';
 import opentype from 'opentype.js';
@@ -199,6 +199,37 @@ const drawIcon = async (icon: CachedIcon) => {
 
 (async () => {
   info('creating icons...');
+  const extraIconsFile = path.resolve(ICONS_DIR, 'extra_icons.json');
+  if (!(await fileExists(extraIconsFile))) {
+    warn('skipping extra icons; icons/extra_icons.json is missing');
+  } else {
+    const extraIcons: (CachedIcon & { path: string })[] = JSON.parse(
+      await fs.readFile(extraIconsFile, 'utf-8')
+    );
+
+    const extraProgress = createProgress(
+      'Creating extra icons',
+      extraIcons.length
+    );
+    let extraProcessed = 0;
+    await Promise.all(
+      extraIcons.map(async (icon) => {
+        try {
+          const dir = path.resolve(ICONS_DIR, icon.path);
+          await fs.mkdir(dir, { recursive: true });
+
+          return await fs.writeFile(
+            path.resolve(dir, `${icon.id}.png`),
+            await drawIcon(icon)
+          );
+        } finally {
+          extraProgress.update(icon.id, ++extraProcessed);
+        }
+      })
+    );
+    extraProgress.complete();
+  }
+
   const iconsDir = await fs.readdir(ICONS_CACHE_DIR);
 
   for (const categoryFile of iconsDir) {
@@ -210,7 +241,7 @@ const drawIcon = async (icon: CachedIcon) => {
     const categoryDir = path.resolve(ICONS_DIR, category);
     info(`creating ${category} icons...`);
 
-    if (!(await fileExists(categoryDir))) await fs.mkdir(categoryDir);
+    await fs.mkdir(categoryDir, { recursive: true });
 
     const iconList = Object.values(icons);
     const progress = createProgress(
@@ -233,13 +264,6 @@ const drawIcon = async (icon: CachedIcon) => {
               return await fs.copyFile(categoryIconPath, iconPath);
           }
 
-          if (
-            icon.material !== 'PLAYER_HEAD' &&
-            icon.material !== 'AIR' &&
-            icon.amount < 2 &&
-            (await fileExists(iconPath))
-          )
-            return;
           const picture = await drawIcon(icon);
           if (!picture) return;
 
@@ -270,34 +294,6 @@ const drawIcon = async (icon: CachedIcon) => {
 
     success(`created ${category} icons`);
   }
-
-  info('creating extra icons...');
-
-  const extraIconsFile = path.resolve(ICONS_DIR, 'extra_icons.json');
-  if (!(await fileExists(extraIconsFile))) {
-    warn('skipping extra icons; icons/extra_icons.json is missing');
-    return;
-  }
-
-  const extraIcons: (CachedIcon & { path: string })[] = JSON.parse(
-    await fs.readFile(extraIconsFile, 'utf-8')
-  );
-
-  const extraProgress = createProgress('Creating extra icons', extraIcons.length);
-  let extraProcessed = 0;
-  await Promise.all(
-    extraIcons.map(async (icon) => {
-      try {
-        const dir = path.resolve(ICONS_DIR, icon.path);
-        if (!existsSync(dir)) mkdirSync(dir);
-
-        return await fs.writeFile(`${dir}/${icon.id}.png`, await drawIcon(icon));
-      } finally {
-        extraProgress.update(icon.id, ++extraProcessed);
-      }
-    })
-  );
-  extraProgress.complete();
 
   success('created all icons');
 })();

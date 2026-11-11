@@ -11,6 +11,8 @@ export const ValueTypes = {
   SOUND: 'sound',
   PARTICLE: 'particle',
   POTION: 'potion',
+  PARAMETER: 'parameter',
+  CELL: 'cell',
 
   /**
    * Argument that only accepts variables containing a list

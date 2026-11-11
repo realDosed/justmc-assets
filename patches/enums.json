@@ -3,6 +3,17 @@
     "TRUE",
     "FALSE"
   ],
+  "DialogBase.DialogAfterAction": [
+    "CLOSE",
+    "WAIT_FOR_RESPONSE",
+    "NONE"
+  ],
+  "DialogTypeEnum": [
+    "MULTI_ACTION",
+    "MULTI_ACTION_WITH_EXIT",
+    "CONFIRMATION",
+    "NOTICE"
+  ],
   "TreeType": [
     "TREE",
     "ACACIA",

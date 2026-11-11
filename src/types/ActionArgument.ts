@@ -103,6 +103,13 @@ export type PotionArgumentDefaultValue = {
   amplifier: number;
 };
 
+export type CellArgumentDefaultValue = {
+  name: string;
+  global: boolean;
+  storage: string | null;
+  storagePath: string | null;
+};
+
 ///////////////////////////////////////////////////////////////////////////////
 
 export type BaseActionArgument = WithId & {
@@ -129,7 +136,7 @@ type WithDefaultValue<T> = {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-export enum NumberActionArgumentSize {
+export enum NumberActionArgumentType {
   INT = 'int',
   LONG = 'long',
   FLOAT = 'float',
@@ -137,13 +144,13 @@ export enum NumberActionArgumentSize {
 }
 
 export type NumberActionArgument = BaseActionArgument &
-  WithDefaultValue<number> & {
+  WithDefaultValue<number | number[]> & {
     type: ActionArgumentTypes['NUMBER'];
 
     /**
-     * Size of the numbers that are accepted by the argument
+     * Numeric type accepted by the argument
      */
-    size: NumberActionArgumentSize;
+    numberType: NumberActionArgumentType;
 
     /**
      * Minimum value accepted by the argument
@@ -157,47 +164,61 @@ export type NumberActionArgument = BaseActionArgument &
   };
 
 export type TextActionArgument = BaseActionArgument &
-  WithDefaultValue<string> & {
+  WithDefaultValue<string | string[]> & {
     type: ActionArgumentTypes['TEXT'];
   };
 
 export type ItemActionArgument = BaseActionArgument &
-  WithDefaultValue<ItemArgumentDefaultValue> & {
+  WithDefaultValue<ItemArgumentDefaultValue | ItemArgumentDefaultValue[]> & {
     type: ActionArgumentTypes['ITEM'];
   };
 
 export type BlockActionArgument = BaseActionArgument &
-  WithDefaultValue<BlockArgumentDefaultValue> & {
+  WithDefaultValue<BlockArgumentDefaultValue | BlockArgumentDefaultValue[]> & {
     type: ActionArgumentTypes['BLOCK'];
   };
 
 export type LocationActionArgument = BaseActionArgument &
-  WithDefaultValue<LocationArgumentDefaultValue> & {
+  WithDefaultValue<
+    LocationArgumentDefaultValue | LocationArgumentDefaultValue[]
+  > & {
     type: ActionArgumentTypes['LOCATION'];
   };
 
 export type VectorActionArgument = BaseActionArgument &
-  WithDefaultValue<VectorArgumentDefaultValue> & {
+  WithDefaultValue<VectorArgumentDefaultValue | VectorArgumentDefaultValue[]> & {
     type: ActionArgumentTypes['VECTOR'];
   };
 
 export type SoundActionArgument = BaseActionArgument &
-  WithDefaultValue<SoundArgumentDefaultValue> & {
+  WithDefaultValue<SoundArgumentDefaultValue | SoundArgumentDefaultValue[]> & {
     type: ActionArgumentTypes['SOUND'];
   };
 
 export type ParticleActionArgument = BaseActionArgument &
-  WithDefaultValue<ParticleArgumentDefaultValue> & {
+  WithDefaultValue<
+    ParticleArgumentDefaultValue | ParticleArgumentDefaultValue[] | null
+  > & {
     type: ActionArgumentTypes['PARTICLE'];
   };
 
 export type PotionActionArgument = BaseActionArgument &
-  WithDefaultValue<PotionArgumentDefaultValue> & {
+  WithDefaultValue<PotionArgumentDefaultValue | PotionArgumentDefaultValue[]> & {
     type: ActionArgumentTypes['POTION'];
   };
 
+export type CellActionArgument = BaseActionArgument &
+  WithDefaultValue<CellArgumentDefaultValue> & {
+    type: ActionArgumentTypes['CELL'];
+  };
+
+export type ParameterActionArgument = BaseActionArgument & {
+  type: ActionArgumentTypes['PARAMETER'];
+};
+
 export type ListActionArgument = BaseActionArgument & {
   type: ActionArgumentTypes['LIST'];
+  defaultValue?: unknown;
 
   /**
    * Type of the elements stored in the list
@@ -207,6 +228,7 @@ export type ListActionArgument = BaseActionArgument & {
 
 export type DictionaryActionArgument = BaseActionArgument & {
   type: ActionArgumentTypes['DICTIONARY'];
+  defaultValue?: unknown;
 
   /**
    * Type of the keys stored in the dictionary
@@ -221,10 +243,20 @@ export type DictionaryActionArgument = BaseActionArgument & {
 
 export type VariableActionArgument = BaseActionArgument & {
   type: ActionArgumentTypes['VARIABLE'];
+  defaultValue?:
+    | {
+        name: string;
+        scope: string;
+      }
+    | {
+        name: string;
+        scope: string;
+      }[];
 };
 
 export type AnyActionArgument = BaseActionArgument & {
   type: ActionArgumentTypes['ANY'];
+  defaultValue?: unknown;
 };
 
 /**
@@ -262,6 +294,8 @@ type ActionArgument =
   | SoundActionArgument
   | ParticleActionArgument
   | PotionActionArgument
+  | ParameterActionArgument
+  | CellActionArgument
   | ListActionArgument
   | DictionaryActionArgument
   | VariableActionArgument

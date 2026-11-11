@@ -33,7 +33,8 @@ import { naiveActionTypeFromId } from '../src/types/Action';
 import ActionArgument, {
   ActionArgumentTypes,
   argumentTypeFromInternal,
-  NumberActionArgumentSize,
+  MinecraftID,
+  NumberActionArgumentType,
 } from '../src/types/ActionArgument';
 import { ActionCategories } from '../src/ActionsData';
 
@@ -250,6 +251,378 @@ const readBalancedBlock = (
   return -1;
 };
 
+const splitArguments = (content: string) => {
+  const arguments_: string[] = [];
+  let start = 0;
+  let parentheses = 0;
+  let brackets = 0;
+  let braces = 0;
+  let generics = 0;
+  let inString = false;
+  let escaped = false;
+
+  for (let index = 0; index < content.length; index++) {
+    const char = content[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === '\\') escaped = true;
+      else if (char === '"') inString = false;
+      continue;
+    }
+
+    if (char === '"') inString = true;
+    else if (char === '(') parentheses++;
+    else if (char === ')') parentheses--;
+    else if (char === '[') brackets++;
+    else if (char === ']') brackets--;
+    else if (char === '{') braces++;
+    else if (char === '}') braces--;
+    else if (char === '<' && content[index + 1] !== '=') generics++;
+    else if (char === '>' && generics > 0) generics--;
+    else if (
+      char === ',' &&
+      parentheses === 0 &&
+      brackets === 0 &&
+      braces === 0 &&
+      generics === 0
+    ) {
+      arguments_.push(content.slice(start, index).trim());
+      start = index + 1;
+    }
+  }
+
+  const lastArgument = content.slice(start).trim();
+  if (lastArgument) arguments_.push(lastArgument);
+  return arguments_;
+};
+
+const getTopLevelAssignment = (content: string) => {
+  let inString = false;
+  let escaped = false;
+  let depth = 0;
+  for (let index = 0; index < content.length; index++) {
+    const char = content[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === '\\') escaped = true;
+      else if (char === '"') inString = false;
+      continue;
+    }
+
+    if (char === '"') inString = true;
+    else if (char === '(' || char === '[' || char === '{') depth++;
+    else if (char === ')' || char === ']' || char === '}') depth--;
+    else if (char === '=' && depth === 0) return index;
+  }
+  return -1;
+};
+
+const parseKotlinNumber = (expression: string): number | undefined => {
+  const value = expression.trim();
+  const constants: Record<string, number> = {
+    'Int.MIN_VALUE': -2147483648,
+    'Int.MAX_VALUE': 2147483647,
+    'Long.MIN_VALUE': -9223372036854775808,
+    'Long.MAX_VALUE': 9223372036854776000,
+    'Float.MIN_VALUE': 1.401298464324817e-45,
+    'Float.MAX_VALUE': 3.4028234663852886e38,
+    'Double.MIN_VALUE': Number.MIN_VALUE,
+    'Double.MAX_VALUE': Number.MAX_VALUE,
+    'Character.MIN_RADIX': 2,
+    'Character.MAX_RADIX': 36,
+    'ArrayValueContainer.MAX_ARRAY_VALUES': 20000,
+  };
+  if (Object.prototype.hasOwnProperty.call(constants, value))
+    return constants[value];
+
+  if (value.startsWith('(') && value.endsWith(')')) {
+    const closingParenthesis = readBalancedBlock(value, 0, '(', ')');
+    if (closingParenthesis === value.length - 1)
+      return parseKotlinNumber(value.slice(1, -1));
+  }
+
+  if (value.startsWith('-')) {
+    const positiveValue = parseKotlinNumber(value.slice(1));
+    if (positiveValue !== undefined) return -positiveValue;
+  }
+
+  const multiplication = value.match(/^(.+?)\s*\*\s*(.+)$/);
+  if (multiplication) {
+    const left = parseKotlinNumber(multiplication[1]);
+    const right = parseKotlinNumber(multiplication[2]);
+    if (left !== undefined && right !== undefined) return left * right;
+  }
+
+  if (
+    !/^[+-]?(?:\d[\d_]*(?:\.\d[\d_]*)?|\.\d[\d_]*)(?:[eE][+-]?\d[\d_]*)?[fFdDlL]?$/.test(
+      value
+    )
+  )
+    return undefined;
+
+  const number = Number(value.replace(/_/g, '').replace(/[fFdDlL]$/, ''));
+  return Number.isFinite(number) ? number : undefined;
+};
+
+const parseKotlinDefaultValue = (
+  expression: string,
+  allowEnumValue = false
+): unknown => {
+  const value = expression.trim();
+  if (value === 'true' || value === 'false') return value;
+  if (value === 'null') return null;
+  if (/^(?:emptyList|listOf)\s*\(/.test(value)) {
+    const openingParenthesis = value.indexOf('(');
+    const closingParenthesis = readBalancedBlock(
+      value,
+      openingParenthesis,
+      '(',
+      ')'
+    );
+    if (closingParenthesis === value.length - 1) {
+      const body = value.slice(openingParenthesis + 1, closingParenthesis);
+      return value.startsWith('emptyList') || !body.trim()
+        ? []
+        : splitArguments(body).map((part) =>
+            parseKotlinDefaultValue(part, allowEnumValue)
+          );
+    }
+  }
+  if (/^(?:emptyMap|mapOf)\s*</.test(value) || /^emptyMap\s*\(/.test(value))
+    return {};
+  if (/^(?:ArrayValueContainer|MapValueContainer)\.empty\s*\(/.test(value))
+    return value.startsWith('ArrayValueContainer') ? [] : {};
+  if (/^EmptyValueContainer\s*</.test(value)) return null;
+  if (/^CellValue\s*\(/.test(value))
+    return { name: '', global: false, storage: null, storagePath: null };
+  if (/^Variable\.of\s*\(/.test(value))
+    return { name: 'default', scope: 'LOCAL' };
+  if (/^Vector\s*\(/.test(value))
+    return { x: 0, y: 0, z: 0 };
+  if (/^Location\s*\(/.test(value))
+    return { x: 0, y: 0, z: 0, yaw: 0, pitch: 0 };
+  if (/^SoundValue\s*\(/.test(value))
+    return { id: 'minecraft:dummy', volume: 0, pitch: 0 };
+  if (/^ParticleValue\s*\(/.test(value))
+    return {
+      id: 'minecraft:white_ash',
+      count: 1,
+      spread: [0, 0],
+      motion: { x: 0, y: 0, z: 0 },
+    };
+  if (/^PotionValue\s*\(/.test(value))
+    return { type: 'minecraft:speed', duration: 0, amplifier: 0 };
+
+  const number = parseKotlinNumber(value);
+  if (number !== undefined) return number;
+
+  const stringValue = value.match(/^("(?:\\.|[^"\\])*")$/);
+  if (stringValue) {
+    try {
+      return JSON.parse(stringValue[1]);
+    } catch {
+      return undefined;
+    }
+  }
+
+  const textValue = value.match(/^TextValue\(\s*("(?:\\.|[^"\\])*")/);
+  if (textValue) {
+    try {
+      return JSON.parse(textValue[1]);
+    } catch {
+      return undefined;
+    }
+  }
+
+  const material = value.match(/Material\.([A-Z0-9_]+)/);
+  if (material) return `minecraft:${material[1].toLowerCase()}`;
+
+  if (allowEnumValue) {
+    const enumValue = value.match(/(?:^|\.)([A-Z][A-Z0-9_]*)$/);
+    if (enumValue) return enumValue[1];
+  }
+
+  return undefined;
+};
+
+const getArgumentHelperDefaults = (content: string) => {
+  const defaults: Record<string, string> = {};
+  const declaration = /\bfun\s+(?:<([\s\S]*?)>\s*)?([a-z]\w*)\s*\(/g;
+
+  for (const match of content.matchAll(declaration)) {
+    const openingParenthesis = match.index! + match[0].lastIndexOf('(');
+    const closingParenthesis = readBalancedBlock(
+      content,
+      openingParenthesis,
+      '(',
+      ')'
+    );
+    if (closingParenthesis < 0) continue;
+
+    const parameters = splitArguments(
+      content.slice(openingParenthesis + 1, closingParenthesis)
+    );
+    const defaultParameter = parameters.find((parameter) =>
+      /^\s*defaultValue\s*:/.test(parameter)
+    );
+    if (!defaultParameter) continue;
+
+    const assignment = getTopLevelAssignment(defaultParameter);
+    if (assignment < 0) continue;
+    defaults[match[2]] = defaultParameter.slice(assignment + 1).trim();
+  }
+
+  return defaults;
+};
+
+const getFallbackDefaultValue = (
+  type: ActionArgument['type'],
+  plural: boolean,
+  enumValues: string[] = []
+) => {
+  if (plural) return [];
+
+  switch (type) {
+    case ActionArgumentTypes.NUMBER:
+      return 0;
+    case ActionArgumentTypes.TEXT:
+      return '';
+    case ActionArgumentTypes.ITEM:
+      return 'minecraft:air';
+    case ActionArgumentTypes.BLOCK:
+      return 'minecraft:stone';
+    case ActionArgumentTypes.LOCATION:
+      return { x: 0, y: 0, z: 0, yaw: 0, pitch: 0 };
+    case ActionArgumentTypes.VECTOR:
+      return { x: 0, y: 0, z: 0 };
+    case ActionArgumentTypes.SOUND:
+      return { id: 'minecraft:dummy', volume: 0, pitch: 0 };
+    case ActionArgumentTypes.PARTICLE:
+      return null;
+    case ActionArgumentTypes.POTION:
+      return { type: 'minecraft:speed', duration: 0, amplifier: 0 };
+    case ActionArgumentTypes.CELL:
+      return { name: '', global: false, storage: null, storagePath: null };
+    case ActionArgumentTypes.LIST:
+      return [];
+    case ActionArgumentTypes.DICTIONARY:
+      return {};
+    case ActionArgumentTypes.VARIABLE:
+      return { name: 'default', scope: 'LOCAL' };
+    case ActionArgumentTypes.ANY:
+      return null;
+    case ActionArgumentTypes.ENUM:
+      return enumValues[0];
+    default:
+      return undefined;
+  }
+};
+
+const isMinecraftId = (value: unknown): value is MinecraftID =>
+  typeof value === 'string' && /^minecraft:[a-z0-9_]+$/.test(value);
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);
+
+const isNumber = (value: unknown): value is number =>
+  typeof value === 'number';
+
+const isLocationDefaultValue = (
+  value: unknown
+): value is { x: number; y: number; z: number; yaw: number; pitch: number } =>
+  isRecord(value) &&
+  isNumber(value.x) &&
+  isNumber(value.y) &&
+  isNumber(value.z) &&
+  isNumber(value.yaw) &&
+  isNumber(value.pitch);
+
+const isVectorDefaultValue = (
+  value: unknown
+): value is { x: number; y: number; z: number } =>
+  isRecord(value) &&
+  isNumber(value.x) &&
+  isNumber(value.y) &&
+  isNumber(value.z);
+
+const isSoundDefaultValue = (
+  value: unknown
+): value is { id: MinecraftID; volume: number; pitch: number } =>
+  isRecord(value) &&
+  isMinecraftId(value.id) &&
+  isNumber(value.volume) &&
+  isNumber(value.pitch);
+
+const isParticleDefaultValue = (
+  value: unknown
+): value is {
+  id: MinecraftID;
+  count: number;
+  spread: [number, number];
+  motion: { x: number; y: number; z: number };
+} =>
+  isRecord(value) &&
+  isMinecraftId(value.id) &&
+  isNumber(value.count) &&
+  Array.isArray(value.spread) &&
+  value.spread.length === 2 &&
+  value.spread.every(isNumber) &&
+  isVectorDefaultValue(value.motion);
+
+const isPotionDefaultValue = (
+  value: unknown
+): value is { type: MinecraftID; duration: number; amplifier: number } =>
+  isRecord(value) &&
+  isMinecraftId(value.type) &&
+  isNumber(value.duration) &&
+  isNumber(value.amplifier);
+
+const isCellDefaultValue = (
+  value: unknown
+): value is {
+  name: string;
+  global: boolean;
+  storage: string | null;
+  storagePath: string | null;
+} =>
+  isRecord(value) &&
+  typeof value.name === 'string' &&
+  typeof value.global === 'boolean' &&
+  (typeof value.storage === 'string' || value.storage === null) &&
+  (typeof value.storagePath === 'string' || value.storagePath === null);
+
+const isVariableDefaultValue = (
+  value: unknown
+): value is { name: string; scope: string } =>
+  isRecord(value) &&
+  typeof value.name === 'string' &&
+  typeof value.scope === 'string';
+
+const isDefaultValueOrList = <T>(
+  value: unknown,
+  guard: (item: unknown) => item is T
+): value is T | T[] =>
+  guard(value) || (Array.isArray(value) && value.every(guard));
+
+const getArgumentOptions = (callContent: string) => {
+  const parts = splitArguments(callContent);
+  const options: Record<string, string> = {};
+  let positionalIndex = 0;
+
+  for (const part of parts.slice(1)) {
+    const assignment = getTopLevelAssignment(part);
+    if (assignment >= 0) {
+      options[part.slice(0, assignment).trim()] = part
+        .slice(assignment + 1)
+        .trim();
+    } else {
+      positionalIndex++;
+      options[`$${positionalIndex}`] = part;
+    }
+  }
+  return options;
+};
+
 const getEnumEntries = (body: string) => {
   const entries: string[] = [];
   let start = 0;
@@ -347,26 +720,61 @@ const getArgumentDeclarations = (content: string) =>
     }
 
     const declaration = content.slice(match.index!, declarationEnd);
-    const bool = callContent.match(/,\s*(false)\b/)?.[1];
-    return [[declaration, type, plural, enumName, id, bool, body] as const];
+    return [
+      [declaration, type, plural, enumName, id, callContent, body] as const,
+    ];
   });
 
 const getArguments = (
   action: string,
   enums: Enums,
   args: Dictionary,
-  content: string
+  content: string,
+  helperDefaults: Record<string, string>
 ) => {
   const _args = getArgumentDeclarations(content);
   const _enums: Enums = { ...enums, ...getEnums(content) };
 
   return _args.map<ActionArgument>(
-    ([argumentDeclaration, type, plural, enumName, id, bool, body]) => {
+    ([argumentDeclaration, type, plural, enumName, id, callContent, body]) => {
       const argumentType = argumentTypeFromInternal(type);
       if (!argumentType)
         return error(
           `Unknown action argument type ${chalk.cyan(type)} in action ${action}`
         );
+
+      const options = getArgumentOptions(callContent);
+      const isPlural = Boolean(plural);
+      const helperName = `${type}${isPlural ? 'List' : ''}`;
+      const rawDefaultValue =
+        options.defaultValue ??
+        options.$1 ??
+        helperDefaults[helperName];
+      let defaultValue =
+        rawDefaultValue !== undefined
+          ? parseKotlinDefaultValue(
+            rawDefaultValue,
+            argumentType === ActionArgumentTypes.ENUM
+          )
+          : undefined;
+      const numericRange = options.range || options.$2;
+      const range = numericRange?.split('..');
+      const min =
+        options.min !== undefined
+          ? parseKotlinNumber(options.min)
+          : range?.length === 2
+            ? parseKotlinNumber(range[0])
+            : undefined;
+      const max =
+        options.max !== undefined
+          ? parseKotlinNumber(options.max)
+          : range?.length === 2
+            ? parseKotlinNumber(range[1])
+            : undefined;
+      const numberBounds = {
+        ...(min !== undefined ? { min } : {}),
+        ...(max !== undefined ? { max } : {}),
+      };
 
       const _valueSlots = body.match(ARGUMENT_VALUE_SLOTS)?.[1];
       if (!_valueSlots)
@@ -397,34 +805,70 @@ const getArguments = (
             )} in action ${action}`
           );
 
+        const enumDefault =
+          typeof defaultValue === 'boolean'
+            ? String(defaultValue)
+            : typeof defaultValue === 'string'
+              ? defaultValue
+              : undefined;
+        const enumDefaultValue = enumDefault
+          ? values.find(
+              (value) => value.toLowerCase() === enumDefault.toLowerCase()
+            )
+          : values[0];
+        if (enumDefaultValue === undefined)
+          return error(
+            `Could not get default value of enum argument ${chalk.cyan(
+              id
+            )} in action ${action}`
+          );
+
         return {
           id,
           plural: false,
           type: argumentType,
           valueSlots,
           values,
-          ...(bool ? { defaultValue: bool } : {}),
+          defaultValue: enumDefaultValue,
           ...args[id],
         };
       }
 
       const _descriptionSlots = body.match(ARGUMENT_DESCRIPTION_SLOTS)?.[1];
-      if (!_descriptionSlots)
-        return error(
-          `Could not get description slots of argument ${chalk.cyan(
-            id
-          )} in action ${action}`
+      const descriptionSlots = _descriptionSlots
+        ? getSlots(_descriptionSlots)
+        : [];
+      if (defaultValue === undefined)
+        defaultValue = getFallbackDefaultValue(
+          argumentType,
+          isPlural
         );
-      const descriptionSlots = getSlots(_descriptionSlots);
+      if (
+        defaultValue === null &&
+        (argumentType === ActionArgumentTypes.LOCATION ||
+          argumentType === ActionArgumentTypes.VECTOR)
+      )
+        defaultValue = getFallbackDefaultValue(argumentType, false);
+      const defaultValueField = { defaultValue };
 
       if (argumentType === ActionArgumentTypes.NUMBER) {
+        const numericDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isNumber
+        )
+          ? defaultValue
+          : isPlural
+            ? []
+            : 0;
         return {
           id,
           plural: Boolean(plural),
           type: argumentType,
           valueSlots,
           descriptionSlots,
-          size: type as NumberActionArgumentSize,
+          numberType: type as NumberActionArgumentType,
+          defaultValue: numericDefaultValue,
+          ...numberBounds,
           ...args[id],
         };
       }
@@ -437,6 +881,7 @@ const getArguments = (
           valueSlots,
           descriptionSlots,
           elementType: args[id]?.elementType || 'any',
+          ...defaultValueField,
           ...args[id],
         };
       }
@@ -453,16 +898,190 @@ const getArguments = (
               ? 'text'
               : args[id]?.keyType || 'any',
           valueType: args[id]?.valueType || 'any',
+          ...defaultValueField,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.TEXT) {
+        const textDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          (value): value is string => typeof value === 'string'
+        )
+          ? defaultValue
+          : isPlural
+            ? []
+            : '';
+        return {
+          id,
+          plural: Boolean(plural),
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: textDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (
+        argumentType === ActionArgumentTypes.ITEM ||
+        argumentType === ActionArgumentTypes.BLOCK
+      ) {
+        const itemDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isMinecraftId
+        )
+          ? defaultValue
+          : isPlural
+            ? []
+            : argumentType === ActionArgumentTypes.ITEM
+              ? 'minecraft:air'
+              : 'minecraft:stone';
+        return {
+          id,
+          plural: Boolean(plural),
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: itemDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.LOCATION) {
+        const locationDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isLocationDefaultValue
+        )
+          ? defaultValue
+          : { x: 0, y: 0, z: 0, yaw: 0, pitch: 0 };
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: locationDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.VECTOR) {
+        const vectorDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isVectorDefaultValue
+        )
+          ? defaultValue
+          : { x: 0, y: 0, z: 0 };
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: vectorDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.SOUND) {
+        const soundDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isSoundDefaultValue
+        )
+          ? defaultValue
+          : { id: 'minecraft:dummy' as const, volume: 0, pitch: 0 };
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: soundDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.PARTICLE) {
+        const particleDefaultValue =
+          defaultValue === null
+            ? null
+            : isDefaultValueOrList(defaultValue, isParticleDefaultValue)
+              ? defaultValue
+              : isPlural
+                ? []
+                : null;
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: particleDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.POTION) {
+        const potionDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isPotionDefaultValue
+        )
+          ? defaultValue
+          : { type: 'minecraft:speed' as const, duration: 0, amplifier: 0 };
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: potionDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.CELL) {
+        const cellDefaultValue = isCellDefaultValue(defaultValue)
+          ? defaultValue
+          : { name: '', global: false, storage: null, storagePath: null };
+        return {
+          id,
+          plural: false,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: cellDefaultValue,
+          ...args[id],
+        };
+      }
+
+      if (argumentType === ActionArgumentTypes.VARIABLE) {
+        const variableDefaultValue = isDefaultValueOrList(
+          defaultValue,
+          isVariableDefaultValue
+        )
+          ? defaultValue
+          : isPlural
+            ? []
+            : { name: 'default', scope: 'LOCAL' };
+        return {
+          id,
+          plural: isPlural,
+          type: argumentType,
+          valueSlots,
+          descriptionSlots,
+          defaultValue: variableDefaultValue,
           ...args[id],
         };
       }
 
       const argument: ActionArgument = {
         id,
-        plural: Boolean(plural),
-        type: argumentType,
+        plural: isPlural,
+        type: ActionArgumentTypes.ANY,
         valueSlots,
         descriptionSlots,
+        defaultValue,
         ...args[id],
       };
 
@@ -552,6 +1171,9 @@ const getArguments = (
   const cachedEnums = enumFiles.map((file) =>
     getEnums(removeComments(file.content))
   );
+  const actionHelperDefaults = getArgumentHelperDefaults(
+    await readSourceFile('core/action/Action.kt')
+  );
   const patchedEnums: Enums = JSON.parse(
     await fs.readFile(ENUMS_PATCHES_FILE, 'utf-8')
   );
@@ -611,7 +1233,13 @@ const getArguments = (
         subcategory: icon?.subcategory || null,
         ...(menuActionPositions[name] || {}),
         type: actionType,
-        args: getArguments(id, enums, {}, contents),
+        args: getArguments(
+          id,
+          enums,
+          {},
+          contents,
+          actionHelperDefaults
+        ),
         ...(!TOP_LEVEL_ACTION_CATEGORIES.has(category) &&
         menuReference === undefined
           ? { deprecated: true }

@@ -18,7 +18,8 @@
     "extract:events": "ts-node scripts/extract-events",
     "extract:values": "ts-node scripts/extract-game-values",
     "extract:actions": "ts-node scripts/extract-actions",
-    "extract": "yarn run extract:events && yarn run extract:values && yarn run extract:actions",
+    "extract:editor-data": "ts-node scripts/extract-editor-data",
+    "extract": "yarn run extract:events && yarn run extract:values && yarn run extract:actions && yarn run extract:editor-data",
     "generate:docs": "ts-node scripts/generate-docs",
     "update": "yarn run create:cache && yarn run extract && yarn run create:icons && yarn run generate:docs",
     "generate": "yarn run update && yarn run create:index && yarn run build"

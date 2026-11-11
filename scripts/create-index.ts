@@ -5,6 +5,8 @@ import { createProgress, info, success } from './common';
 
 const content = `
 import ActionsData from './ActionsData';
+import ArgumentsData from './types/ArgumentsData';
+import BlocksData from './types/BlocksData';
 import EventsData from './EventsData';
 import GameValuesData from './GameValuesData';
 
@@ -12,6 +14,10 @@ export * from './types/Action';
 export { default as Action } from './types/Action';
 export * from './types/ActionArgument';
 export { default as ActionArgument } from './types/ActionArgument';
+export { default as ArgumentsData } from './types/ArgumentsData';
+export * from './types/ArgumentsData';
+export { default as BlocksData } from './types/BlocksData';
+export * from './types/BlocksData';
 export * from './types/Event';
 export { default as Event } from './types/Event';
 export * from './types/GameValue';
@@ -29,12 +35,20 @@ export { default as GameValuesData } from './GameValuesData';
 import actionsData from '../data/actions.json';
 
 // @ts-ignore
+import argumentsData from '../data/arguments.json';
+
+// @ts-ignore
+import blocksData from '../data/blocks.json';
+
+// @ts-ignore
 import eventsData from '../data/events.json';
 
 // @ts-ignore
 import gameValuesData from '../data/values.json';
 
 export const actions = actionsData as ActionsData;
+export const argumentTypes = argumentsData as ArgumentsData;
+export const blocks = blocksData as BlocksData;
 export const events = eventsData as EventsData;
 export const gameValues = gameValuesData as GameValuesData;
 `.trim();

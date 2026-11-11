@@ -137,7 +137,7 @@
   {
     "id": "list",
     "path": "arguments",
-    "material": "ENDER_CHEST"
+    "material": "GUSTER_BANNER_PATTERN"
   },
   {
     "id": "dictionary",
@@ -157,12 +157,22 @@
   {
     "id": "enum",
     "path": "arguments",
+    "material": "CHEST"
+  },
+  {
+    "id": "parameter",
+    "path": "arguments",
     "material": "HEART_OF_THE_SEA"
+  },
+  {
+    "id": "cell",
+    "path": "arguments",
+    "material": "GREEN_BUNDLE"
   },
   {
     "id": "arguments",
     "path": "extra",
-    "material": "CHEST"
+    "material": "ENDER_CHEST"
   },
   {
     "id": "game_values",
